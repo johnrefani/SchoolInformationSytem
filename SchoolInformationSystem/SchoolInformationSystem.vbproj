@@ -29,4 +29,11 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="My Project\NewFolder1\" />
+    <Folder Include="My Project\NewFolder2\" />
+    <Folder Include="My Project\NewFolder3\" />
+    <Folder Include="My Project\NewFolder\" />
+  </ItemGroup>
+
 </Project>
