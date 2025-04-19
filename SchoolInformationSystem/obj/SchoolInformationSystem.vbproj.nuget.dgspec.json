@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSystem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj": {}
+    "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSystem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj": {
+    "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSystem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj",
         "projectName": "SchoolInformationSystem",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSystem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSystem\\SchoolInformationSystem\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",

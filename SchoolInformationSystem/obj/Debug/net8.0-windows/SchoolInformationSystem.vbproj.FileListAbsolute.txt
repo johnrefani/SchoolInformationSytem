@@ -1,0 +1,17 @@
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.exe
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.deps.json
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.runtimeconfig.json
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.dll
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.pdb
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.Form1.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.vbproj.GenerateResource.cache
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.AssemblyInfoInputs.cache
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.AssemblyInfo.vb
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.vbproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.sourcelink.json
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.dll
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\refint\SchoolInformationSystem.dll
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.pdb
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.genruntimeconfig.cache
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\ref\SchoolInformationSystem.dll
