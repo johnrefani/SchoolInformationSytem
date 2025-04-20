@@ -1,17 +1,21 @@
 ﻿Public Class login
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Center the second PictureBox on the form when the form loads
+        CenterPictureBox()
+
 
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
+    Private Sub login_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        ' Adjust position of PictureBox2 when the form is resized
+        CenterPictureBox()
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
+    ' Function to center the PictureBox
+    Private Sub CenterPictureBox()
+        ' Center PictureBox2 in the form
+        PictureBox2.Left = (Me.ClientSize.Width - PictureBox2.Width) \ 2
+        PictureBox2.Top = (Me.ClientSize.Height - PictureBox2.Height) \ 2
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
-
-    End Sub
 End Class

@@ -23,111 +23,122 @@ Partial Class login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
-        Panel1 = New Panel()
-        TextBox2 = New TextBox()
-        ComboBox1 = New ComboBox()
         PictureBox1 = New PictureBox()
-        TextBox1 = New TextBox()
-        TextBox3 = New TextBox()
-        Button1 = New Button()
-        Panel1.SuspendLayout()
+        PictureBox2 = New PictureBox()
+        logo = New PictureBox()
+        selectuser = New ComboBox()
+        username = New TextBox()
+        password = New TextBox()
+        loginbtn = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' Panel1
-        ' 
-        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel1.BackColor = SystemColors.ActiveCaption
-        Panel1.Controls.Add(Button1)
-        Panel1.Controls.Add(TextBox3)
-        Panel1.Controls.Add(TextBox2)
-        Panel1.Controls.Add(ComboBox1)
-        Panel1.Controls.Add(PictureBox1)
-        Panel1.Location = New Point(131, 142)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(690, 600)
-        Panel1.TabIndex = 0
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Font = New Font("Segoe UI", 15F)
-        TextBox2.Location = New Point(198, 323)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(319, 41)
-        TextBox2.TabIndex = 2
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Select User", "Student", "Instructor", "Admin"})
-        ComboBox1.Location = New Point(198, 237)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(319, 29)
-        ComboBox1.TabIndex = 1
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
-        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), Image)
-        PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), Image)
-        PictureBox1.Location = New Point(271, 53)
+        PictureBox1.BackColor = Color.Maroon
+        PictureBox1.Dock = DockStyle.Top
+        PictureBox1.Location = New Point(0, 0)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(160, 160)
+        PictureBox1.Size = New Size(1440, 512)
+        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
-        ' TextBox1
+        ' PictureBox2
         ' 
-        TextBox1.Location = New Point(0, 0)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(125, 29)
-        TextBox1.TabIndex = 1
+        PictureBox2.BackColor = Color.White
+        PictureBox2.Location = New Point(470, 212)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(500, 600)
+        PictureBox2.TabIndex = 1
+        PictureBox2.TabStop = False
         ' 
-        ' TextBox3
+        ' logo
         ' 
-        TextBox3.Font = New Font("Segoe UI", 15F)
-        TextBox3.Location = New Point(198, 399)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(319, 41)
-        TextBox3.TabIndex = 3
+        logo.Anchor = AnchorStyles.Left Or AnchorStyles.Right
+        logo.BackColor = Color.White
+        logo.Image = CType(resources.GetObject("logo.Image"), Image)
+        logo.Location = New Point(640, 254)
+        logo.Name = "logo"
+        logo.Size = New Size(160, 160)
+        logo.SizeMode = PictureBoxSizeMode.StretchImage
+        logo.TabIndex = 2
+        logo.TabStop = False
         ' 
-        ' Button1
+        ' selectuser
         ' 
-        Button1.Location = New Point(198, 504)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(319, 50)
-        Button1.TabIndex = 4
-        Button1.Text = "Login"
-        Button1.UseVisualStyleBackColor = True
+        selectuser.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        selectuser.FormattingEnabled = True
+        selectuser.Items.AddRange(New Object() {"Student", "Teacher", "Admin"})
+        selectuser.Location = New Point(570, 462)
+        selectuser.Name = "selectuser"
+        selectuser.Size = New Size(300, 33)
+        selectuser.TabIndex = 3
+        ' 
+        ' username
+        ' 
+        username.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        username.Location = New Point(570, 530)
+        username.Multiline = True
+        username.Name = "username"
+        username.PlaceholderText = "Username"
+        username.Size = New Size(300, 40)
+        username.TabIndex = 4
+        ' 
+        ' password
+        ' 
+        password.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        password.Location = New Point(570, 587)
+        password.Multiline = True
+        password.Name = "password"
+        password.PlaceholderText = "Password"
+        password.Size = New Size(300, 40)
+        password.TabIndex = 5
+        ' 
+        ' loginbtn
+        ' 
+        loginbtn.BackColor = Color.Maroon
+        loginbtn.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        loginbtn.ForeColor = Color.White
+        loginbtn.Location = New Point(570, 665)
+        loginbtn.Name = "loginbtn"
+        loginbtn.Size = New Size(300, 48)
+        loginbtn.TabIndex = 6
+        loginbtn.Text = "Log In"
+        loginbtn.UseVisualStyleBackColor = False
         ' 
         ' login
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1902, 1033)
-        Controls.Add(TextBox1)
-        Controls.Add(Panel1)
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        BackColor = Color.WhiteSmoke
+        ClientSize = New Size(1440, 1024)
+        Controls.Add(logo)
+        Controls.Add(loginbtn)
+        Controls.Add(password)
+        Controls.Add(username)
+        Controls.Add(selectuser)
+        Controls.Add(PictureBox2)
+        Controls.Add(PictureBox1)
+        FormBorderStyle = FormBorderStyle.None
         Name = "login"
-        RightToLeft = RightToLeft.No
-        SizeGripStyle = SizeGripStyle.Hide
         StartPosition = FormStartPosition.CenterScreen
-        Text = "School Information System"
+        Text = "User LogIn"
         WindowState = FormWindowState.Maximized
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(logo, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents logo As PictureBox
+    Friend WithEvents selectuser As ComboBox
+    Friend WithEvents username As TextBox
+    Friend WithEvents password As TextBox
+    Friend WithEvents loginbtn As Button
 End Class
