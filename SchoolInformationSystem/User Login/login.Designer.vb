@@ -25,11 +25,12 @@ Partial Class login
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         TopColor = New Panel()
         LoginPanel = New Panel()
-        UserSelect = New ComboBox()
-        LoginButton = New Button()
-        Password = New TextBox()
-        Username = New TextBox()
+        userselect = New ComboBox()
+        loginbtn = New Button()
+        password = New TextBox()
+        username = New TextBox()
         Logo = New PictureBox()
+        errorLabel = New Label()
         LoginPanel.SuspendLayout()
         CType(Logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -41,77 +42,91 @@ Partial Class login
         TopColor.Location = New Point(0, 0)
         TopColor.Margin = New Padding(2)
         TopColor.Name = "TopColor"
-        TopColor.Size = New Size(1479, 324)
+        TopColor.Size = New Size(1424, 512)
         TopColor.TabIndex = 0
         ' 
         ' LoginPanel
         ' 
         LoginPanel.BackColor = Color.White
-        LoginPanel.Controls.Add(UserSelect)
-        LoginPanel.Controls.Add(LoginButton)
-        LoginPanel.Controls.Add(Password)
-        LoginPanel.Controls.Add(Username)
+        LoginPanel.Controls.Add(errorLabel)
+        LoginPanel.Controls.Add(userselect)
+        LoginPanel.Controls.Add(loginbtn)
+        LoginPanel.Controls.Add(password)
+        LoginPanel.Controls.Add(username)
         LoginPanel.Controls.Add(Logo)
-        LoginPanel.Location = New Point(552, 194)
+        LoginPanel.Location = New Point(518, 278)
         LoginPanel.Margin = New Padding(2)
         LoginPanel.Name = "LoginPanel"
-        LoginPanel.Size = New Size(389, 486)
+        LoginPanel.Size = New Size(500, 600)
         LoginPanel.TabIndex = 1
         ' 
-        ' UserSelect
+        ' userselect
         ' 
-        UserSelect.FormattingEnabled = True
-        UserSelect.Items.AddRange(New Object() {"Select User", "Student", "Instructor", "Admin"})
-        UserSelect.SelectedIndex = 0
-        UserSelect.Location = New Point(86, 202)
-        UserSelect.Name = "UserSelect"
-        UserSelect.Size = New Size(217, 25)
-        UserSelect.TabIndex = 4
+        userselect.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        userselect.FormattingEnabled = True
+        userselect.Items.AddRange(New Object() {"Select User", "Student", "Teacher", "Admin"})
+        userselect.Location = New Point(100, 249)
+        userselect.Name = "userselect"
+        userselect.Size = New Size(300, 33)
+        userselect.TabIndex = 4
         ' 
-        ' LoginButton
+        ' loginbtn
         ' 
-        LoginButton.BackColor = Color.Maroon
-        LoginButton.ForeColor = Color.White
-        LoginButton.Location = New Point(86, 372)
-        LoginButton.Name = "LoginButton"
-        LoginButton.Size = New Size(217, 35)
-        LoginButton.TabIndex = 3
-        LoginButton.Text = "Login"
-        LoginButton.UseVisualStyleBackColor = False
+        loginbtn.BackColor = Color.Maroon
+        loginbtn.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        loginbtn.ForeColor = Color.White
+        loginbtn.Location = New Point(100, 460)
+        loginbtn.Name = "loginbtn"
+        loginbtn.Size = New Size(300, 50)
+        loginbtn.TabIndex = 3
+        loginbtn.Text = "Login"
+        loginbtn.UseVisualStyleBackColor = False
         ' 
-        ' Password
+        ' password
         ' 
-        Password.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Password.Location = New Point(86, 311)
-        Password.Name = "Password"
-        Password.PlaceholderText = "Password"
-        Password.Size = New Size(217, 29)
-        Password.TabIndex = 2
+        password.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        password.Location = New Point(100, 373)
+        password.Multiline = True
+        password.Name = "password"
+        password.PlaceholderText = "Password"
+        password.Size = New Size(300, 40)
+        password.TabIndex = 2
         ' 
-        ' Username
+        ' username
         ' 
-        Username.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Username.Location = New Point(86, 261)
-        Username.Name = "Username"
-        Username.PlaceholderText = "Username"
-        Username.Size = New Size(217, 29)
-        Username.TabIndex = 1
+        username.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        username.Location = New Point(100, 310)
+        username.Multiline = True
+        username.Name = "username"
+        username.PlaceholderText = "Username"
+        username.Size = New Size(300, 40)
+        username.TabIndex = 1
         ' 
         ' Logo
         ' 
         Logo.Image = CType(resources.GetObject("Logo.Image"), Image)
-        Logo.Location = New Point(144, 62)
+        Logo.Location = New Point(170, 37)
         Logo.Name = "Logo"
-        Logo.Size = New Size(100, 100)
+        Logo.Size = New Size(160, 160)
         Logo.SizeMode = PictureBoxSizeMode.StretchImage
         Logo.TabIndex = 0
         Logo.TabStop = False
         ' 
+        ' errorLabel
+        ' 
+        errorLabel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        errorLabel.ForeColor = Color.Red
+        errorLabel.Location = New Point(100, 422)
+        errorLabel.Name = "errorLabel"
+        errorLabel.Size = New Size(300, 35)
+        errorLabel.TabIndex = 5
+        errorLabel.TextAlign = ContentAlignment.MiddleLeft
+        ' 
         ' login
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 17.0F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1479, 836)
+        ClientSize = New Size(1424, 985)
         Controls.Add(LoginPanel)
         Controls.Add(TopColor)
         FormBorderStyle = FormBorderStyle.FixedDialog
@@ -130,8 +145,9 @@ Partial Class login
     Friend WithEvents TopColor As Panel
     Friend WithEvents LoginPanel As Panel
     Friend WithEvents Logo As PictureBox
-    Friend WithEvents Username As TextBox
-    Friend WithEvents Password As TextBox
-    Friend WithEvents LoginButton As Button
-    Friend WithEvents UserSelect As ComboBox
+    Friend WithEvents username As TextBox
+    Friend WithEvents password As TextBox
+    Friend WithEvents loginbtn As Button
+    Friend WithEvents userselect As ComboBox
+    Friend WithEvents errorLabel As Label
 End Class

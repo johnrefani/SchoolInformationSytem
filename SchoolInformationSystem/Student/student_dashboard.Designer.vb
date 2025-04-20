@@ -22,9 +22,21 @@ Partial Class student_dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "student_dashboard"
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(student_dashboard))
+        SuspendLayout()
+        ' 
+        ' student_dashboard
+        ' 
+        AutoScaleDimensions = New SizeF(12F, 25F)
+        AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
+        ClientSize = New Size(1424, 985)
+        Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Margin = New Padding(5, 5, 5, 5)
+        Name = "student_dashboard"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "student_dashboard"
+        ResumeLayout(False)
     End Sub
 End Class
