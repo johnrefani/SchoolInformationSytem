@@ -1,9 +1,32 @@
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.exe
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.deps.json
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.runtimeconfig.json
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.dll
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.pdb
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.Form1.resources
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.Resources.resources
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.student_dashboard.resources
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.login.resources
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.vbproj.GenerateResource.cache
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.AssemblyInfoInputs.cache
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.AssemblyInfo.vb
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.vbproj.CoreCompileInputs.cache
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.sourcelink.json
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.dll
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\refint\SchoolInformationSystem.dll
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.pdb
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.genruntimeconfig.cache
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\ref\SchoolInformationSystem.dll
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.exe
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.deps.json
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.runtimeconfig.json
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.dll
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.pdb
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.Form1.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.Resources.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.student_dashboard.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.login.resources
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.vbproj.GenerateResource.cache
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.AssemblyInfoInputs.cache

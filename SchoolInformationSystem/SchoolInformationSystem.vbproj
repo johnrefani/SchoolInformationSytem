@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>SchoolInformationSystem.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
@@ -30,10 +30,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="My Project\NewFolder1\" />
-    <Folder Include="My Project\NewFolder2\" />
-    <Folder Include="My Project\NewFolder3\" />
-    <Folder Include="My Project\NewFolder\" />
+    <Folder Include="Admin\" />
+    <Folder Include="Instructor\" />
   </ItemGroup>
 
 </Project>
