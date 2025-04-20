@@ -23,122 +23,115 @@ Partial Class login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
-        PictureBox1 = New PictureBox()
-        PictureBox2 = New PictureBox()
-        logo = New PictureBox()
-        selectuser = New ComboBox()
-        username = New TextBox()
-        password = New TextBox()
-        loginbtn = New Button()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(logo, ComponentModel.ISupportInitialize).BeginInit()
+        TopColor = New Panel()
+        LoginPanel = New Panel()
+        UserSelect = New ComboBox()
+        LoginButton = New Button()
+        Password = New TextBox()
+        Username = New TextBox()
+        Logo = New PictureBox()
+        LoginPanel.SuspendLayout()
+        CType(Logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' PictureBox1
+        ' TopColor
         ' 
-        PictureBox1.BackColor = Color.Maroon
-        PictureBox1.Dock = DockStyle.Top
-        PictureBox1.Location = New Point(0, 0)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(1440, 512)
-        PictureBox1.SizeMode = PictureBoxSizeMode.AutoSize
-        PictureBox1.TabIndex = 0
-        PictureBox1.TabStop = False
+        TopColor.BackColor = Color.Maroon
+        TopColor.Dock = DockStyle.Top
+        TopColor.Location = New Point(0, 0)
+        TopColor.Margin = New Padding(2)
+        TopColor.Name = "TopColor"
+        TopColor.Size = New Size(1479, 324)
+        TopColor.TabIndex = 0
         ' 
-        ' PictureBox2
+        ' LoginPanel
         ' 
-        PictureBox2.BackColor = Color.White
-        PictureBox2.Location = New Point(470, 212)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(500, 600)
-        PictureBox2.TabIndex = 1
-        PictureBox2.TabStop = False
+        LoginPanel.BackColor = Color.White
+        LoginPanel.Controls.Add(UserSelect)
+        LoginPanel.Controls.Add(LoginButton)
+        LoginPanel.Controls.Add(Password)
+        LoginPanel.Controls.Add(Username)
+        LoginPanel.Controls.Add(Logo)
+        LoginPanel.Location = New Point(552, 194)
+        LoginPanel.Margin = New Padding(2)
+        LoginPanel.Name = "LoginPanel"
+        LoginPanel.Size = New Size(389, 486)
+        LoginPanel.TabIndex = 1
         ' 
-        ' logo
+        ' UserSelect
         ' 
-        logo.Anchor = AnchorStyles.Left Or AnchorStyles.Right
-        logo.BackColor = Color.White
-        logo.Image = CType(resources.GetObject("logo.Image"), Image)
-        logo.Location = New Point(640, 254)
-        logo.Name = "logo"
-        logo.Size = New Size(160, 160)
-        logo.SizeMode = PictureBoxSizeMode.StretchImage
-        logo.TabIndex = 2
-        logo.TabStop = False
+        UserSelect.FormattingEnabled = True
+        UserSelect.Items.AddRange(New Object() {"Select User", "Student", "Instructor", "Admin"})
+        UserSelect.SelectedIndex = 0
+        UserSelect.Location = New Point(86, 202)
+        UserSelect.Name = "UserSelect"
+        UserSelect.Size = New Size(217, 25)
+        UserSelect.TabIndex = 4
         ' 
-        ' selectuser
+        ' LoginButton
         ' 
-        selectuser.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        selectuser.FormattingEnabled = True
-        selectuser.Items.AddRange(New Object() {"Student", "Teacher", "Admin"})
-        selectuser.Location = New Point(570, 462)
-        selectuser.Name = "selectuser"
-        selectuser.Size = New Size(300, 33)
-        selectuser.TabIndex = 3
+        LoginButton.BackColor = Color.Maroon
+        LoginButton.ForeColor = Color.White
+        LoginButton.Location = New Point(86, 372)
+        LoginButton.Name = "LoginButton"
+        LoginButton.Size = New Size(217, 35)
+        LoginButton.TabIndex = 3
+        LoginButton.Text = "Login"
+        LoginButton.UseVisualStyleBackColor = False
         ' 
-        ' username
+        ' Password
         ' 
-        username.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        username.Location = New Point(570, 530)
-        username.Multiline = True
-        username.Name = "username"
-        username.PlaceholderText = "Username"
-        username.Size = New Size(300, 40)
-        username.TabIndex = 4
+        Password.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Password.Location = New Point(86, 311)
+        Password.Name = "Password"
+        Password.PlaceholderText = "Password"
+        Password.Size = New Size(217, 29)
+        Password.TabIndex = 2
         ' 
-        ' password
+        ' Username
         ' 
-        password.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        password.Location = New Point(570, 587)
-        password.Multiline = True
-        password.Name = "password"
-        password.PlaceholderText = "Password"
-        password.Size = New Size(300, 40)
-        password.TabIndex = 5
+        Username.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Username.Location = New Point(86, 261)
+        Username.Name = "Username"
+        Username.PlaceholderText = "Username"
+        Username.Size = New Size(217, 29)
+        Username.TabIndex = 1
         ' 
-        ' loginbtn
+        ' Logo
         ' 
-        loginbtn.BackColor = Color.Maroon
-        loginbtn.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        loginbtn.ForeColor = Color.White
-        loginbtn.Location = New Point(570, 665)
-        loginbtn.Name = "loginbtn"
-        loginbtn.Size = New Size(300, 48)
-        loginbtn.TabIndex = 6
-        loginbtn.Text = "Log In"
-        loginbtn.UseVisualStyleBackColor = False
+        Logo.Image = CType(resources.GetObject("Logo.Image"), Image)
+        Logo.Location = New Point(144, 62)
+        Logo.Name = "Logo"
+        Logo.Size = New Size(100, 100)
+        Logo.SizeMode = PictureBoxSizeMode.StretchImage
+        Logo.TabIndex = 0
+        Logo.TabStop = False
         ' 
         ' login
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 17.0F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1440, 1024)
-        Controls.Add(logo)
-        Controls.Add(loginbtn)
-        Controls.Add(password)
-        Controls.Add(username)
-        Controls.Add(selectuser)
-        Controls.Add(PictureBox2)
-        Controls.Add(PictureBox1)
-        FormBorderStyle = FormBorderStyle.None
+        ClientSize = New Size(1479, 836)
+        Controls.Add(LoginPanel)
+        Controls.Add(TopColor)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        Margin = New Padding(2)
+        MaximizeBox = False
         Name = "login"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "User LogIn"
-        WindowState = FormWindowState.Maximized
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(logo, ComponentModel.ISupportInitialize).EndInit()
+        Text = "School Information System"
+        LoginPanel.ResumeLayout(False)
+        LoginPanel.PerformLayout()
+        CType(Logo, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents logo As PictureBox
-    Friend WithEvents selectuser As ComboBox
-    Friend WithEvents username As TextBox
-    Friend WithEvents password As TextBox
-    Friend WithEvents loginbtn As Button
+    Friend WithEvents TopColor As Panel
+    Friend WithEvents LoginPanel As Panel
+    Friend WithEvents Logo As PictureBox
+    Friend WithEvents Username As TextBox
+    Friend WithEvents Password As TextBox
+    Friend WithEvents LoginButton As Button
+    Friend WithEvents UserSelect As ComboBox
 End Class
