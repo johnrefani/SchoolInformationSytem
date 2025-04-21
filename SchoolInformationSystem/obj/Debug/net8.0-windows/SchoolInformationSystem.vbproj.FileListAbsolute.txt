@@ -5,7 +5,6 @@ D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformatio
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows\SchoolInformationSystem.pdb
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.Form1.resources
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.Resources.resources
-D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.student_dashboard.resources
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.login.resources
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.vbproj.GenerateResource.cache
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.GeneratedMSBuildEditorConfig.editorconfig
@@ -58,3 +57,4 @@ D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformatio
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.admin_dashboard.resources
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.teacher_dashboard.resources
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolIn.7B0CB053.Up2Date
+D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows\SchoolInformationSystem.studentframe.resources

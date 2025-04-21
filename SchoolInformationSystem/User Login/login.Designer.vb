@@ -25,12 +25,12 @@ Partial Class login
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         TopColor = New Panel()
         LoginPanel = New Panel()
+        errorLabel = New Label()
         userselect = New ComboBox()
         loginbtn = New Button()
         password = New TextBox()
         username = New TextBox()
         Logo = New PictureBox()
-        errorLabel = New Label()
         LoginPanel.SuspendLayout()
         CType(Logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -60,6 +60,16 @@ Partial Class login
         LoginPanel.Size = New Size(500, 600)
         LoginPanel.TabIndex = 1
         ' 
+        ' errorLabel
+        ' 
+        errorLabel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        errorLabel.ForeColor = Color.Red
+        errorLabel.Location = New Point(100, 422)
+        errorLabel.Name = "errorLabel"
+        errorLabel.Size = New Size(300, 35)
+        errorLabel.TabIndex = 5
+        errorLabel.TextAlign = ContentAlignment.MiddleLeft
+        ' 
         ' userselect
         ' 
         userselect.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -73,6 +83,7 @@ Partial Class login
         ' loginbtn
         ' 
         loginbtn.BackColor = Color.Maroon
+        loginbtn.Cursor = Cursors.Hand
         loginbtn.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         loginbtn.ForeColor = Color.White
         loginbtn.Location = New Point(100, 460)
@@ -112,19 +123,9 @@ Partial Class login
         Logo.TabIndex = 0
         Logo.TabStop = False
         ' 
-        ' errorLabel
-        ' 
-        errorLabel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        errorLabel.ForeColor = Color.Red
-        errorLabel.Location = New Point(100, 422)
-        errorLabel.Name = "errorLabel"
-        errorLabel.Size = New Size(300, 35)
-        errorLabel.TabIndex = 5
-        errorLabel.TextAlign = ContentAlignment.MiddleLeft
-        ' 
         ' login
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1424, 985)
         Controls.Add(LoginPanel)
