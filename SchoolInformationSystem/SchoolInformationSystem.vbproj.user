@@ -7,9 +7,6 @@
     <Compile Update="Student\studentframe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Teacher\teacherframe.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="User Login\login.vb">
       <SubType>Form</SubType>
     </Compile>

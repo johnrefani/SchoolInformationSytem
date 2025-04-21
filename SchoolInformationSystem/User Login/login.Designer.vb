@@ -26,7 +26,7 @@ Partial Class login
         TopColor = New Panel()
         LoginPanel = New Panel()
         errorLabel = New Label()
-        userselect = New ComboBox()
+        role = New ComboBox()
         loginbtn = New Button()
         password = New TextBox()
         username = New TextBox()
@@ -49,12 +49,12 @@ Partial Class login
         ' 
         LoginPanel.BackColor = Color.White
         LoginPanel.Controls.Add(errorLabel)
-        LoginPanel.Controls.Add(userselect)
+        LoginPanel.Controls.Add(role)
         LoginPanel.Controls.Add(loginbtn)
         LoginPanel.Controls.Add(password)
         LoginPanel.Controls.Add(username)
         LoginPanel.Controls.Add(Logo)
-        LoginPanel.Location = New Point(518, 278)
+        LoginPanel.Location = New Point(462, 278)
         LoginPanel.Margin = New Padding(2)
         LoginPanel.Name = "LoginPanel"
         LoginPanel.Size = New Size(500, 600)
@@ -70,15 +70,15 @@ Partial Class login
         errorLabel.TabIndex = 5
         errorLabel.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' userselect
+        ' role
         ' 
-        userselect.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        userselect.FormattingEnabled = True
-        userselect.Items.AddRange(New Object() {"Select User", "Student", "Teacher", "Admin"})
-        userselect.Location = New Point(100, 249)
-        userselect.Name = "userselect"
-        userselect.Size = New Size(300, 33)
-        userselect.TabIndex = 4
+        role.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        role.FormattingEnabled = True
+        role.Items.AddRange(New Object() {"Select User", "Student", "Teacher", "Admin"})
+        role.Location = New Point(100, 249)
+        role.Name = "role"
+        role.Size = New Size(300, 33)
+        role.TabIndex = 4
         ' 
         ' loginbtn
         ' 
@@ -149,6 +149,6 @@ Partial Class login
     Friend WithEvents username As TextBox
     Friend WithEvents password As TextBox
     Friend WithEvents loginbtn As Button
-    Friend WithEvents userselect As ComboBox
+    Friend WithEvents role As ComboBox
     Friend WithEvents errorLabel As Label
 End Class
