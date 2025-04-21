@@ -42,13 +42,13 @@ Public Class login
                     ' Login success
                     Me.Hide()
                     If role.ToLower() = "admin" Then
-                        adminframe.Show()
+                        admin_frame.Show()
                     ElseIf role.ToLower() = "student" Then
 
                         student_frame.Show()
 
                     ElseIf role.ToLower() = "instructor" Then
-                        instructorframe.Show()
+                        instructor_frame.Show()
 
                     End If
                 Else
