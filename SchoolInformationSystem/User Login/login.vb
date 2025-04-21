@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports dbconnection
+
 Public Class login
     ' Declare connection string and connection object
     Dim connString As String = "Server=your_server;Database=school_information_db;Uid=your_user;Pwd=your_password;"
@@ -60,8 +60,9 @@ Public Class login
                         Dim AdminDashboard As New admin_dashboard
                         AdminDashboard.Show()
                     ElseIf role.ToLower() = "student" Then
-                        Dim studentDashboard As New student_dashboard
-                        studentDashboard.Show()
+
+                        student_frame.Show()
+
                     ElseIf role.ToLower() = "teacher" Then
                         Dim teacherDashboard As New teacher_dashboard
                         teacherDashboard.Show()
@@ -80,4 +81,7 @@ Public Class login
         End Try
     End Sub
 
+    Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
