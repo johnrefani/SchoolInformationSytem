@@ -57,15 +57,14 @@ Public Class login
                     ' Login success
                     Me.Hide()
                     If role.ToLower() = "admin" Then
-                        Dim AdminDashboard As New admin_dashboard
-                        AdminDashboard.Show()
+                        adminframe.Show()
                     ElseIf role.ToLower() = "student" Then
 
                         student_frame.Show()
 
                     ElseIf role.ToLower() = "teacher" Then
-                        Dim teacherDashboard As New teacher_dashboard
-                        teacherDashboard.Show()
+                        teacherframe.Show()
+
                     End If
                 Else
                     errorLabel.Text = "Invalid password. Please try again."
