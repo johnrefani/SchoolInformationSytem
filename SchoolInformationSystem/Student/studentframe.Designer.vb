@@ -63,260 +63,173 @@ Partial Class student_frame
         ' 
         ' sidepanel
         ' 
+        resources.ApplyResources(sidepanel, "sidepanel")
         sidepanel.BackColor = Color.Maroon
         sidepanel.Controls.Add(sidenav)
-        sidepanel.Dock = DockStyle.Left
-        sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 985)
-        sidepanel.TabIndex = 0
         ' 
         ' sidenav
         ' 
+        resources.ApplyResources(sidenav, "sidenav")
         sidenav.Controls.Add(menupanel)
         sidenav.Controls.Add(header)
-        sidenav.Location = New Point(25, 21)
         sidenav.Name = "sidenav"
-        sidenav.Size = New Size(300, 500)
-        sidenav.TabIndex = 0
         ' 
         ' menupanel
         ' 
+        resources.ApplyResources(menupanel, "menupanel")
         menupanel.Controls.Add(dashboard)
         menupanel.Controls.Add(enrollment)
         menupanel.Controls.Add(myprofile)
-        menupanel.Dock = DockStyle.Fill
-        menupanel.Location = New Point(0, 60)
         menupanel.Name = "menupanel"
-        menupanel.Size = New Size(300, 440)
-        menupanel.TabIndex = 2
         ' 
         ' dashboard
         ' 
+        resources.ApplyResources(dashboard, "dashboard")
         dashboard.Controls.Add(dashboardbutton)
         dashboard.Cursor = Cursors.Hand
-        dashboard.Location = New Point(3, 100)
         dashboard.Name = "dashboard"
-        dashboard.Size = New Size(294, 56)
-        dashboard.TabIndex = 0
         ' 
         ' dashboardbutton
         ' 
+        resources.ApplyResources(dashboardbutton, "dashboardbutton")
         dashboardbutton.BackColor = Color.Maroon
-        dashboardbutton.Dock = DockStyle.Fill
         dashboardbutton.FlatAppearance.BorderColor = Color.Maroon
         dashboardbutton.FlatAppearance.BorderSize = 0
-        dashboardbutton.FlatStyle = FlatStyle.Flat
         dashboardbutton.ForeColor = Color.White
-        dashboardbutton.Location = New Point(0, 0)
         dashboardbutton.Name = "dashboardbutton"
-        dashboardbutton.Size = New Size(294, 56)
-        dashboardbutton.TabIndex = 0
-        dashboardbutton.Text = "Dashboard"
         dashboardbutton.UseVisualStyleBackColor = False
         ' 
         ' enrollment
         ' 
-        enrollment.BackgroundImageLayout = ImageLayout.None
+        resources.ApplyResources(enrollment, "enrollment")
         enrollment.Controls.Add(enrollmentbutton)
         enrollment.Cursor = Cursors.Hand
         enrollment.ForeColor = SystemColors.ControlText
-        enrollment.Location = New Point(3, 185)
         enrollment.Name = "enrollment"
-        enrollment.Size = New Size(294, 56)
-        enrollment.TabIndex = 1
         ' 
         ' enrollmentbutton
         ' 
+        resources.ApplyResources(enrollmentbutton, "enrollmentbutton")
         enrollmentbutton.BackColor = Color.Maroon
         enrollmentbutton.Cursor = Cursors.Hand
-        enrollmentbutton.Dock = DockStyle.Fill
         enrollmentbutton.FlatAppearance.BorderSize = 0
-        enrollmentbutton.FlatStyle = FlatStyle.Flat
         enrollmentbutton.ForeColor = Color.White
-        enrollmentbutton.Location = New Point(0, 0)
         enrollmentbutton.Name = "enrollmentbutton"
-        enrollmentbutton.Size = New Size(294, 56)
-        enrollmentbutton.TabIndex = 0
-        enrollmentbutton.Text = "Enrollment"
         enrollmentbutton.UseVisualStyleBackColor = False
         ' 
         ' myprofile
         ' 
+        resources.ApplyResources(myprofile, "myprofile")
         myprofile.Controls.Add(myprofilebutton)
         myprofile.Cursor = Cursors.Hand
-        myprofile.Location = New Point(3, 265)
         myprofile.Name = "myprofile"
-        myprofile.Size = New Size(294, 56)
-        myprofile.TabIndex = 2
         ' 
         ' myprofilebutton
         ' 
+        resources.ApplyResources(myprofilebutton, "myprofilebutton")
         myprofilebutton.BackColor = Color.Maroon
-        myprofilebutton.Dock = DockStyle.Fill
         myprofilebutton.FlatAppearance.BorderSize = 0
-        myprofilebutton.FlatStyle = FlatStyle.Flat
         myprofilebutton.ForeColor = Color.White
-        myprofilebutton.Location = New Point(0, 0)
         myprofilebutton.Name = "myprofilebutton"
-        myprofilebutton.Size = New Size(294, 56)
-        myprofilebutton.TabIndex = 0
-        myprofilebutton.Text = "My Profile"
         myprofilebutton.UseVisualStyleBackColor = False
         ' 
         ' header
         ' 
+        resources.ApplyResources(header, "header")
         header.Controls.Add(title)
         header.Controls.Add(logo)
-        header.Dock = DockStyle.Top
-        header.Location = New Point(0, 0)
         header.Name = "header"
-        header.Size = New Size(300, 60)
-        header.TabIndex = 1
         ' 
         ' title
         ' 
-        title.Dock = DockStyle.Fill
-        title.Font = New Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        resources.ApplyResources(title, "title")
         title.ForeColor = Color.White
-        title.Location = New Point(57, 0)
         title.Name = "title"
-        title.Size = New Size(243, 60)
-        title.TabIndex = 1
-        title.Text = "CNSC Information System"
-        title.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' logo
         ' 
+        resources.ApplyResources(logo, "logo")
         logo.BackColor = Color.White
-        logo.Dock = DockStyle.Left
-        logo.Image = CType(resources.GetObject("logo.Image"), Image)
-        logo.Location = New Point(0, 0)
         logo.Name = "logo"
-        logo.Size = New Size(57, 60)
-        logo.SizeMode = PictureBoxSizeMode.Zoom
-        logo.TabIndex = 0
         logo.TabStop = False
         ' 
         ' dashboardpanel
         ' 
+        resources.ApplyResources(dashboardpanel, "dashboardpanel")
         dashboardpanel.Controls.Add(head_dashboard)
-        dashboardpanel.Dock = DockStyle.Fill
-        dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1074, 985)
-        dashboardpanel.TabIndex = 1
         ' 
         ' head_dashboard
         ' 
+        resources.ApplyResources(head_dashboard, "head_dashboard")
         head_dashboard.BackColor = Color.Maroon
         head_dashboard.Controls.Add(title_dashboard)
         head_dashboard.Controls.Add(username)
-        head_dashboard.Dock = DockStyle.Top
-        head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1074, 81)
-        head_dashboard.TabIndex = 0
         ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        resources.ApplyResources(title_dashboard, "title_dashboard")
         title_dashboard.ForeColor = Color.White
-        title_dashboard.Location = New Point(16, 21)
         title_dashboard.Name = "title_dashboard"
-        title_dashboard.Size = New Size(157, 38)
-        title_dashboard.TabIndex = 0
-        title_dashboard.Text = "Welcome,"
-        title_dashboard.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' username
         ' 
-        username.Font = New Font("Tahoma", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        resources.ApplyResources(username, "username")
         username.ForeColor = Color.White
-        username.Location = New Point(179, 21)
         username.Name = "username"
-        username.Size = New Size(157, 38)
-        username.TabIndex = 1
-        username.Text = "John Doe"
-        username.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' enrollmentpanel
         ' 
+        resources.ApplyResources(enrollmentpanel, "enrollmentpanel")
         enrollmentpanel.Controls.Add(head_enrollment)
-        enrollmentpanel.Dock = DockStyle.Fill
-        enrollmentpanel.Location = New Point(350, 0)
         enrollmentpanel.Name = "enrollmentpanel"
-        enrollmentpanel.Size = New Size(1074, 985)
-        enrollmentpanel.TabIndex = 2
         ' 
         ' head_enrollment
         ' 
+        resources.ApplyResources(head_enrollment, "head_enrollment")
         head_enrollment.BackColor = Color.Maroon
         head_enrollment.Controls.Add(title_enrollment)
-        head_enrollment.Dock = DockStyle.Top
-        head_enrollment.Location = New Point(0, 0)
         head_enrollment.Name = "head_enrollment"
-        head_enrollment.Size = New Size(1074, 81)
-        head_enrollment.TabIndex = 0
         ' 
         ' title_enrollment
         ' 
-        title_enrollment.Font = New Font("Tahoma", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        resources.ApplyResources(title_enrollment, "title_enrollment")
         title_enrollment.ForeColor = Color.White
-        title_enrollment.Location = New Point(16, 21)
         title_enrollment.Name = "title_enrollment"
-        title_enrollment.Size = New Size(366, 38)
-        title_enrollment.TabIndex = 0
-        title_enrollment.Text = "My Enrollment History"
-        title_enrollment.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' myprofilepanel
         ' 
+        resources.ApplyResources(myprofilepanel, "myprofilepanel")
         myprofilepanel.Controls.Add(head_myprofile)
-        myprofilepanel.Dock = DockStyle.Fill
-        myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1074, 985)
-        myprofilepanel.TabIndex = 3
         ' 
         ' head_myprofile
         ' 
+        resources.ApplyResources(head_myprofile, "head_myprofile")
         head_myprofile.BackColor = Color.Maroon
         head_myprofile.Controls.Add(title_myprofile)
-        head_myprofile.Dock = DockStyle.Top
-        head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1074, 81)
-        head_myprofile.TabIndex = 0
         ' 
         ' title_myprofile
         ' 
-        title_myprofile.Font = New Font("Tahoma", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        resources.ApplyResources(title_myprofile, "title_myprofile")
         title_myprofile.ForeColor = Color.White
-        title_myprofile.Location = New Point(16, 21)
         title_myprofile.Name = "title_myprofile"
-        title_myprofile.Size = New Size(366, 38)
-        title_myprofile.TabIndex = 0
-        title_myprofile.Text = "My Profile"
-        title_myprofile.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' student_frame
         ' 
-        AutoScaleDimensions = New SizeF(12F, 25F)
+        resources.ApplyResources(Me, "$this")
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1424, 985)
         Controls.Add(dashboardpanel)
         Controls.Add(enrollmentpanel)
         Controls.Add(myprofilepanel)
         Controls.Add(sidepanel)
-        Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        FormBorderStyle = FormBorderStyle.FixedToolWindow
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        Margin = New Padding(5)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        MaximizeBox = False
         Name = "student_frame"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "Student Frame"
         sidepanel.ResumeLayout(False)
         sidenav.ResumeLayout(False)
         menupanel.ResumeLayout(False)

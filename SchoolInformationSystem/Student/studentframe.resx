@@ -117,7 +117,453 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;dashboardbutton.Parent" xml:space="preserve">
+    <value>dashboard</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="head_dashboard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;dashboardpanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="logo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;sidepanel.Name" xml:space="preserve">
+    <value>sidepanel</value>
+  </data>
+  <data name="&gt;&gt;username.Parent" xml:space="preserve">
+    <value>head_dashboard</value>
+  </data>
+  <data name="&gt;&gt;myprofilebutton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 15.75pt</value>
+  </data>
+  <data name="&gt;&gt;myprofilepanel.Name" xml:space="preserve">
+    <value>myprofilepanel</value>
+  </data>
+  <data name="title.Text" xml:space="preserve">
+    <value>CNSC Information System</value>
+  </data>
+  <data name="&gt;&gt;myprofile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;title.Name" xml:space="preserve">
+    <value>title</value>
+  </data>
+  <data name="&gt;&gt;head_enrollment.Parent" xml:space="preserve">
+    <value>enrollmentpanel</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="sidepanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="enrollmentpanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;head_myprofile.Name" xml:space="preserve">
+    <value>head_myprofile</value>
+  </data>
+  <data name="username.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 38</value>
+  </data>
+  <data name="sidepanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="myprofilepanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 0</value>
+  </data>
+  <data name="&gt;&gt;logo.Parent" xml:space="preserve">
+    <value>header</value>
+  </data>
+  <data name="&gt;&gt;myprofilebutton.Name" xml:space="preserve">
+    <value>myprofilebutton</value>
+  </data>
+  <data name="&gt;&gt;sidenav.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dashboard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="myprofile.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="title.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;title_dashboard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;enrollment.Name" xml:space="preserve">
+    <value>enrollment</value>
+  </data>
+  <data name="username.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;title_dashboard.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;header.Parent" xml:space="preserve">
+    <value>sidenav</value>
+  </data>
+  <data name="myprofilebutton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;dashboard.Parent" xml:space="preserve">
+    <value>menupanel</value>
+  </data>
+  <data name="&gt;&gt;title_dashboard.Parent" xml:space="preserve">
+    <value>head_dashboard</value>
+  </data>
+  <data name="dashboard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 56</value>
+  </data>
+  <data name="&gt;&gt;enrollmentbutton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="logo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;title_myprofile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="username.Text" xml:space="preserve">
+    <value>John Doe</value>
+  </data>
+  <data name="&gt;&gt;dashboardpanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;enrollment.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="menupanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 60</value>
+  </data>
+  <data name="myprofile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 265</value>
+  </data>
+  <data name="&gt;&gt;myprofile.Parent" xml:space="preserve">
+    <value>menupanel</value>
+  </data>
+  <data name="head_myprofile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="header.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 60</value>
+  </data>
+  <data name="menupanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 440</value>
+  </data>
+  <data name="logo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 60</value>
+  </data>
+  <data name="&gt;&gt;sidepanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="title_enrollment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 38</value>
+  </data>
+  <data name="&gt;&gt;menupanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dashboard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 100</value>
+  </data>
+  <data name="&gt;&gt;header.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="username.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1424, 985</value>
+  </data>
+  <data name="&gt;&gt;head_enrollment.Name" xml:space="preserve">
+    <value>head_enrollment</value>
+  </data>
+  <data name="title_myprofile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 38</value>
+  </data>
+  <data name="head_dashboard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1074, 81</value>
+  </data>
+  <data name="myprofilebutton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="title.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;menupanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="menupanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;title.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dashboard.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="title.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 60</value>
+  </data>
+  <data name="enrollment.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;dashboardbutton.Name" xml:space="preserve">
+    <value>dashboardbutton</value>
+  </data>
+  <data name="title.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;myprofilebutton.Parent" xml:space="preserve">
+    <value>myprofile</value>
+  </data>
+  <data name="&gt;&gt;enrollmentpanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;head_dashboard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="enrollment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 185</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="myprofilepanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1074, 985</value>
+  </data>
+  <data name="dashboardpanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1074, 985</value>
+  </data>
+  <data name="logo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="myprofilebutton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 56</value>
+  </data>
+  <data name="sidenav.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 500</value>
+  </data>
+  <data name="&gt;&gt;sidenav.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="enrollmentbutton.Text" xml:space="preserve">
+    <value>Enrollment</value>
+  </data>
+  <data name="&gt;&gt;head_dashboard.Parent" xml:space="preserve">
+    <value>dashboardpanel</value>
+  </data>
+  <data name="&gt;&gt;title.Parent" xml:space="preserve">
+    <value>header</value>
+  </data>
+  <data name="&gt;&gt;myprofile.Name" xml:space="preserve">
+    <value>myprofile</value>
+  </data>
+  <data name="head_enrollment.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="header.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;myprofile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menupanel.Name" xml:space="preserve">
+    <value>menupanel</value>
+  </data>
+  <data name="&gt;&gt;enrollmentpanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;enrollmentbutton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="enrollment.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="title_myprofile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;head_myprofile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="header.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;username.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="title_myprofile.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;username.Name" xml:space="preserve">
+    <value>username</value>
+  </data>
+  <data name="&gt;&gt;dashboardbutton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="title_dashboard.Text" xml:space="preserve">
+    <value>Welcome,</value>
+  </data>
+  <data name="&gt;&gt;menupanel.Parent" xml:space="preserve">
+    <value>sidenav</value>
+  </data>
+  <data name="&gt;&gt;title_enrollment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sidepanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="enrollmentpanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="menupanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;dashboard.Name" xml:space="preserve">
+    <value>dashboard</value>
+  </data>
+  <data name="&gt;&gt;header.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="title_dashboard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 38</value>
+  </data>
+  <data name="dashboardbutton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="sidepanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 985</value>
+  </data>
+  <data name="&gt;&gt;logo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="username.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt</value>
+  </data>
+  <data name="dashboardbutton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="title.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="dashboardbutton.Text" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="sidenav.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;head_dashboard.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="head_enrollment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1074, 81</value>
+  </data>
+  <data name="dashboardbutton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;enrollmentbutton.Name" xml:space="preserve">
+    <value>enrollmentbutton</value>
+  </data>
+  <data name="&gt;&gt;logo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="title.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 0</value>
+  </data>
+  <data name="title_dashboard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 21</value>
+  </data>
+  <data name="username.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 21</value>
+  </data>
+  <data name="sidenav.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 21</value>
+  </data>
+  <data name="&gt;&gt;head_dashboard.Name" xml:space="preserve">
+    <value>head_dashboard</value>
+  </data>
+  <data name="head_myprofile.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="title_myprofile.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt</value>
+  </data>
+  <data name="&gt;&gt;sidenav.Name" xml:space="preserve">
+    <value>sidenav</value>
+  </data>
+  <data name="head_enrollment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="myprofilebutton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Student Frame</value>
+  </data>
+  <data name="&gt;&gt;enrollment.Parent" xml:space="preserve">
+    <value>menupanel</value>
+  </data>
+  <data name="head_dashboard.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dashboardpanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="head_myprofile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;enrollmentpanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;myprofilebutton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>student_frame</value>
+  </data>
+  <data name="enrollmentbutton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="title_enrollment.Text" xml:space="preserve">
+    <value>My Enrollment History</value>
+  </data>
+  <data name="enrollment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 56</value>
+  </data>
+  <data name="head_enrollment.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="title_myprofile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 21</value>
+  </data>
+  <data name="title_dashboard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt</value>
+  </data>
+  <data name="title_enrollment.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="dashboardbutton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 56</value>
+  </data>
+  <data name="&gt;&gt;sidenav.Parent" xml:space="preserve">
+    <value>sidepanel</value>
+  </data>
+  <data name="&gt;&gt;myprofilepanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="myprofilebutton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="head_myprofile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1074, 81</value>
+  </data>
   <data name="logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKgAAACgCAYAAACYGCfZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -523,6 +969,12 @@
         rcC5BSMj8zDrvP1bYP/www9Zu5nJhSZVtLPeuPvtZG3xpEmT6vyV3PP/AY0NxeQ2dl/JAAAAAElFTkSu
         QmCC
 </value>
+  </data>
+  <data name="enrollmentpanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 0</value>
+  </data>
+  <data name="&gt;&gt;title_enrollment.Name" xml:space="preserve">
+    <value>title_enrollment</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4410,4 +4862,158 @@
         21JSUjxccgCXuLDExsfHNx4+fDh0/fXXz7ct583/D1WvS9PqZF44AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="&gt;&gt;sidepanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dashboardpanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;head_myprofile.Parent" xml:space="preserve">
+    <value>myprofilepanel</value>
+  </data>
+  <data name="&gt;&gt;head_enrollment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;title_myprofile.Parent" xml:space="preserve">
+    <value>head_myprofile</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;dashboardpanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="dashboardpanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 0</value>
+  </data>
+  <data name="title_dashboard.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="enrollmentbutton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="head_dashboard.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;logo.Name" xml:space="preserve">
+    <value>logo</value>
+  </data>
+  <data name="&gt;&gt;title_enrollment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dashboardbutton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="enrollmentbutton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="myprofilepanel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="dashboardbutton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dashboard.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;head_enrollment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="title_enrollment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 21</value>
+  </data>
+  <data name="myprofilebutton.Text" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="enrollmentbutton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;header.Name" xml:space="preserve">
+    <value>header</value>
+  </data>
+  <data name="&gt;&gt;title_myprofile.Name" xml:space="preserve">
+    <value>title_myprofile</value>
+  </data>
+  <data name="&gt;&gt;enrollment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="myprofile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 56</value>
+  </data>
+  <data name="&gt;&gt;enrollmentpanel.Name" xml:space="preserve">
+    <value>enrollmentpanel</value>
+  </data>
+  <data name="title_enrollment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 24pt</value>
+  </data>
+  <data name="&gt;&gt;dashboardpanel.Name" xml:space="preserve">
+    <value>dashboardpanel</value>
+  </data>
+  <data name="sidepanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;myprofilepanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="myprofilepanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="title_enrollment.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>12, 25</value>
+  </data>
+  <data name="logo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;title_enrollment.Parent" xml:space="preserve">
+    <value>head_enrollment</value>
+  </data>
+  <data name="enrollmentbutton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 56</value>
+  </data>
+  <data name="title_myprofile.Text" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="header.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;enrollmentbutton.Parent" xml:space="preserve">
+    <value>enrollment</value>
+  </data>
+  <data name="&gt;&gt;title_myprofile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;title.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="title_dashboard.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;head_myprofile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;myprofilepanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;username.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;title_dashboard.Name" xml:space="preserve">
+    <value>title_dashboard</value>
+  </data>
+  <data name="enrollmentpanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1074, 985</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>aa</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
