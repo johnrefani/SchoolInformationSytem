@@ -1,6 +1,5 @@
 ﻿Public Class student_frame
 
-    ' Called when the form loads
     Private Sub student_frame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         HideAllPanels()
         dashboardpanel.Visible = True
@@ -45,4 +44,6 @@
         myprofilepanel.Visible = True
         HighlightActiveButton(myprofilebutton)
     End Sub
+
+
 End Class

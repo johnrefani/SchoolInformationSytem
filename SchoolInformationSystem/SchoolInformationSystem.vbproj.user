@@ -4,6 +4,9 @@
     <Compile Update="Admin\adminframe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Instructor\instructorframe.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Student\studentframe.vb">
       <SubType>Form</SubType>
     </Compile>
