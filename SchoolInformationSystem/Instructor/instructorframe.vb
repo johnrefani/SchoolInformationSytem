@@ -40,4 +40,5 @@
         myprofilepanel.Visible = True
         HighlightActiveButton(myprofilebutton)
     End Sub
+
 End Class
