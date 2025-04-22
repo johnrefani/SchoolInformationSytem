@@ -1,4 +1,4 @@
-﻿Public Class instructor_frame
+﻿Public Class instructorframe
     Private Sub instructor_frame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         HideAllPanels()
         dashboardpanel.Visible = True

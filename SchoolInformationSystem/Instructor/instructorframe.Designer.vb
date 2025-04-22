@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class instructor_frame
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class instructorframe
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class instructor_frame
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructor_frame))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         head_myprofile = New Panel()
@@ -63,7 +63,7 @@ Partial Class instructor_frame
         ' 
         ' title_myprofile
         ' 
-        title_myprofile.Font = New Font("Tahoma", 24F)
+        title_myprofile.Font = New Font("Tahoma", 24.0F)
         title_myprofile.ForeColor = Color.White
         title_myprofile.ImeMode = ImeMode.NoControl
         title_myprofile.Location = New Point(16, 28)
@@ -94,7 +94,7 @@ Partial Class instructor_frame
         ' 
         ' title_classes
         ' 
-        title_classes.Font = New Font("Tahoma", 24F)
+        title_classes.Font = New Font("Tahoma", 24.0F)
         title_classes.ForeColor = Color.White
         title_classes.ImeMode = ImeMode.NoControl
         title_classes.Location = New Point(16, 28)
@@ -127,18 +127,22 @@ Partial Class instructor_frame
         ' dashboardbutton
         ' 
         dashboardbutton.BackColor = Color.Maroon
+        dashboardbutton.BackgroundImageLayout = ImageLayout.Center
         dashboardbutton.Dock = DockStyle.Fill
         dashboardbutton.FlatAppearance.BorderColor = Color.Maroon
         dashboardbutton.FlatAppearance.BorderSize = 0
         dashboardbutton.FlatStyle = FlatStyle.Flat
         dashboardbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dashboardbutton.ForeColor = Color.White
+        dashboardbutton.Image = CType(resources.GetObject("dashboardbutton.Image"), Image)
+        dashboardbutton.ImageAlign = ContentAlignment.MiddleLeft
         dashboardbutton.ImeMode = ImeMode.NoControl
         dashboardbutton.Location = New Point(0, 0)
         dashboardbutton.Name = "dashboardbutton"
         dashboardbutton.Size = New Size(294, 56)
         dashboardbutton.TabIndex = 0
-        dashboardbutton.Text = "Dashboard"
+        dashboardbutton.Text = "       Dashboard"
+        dashboardbutton.TextAlign = ContentAlignment.MiddleLeft
         dashboardbutton.UseVisualStyleBackColor = False
         ' 
         ' classes
@@ -155,18 +159,22 @@ Partial Class instructor_frame
         ' classesbutton
         ' 
         classesbutton.BackColor = Color.Maroon
+        classesbutton.BackgroundImageLayout = ImageLayout.Center
         classesbutton.Cursor = Cursors.Hand
         classesbutton.Dock = DockStyle.Fill
         classesbutton.FlatAppearance.BorderSize = 0
         classesbutton.FlatStyle = FlatStyle.Flat
         classesbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         classesbutton.ForeColor = Color.WhiteSmoke
+        classesbutton.Image = CType(resources.GetObject("classesbutton.Image"), Image)
+        classesbutton.ImageAlign = ContentAlignment.MiddleLeft
         classesbutton.ImeMode = ImeMode.NoControl
         classesbutton.Location = New Point(0, 0)
         classesbutton.Name = "classesbutton"
         classesbutton.Size = New Size(294, 56)
         classesbutton.TabIndex = 0
-        classesbutton.Text = "Classes"
+        classesbutton.Text = "       Classes"
+        classesbutton.TextAlign = ContentAlignment.MiddleLeft
         classesbutton.UseVisualStyleBackColor = False
         ' 
         ' myprofile
@@ -181,17 +189,21 @@ Partial Class instructor_frame
         ' myprofilebutton
         ' 
         myprofilebutton.BackColor = Color.Maroon
+        myprofilebutton.BackgroundImageLayout = ImageLayout.Center
         myprofilebutton.Dock = DockStyle.Fill
         myprofilebutton.FlatAppearance.BorderSize = 0
         myprofilebutton.FlatStyle = FlatStyle.Flat
         myprofilebutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         myprofilebutton.ForeColor = Color.White
+        myprofilebutton.Image = CType(resources.GetObject("myprofilebutton.Image"), Image)
+        myprofilebutton.ImageAlign = ContentAlignment.MiddleLeft
         myprofilebutton.ImeMode = ImeMode.NoControl
         myprofilebutton.Location = New Point(0, 0)
         myprofilebutton.Name = "myprofilebutton"
         myprofilebutton.Size = New Size(294, 56)
         myprofilebutton.TabIndex = 0
-        myprofilebutton.Text = "My Profile"
+        myprofilebutton.Text = "       My Profile"
+        myprofilebutton.TextAlign = ContentAlignment.MiddleLeft
         myprofilebutton.UseVisualStyleBackColor = False
         ' 
         ' header
@@ -251,7 +263,7 @@ Partial Class instructor_frame
         ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24F)
+        title_dashboard.Font = New Font("Tahoma", 24.0F)
         title_dashboard.ForeColor = Color.White
         title_dashboard.ImeMode = ImeMode.NoControl
         title_dashboard.Location = New Point(16, 28)
@@ -263,7 +275,7 @@ Partial Class instructor_frame
         ' 
         ' username
         ' 
-        username.Font = New Font("Tahoma", 24F)
+        username.Font = New Font("Tahoma", 24.0F)
         username.ForeColor = Color.White
         username.ImeMode = ImeMode.NoControl
         username.Location = New Point(179, 28)
@@ -312,9 +324,9 @@ Partial Class instructor_frame
         dashboardpanel.Size = New Size(1074, 985)
         dashboardpanel.TabIndex = 5
         ' 
-        ' instructor_frame
+        ' instructorframe
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
@@ -324,7 +336,7 @@ Partial Class instructor_frame
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        Name = "instructor_frame"
+        Name = "instructorframe"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Instructor"
         myprofilepanel.ResumeLayout(False)

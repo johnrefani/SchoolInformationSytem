@@ -6,6 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <ApplicationIcon>Resources\Logo.ico</ApplicationIcon>
+    <StartupObject>SchoolInformationSystem.My.MyApplication</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

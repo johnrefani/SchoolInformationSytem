@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class admin_frame
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class adminframe
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class admin_frame
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(admin_frame))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminframe))
         dashboardpanel = New Panel()
         head_dashboard = New Panel()
         title_dashboard = New Label()
@@ -99,7 +99,7 @@ Partial Class admin_frame
         ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24F)
+        title_dashboard.Font = New Font("Tahoma", 24.0F)
         title_dashboard.ForeColor = Color.White
         title_dashboard.ImeMode = ImeMode.NoControl
         title_dashboard.Location = New Point(16, 28)
@@ -111,7 +111,7 @@ Partial Class admin_frame
         ' 
         ' username
         ' 
-        username.Font = New Font("Tahoma", 24F)
+        username.Font = New Font("Tahoma", 24.0F)
         username.ForeColor = Color.White
         username.ImeMode = ImeMode.NoControl
         username.Location = New Point(179, 28)
@@ -197,12 +197,15 @@ Partial Class admin_frame
         dashboardbutton.FlatStyle = FlatStyle.Flat
         dashboardbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dashboardbutton.ForeColor = Color.White
+        dashboardbutton.Image = CType(resources.GetObject("dashboardbutton.Image"), Image)
+        dashboardbutton.ImageAlign = ContentAlignment.MiddleLeft
         dashboardbutton.ImeMode = ImeMode.NoControl
         dashboardbutton.Location = New Point(0, 0)
         dashboardbutton.Name = "dashboardbutton"
         dashboardbutton.Size = New Size(294, 56)
         dashboardbutton.TabIndex = 0
-        dashboardbutton.Text = "Dashboard"
+        dashboardbutton.Text = "       Dashboard"
+        dashboardbutton.TextAlign = ContentAlignment.MiddleLeft
         dashboardbutton.UseVisualStyleBackColor = False
         ' 
         ' users
@@ -225,12 +228,15 @@ Partial Class admin_frame
         usersbutton.FlatStyle = FlatStyle.Flat
         usersbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         usersbutton.ForeColor = Color.WhiteSmoke
+        usersbutton.Image = CType(resources.GetObject("usersbutton.Image"), Image)
+        usersbutton.ImageAlign = ContentAlignment.MiddleLeft
         usersbutton.ImeMode = ImeMode.NoControl
         usersbutton.Location = New Point(0, 0)
         usersbutton.Name = "usersbutton"
         usersbutton.Size = New Size(294, 56)
         usersbutton.TabIndex = 0
-        usersbutton.Text = "Users"
+        usersbutton.Text = "       Users"
+        usersbutton.TextAlign = ContentAlignment.MiddleLeft
         usersbutton.UseVisualStyleBackColor = False
         ' 
         ' enrollments
@@ -250,12 +256,15 @@ Partial Class admin_frame
         enrollmentsbutton.FlatStyle = FlatStyle.Flat
         enrollmentsbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         enrollmentsbutton.ForeColor = Color.White
+        enrollmentsbutton.Image = CType(resources.GetObject("enrollmentsbutton.Image"), Image)
+        enrollmentsbutton.ImageAlign = ContentAlignment.MiddleLeft
         enrollmentsbutton.ImeMode = ImeMode.NoControl
         enrollmentsbutton.Location = New Point(0, 0)
         enrollmentsbutton.Name = "enrollmentsbutton"
         enrollmentsbutton.Size = New Size(294, 56)
         enrollmentsbutton.TabIndex = 0
-        enrollmentsbutton.Text = "Enrollments"
+        enrollmentsbutton.Text = "       Enrollments"
+        enrollmentsbutton.TextAlign = ContentAlignment.MiddleLeft
         enrollmentsbutton.UseVisualStyleBackColor = False
         ' 
         ' subjects
@@ -276,12 +285,15 @@ Partial Class admin_frame
         subjectsbutton.FlatStyle = FlatStyle.Flat
         subjectsbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         subjectsbutton.ForeColor = Color.White
+        subjectsbutton.Image = CType(resources.GetObject("subjectsbutton.Image"), Image)
+        subjectsbutton.ImageAlign = ContentAlignment.MiddleLeft
         subjectsbutton.ImeMode = ImeMode.NoControl
         subjectsbutton.Location = New Point(0, 0)
         subjectsbutton.Name = "subjectsbutton"
         subjectsbutton.Size = New Size(294, 56)
         subjectsbutton.TabIndex = 0
-        subjectsbutton.Text = "Subjects"
+        subjectsbutton.Text = "       Subjects"
+        subjectsbutton.TextAlign = ContentAlignment.MiddleLeft
         subjectsbutton.UseVisualStyleBackColor = False
         ' 
         ' configuration
@@ -302,12 +314,15 @@ Partial Class admin_frame
         configurationbutton.FlatStyle = FlatStyle.Flat
         configurationbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         configurationbutton.ForeColor = Color.White
+        configurationbutton.Image = CType(resources.GetObject("configurationbutton.Image"), Image)
+        configurationbutton.ImageAlign = ContentAlignment.MiddleLeft
         configurationbutton.ImeMode = ImeMode.NoControl
         configurationbutton.Location = New Point(0, 0)
         configurationbutton.Name = "configurationbutton"
         configurationbutton.Size = New Size(294, 56)
         configurationbutton.TabIndex = 0
-        configurationbutton.Text = "Configuration"
+        configurationbutton.Text = "       Configuration"
+        configurationbutton.TextAlign = ContentAlignment.MiddleLeft
         configurationbutton.UseVisualStyleBackColor = False
         ' 
         ' userspanel
@@ -331,7 +346,7 @@ Partial Class admin_frame
         ' 
         ' title_users
         ' 
-        title_users.Font = New Font("Tahoma", 24F)
+        title_users.Font = New Font("Tahoma", 24.0F)
         title_users.ForeColor = Color.White
         title_users.ImeMode = ImeMode.NoControl
         title_users.Location = New Point(16, 28)
@@ -353,7 +368,7 @@ Partial Class admin_frame
         ' 
         ' title_enrollments
         ' 
-        title_enrollments.Font = New Font("Tahoma", 24F)
+        title_enrollments.Font = New Font("Tahoma", 24.0F)
         title_enrollments.ForeColor = Color.White
         title_enrollments.ImeMode = ImeMode.NoControl
         title_enrollments.Location = New Point(16, 28)
@@ -403,7 +418,7 @@ Partial Class admin_frame
         ' 
         ' title_subjects
         ' 
-        title_subjects.Font = New Font("Tahoma", 24F)
+        title_subjects.Font = New Font("Tahoma", 24.0F)
         title_subjects.ForeColor = Color.White
         title_subjects.ImeMode = ImeMode.NoControl
         title_subjects.Location = New Point(16, 28)
@@ -434,7 +449,7 @@ Partial Class admin_frame
         ' 
         ' title_configuration
         ' 
-        title_configuration.Font = New Font("Tahoma", 24F)
+        title_configuration.Font = New Font("Tahoma", 24.0F)
         title_configuration.ForeColor = Color.White
         title_configuration.ImeMode = ImeMode.NoControl
         title_configuration.Location = New Point(16, 28)
@@ -444,9 +459,9 @@ Partial Class admin_frame
         title_configuration.Text = "Configure Database"
         title_configuration.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' admin_frame
+        ' adminframe
         ' 
-        AutoScaleDimensions = New SizeF(12F, 25F)
+        AutoScaleDimensions = New SizeF(12.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
@@ -460,7 +475,7 @@ Partial Class admin_frame
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(5)
-        Name = "admin_frame"
+        Name = "adminframe"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Admin"
         dashboardpanel.ResumeLayout(False)

@@ -1,4 +1,4 @@
-﻿Public Class admin_frame
+﻿Public Class adminframe
     Private Sub admin_frame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         HideAllPanels()
         dashboardpanel.Visible = True
