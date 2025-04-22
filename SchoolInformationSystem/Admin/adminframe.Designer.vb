@@ -32,14 +32,14 @@ Partial Class admin_frame
         title = New Label()
         logo = New PictureBox()
         menupanel = New Panel()
-        subjects = New Panel()
-        subjectsbutton = New Button()
         dashboard = New Panel()
         dashboardbutton = New Button()
         users = New Panel()
         usersbutton = New Button()
         enrollments = New Panel()
         enrollmentsbutton = New Button()
+        subjects = New Panel()
+        subjectsbutton = New Button()
         configuration = New Panel()
         configurationbutton = New Button()
         userspanel = New Panel()
@@ -61,10 +61,10 @@ Partial Class admin_frame
         header.SuspendLayout()
         CType(logo, ComponentModel.ISupportInitialize).BeginInit()
         menupanel.SuspendLayout()
-        subjects.SuspendLayout()
         dashboard.SuspendLayout()
         users.SuspendLayout()
         enrollments.SuspendLayout()
+        subjects.SuspendLayout()
         configuration.SuspendLayout()
         userspanel.SuspendLayout()
         head_users.SuspendLayout()
@@ -118,7 +118,7 @@ Partial Class admin_frame
         username.Name = "username"
         username.Size = New Size(157, 38)
         username.TabIndex = 1
-        username.Text = "John Doe"
+        username.Text = "Admin"
         username.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' sidenav
@@ -168,42 +168,16 @@ Partial Class admin_frame
         ' 
         ' menupanel
         ' 
-        menupanel.Controls.Add(subjects)
         menupanel.Controls.Add(dashboard)
         menupanel.Controls.Add(users)
         menupanel.Controls.Add(enrollments)
+        menupanel.Controls.Add(subjects)
         menupanel.Controls.Add(configuration)
         menupanel.Dock = DockStyle.Fill
         menupanel.Location = New Point(0, 0)
         menupanel.Name = "menupanel"
         menupanel.Size = New Size(300, 580)
         menupanel.TabIndex = 2
-        ' 
-        ' subjects
-        ' 
-        subjects.Controls.Add(subjectsbutton)
-        subjects.Cursor = Cursors.Hand
-        subjects.Location = New Point(3, 286)
-        subjects.Name = "subjects"
-        subjects.Size = New Size(294, 56)
-        subjects.TabIndex = 3
-        ' 
-        ' subjectsbutton
-        ' 
-        subjectsbutton.BackColor = Color.Maroon
-        subjectsbutton.Dock = DockStyle.Fill
-        subjectsbutton.FlatAppearance.BorderColor = Color.Maroon
-        subjectsbutton.FlatAppearance.BorderSize = 0
-        subjectsbutton.FlatStyle = FlatStyle.Flat
-        subjectsbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        subjectsbutton.ForeColor = Color.White
-        subjectsbutton.ImeMode = ImeMode.NoControl
-        subjectsbutton.Location = New Point(0, 0)
-        subjectsbutton.Name = "subjectsbutton"
-        subjectsbutton.Size = New Size(294, 56)
-        subjectsbutton.TabIndex = 0
-        subjectsbutton.Text = "Subjects"
-        subjectsbutton.UseVisualStyleBackColor = False
         ' 
         ' dashboard
         ' 
@@ -284,6 +258,32 @@ Partial Class admin_frame
         enrollmentsbutton.Text = "Enrollments"
         enrollmentsbutton.UseVisualStyleBackColor = False
         ' 
+        ' subjects
+        ' 
+        subjects.Controls.Add(subjectsbutton)
+        subjects.Cursor = Cursors.Hand
+        subjects.Location = New Point(3, 286)
+        subjects.Name = "subjects"
+        subjects.Size = New Size(294, 56)
+        subjects.TabIndex = 3
+        ' 
+        ' subjectsbutton
+        ' 
+        subjectsbutton.BackColor = Color.Maroon
+        subjectsbutton.Dock = DockStyle.Fill
+        subjectsbutton.FlatAppearance.BorderColor = Color.Maroon
+        subjectsbutton.FlatAppearance.BorderSize = 0
+        subjectsbutton.FlatStyle = FlatStyle.Flat
+        subjectsbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        subjectsbutton.ForeColor = Color.White
+        subjectsbutton.ImeMode = ImeMode.NoControl
+        subjectsbutton.Location = New Point(0, 0)
+        subjectsbutton.Name = "subjectsbutton"
+        subjectsbutton.Size = New Size(294, 56)
+        subjectsbutton.TabIndex = 0
+        subjectsbutton.Text = "Subjects"
+        subjectsbutton.UseVisualStyleBackColor = False
+        ' 
         ' configuration
         ' 
         configuration.Controls.Add(configurationbutton)
@@ -326,7 +326,7 @@ Partial Class admin_frame
         head_users.Dock = DockStyle.Top
         head_users.Location = New Point(0, 0)
         head_users.Name = "head_users"
-        head_users.Size = New Size(1074, 81)
+        head_users.Size = New Size(1074, 94)
         head_users.TabIndex = 0
         ' 
         ' title_users
@@ -334,7 +334,7 @@ Partial Class admin_frame
         title_users.Font = New Font("Tahoma", 24F)
         title_users.ForeColor = Color.White
         title_users.ImeMode = ImeMode.NoControl
-        title_users.Location = New Point(16, 21)
+        title_users.Location = New Point(16, 28)
         title_users.Name = "title_users"
         title_users.Size = New Size(366, 38)
         title_users.TabIndex = 0
@@ -348,7 +348,7 @@ Partial Class admin_frame
         head_enrollments.Dock = DockStyle.Top
         head_enrollments.Location = New Point(0, 0)
         head_enrollments.Name = "head_enrollments"
-        head_enrollments.Size = New Size(1074, 81)
+        head_enrollments.Size = New Size(1074, 94)
         head_enrollments.TabIndex = 0
         ' 
         ' title_enrollments
@@ -356,7 +356,7 @@ Partial Class admin_frame
         title_enrollments.Font = New Font("Tahoma", 24F)
         title_enrollments.ForeColor = Color.White
         title_enrollments.ImeMode = ImeMode.NoControl
-        title_enrollments.Location = New Point(16, 21)
+        title_enrollments.Location = New Point(16, 28)
         title_enrollments.Name = "title_enrollments"
         title_enrollments.Size = New Size(366, 38)
         title_enrollments.TabIndex = 0
@@ -398,7 +398,7 @@ Partial Class admin_frame
         head_subjects.Dock = DockStyle.Top
         head_subjects.Location = New Point(0, 0)
         head_subjects.Name = "head_subjects"
-        head_subjects.Size = New Size(1074, 81)
+        head_subjects.Size = New Size(1074, 94)
         head_subjects.TabIndex = 0
         ' 
         ' title_subjects
@@ -406,7 +406,7 @@ Partial Class admin_frame
         title_subjects.Font = New Font("Tahoma", 24F)
         title_subjects.ForeColor = Color.White
         title_subjects.ImeMode = ImeMode.NoControl
-        title_subjects.Location = New Point(16, 21)
+        title_subjects.Location = New Point(16, 28)
         title_subjects.Name = "title_subjects"
         title_subjects.Size = New Size(366, 38)
         title_subjects.TabIndex = 0
@@ -429,7 +429,7 @@ Partial Class admin_frame
         head_configuration.Dock = DockStyle.Top
         head_configuration.Location = New Point(0, 0)
         head_configuration.Name = "head_configuration"
-        head_configuration.Size = New Size(1074, 81)
+        head_configuration.Size = New Size(1074, 94)
         head_configuration.TabIndex = 0
         ' 
         ' title_configuration
@@ -437,7 +437,7 @@ Partial Class admin_frame
         title_configuration.Font = New Font("Tahoma", 24F)
         title_configuration.ForeColor = Color.White
         title_configuration.ImeMode = ImeMode.NoControl
-        title_configuration.Location = New Point(16, 21)
+        title_configuration.Location = New Point(16, 28)
         title_configuration.Name = "title_configuration"
         title_configuration.Size = New Size(366, 38)
         title_configuration.TabIndex = 0
@@ -451,8 +451,8 @@ Partial Class admin_frame
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
         Controls.Add(dashboardpanel)
-        Controls.Add(enrollmentspanel)
         Controls.Add(userspanel)
+        Controls.Add(enrollmentspanel)
         Controls.Add(subjectspanel)
         Controls.Add(configurationpanel)
         Controls.Add(sidepanel)
@@ -469,10 +469,10 @@ Partial Class admin_frame
         header.ResumeLayout(False)
         CType(logo, ComponentModel.ISupportInitialize).EndInit()
         menupanel.ResumeLayout(False)
-        subjects.ResumeLayout(False)
         dashboard.ResumeLayout(False)
         users.ResumeLayout(False)
         enrollments.ResumeLayout(False)
+        subjects.ResumeLayout(False)
         configuration.ResumeLayout(False)
         userspanel.ResumeLayout(False)
         head_users.ResumeLayout(False)
