@@ -223,9 +223,9 @@ Partial Class student_frame
         resources.ApplyResources(Me, "$this")
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
-        Controls.Add(dashboardpanel)
-        Controls.Add(enrollmentpanel)
         Controls.Add(myprofilepanel)
+        Controls.Add(enrollmentpanel)
+        Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         MaximizeBox = False

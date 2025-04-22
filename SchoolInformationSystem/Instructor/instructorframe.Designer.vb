@@ -66,7 +66,7 @@ Partial Class instructor_frame
         title_myprofile.Font = New Font("Tahoma", 24F)
         title_myprofile.ForeColor = Color.White
         title_myprofile.ImeMode = ImeMode.NoControl
-        title_myprofile.Location = New Point(16, 21)
+        title_myprofile.Location = New Point(16, 28)
         title_myprofile.Name = "title_myprofile"
         title_myprofile.Size = New Size(366, 38)
         title_myprofile.TabIndex = 0
@@ -89,7 +89,7 @@ Partial Class instructor_frame
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1074, 81)
+        head_myprofile.Size = New Size(1074, 94)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -97,7 +97,7 @@ Partial Class instructor_frame
         title_classes.Font = New Font("Tahoma", 24F)
         title_classes.ForeColor = Color.White
         title_classes.ImeMode = ImeMode.NoControl
-        title_classes.Location = New Point(16, 21)
+        title_classes.Location = New Point(16, 28)
         title_classes.Name = "title_classes"
         title_classes.Size = New Size(366, 38)
         title_classes.TabIndex = 0
@@ -237,7 +237,7 @@ Partial Class instructor_frame
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1074, 81)
+        head_classes.Size = New Size(1074, 94)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -318,9 +318,9 @@ Partial Class instructor_frame
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
-        Controls.Add(dashboardpanel)
-        Controls.Add(classespanel)
         Controls.Add(myprofilepanel)
+        Controls.Add(classespanel)
+        Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)

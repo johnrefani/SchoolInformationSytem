@@ -4,25 +4,33 @@
         dashboardpanel.Visible = True
         HighlightActiveButton(dashboardbutton)
     End Sub
+
     ' Hide all panels
     Private Sub HideAllPanels()
         dashboardpanel.Visible = False
         userspanel.Visible = False
-        enrollments.Visible = False
-        subjects.Visible = False
-        configuration.Visible = False
+        enrollmentspanel.Visible = False
+        subjectspanel.Visible = False
+        configurationpanel.Visible = False
     End Sub
 
-    ' Reset and highlight active button
+    ' Highlight the active button
     Private Sub HighlightActiveButton(activeBtn As Button)
-        Dim buttons As Button() = {dashboardbutton, usersbutton, enrollmentsbutton, subjectsbutton, configurationbutton}
+        Dim buttons As Button() = {
+            dashboardbutton,
+            usersbutton,
+            enrollmentsbutton,
+            subjectsbutton,
+            configurationbutton
+        }
 
         For Each btn As Button In buttons
             btn.BackColor = Color.Transparent
         Next
 
-        activeBtn.BackColor = ColorTranslator.FromHtml("#ADADAD")
+        activeBtn.BackColor = ColorTranslator.FromHtml("#ADADAD") ' light gray highlight
     End Sub
+
     Private Sub dashboardbutton_Click(sender As Object, e As EventArgs) Handles dashboardbutton.Click
         HideAllPanels()
         dashboardpanel.Visible = True
@@ -52,6 +60,4 @@
         configurationpanel.Visible = True
         HighlightActiveButton(configurationbutton)
     End Sub
-
-
 End Class
