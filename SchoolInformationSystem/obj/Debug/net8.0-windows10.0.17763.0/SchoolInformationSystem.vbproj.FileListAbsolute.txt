@@ -61,10 +61,7 @@ C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\WinRT.Runtime.dll
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.vbproj.AssemblyReference.cache
-C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.adminframe.resources
-C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.instructorframe.resources
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.Resources.resources
-C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.student_frame.resources
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.login.resources
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.vbproj.GenerateResource.cache
 C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.GeneratedMSBuildEditorConfig.editorconfig
@@ -83,3 +80,6 @@ D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformatio
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.student_frame.aa.resources
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\aa\SchoolInformationSystem.resources.dll
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\aa\SchoolInformationSystem.resources.dll
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.studentframe.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.adminframe.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.instructorframe.resources

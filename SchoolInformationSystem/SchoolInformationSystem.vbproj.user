@@ -4,19 +4,10 @@
     <Compile Update="Admin\adminframe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Admin\admin_frame.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Instructor\instructorframe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Instructor\instructor_frame.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Student\studentframe.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Student\student_frame.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="User Login\login.vb">
