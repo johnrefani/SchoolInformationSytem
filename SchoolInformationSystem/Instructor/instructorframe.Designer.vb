@@ -25,6 +25,29 @@ Partial Class instructorframe
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
         title_myprofile = New Label()
         myprofilepanel = New Panel()
+        myprofilebodypanel = New Panel()
+        subjecthandledtextbox = New TextBox()
+        Label17 = New Label()
+        addresstextbox = New TextBox()
+        Label16 = New Label()
+        advisorytextbox = New TextBox()
+        Label15 = New Label()
+        departmenttextbox = New TextBox()
+        Label14 = New Label()
+        emailaddtextbox = New TextBox()
+        Label13 = New Label()
+        contactnumtextbox = New TextBox()
+        Label12 = New Label()
+        gendertextbox = New TextBox()
+        Label11 = New Label()
+        lastnametextbox = New TextBox()
+        Label10 = New Label()
+        middlenametextbox = New TextBox()
+        Label9 = New Label()
+        firsnametextbox = New TextBox()
+        Label8 = New Label()
+        editprofilebutton = New Button()
+        Label6 = New Label()
         head_myprofile = New Panel()
         title_classes = New Label()
         menupanel = New Panel()
@@ -39,13 +62,42 @@ Partial Class instructorframe
         logo = New PictureBox()
         head_classes = New Panel()
         classespanel = New Panel()
+        bodyclassespanel = New Panel()
+        DataGridView2 = New DataGridView()
+        ComboBox2 = New ComboBox()
+        ComboBox1 = New ComboBox()
+        PictureBox1 = New PictureBox()
+        TextBox1 = New TextBox()
+        Button3 = New Button()
+        Button2 = New Button()
+        Label4 = New Label()
         title_dashboard = New Label()
         username = New Label()
         head_dashboard = New Panel()
         sidenav = New Panel()
         sidepanel = New Panel()
         dashboardpanel = New Panel()
+        Panel3 = New Panel()
+        Button1 = New Button()
+        DataGridView1 = New DataGridView()
+        Label7 = New Label()
+        Panel2 = New Panel()
+        droppedstudentslabel = New Label()
+        Label5 = New Label()
+        Panel1 = New Panel()
+        enrolledstudentslabel = New Label()
+        Label3 = New Label()
+        chartpanel = New Panel()
+        Label2 = New Label()
+        Label1 = New Label()
+        civilstatustextbox = New TextBox()
+        Label18 = New Label()
+        nationalitytextbox = New TextBox()
+        Label19 = New Label()
+        TextBox2 = New TextBox()
+        Label20 = New Label()
         myprofilepanel.SuspendLayout()
+        myprofilebodypanel.SuspendLayout()
         head_myprofile.SuspendLayout()
         menupanel.SuspendLayout()
         dashboard.SuspendLayout()
@@ -55,15 +107,23 @@ Partial Class instructorframe
         CType(logo, ComponentModel.ISupportInitialize).BeginInit()
         head_classes.SuspendLayout()
         classespanel.SuspendLayout()
+        bodyclassespanel.SuspendLayout()
+        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
         sidepanel.SuspendLayout()
         dashboardpanel.SuspendLayout()
+        Panel3.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
+        Panel1.SuspendLayout()
+        chartpanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' title_myprofile
         ' 
-        title_myprofile.Font = New Font("Tahoma", 24.0F)
+        title_myprofile.Font = New Font("Tahoma", 24F)
         title_myprofile.ForeColor = Color.White
         title_myprofile.ImeMode = ImeMode.NoControl
         title_myprofile.Location = New Point(16, 28)
@@ -75,12 +135,254 @@ Partial Class instructorframe
         ' 
         ' myprofilepanel
         ' 
+        myprofilepanel.Controls.Add(myprofilebodypanel)
         myprofilepanel.Controls.Add(head_myprofile)
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
         myprofilepanel.Size = New Size(1074, 985)
         myprofilepanel.TabIndex = 7
+        ' 
+        ' myprofilebodypanel
+        ' 
+        myprofilebodypanel.BackColor = Color.White
+        myprofilebodypanel.Controls.Add(TextBox2)
+        myprofilebodypanel.Controls.Add(Label20)
+        myprofilebodypanel.Controls.Add(nationalitytextbox)
+        myprofilebodypanel.Controls.Add(Label19)
+        myprofilebodypanel.Controls.Add(civilstatustextbox)
+        myprofilebodypanel.Controls.Add(Label18)
+        myprofilebodypanel.Controls.Add(subjecthandledtextbox)
+        myprofilebodypanel.Controls.Add(Label17)
+        myprofilebodypanel.Controls.Add(addresstextbox)
+        myprofilebodypanel.Controls.Add(Label16)
+        myprofilebodypanel.Controls.Add(advisorytextbox)
+        myprofilebodypanel.Controls.Add(Label15)
+        myprofilebodypanel.Controls.Add(departmenttextbox)
+        myprofilebodypanel.Controls.Add(Label14)
+        myprofilebodypanel.Controls.Add(emailaddtextbox)
+        myprofilebodypanel.Controls.Add(Label13)
+        myprofilebodypanel.Controls.Add(contactnumtextbox)
+        myprofilebodypanel.Controls.Add(Label12)
+        myprofilebodypanel.Controls.Add(gendertextbox)
+        myprofilebodypanel.Controls.Add(Label11)
+        myprofilebodypanel.Controls.Add(lastnametextbox)
+        myprofilebodypanel.Controls.Add(Label10)
+        myprofilebodypanel.Controls.Add(middlenametextbox)
+        myprofilebodypanel.Controls.Add(Label9)
+        myprofilebodypanel.Controls.Add(firsnametextbox)
+        myprofilebodypanel.Controls.Add(Label8)
+        myprofilebodypanel.Controls.Add(editprofilebutton)
+        myprofilebodypanel.Controls.Add(Label6)
+        myprofilebodypanel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        myprofilebodypanel.Location = New Point(25, 121)
+        myprofilebodypanel.Name = "myprofilebodypanel"
+        myprofilebodypanel.Size = New Size(1024, 589)
+        myprofilebodypanel.TabIndex = 1
+        ' 
+        ' subjecthandledtextbox
+        ' 
+        subjecthandledtextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        subjecthandledtextbox.BorderStyle = BorderStyle.FixedSingle
+        subjecthandledtextbox.Location = New Point(360, 332)
+        subjecthandledtextbox.Name = "subjecthandledtextbox"
+        subjecthandledtextbox.Size = New Size(619, 33)
+        subjecthandledtextbox.TabIndex = 23
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.Location = New Point(360, 294)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(195, 25)
+        Label17.TabIndex = 22
+        Label17.Text = "SUBJECT HANDLED"
+        ' 
+        ' addresstextbox
+        ' 
+        addresstextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        addresstextbox.BorderStyle = BorderStyle.FixedSingle
+        addresstextbox.Location = New Point(360, 234)
+        addresstextbox.Name = "addresstextbox"
+        addresstextbox.Size = New Size(619, 33)
+        addresstextbox.TabIndex = 21
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Location = New Point(360, 196)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(102, 25)
+        Label16.TabIndex = 20
+        Label16.Text = "ADDRESS"
+        ' 
+        ' advisorytextbox
+        ' 
+        advisorytextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        advisorytextbox.BorderStyle = BorderStyle.FixedSingle
+        advisorytextbox.Location = New Point(23, 525)
+        advisorytextbox.Name = "advisorytextbox"
+        advisorytextbox.Size = New Size(309, 33)
+        advisorytextbox.TabIndex = 19
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Location = New Point(23, 487)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(179, 25)
+        Label15.TabIndex = 18
+        Label15.Text = "ADVISORY CLASS"
+        ' 
+        ' departmenttextbox
+        ' 
+        departmenttextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        departmenttextbox.BorderStyle = BorderStyle.FixedSingle
+        departmenttextbox.Location = New Point(23, 428)
+        departmenttextbox.Name = "departmenttextbox"
+        departmenttextbox.Size = New Size(309, 33)
+        departmenttextbox.TabIndex = 17
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Location = New Point(23, 390)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(142, 25)
+        Label14.TabIndex = 16
+        Label14.Text = "DEPARTMENT"
+        ' 
+        ' emailaddtextbox
+        ' 
+        emailaddtextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        emailaddtextbox.BorderStyle = BorderStyle.FixedSingle
+        emailaddtextbox.Location = New Point(23, 332)
+        emailaddtextbox.Name = "emailaddtextbox"
+        emailaddtextbox.Size = New Size(309, 33)
+        emailaddtextbox.TabIndex = 15
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Location = New Point(23, 294)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(168, 25)
+        Label13.TabIndex = 14
+        Label13.Text = "EMAIL ADDRESS"
+        ' 
+        ' contactnumtextbox
+        ' 
+        contactnumtextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        contactnumtextbox.BorderStyle = BorderStyle.FixedSingle
+        contactnumtextbox.Location = New Point(23, 234)
+        contactnumtextbox.Name = "contactnumtextbox"
+        contactnumtextbox.Size = New Size(309, 33)
+        contactnumtextbox.TabIndex = 13
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Location = New Point(23, 196)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(193, 25)
+        Label12.TabIndex = 12
+        Label12.Text = "CONTACT NUMBER"
+        ' 
+        ' gendertextbox
+        ' 
+        gendertextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        gendertextbox.BorderStyle = BorderStyle.FixedSingle
+        gendertextbox.Location = New Point(830, 133)
+        gendertextbox.Name = "gendertextbox"
+        gendertextbox.Size = New Size(149, 33)
+        gendertextbox.TabIndex = 11
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Location = New Point(830, 95)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(91, 25)
+        Label11.TabIndex = 10
+        Label11.Text = "GENDER"
+        ' 
+        ' lastnametextbox
+        ' 
+        lastnametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        lastnametextbox.BorderStyle = BorderStyle.FixedSingle
+        lastnametextbox.Location = New Point(561, 133)
+        lastnametextbox.Name = "lastnametextbox"
+        lastnametextbox.Size = New Size(250, 33)
+        lastnametextbox.TabIndex = 9
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Location = New Point(561, 95)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(121, 25)
+        Label10.TabIndex = 8
+        Label10.Text = "LAST NAME"
+        ' 
+        ' middlenametextbox
+        ' 
+        middlenametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        middlenametextbox.BorderStyle = BorderStyle.FixedSingle
+        middlenametextbox.Location = New Point(292, 133)
+        middlenametextbox.Name = "middlenametextbox"
+        middlenametextbox.Size = New Size(250, 33)
+        middlenametextbox.TabIndex = 7
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Location = New Point(292, 95)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(148, 25)
+        Label9.TabIndex = 6
+        Label9.Text = "MIDDLE NAME"
+        ' 
+        ' firsnametextbox
+        ' 
+        firsnametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        firsnametextbox.BorderStyle = BorderStyle.FixedSingle
+        firsnametextbox.Location = New Point(23, 133)
+        firsnametextbox.Name = "firsnametextbox"
+        firsnametextbox.Size = New Size(250, 33)
+        firsnametextbox.TabIndex = 5
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(23, 95)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(130, 25)
+        Label8.TabIndex = 4
+        Label8.Text = "FIRST NAME"
+        ' 
+        ' editprofilebutton
+        ' 
+        editprofilebutton.AutoSize = True
+        editprofilebutton.BackColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        editprofilebutton.FlatAppearance.BorderSize = 0
+        editprofilebutton.FlatStyle = FlatStyle.Flat
+        editprofilebutton.ForeColor = Color.White
+        editprofilebutton.Location = New Point(848, 25)
+        editprofilebutton.Name = "editprofilebutton"
+        editprofilebutton.Size = New Size(156, 37)
+        editprofilebutton.TabIndex = 3
+        editprofilebutton.Text = "EDIT PROFILE"
+        editprofilebutton.UseVisualStyleBackColor = False
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(16, 20)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(258, 39)
+        Label6.TabIndex = 2
+        Label6.Text = "Manage Profile"
         ' 
         ' head_myprofile
         ' 
@@ -94,7 +396,7 @@ Partial Class instructorframe
         ' 
         ' title_classes
         ' 
-        title_classes.Font = New Font("Tahoma", 24.0F)
+        title_classes.Font = New Font("Tahoma", 24F)
         title_classes.ForeColor = Color.White
         title_classes.ImeMode = ImeMode.NoControl
         title_classes.Location = New Point(16, 28)
@@ -254,6 +556,7 @@ Partial Class instructorframe
         ' 
         ' classespanel
         ' 
+        classespanel.Controls.Add(bodyclassespanel)
         classespanel.Controls.Add(head_classes)
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
@@ -261,9 +564,111 @@ Partial Class instructorframe
         classespanel.Size = New Size(1074, 985)
         classespanel.TabIndex = 6
         ' 
+        ' bodyclassespanel
+        ' 
+        bodyclassespanel.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
+        bodyclassespanel.Controls.Add(DataGridView2)
+        bodyclassespanel.Controls.Add(ComboBox2)
+        bodyclassespanel.Controls.Add(ComboBox1)
+        bodyclassespanel.Controls.Add(PictureBox1)
+        bodyclassespanel.Controls.Add(TextBox1)
+        bodyclassespanel.Controls.Add(Button3)
+        bodyclassespanel.Controls.Add(Button2)
+        bodyclassespanel.Controls.Add(Label4)
+        bodyclassespanel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        bodyclassespanel.Location = New Point(25, 121)
+        bodyclassespanel.Name = "bodyclassespanel"
+        bodyclassespanel.Size = New Size(1024, 850)
+        bodyclassespanel.TabIndex = 1
+        ' 
+        ' DataGridView2
+        ' 
+        DataGridView2.BackgroundColor = Color.White
+        DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView2.Location = New Point(23, 133)
+        DataGridView2.Name = "DataGridView2"
+        DataGridView2.Size = New Size(981, 698)
+        DataGridView2.TabIndex = 8
+        ' 
+        ' ComboBox2
+        ' 
+        ComboBox2.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        ComboBox2.FormattingEnabled = True
+        ComboBox2.Location = New Point(883, 79)
+        ComboBox2.Name = "ComboBox2"
+        ComboBox2.Size = New Size(121, 33)
+        ComboBox2.TabIndex = 7
+        ComboBox2.Text = "Semester"
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(756, 79)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(121, 33)
+        ComboBox1.TabIndex = 6
+        ComboBox1.Text = "Subject"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(23, 79)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(32, 33)
+        PictureBox1.TabIndex = 5
+        PictureBox1.TabStop = False
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(61, 79)
+        TextBox1.Name = "TextBox1"
+        TextBox1.PlaceholderText = "Search"
+        TextBox1.Size = New Size(418, 33)
+        TextBox1.TabIndex = 4
+        ' 
+        ' Button3
+        ' 
+        Button3.AutoSize = True
+        Button3.BackColor = Color.White
+        Button3.FlatAppearance.BorderSize = 0
+        Button3.FlatStyle = FlatStyle.Flat
+        Button3.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        Button3.Location = New Point(906, 22)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(98, 37)
+        Button3.TabIndex = 2
+        Button3.Text = "EXPORT"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Button2
+        ' 
+        Button2.AutoSize = True
+        Button2.BackColor = Color.White
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        Button2.Location = New Point(805, 21)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(95, 37)
+        Button2.TabIndex = 1
+        Button2.Text = "PRINT"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(15, 17)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(295, 39)
+        Label4.TabIndex = 0
+        Label4.Text = "Handled Subjects"
+        ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24.0F)
+        title_dashboard.Font = New Font("Tahoma", 24F)
         title_dashboard.ForeColor = Color.White
         title_dashboard.ImeMode = ImeMode.NoControl
         title_dashboard.Location = New Point(16, 28)
@@ -275,7 +680,7 @@ Partial Class instructorframe
         ' 
         ' username
         ' 
-        username.Font = New Font("Tahoma", 24.0F)
+        username.Font = New Font("Tahoma", 24F)
         username.ForeColor = Color.White
         username.ImeMode = ImeMode.NoControl
         username.Location = New Point(179, 28)
@@ -317,6 +722,10 @@ Partial Class instructorframe
         ' 
         ' dashboardpanel
         ' 
+        dashboardpanel.Controls.Add(Panel3)
+        dashboardpanel.Controls.Add(Panel2)
+        dashboardpanel.Controls.Add(Panel1)
+        dashboardpanel.Controls.Add(chartpanel)
         dashboardpanel.Controls.Add(head_dashboard)
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
@@ -324,9 +733,203 @@ Partial Class instructorframe
         dashboardpanel.Size = New Size(1074, 985)
         dashboardpanel.TabIndex = 5
         ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.White
+        Panel3.Controls.Add(Button1)
+        Panel3.Controls.Add(DataGridView1)
+        Panel3.Controls.Add(Label7)
+        Panel3.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Panel3.Location = New Point(16, 583)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(760, 390)
+        Panel3.TabIndex = 4
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        Button1.FlatAppearance.BorderSize = 0
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(495, 28)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(240, 40)
+        Button1.TabIndex = 3
+        Button1.Text = "VIEW ALL CLASSES"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.BackgroundColor = Color.White
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(24, 82)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.Size = New Size(711, 192)
+        DataGridView1.TabIndex = 2
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(24, 25)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(261, 39)
+        Label7.TabIndex = 1
+        Label7.Text = "Class Summary"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(255), CByte(139), CByte(139))
+        Panel2.Controls.Add(droppedstudentslabel)
+        Panel2.Controls.Add(Label5)
+        Panel2.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Panel2.Location = New Point(807, 353)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(240, 210)
+        Panel2.TabIndex = 3
+        ' 
+        ' droppedstudentslabel
+        ' 
+        droppedstudentslabel.AutoSize = True
+        droppedstudentslabel.Font = New Font("Tahoma", 64F, FontStyle.Bold)
+        droppedstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
+        droppedstudentslabel.Location = New Point(71, 79)
+        droppedstudentslabel.Name = "droppedstudentslabel"
+        droppedstudentslabel.Size = New Size(99, 104)
+        droppedstudentslabel.TabIndex = 2
+        droppedstudentslabel.Text = "2"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
+        Label5.Location = New Point(6, 33)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(228, 29)
+        Label5.TabIndex = 1
+        Label5.Text = "Dropped Students"
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.FromArgb(CByte(255), CByte(17), CByte(17))
+        Panel1.Controls.Add(enrolledstudentslabel)
+        Panel1.Controls.Add(Label3)
+        Panel1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Panel1.Location = New Point(807, 121)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(240, 210)
+        Panel1.TabIndex = 2
+        ' 
+        ' enrolledstudentslabel
+        ' 
+        enrolledstudentslabel.AutoSize = True
+        enrolledstudentslabel.Font = New Font("Tahoma", 64F, FontStyle.Bold)
+        enrolledstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
+        enrolledstudentslabel.Location = New Point(43, 79)
+        enrolledstudentslabel.Name = "enrolledstudentslabel"
+        enrolledstudentslabel.Size = New Size(154, 104)
+        enrolledstudentslabel.TabIndex = 1
+        enrolledstudentslabel.Text = "96"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
+        Label3.Location = New Point(8, 22)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(224, 29)
+        Label3.TabIndex = 0
+        Label3.Text = "Enrolled Students"
+        ' 
+        ' chartpanel
+        ' 
+        chartpanel.BackColor = Color.White
+        chartpanel.Controls.Add(Label2)
+        chartpanel.Controls.Add(Label1)
+        chartpanel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        chartpanel.Location = New Point(16, 121)
+        chartpanel.Name = "chartpanel"
+        chartpanel.Size = New Size(760, 442)
+        chartpanel.TabIndex = 1
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(12, 70)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(659, 25)
+        Label2.TabIndex = 1
+        Label2.Text = "Line chart showing student enrollment per subject over school years."
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(13, 16)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(328, 39)
+        Label1.TabIndex = 0
+        Label1.Text = "Student Enrollment"
+        ' 
+        ' civilstatustextbox
+        ' 
+        civilstatustextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        civilstatustextbox.BorderStyle = BorderStyle.FixedSingle
+        civilstatustextbox.Location = New Point(360, 428)
+        civilstatustextbox.Name = "civilstatustextbox"
+        civilstatustextbox.Size = New Size(302, 33)
+        civilstatustextbox.TabIndex = 25
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Location = New Point(360, 390)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(146, 25)
+        Label18.TabIndex = 24
+        Label18.Text = "CIVIL STATUS"
+        ' 
+        ' nationalitytextbox
+        ' 
+        nationalitytextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        nationalitytextbox.BorderStyle = BorderStyle.FixedSingle
+        nationalitytextbox.Location = New Point(696, 428)
+        nationalitytextbox.Name = "nationalitytextbox"
+        nationalitytextbox.Size = New Size(282, 33)
+        nationalitytextbox.TabIndex = 27
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Location = New Point(696, 390)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(143, 25)
+        Label19.TabIndex = 26
+        Label19.Text = "NATIONALITY"
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        TextBox2.BorderStyle = BorderStyle.FixedSingle
+        TextBox2.Location = New Point(360, 525)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(234, 33)
+        TextBox2.TabIndex = 29
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Location = New Point(360, 487)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(234, 25)
+        Label20.TabIndex = 28
+        Label20.Text = "YEARS OF EXPERIENCE"
+        ' 
         ' instructorframe
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
@@ -336,10 +939,13 @@ Partial Class instructorframe
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        MaximizeBox = False
         Name = "instructorframe"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Instructor"
         myprofilepanel.ResumeLayout(False)
+        myprofilebodypanel.ResumeLayout(False)
+        myprofilebodypanel.PerformLayout()
         head_myprofile.ResumeLayout(False)
         menupanel.ResumeLayout(False)
         dashboard.ResumeLayout(False)
@@ -349,10 +955,23 @@ Partial Class instructorframe
         CType(logo, ComponentModel.ISupportInitialize).EndInit()
         head_classes.ResumeLayout(False)
         classespanel.ResumeLayout(False)
+        bodyclassespanel.ResumeLayout(False)
+        bodyclassespanel.PerformLayout()
+        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         head_dashboard.ResumeLayout(False)
         sidenav.ResumeLayout(False)
         sidepanel.ResumeLayout(False)
         dashboardpanel.ResumeLayout(False)
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        chartpanel.ResumeLayout(False)
+        chartpanel.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -378,4 +997,55 @@ Partial Class instructorframe
     Friend WithEvents sidenav As Panel
     Friend WithEvents sidepanel As Panel
     Friend WithEvents dashboardpanel As Panel
+    Friend WithEvents chartpanel As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents enrolledstudentslabel As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents droppedstudentslabel As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents bodyclassespanel As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents myprofilebodypanel As Panel
+    Friend WithEvents editprofilebutton As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents gendertextbox As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents lastnametextbox As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents middlenametextbox As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents firsnametextbox As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents contactnumtextbox As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents emailaddtextbox As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents advisorytextbox As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents departmenttextbox As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents addresstextbox As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents subjecthandledtextbox As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents nationalitytextbox As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents civilstatustextbox As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label20 As Label
 End Class
