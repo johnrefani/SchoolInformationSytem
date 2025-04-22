@@ -26,6 +26,12 @@ Partial Class instructorframe
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
+        TextBox2 = New TextBox()
+        Label20 = New Label()
+        nationalitytextbox = New TextBox()
+        Label19 = New Label()
+        civilstatustextbox = New TextBox()
+        Label18 = New Label()
         subjecthandledtextbox = New TextBox()
         Label17 = New Label()
         addresstextbox = New TextBox()
@@ -90,12 +96,6 @@ Partial Class instructorframe
         chartpanel = New Panel()
         Label2 = New Label()
         Label1 = New Label()
-        civilstatustextbox = New TextBox()
-        Label18 = New Label()
-        nationalitytextbox = New TextBox()
-        Label19 = New Label()
-        TextBox2 = New TextBox()
-        Label20 = New Label()
         myprofilepanel.SuspendLayout()
         myprofilebodypanel.SuspendLayout()
         head_myprofile.SuspendLayout()
@@ -179,6 +179,60 @@ Partial Class instructorframe
         myprofilebodypanel.Name = "myprofilebodypanel"
         myprofilebodypanel.Size = New Size(1024, 589)
         myprofilebodypanel.TabIndex = 1
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        TextBox2.BorderStyle = BorderStyle.FixedSingle
+        TextBox2.Location = New Point(360, 525)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(234, 33)
+        TextBox2.TabIndex = 29
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Location = New Point(360, 487)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(234, 25)
+        Label20.TabIndex = 28
+        Label20.Text = "YEARS OF EXPERIENCE"
+        ' 
+        ' nationalitytextbox
+        ' 
+        nationalitytextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        nationalitytextbox.BorderStyle = BorderStyle.FixedSingle
+        nationalitytextbox.Location = New Point(696, 428)
+        nationalitytextbox.Name = "nationalitytextbox"
+        nationalitytextbox.Size = New Size(282, 33)
+        nationalitytextbox.TabIndex = 27
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Location = New Point(696, 390)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(143, 25)
+        Label19.TabIndex = 26
+        Label19.Text = "NATIONALITY"
+        ' 
+        ' civilstatustextbox
+        ' 
+        civilstatustextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        civilstatustextbox.BorderStyle = BorderStyle.FixedSingle
+        civilstatustextbox.Location = New Point(360, 428)
+        civilstatustextbox.Name = "civilstatustextbox"
+        civilstatustextbox.Size = New Size(302, 33)
+        civilstatustextbox.TabIndex = 25
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Location = New Point(360, 390)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(146, 25)
+        Label18.TabIndex = 24
+        Label18.Text = "CIVIL STATUS"
         ' 
         ' subjecthandledtextbox
         ' 
@@ -364,6 +418,7 @@ Partial Class instructorframe
         ' 
         editprofilebutton.AutoSize = True
         editprofilebutton.BackColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        editprofilebutton.Cursor = Cursors.Hand
         editprofilebutton.FlatAppearance.BorderSize = 0
         editprofilebutton.FlatStyle = FlatStyle.Flat
         editprofilebutton.ForeColor = Color.White
@@ -872,60 +927,6 @@ Partial Class instructorframe
         Label1.Size = New Size(328, 39)
         Label1.TabIndex = 0
         Label1.Text = "Student Enrollment"
-        ' 
-        ' civilstatustextbox
-        ' 
-        civilstatustextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        civilstatustextbox.BorderStyle = BorderStyle.FixedSingle
-        civilstatustextbox.Location = New Point(360, 428)
-        civilstatustextbox.Name = "civilstatustextbox"
-        civilstatustextbox.Size = New Size(302, 33)
-        civilstatustextbox.TabIndex = 25
-        ' 
-        ' Label18
-        ' 
-        Label18.AutoSize = True
-        Label18.Location = New Point(360, 390)
-        Label18.Name = "Label18"
-        Label18.Size = New Size(146, 25)
-        Label18.TabIndex = 24
-        Label18.Text = "CIVIL STATUS"
-        ' 
-        ' nationalitytextbox
-        ' 
-        nationalitytextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        nationalitytextbox.BorderStyle = BorderStyle.FixedSingle
-        nationalitytextbox.Location = New Point(696, 428)
-        nationalitytextbox.Name = "nationalitytextbox"
-        nationalitytextbox.Size = New Size(282, 33)
-        nationalitytextbox.TabIndex = 27
-        ' 
-        ' Label19
-        ' 
-        Label19.AutoSize = True
-        Label19.Location = New Point(696, 390)
-        Label19.Name = "Label19"
-        Label19.Size = New Size(143, 25)
-        Label19.TabIndex = 26
-        Label19.Text = "NATIONALITY"
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Location = New Point(360, 525)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(234, 33)
-        TextBox2.TabIndex = 29
-        ' 
-        ' Label20
-        ' 
-        Label20.AutoSize = True
-        Label20.Location = New Point(360, 487)
-        Label20.Name = "Label20"
-        Label20.Size = New Size(234, 25)
-        Label20.TabIndex = 28
-        Label20.Text = "YEARS OF EXPERIENCE"
         ' 
         ' instructorframe
         ' 

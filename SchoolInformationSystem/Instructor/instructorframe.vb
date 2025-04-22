@@ -41,4 +41,7 @@
         HighlightActiveButton(myprofilebutton)
     End Sub
 
+    Private Sub editprofilebutton_Click(sender As Object, e As EventArgs) Handles editprofilebutton.Click
+        editprofile.Show()
+    End Sub
 End Class
