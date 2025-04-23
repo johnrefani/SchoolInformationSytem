@@ -77,4 +77,12 @@
         editconfiguration.Show()
 
     End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles TotalIns.Paint
+
+    End Sub
+
+    Private Sub TextBox10_TextChanged(sender As Object, e As EventArgs) Handles SubjectCount.TextChanged
+
+    End Sub
 End Class
