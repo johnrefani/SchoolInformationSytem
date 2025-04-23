@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj": {}
+    "C:\\Users\\Win11\\Source\\Repos\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj": {
+    "C:\\Users\\Win11\\Source\\Repos\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj",
+        "projectUniqueName": "C:\\Users\\Win11\\Source\\Repos\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj",
         "projectName": "SchoolInformationSystem",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj",
-        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\Commission\\SchoolInformationSytem\\SchoolInformationSystem\\obj\\",
+        "projectPath": "C:\\Users\\Win11\\Source\\Repos\\SchoolInformationSytem\\SchoolInformationSystem\\SchoolInformationSystem.vbproj",
+        "packagesPath": "C:\\Users\\Win11\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Win11\\Source\\Repos\\SchoolInformationSytem\\SchoolInformationSystem\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Win11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows10.0.17763": {
@@ -48,6 +53,10 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[9.3.0, )"
+            },
+            "WinForms.DataVisualization": {
+              "target": "Package",
+              "version": "[1.10.0, )"
             }
           },
           "imports": [
@@ -64,21 +73,21 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
-              "version": "[10.0.17763.34, 10.0.17763.34]"
+              "version": "[10.0.17763.57, 10.0.17763.57]"
             }
           ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.Windows.SDK.NET.Ref": {
+            "Microsoft.Windows.SDK.NET.Ref.Windows": {
               "privateAssets": "all"
             },
             "Microsoft.WindowsDesktop.App.WindowsForms": {
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
