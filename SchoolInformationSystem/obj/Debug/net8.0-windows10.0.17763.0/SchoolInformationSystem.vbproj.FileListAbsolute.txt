@@ -137,3 +137,5 @@ C:\Users\Win11\Source\Repos\SchoolInformationSytem\SchoolInformationSystem\obj\D
 C:\Users\Win11\Source\Repos\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.pdb
 C:\Users\Win11\Source\Repos\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.genruntimeconfig.cache
 C:\Users\Win11\Source\Repos\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\ref\SchoolInformationSystem.dll
+C:\Users\Win11\Source\Repos\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\WinForms.DataVisualization.Utilities.dll
+C:\Users\Win11\Source\Repos\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\WinForms.DataVisualization.dll

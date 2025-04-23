@@ -124,7 +124,7 @@ Partial Class studentframe
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1074, 985)
+        myprofilepanel.Size = New Size(1020, 749)
         myprofilepanel.TabIndex = 7
         ' 
         ' Panel3
@@ -383,7 +383,7 @@ Partial Class studentframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1074, 81)
+        head_myprofile.Size = New Size(1020, 81)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -540,7 +540,7 @@ Partial Class studentframe
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1074, 81)
+        head_classes.Size = New Size(1020, 81)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -551,7 +551,7 @@ Partial Class studentframe
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
         classespanel.Name = "classespanel"
-        classespanel.Size = New Size(1074, 985)
+        classespanel.Size = New Size(1020, 749)
         classespanel.TabIndex = 6
         ' 
         ' Panel2
@@ -597,7 +597,7 @@ Partial Class studentframe
         ' 
         ' TextBox1
         ' 
-        TextBox1.Font = New Font("Segoe UI", 12.0F)
+        TextBox1.Font = New Font("Segoe UI", 12F)
         TextBox1.Location = New Point(55, 57)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "Search"
@@ -624,7 +624,7 @@ Partial Class studentframe
         ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24.0F)
+        title_dashboard.Font = New Font("Tahoma", 24F)
         title_dashboard.ForeColor = Color.White
         title_dashboard.ImeMode = ImeMode.NoControl
         title_dashboard.Location = New Point(16, 28)
@@ -636,7 +636,7 @@ Partial Class studentframe
         ' 
         ' username
         ' 
-        username.Font = New Font("Tahoma", 24.0F)
+        username.Font = New Font("Tahoma", 24F)
         username.ForeColor = Color.White
         username.ImeMode = ImeMode.NoControl
         username.Location = New Point(179, 28)
@@ -654,7 +654,7 @@ Partial Class studentframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1074, 94)
+        head_dashboard.Size = New Size(1020, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' sidenav
@@ -673,7 +673,7 @@ Partial Class studentframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 985)
+        sidepanel.Size = New Size(350, 749)
         sidepanel.TabIndex = 4
         ' 
         ' dashboardpanel
@@ -686,7 +686,7 @@ Partial Class studentframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1074, 985)
+        dashboardpanel.Size = New Size(1020, 749)
         dashboardpanel.TabIndex = 5
         ' 
         ' Panel1
@@ -746,18 +746,18 @@ Partial Class studentframe
         Label1.TabIndex = 0
         Label1.Text = "Enrolled Subjects"
         ' 
-        ' student_frame
+        ' studentframe
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1424, 985)
-        Controls.Add(classespanel)
+        ClientSize = New Size(1370, 749)
         Controls.Add(myprofilepanel)
+        Controls.Add(classespanel)
         Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
-        Name = "student_frame"
+        Name = "studentframe"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Student"
         myprofilepanel.ResumeLayout(False)
