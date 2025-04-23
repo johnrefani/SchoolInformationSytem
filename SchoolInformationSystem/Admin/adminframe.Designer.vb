@@ -70,11 +70,6 @@ Partial Class adminframe
         Label1 = New Label()
         sidepanel = New Panel()
         subjectspanel = New Panel()
-        head_subjects = New Panel()
-        title_subjects = New Label()
-        configurationpanel = New Panel()
-        head_configuration = New Panel()
-        title_configuration = New Label()
         Panel2 = New Panel()
         ComboBox8 = New ComboBox()
         Button8 = New Button()
@@ -85,6 +80,25 @@ Partial Class adminframe
         DataGridView3 = New DataGridView()
         PictureBox3 = New PictureBox()
         Label2 = New Label()
+        head_subjects = New Panel()
+        title_subjects = New Label()
+        configurationpanel = New Panel()
+        Panel3 = New Panel()
+        TextBox1 = New TextBox()
+        Label3 = New Label()
+        TextBox5 = New TextBox()
+        Label5 = New Label()
+        TextBox6 = New TextBox()
+        Label6 = New Label()
+        TextBox7 = New TextBox()
+        Label7 = New Label()
+        studentnametextbox = New TextBox()
+        Label8 = New Label()
+        Button2 = New Button()
+        configurebutton = New Button()
+        Label9 = New Label()
+        head_configuration = New Panel()
+        title_configuration = New Label()
         dashboardpanel.SuspendLayout()
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
@@ -108,12 +122,13 @@ Partial Class adminframe
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         sidepanel.SuspendLayout()
         subjectspanel.SuspendLayout()
-        head_subjects.SuspendLayout()
-        configurationpanel.SuspendLayout()
-        head_configuration.SuspendLayout()
         Panel2.SuspendLayout()
         CType(DataGridView3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        head_subjects.SuspendLayout()
+        configurationpanel.SuspendLayout()
+        Panel3.SuspendLayout()
+        head_configuration.SuspendLayout()
         SuspendLayout()
         ' 
         ' dashboardpanel
@@ -662,59 +677,6 @@ Partial Class adminframe
         subjectspanel.Size = New Size(1074, 985)
         subjectspanel.TabIndex = 12
         ' 
-        ' head_subjects
-        ' 
-        head_subjects.BackColor = Color.Maroon
-        head_subjects.Controls.Add(title_subjects)
-        head_subjects.Dock = DockStyle.Top
-        head_subjects.Location = New Point(0, 0)
-        head_subjects.Name = "head_subjects"
-        head_subjects.Size = New Size(1074, 94)
-        head_subjects.TabIndex = 0
-        ' 
-        ' title_subjects
-        ' 
-        title_subjects.Font = New Font("Tahoma", 24F)
-        title_subjects.ForeColor = Color.White
-        title_subjects.ImeMode = ImeMode.NoControl
-        title_subjects.Location = New Point(16, 28)
-        title_subjects.Name = "title_subjects"
-        title_subjects.Size = New Size(366, 38)
-        title_subjects.TabIndex = 0
-        title_subjects.Text = "Manage Subjects"
-        title_subjects.TextAlign = ContentAlignment.MiddleLeft
-        ' 
-        ' configurationpanel
-        ' 
-        configurationpanel.Controls.Add(head_configuration)
-        configurationpanel.Dock = DockStyle.Fill
-        configurationpanel.Location = New Point(350, 0)
-        configurationpanel.Name = "configurationpanel"
-        configurationpanel.Size = New Size(1074, 985)
-        configurationpanel.TabIndex = 13
-        ' 
-        ' head_configuration
-        ' 
-        head_configuration.BackColor = Color.Maroon
-        head_configuration.Controls.Add(title_configuration)
-        head_configuration.Dock = DockStyle.Top
-        head_configuration.Location = New Point(0, 0)
-        head_configuration.Name = "head_configuration"
-        head_configuration.Size = New Size(1074, 94)
-        head_configuration.TabIndex = 0
-        ' 
-        ' title_configuration
-        ' 
-        title_configuration.Font = New Font("Tahoma", 24F)
-        title_configuration.ForeColor = Color.White
-        title_configuration.ImeMode = ImeMode.NoControl
-        title_configuration.Location = New Point(16, 28)
-        title_configuration.Name = "title_configuration"
-        title_configuration.Size = New Size(366, 38)
-        title_configuration.TabIndex = 0
-        title_configuration.Text = "Configure Database"
-        title_configuration.TextAlign = ContentAlignment.MiddleLeft
-        ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
@@ -822,17 +784,221 @@ Partial Class adminframe
         Label2.TabIndex = 0
         Label2.Text = "Subjects List"
         ' 
+        ' head_subjects
+        ' 
+        head_subjects.BackColor = Color.Maroon
+        head_subjects.Controls.Add(title_subjects)
+        head_subjects.Dock = DockStyle.Top
+        head_subjects.Location = New Point(0, 0)
+        head_subjects.Name = "head_subjects"
+        head_subjects.Size = New Size(1074, 94)
+        head_subjects.TabIndex = 0
+        ' 
+        ' title_subjects
+        ' 
+        title_subjects.Font = New Font("Tahoma", 24F)
+        title_subjects.ForeColor = Color.White
+        title_subjects.ImeMode = ImeMode.NoControl
+        title_subjects.Location = New Point(16, 28)
+        title_subjects.Name = "title_subjects"
+        title_subjects.Size = New Size(366, 38)
+        title_subjects.TabIndex = 0
+        title_subjects.Text = "Manage Subjects"
+        title_subjects.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' configurationpanel
+        ' 
+        configurationpanel.Controls.Add(Panel3)
+        configurationpanel.Controls.Add(head_configuration)
+        configurationpanel.Dock = DockStyle.Fill
+        configurationpanel.Location = New Point(350, 0)
+        configurationpanel.Name = "configurationpanel"
+        configurationpanel.Size = New Size(1074, 985)
+        configurationpanel.TabIndex = 13
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.White
+        Panel3.Controls.Add(TextBox1)
+        Panel3.Controls.Add(Label3)
+        Panel3.Controls.Add(TextBox5)
+        Panel3.Controls.Add(Label5)
+        Panel3.Controls.Add(TextBox6)
+        Panel3.Controls.Add(Label6)
+        Panel3.Controls.Add(TextBox7)
+        Panel3.Controls.Add(Label7)
+        Panel3.Controls.Add(studentnametextbox)
+        Panel3.Controls.Add(Label8)
+        Panel3.Controls.Add(Button2)
+        Panel3.Controls.Add(configurebutton)
+        Panel3.Controls.Add(Label9)
+        Panel3.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Panel3.Location = New Point(25, 124)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(1024, 357)
+        Panel3.TabIndex = 5
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        TextBox1.BorderStyle = BorderStyle.FixedSingle
+        TextBox1.Location = New Point(327, 230)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(250, 33)
+        TextBox1.TabIndex = 153
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(327, 192)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(122, 25)
+        Label3.TabIndex = 152
+        Label3.Text = "PASSWORD"
+        ' 
+        ' TextBox5
+        ' 
+        TextBox5.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        TextBox5.BorderStyle = BorderStyle.FixedSingle
+        TextBox5.Location = New Point(34, 230)
+        TextBox5.Name = "TextBox5"
+        TextBox5.Size = New Size(250, 33)
+        TextBox5.TabIndex = 151
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(34, 192)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(118, 25)
+        Label5.TabIndex = 150
+        Label5.Text = "USERNAME"
+        ' 
+        ' TextBox6
+        ' 
+        TextBox6.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        TextBox6.BorderStyle = BorderStyle.FixedSingle
+        TextBox6.Location = New Point(612, 129)
+        TextBox6.Name = "TextBox6"
+        TextBox6.Size = New Size(250, 33)
+        TextBox6.TabIndex = 149
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Point(612, 91)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(176, 25)
+        Label6.TabIndex = 148
+        Label6.Text = "DATABASE NAME"
+        ' 
+        ' TextBox7
+        ' 
+        TextBox7.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        TextBox7.BorderStyle = BorderStyle.FixedSingle
+        TextBox7.Location = New Point(327, 129)
+        TextBox7.Name = "TextBox7"
+        TextBox7.Size = New Size(250, 33)
+        TextBox7.TabIndex = 147
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(327, 91)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(64, 25)
+        Label7.TabIndex = 146
+        Label7.Text = "PORT"
+        ' 
+        ' studentnametextbox
+        ' 
+        studentnametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        studentnametextbox.BorderStyle = BorderStyle.FixedSingle
+        studentnametextbox.Location = New Point(34, 129)
+        studentnametextbox.Name = "studentnametextbox"
+        studentnametextbox.Size = New Size(250, 33)
+        studentnametextbox.TabIndex = 145
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(34, 91)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(184, 25)
+        Label8.TabIndex = 144
+        Label8.Text = "SERVER ADDRESS"
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.FromArgb(CByte(127), CByte(189), CByte(228))
+        Button2.Cursor = Cursors.Hand
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(742, 20)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(98, 35)
+        Button2.TabIndex = 143
+        Button2.Text = "TEST"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' configurebutton
+        ' 
+        configurebutton.BackColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        configurebutton.Cursor = Cursors.Hand
+        configurebutton.FlatAppearance.BorderSize = 0
+        configurebutton.FlatStyle = FlatStyle.Flat
+        configurebutton.ForeColor = Color.White
+        configurebutton.Location = New Point(859, 20)
+        configurebutton.Name = "configurebutton"
+        configurebutton.Size = New Size(141, 35)
+        configurebutton.TabIndex = 141
+        configurebutton.Text = "CONFIGURE"
+        configurebutton.UseVisualStyleBackColor = False
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Location = New Point(23, 20)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(490, 39)
+        Label9.TabIndex = 140
+        Label9.Text = "Manage Database Connection"
+        ' 
+        ' head_configuration
+        ' 
+        head_configuration.BackColor = Color.Maroon
+        head_configuration.Controls.Add(title_configuration)
+        head_configuration.Dock = DockStyle.Top
+        head_configuration.Location = New Point(0, 0)
+        head_configuration.Name = "head_configuration"
+        head_configuration.Size = New Size(1074, 94)
+        head_configuration.TabIndex = 0
+        ' 
+        ' title_configuration
+        ' 
+        title_configuration.Font = New Font("Tahoma", 24F)
+        title_configuration.ForeColor = Color.White
+        title_configuration.ImeMode = ImeMode.NoControl
+        title_configuration.Location = New Point(16, 28)
+        title_configuration.Name = "title_configuration"
+        title_configuration.Size = New Size(366, 38)
+        title_configuration.TabIndex = 0
+        title_configuration.Text = "Configure Database"
+        title_configuration.TextAlign = ContentAlignment.MiddleLeft
+        ' 
         ' adminframe
         ' 
         AutoScaleDimensions = New SizeF(12F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
+        Controls.Add(configurationpanel)
         Controls.Add(subjectspanel)
         Controls.Add(enrollmentspanel)
         Controls.Add(userspanel)
         Controls.Add(dashboardpanel)
-        Controls.Add(configurationpanel)
         Controls.Add(sidepanel)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.FixedDialog
@@ -867,13 +1033,15 @@ Partial Class adminframe
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         sidepanel.ResumeLayout(False)
         subjectspanel.ResumeLayout(False)
-        head_subjects.ResumeLayout(False)
-        configurationpanel.ResumeLayout(False)
-        head_configuration.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(DataGridView3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        head_subjects.ResumeLayout(False)
+        configurationpanel.ResumeLayout(False)
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        head_configuration.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -911,12 +1079,7 @@ Partial Class adminframe
     Friend WithEvents title_configuration As Label
     Friend WithEvents bodyclassespanel As Panel
     Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents adduserbutton As Button
     Friend WithEvents ComboBox3 As ComboBox
@@ -944,4 +1107,18 @@ Partial Class adminframe
     Friend WithEvents DataGridView3 As DataGridView
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents studentnametextbox As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents configurebutton As Button
+    Friend WithEvents Label9 As Label
 End Class

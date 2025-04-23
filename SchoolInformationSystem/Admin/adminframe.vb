@@ -72,4 +72,9 @@
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         editsubject.Show()
     End Sub
+
+    Private Sub configurebutton_Click(sender As Object, e As EventArgs) Handles configurebutton.Click
+        editconfiguration.Show()
+
+    End Sub
 End Class
