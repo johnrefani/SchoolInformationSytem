@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\instructor\\editprofile.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\instructor\\editprofile.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\adduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\adduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\instructor\\instructorframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\instructor\\instructorframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\instructor\\instructorframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\instructor\\instructorframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\adduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\adduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\instructor\\editprofile.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\instructor\\editprofile.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,21 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Application.Designer.vb",
               "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\My Project\\Application.Designer.vb",
               "RelativeDocumentMoniker": "SchoolInformationSystem\\My Project\\Application.Designer.vb",
               "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\My Project\\Application.Designer.vb",
               "RelativeToolTip": "SchoolInformationSystem\\My Project\\Application.Designer.vb",
-              "ViewState": "AgIAABUAAAAAAAAAAAA6wCUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-22T07:05:41.921Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "adduser.vb",
+              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adduser.vb",
+              "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\adduser.vb",
+              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adduser.vb",
+              "RelativeToolTip": "SchoolInformationSystem\\Admin\\adduser.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-23T07:28:40.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "adduser.vb [Design]",
+              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adduser.vb",
+              "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\adduser.vb",
+              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adduser.vb [Design]",
+              "RelativeToolTip": "SchoolInformationSystem\\Admin\\adduser.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-23T07:28:33.241Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -57,56 +74,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "instructorframe.vb [Design]",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Instructor\\instructorframe.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\Instructor\\instructorframe.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Instructor\\instructorframe.vb [Design]",
-              "RelativeToolTip": "SchoolInformationSystem\\Instructor\\instructorframe.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-22T14:04:23.258Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "editprofile.Designer.vb",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Instructor\\editprofile.Designer.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\Instructor\\editprofile.Designer.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Instructor\\editprofile.Designer.vb",
-              "RelativeToolTip": "SchoolInformationSystem\\Instructor\\editprofile.Designer.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-22T14:03:35.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "editprofile.vb [Design]",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Instructor\\editprofile.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\Instructor\\editprofile.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Instructor\\editprofile.vb [Design]",
-              "RelativeToolTip": "SchoolInformationSystem\\Instructor\\editprofile.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-22T13:59:38.735Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "instructorframe.vb",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Instructor\\instructorframe.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\Instructor\\instructorframe.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Instructor\\instructorframe.vb",
-              "RelativeToolTip": "SchoolInformationSystem\\Instructor\\instructorframe.vb",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-22T13:45:55.636Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -43,6 +43,15 @@ Partial Class adminframe
         configuration = New Panel()
         configurationbutton = New Button()
         userspanel = New Panel()
+        bodyclassespanel = New Panel()
+        Button4 = New Button()
+        Button1 = New Button()
+        ComboBox3 = New ComboBox()
+        TextBox2 = New TextBox()
+        adduserbutton = New Button()
+        DataGridView2 = New DataGridView()
+        PictureBox1 = New PictureBox()
+        Label4 = New Label()
         head_users = New Panel()
         title_users = New Label()
         head_enrollments = New Panel()
@@ -67,6 +76,9 @@ Partial Class adminframe
         subjects.SuspendLayout()
         configuration.SuspendLayout()
         userspanel.SuspendLayout()
+        bodyclassespanel.SuspendLayout()
+        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         head_users.SuspendLayout()
         head_enrollments.SuspendLayout()
         enrollmentspanel.SuspendLayout()
@@ -99,7 +111,7 @@ Partial Class adminframe
         ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24.0F)
+        title_dashboard.Font = New Font("Tahoma", 24F)
         title_dashboard.ForeColor = Color.White
         title_dashboard.ImeMode = ImeMode.NoControl
         title_dashboard.Location = New Point(16, 28)
@@ -111,7 +123,7 @@ Partial Class adminframe
         ' 
         ' username
         ' 
-        username.Font = New Font("Tahoma", 24.0F)
+        username.Font = New Font("Tahoma", 24F)
         username.ForeColor = Color.White
         username.ImeMode = ImeMode.NoControl
         username.Location = New Point(179, 28)
@@ -327,12 +339,110 @@ Partial Class adminframe
         ' 
         ' userspanel
         ' 
+        userspanel.Controls.Add(bodyclassespanel)
         userspanel.Controls.Add(head_users)
         userspanel.Dock = DockStyle.Fill
         userspanel.Location = New Point(350, 0)
         userspanel.Name = "userspanel"
         userspanel.Size = New Size(1074, 985)
         userspanel.TabIndex = 10
+        ' 
+        ' bodyclassespanel
+        ' 
+        bodyclassespanel.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
+        bodyclassespanel.Controls.Add(Button4)
+        bodyclassespanel.Controls.Add(Button1)
+        bodyclassespanel.Controls.Add(ComboBox3)
+        bodyclassespanel.Controls.Add(TextBox2)
+        bodyclassespanel.Controls.Add(adduserbutton)
+        bodyclassespanel.Controls.Add(DataGridView2)
+        bodyclassespanel.Controls.Add(PictureBox1)
+        bodyclassespanel.Controls.Add(Label4)
+        bodyclassespanel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        bodyclassespanel.Location = New Point(25, 121)
+        bodyclassespanel.Name = "bodyclassespanel"
+        bodyclassespanel.Size = New Size(1024, 850)
+        bodyclassespanel.TabIndex = 2
+        ' 
+        ' Button4
+        ' 
+        Button4.AutoSize = True
+        Button4.Location = New Point(766, 26)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(98, 35)
+        Button4.TabIndex = 13
+        Button4.Text = "EXPORT"
+        Button4.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.AutoSize = True
+        Button1.Location = New Point(654, 26)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(95, 35)
+        Button1.TabIndex = 12
+        Button1.Text = "PRINT"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' ComboBox3
+        ' 
+        ComboBox3.FormattingEnabled = True
+        ComboBox3.Location = New Point(882, 85)
+        ComboBox3.Name = "ComboBox3"
+        ComboBox3.Size = New Size(121, 33)
+        ComboBox3.TabIndex = 11
+        ComboBox3.Text = "Role"
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(61, 79)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(358, 33)
+        TextBox2.TabIndex = 10
+        TextBox2.Text = "Search"
+        ' 
+        ' adduserbutton
+        ' 
+        adduserbutton.AutoSize = True
+        adduserbutton.BackColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        adduserbutton.Cursor = Cursors.Hand
+        adduserbutton.FlatAppearance.BorderSize = 0
+        adduserbutton.FlatStyle = FlatStyle.Flat
+        adduserbutton.ForeColor = Color.White
+        adduserbutton.Location = New Point(881, 26)
+        adduserbutton.Name = "adduserbutton"
+        adduserbutton.Size = New Size(121, 35)
+        adduserbutton.TabIndex = 9
+        adduserbutton.Text = "ADD USER"
+        adduserbutton.UseVisualStyleBackColor = False
+        ' 
+        ' DataGridView2
+        ' 
+        DataGridView2.BackgroundColor = Color.White
+        DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView2.Location = New Point(23, 133)
+        DataGridView2.Name = "DataGridView2"
+        DataGridView2.Size = New Size(981, 698)
+        DataGridView2.TabIndex = 8
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(23, 79)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(32, 33)
+        PictureBox1.TabIndex = 5
+        PictureBox1.TabStop = False
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(23, 19)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(172, 39)
+        Label4.TabIndex = 0
+        Label4.Text = "Users List"
         ' 
         ' head_users
         ' 
@@ -346,7 +456,7 @@ Partial Class adminframe
         ' 
         ' title_users
         ' 
-        title_users.Font = New Font("Tahoma", 24.0F)
+        title_users.Font = New Font("Tahoma", 24F)
         title_users.ForeColor = Color.White
         title_users.ImeMode = ImeMode.NoControl
         title_users.Location = New Point(16, 28)
@@ -368,7 +478,7 @@ Partial Class adminframe
         ' 
         ' title_enrollments
         ' 
-        title_enrollments.Font = New Font("Tahoma", 24.0F)
+        title_enrollments.Font = New Font("Tahoma", 24F)
         title_enrollments.ForeColor = Color.White
         title_enrollments.ImeMode = ImeMode.NoControl
         title_enrollments.Location = New Point(16, 28)
@@ -418,7 +528,7 @@ Partial Class adminframe
         ' 
         ' title_subjects
         ' 
-        title_subjects.Font = New Font("Tahoma", 24.0F)
+        title_subjects.Font = New Font("Tahoma", 24F)
         title_subjects.ForeColor = Color.White
         title_subjects.ImeMode = ImeMode.NoControl
         title_subjects.Location = New Point(16, 28)
@@ -449,7 +559,7 @@ Partial Class adminframe
         ' 
         ' title_configuration
         ' 
-        title_configuration.Font = New Font("Tahoma", 24.0F)
+        title_configuration.Font = New Font("Tahoma", 24F)
         title_configuration.ForeColor = Color.White
         title_configuration.ImeMode = ImeMode.NoControl
         title_configuration.Location = New Point(16, 28)
@@ -461,12 +571,12 @@ Partial Class adminframe
         ' 
         ' adminframe
         ' 
-        AutoScaleDimensions = New SizeF(12.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(12F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
-        Controls.Add(dashboardpanel)
         Controls.Add(userspanel)
+        Controls.Add(dashboardpanel)
         Controls.Add(enrollmentspanel)
         Controls.Add(subjectspanel)
         Controls.Add(configurationpanel)
@@ -475,6 +585,7 @@ Partial Class adminframe
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(5)
+        MaximizeBox = False
         Name = "adminframe"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Admin"
@@ -490,6 +601,10 @@ Partial Class adminframe
         subjects.ResumeLayout(False)
         configuration.ResumeLayout(False)
         userspanel.ResumeLayout(False)
+        bodyclassespanel.ResumeLayout(False)
+        bodyclassespanel.PerformLayout()
+        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         head_users.ResumeLayout(False)
         head_enrollments.ResumeLayout(False)
         enrollmentspanel.ResumeLayout(False)
@@ -533,4 +648,18 @@ Partial Class adminframe
     Friend WithEvents configurationpanel As Panel
     Friend WithEvents head_configuration As Panel
     Friend WithEvents title_configuration As Label
+    Friend WithEvents bodyclassespanel As Panel
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents adduserbutton As Button
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button1 As Button
 End Class

@@ -934,8 +934,8 @@ Partial Class instructorframe
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
-        Controls.Add(myprofilepanel)
         Controls.Add(classespanel)
+        Controls.Add(myprofilepanel)
         Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog

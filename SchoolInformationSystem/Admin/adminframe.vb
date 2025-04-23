@@ -60,4 +60,9 @@
         configurationpanel.Visible = True
         HighlightActiveButton(configurationbutton)
     End Sub
+
+    Private Sub adduserbutton_Click(sender As Object, e As EventArgs) Handles adduserbutton.Click
+        adduser.Show()
+    End Sub
+
 End Class
