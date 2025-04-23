@@ -66,6 +66,10 @@
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        addenrolle.Show()
+        addenrolle.Show
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        editsubject.Show()
     End Sub
 End Class
