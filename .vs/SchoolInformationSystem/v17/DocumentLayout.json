@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\",
+  "WorkspaceRootPath": "C:\\Users\\Win11\\source\\repos\\SchoolInformationSytem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|c:\\users\\win11\\source\\repos\\schoolinformationsytem\\schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|c:\\users\\win11\\source\\repos\\schoolinformationsytem\\schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +18,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Application.Designer.vb",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\My Project\\Application.Designer.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\My Project\\Application.Designer.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\My Project\\Application.Designer.vb",
-              "RelativeToolTip": "SchoolInformationSystem\\My Project\\Application.Designer.vb",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-22T07:05:41.921Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -44,35 +34,31 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "adminframe.vb",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb",
+              "DocumentMoniker": "C:\\Users\\Win11\\source\\repos\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb",
               "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\adminframe.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb",
+              "ToolTip": "C:\\Users\\Win11\\source\\repos\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb",
               "RelativeToolTip": "SchoolInformationSystem\\Admin\\adminframe.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAA7wD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAqwDwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-22T07:35:40.507Z",
+              "WhenOpened": "2025-04-23T07:20:16.135Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "adminframe.vb [Design]",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb",
+              "DocumentMoniker": "C:\\Users\\Win11\\source\\repos\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb",
               "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\adminframe.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb [Design]",
+              "ToolTip": "C:\\Users\\Win11\\source\\repos\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb [Design]",
               "RelativeToolTip": "SchoolInformationSystem\\Admin\\adminframe.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-22T07:12:56.764Z",
+              "WhenOpened": "2025-04-23T05:36:19.673Z",
               "EditorCaption": " [Design]"
             }
           ]
