@@ -57,13 +57,9 @@ Partial Class adminframe
         head_enrollments = New Panel()
         title_enrollments = New Label()
         enrollmentspanel = New Panel()
-        sidepanel = New Panel()
-        subjectspanel = New Panel()
-        head_subjects = New Panel()
-        title_subjects = New Label()
-        configurationpanel = New Panel()
-        head_configuration = New Panel()
-        title_configuration = New Label()
+        Panel1 = New Panel()
+        ComboBox6 = New ComboBox()
+        ComboBox5 = New ComboBox()
         Button5 = New Button()
         Button6 = New Button()
         ComboBox4 = New ComboBox()
@@ -72,9 +68,23 @@ Partial Class adminframe
         DataGridView1 = New DataGridView()
         PictureBox2 = New PictureBox()
         Label1 = New Label()
-        Panel1 = New Panel()
-        ComboBox5 = New ComboBox()
-        ComboBox6 = New ComboBox()
+        sidepanel = New Panel()
+        subjectspanel = New Panel()
+        head_subjects = New Panel()
+        title_subjects = New Label()
+        configurationpanel = New Panel()
+        head_configuration = New Panel()
+        title_configuration = New Label()
+        Panel2 = New Panel()
+        ComboBox8 = New ComboBox()
+        Button8 = New Button()
+        Button9 = New Button()
+        ComboBox9 = New ComboBox()
+        TextBox4 = New TextBox()
+        Button10 = New Button()
+        DataGridView3 = New DataGridView()
+        PictureBox3 = New PictureBox()
+        Label2 = New Label()
         dashboardpanel.SuspendLayout()
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
@@ -93,14 +103,17 @@ Partial Class adminframe
         head_users.SuspendLayout()
         head_enrollments.SuspendLayout()
         enrollmentspanel.SuspendLayout()
+        Panel1.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         sidepanel.SuspendLayout()
         subjectspanel.SuspendLayout()
         head_subjects.SuspendLayout()
         configurationpanel.SuspendLayout()
         head_configuration.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
+        CType(DataGridView3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' dashboardpanel
@@ -512,77 +525,42 @@ Partial Class adminframe
         enrollmentspanel.Size = New Size(1074, 985)
         enrollmentspanel.TabIndex = 11
         ' 
-        ' sidepanel
+        ' Panel1
         ' 
-        sidepanel.BackColor = Color.Maroon
-        sidepanel.Controls.Add(sidenav)
-        sidepanel.Dock = DockStyle.Left
-        sidepanel.Location = New Point(0, 0)
-        sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 985)
-        sidepanel.TabIndex = 8
+        Panel1.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
+        Panel1.Controls.Add(ComboBox6)
+        Panel1.Controls.Add(ComboBox5)
+        Panel1.Controls.Add(Button5)
+        Panel1.Controls.Add(Button6)
+        Panel1.Controls.Add(ComboBox4)
+        Panel1.Controls.Add(TextBox3)
+        Panel1.Controls.Add(Button7)
+        Panel1.Controls.Add(DataGridView1)
+        Panel1.Controls.Add(PictureBox2)
+        Panel1.Controls.Add(Label1)
+        Panel1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Panel1.Location = New Point(25, 118)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1024, 850)
+        Panel1.TabIndex = 3
         ' 
-        ' subjectspanel
+        ' ComboBox6
         ' 
-        subjectspanel.Controls.Add(head_subjects)
-        subjectspanel.Dock = DockStyle.Fill
-        subjectspanel.Location = New Point(350, 0)
-        subjectspanel.Name = "subjectspanel"
-        subjectspanel.Size = New Size(1074, 985)
-        subjectspanel.TabIndex = 12
+        ComboBox6.FormattingEnabled = True
+        ComboBox6.Location = New Point(577, 85)
+        ComboBox6.Name = "ComboBox6"
+        ComboBox6.Size = New Size(146, 33)
+        ComboBox6.TabIndex = 15
+        ComboBox6.Text = "School Year"
         ' 
-        ' head_subjects
+        ' ComboBox5
         ' 
-        head_subjects.BackColor = Color.Maroon
-        head_subjects.Controls.Add(title_subjects)
-        head_subjects.Dock = DockStyle.Top
-        head_subjects.Location = New Point(0, 0)
-        head_subjects.Name = "head_subjects"
-        head_subjects.Size = New Size(1074, 94)
-        head_subjects.TabIndex = 0
-        ' 
-        ' title_subjects
-        ' 
-        title_subjects.Font = New Font("Tahoma", 24F)
-        title_subjects.ForeColor = Color.White
-        title_subjects.ImeMode = ImeMode.NoControl
-        title_subjects.Location = New Point(16, 28)
-        title_subjects.Name = "title_subjects"
-        title_subjects.Size = New Size(366, 38)
-        title_subjects.TabIndex = 0
-        title_subjects.Text = "Manage Subjects"
-        title_subjects.TextAlign = ContentAlignment.MiddleLeft
-        ' 
-        ' configurationpanel
-        ' 
-        configurationpanel.Controls.Add(head_configuration)
-        configurationpanel.Dock = DockStyle.Fill
-        configurationpanel.Location = New Point(350, 0)
-        configurationpanel.Name = "configurationpanel"
-        configurationpanel.Size = New Size(1074, 985)
-        configurationpanel.TabIndex = 13
-        ' 
-        ' head_configuration
-        ' 
-        head_configuration.BackColor = Color.Maroon
-        head_configuration.Controls.Add(title_configuration)
-        head_configuration.Dock = DockStyle.Top
-        head_configuration.Location = New Point(0, 0)
-        head_configuration.Name = "head_configuration"
-        head_configuration.Size = New Size(1074, 94)
-        head_configuration.TabIndex = 0
-        ' 
-        ' title_configuration
-        ' 
-        title_configuration.Font = New Font("Tahoma", 24F)
-        title_configuration.ForeColor = Color.White
-        title_configuration.ImeMode = ImeMode.NoControl
-        title_configuration.Location = New Point(16, 28)
-        title_configuration.Name = "title_configuration"
-        title_configuration.Size = New Size(366, 38)
-        title_configuration.TabIndex = 0
-        title_configuration.Text = "Configure Database"
-        title_configuration.TextAlign = ContentAlignment.MiddleLeft
+        ComboBox5.FormattingEnabled = True
+        ComboBox5.Location = New Point(742, 85)
+        ComboBox5.Name = "ComboBox5"
+        ComboBox5.Size = New Size(121, 33)
+        ComboBox5.TabIndex = 14
+        ComboBox5.Text = "Status"
         ' 
         ' Button5
         ' 
@@ -664,42 +642,185 @@ Partial Class adminframe
         Label1.TabIndex = 0
         Label1.Text = "Enrollments List"
         ' 
-        ' Panel1
+        ' sidepanel
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
-        Panel1.Controls.Add(ComboBox6)
-        Panel1.Controls.Add(ComboBox5)
-        Panel1.Controls.Add(Button5)
-        Panel1.Controls.Add(Button6)
-        Panel1.Controls.Add(ComboBox4)
-        Panel1.Controls.Add(TextBox3)
-        Panel1.Controls.Add(Button7)
-        Panel1.Controls.Add(DataGridView1)
-        Panel1.Controls.Add(PictureBox2)
-        Panel1.Controls.Add(Label1)
-        Panel1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Panel1.Location = New Point(25, 118)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1024, 850)
-        Panel1.TabIndex = 3
+        sidepanel.BackColor = Color.Maroon
+        sidepanel.Controls.Add(sidenav)
+        sidepanel.Dock = DockStyle.Left
+        sidepanel.Location = New Point(0, 0)
+        sidepanel.Name = "sidepanel"
+        sidepanel.Size = New Size(350, 985)
+        sidepanel.TabIndex = 8
         ' 
-        ' ComboBox5
+        ' subjectspanel
         ' 
-        ComboBox5.FormattingEnabled = True
-        ComboBox5.Location = New Point(742, 85)
-        ComboBox5.Name = "ComboBox5"
-        ComboBox5.Size = New Size(121, 33)
-        ComboBox5.TabIndex = 14
-        ComboBox5.Text = "Status"
+        subjectspanel.Controls.Add(Panel2)
+        subjectspanel.Controls.Add(head_subjects)
+        subjectspanel.Dock = DockStyle.Fill
+        subjectspanel.Location = New Point(350, 0)
+        subjectspanel.Name = "subjectspanel"
+        subjectspanel.Size = New Size(1074, 985)
+        subjectspanel.TabIndex = 12
         ' 
-        ' ComboBox6
+        ' head_subjects
         ' 
-        ComboBox6.FormattingEnabled = True
-        ComboBox6.Location = New Point(577, 85)
-        ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(146, 33)
-        ComboBox6.TabIndex = 15
-        ComboBox6.Text = "School Year"
+        head_subjects.BackColor = Color.Maroon
+        head_subjects.Controls.Add(title_subjects)
+        head_subjects.Dock = DockStyle.Top
+        head_subjects.Location = New Point(0, 0)
+        head_subjects.Name = "head_subjects"
+        head_subjects.Size = New Size(1074, 94)
+        head_subjects.TabIndex = 0
+        ' 
+        ' title_subjects
+        ' 
+        title_subjects.Font = New Font("Tahoma", 24F)
+        title_subjects.ForeColor = Color.White
+        title_subjects.ImeMode = ImeMode.NoControl
+        title_subjects.Location = New Point(16, 28)
+        title_subjects.Name = "title_subjects"
+        title_subjects.Size = New Size(366, 38)
+        title_subjects.TabIndex = 0
+        title_subjects.Text = "Manage Subjects"
+        title_subjects.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' configurationpanel
+        ' 
+        configurationpanel.Controls.Add(head_configuration)
+        configurationpanel.Dock = DockStyle.Fill
+        configurationpanel.Location = New Point(350, 0)
+        configurationpanel.Name = "configurationpanel"
+        configurationpanel.Size = New Size(1074, 985)
+        configurationpanel.TabIndex = 13
+        ' 
+        ' head_configuration
+        ' 
+        head_configuration.BackColor = Color.Maroon
+        head_configuration.Controls.Add(title_configuration)
+        head_configuration.Dock = DockStyle.Top
+        head_configuration.Location = New Point(0, 0)
+        head_configuration.Name = "head_configuration"
+        head_configuration.Size = New Size(1074, 94)
+        head_configuration.TabIndex = 0
+        ' 
+        ' title_configuration
+        ' 
+        title_configuration.Font = New Font("Tahoma", 24F)
+        title_configuration.ForeColor = Color.White
+        title_configuration.ImeMode = ImeMode.NoControl
+        title_configuration.Location = New Point(16, 28)
+        title_configuration.Name = "title_configuration"
+        title_configuration.Size = New Size(366, 38)
+        title_configuration.TabIndex = 0
+        title_configuration.Text = "Configure Database"
+        title_configuration.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
+        Panel2.Controls.Add(ComboBox8)
+        Panel2.Controls.Add(Button8)
+        Panel2.Controls.Add(Button9)
+        Panel2.Controls.Add(ComboBox9)
+        Panel2.Controls.Add(TextBox4)
+        Panel2.Controls.Add(Button10)
+        Panel2.Controls.Add(DataGridView3)
+        Panel2.Controls.Add(PictureBox3)
+        Panel2.Controls.Add(Label2)
+        Panel2.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Panel2.Location = New Point(25, 115)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(1024, 850)
+        Panel2.TabIndex = 4
+        ' 
+        ' ComboBox8
+        ' 
+        ComboBox8.FormattingEnabled = True
+        ComboBox8.Location = New Point(685, 85)
+        ComboBox8.Name = "ComboBox8"
+        ComboBox8.Size = New Size(139, 33)
+        ComboBox8.TabIndex = 14
+        ComboBox8.Text = "Department"
+        ' 
+        ' Button8
+        ' 
+        Button8.AutoSize = True
+        Button8.Location = New Point(726, 29)
+        Button8.Name = "Button8"
+        Button8.Size = New Size(98, 35)
+        Button8.TabIndex = 13
+        Button8.Text = "EXPORT"
+        Button8.UseVisualStyleBackColor = True
+        ' 
+        ' Button9
+        ' 
+        Button9.AutoSize = True
+        Button9.Location = New Point(608, 29)
+        Button9.Name = "Button9"
+        Button9.Size = New Size(95, 35)
+        Button9.TabIndex = 12
+        Button9.Text = "PRINT"
+        Button9.UseVisualStyleBackColor = True
+        ' 
+        ' ComboBox9
+        ' 
+        ComboBox9.FormattingEnabled = True
+        ComboBox9.Location = New Point(847, 85)
+        ComboBox9.Name = "ComboBox9"
+        ComboBox9.Size = New Size(156, 33)
+        ComboBox9.TabIndex = 11
+        ComboBox9.Text = "Grade Level"
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Location = New Point(61, 79)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(358, 33)
+        TextBox4.TabIndex = 10
+        TextBox4.Text = "Search"
+        ' 
+        ' Button10
+        ' 
+        Button10.AutoSize = True
+        Button10.BackColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        Button10.Cursor = Cursors.Hand
+        Button10.FlatAppearance.BorderSize = 0
+        Button10.FlatStyle = FlatStyle.Flat
+        Button10.ForeColor = Color.White
+        Button10.Location = New Point(847, 29)
+        Button10.Name = "Button10"
+        Button10.Size = New Size(156, 35)
+        Button10.TabIndex = 9
+        Button10.Text = "ADD SUBJECT"
+        Button10.UseVisualStyleBackColor = False
+        ' 
+        ' DataGridView3
+        ' 
+        DataGridView3.BackgroundColor = Color.White
+        DataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView3.Location = New Point(23, 133)
+        DataGridView3.Name = "DataGridView3"
+        DataGridView3.Size = New Size(981, 698)
+        DataGridView3.TabIndex = 8
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(23, 79)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(32, 33)
+        PictureBox3.TabIndex = 5
+        PictureBox3.TabStop = False
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(23, 19)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(220, 39)
+        Label2.TabIndex = 0
+        Label2.Text = "Subjects List"
         ' 
         ' adminframe
         ' 
@@ -707,10 +828,10 @@ Partial Class adminframe
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
+        Controls.Add(subjectspanel)
         Controls.Add(enrollmentspanel)
         Controls.Add(userspanel)
         Controls.Add(dashboardpanel)
-        Controls.Add(subjectspanel)
         Controls.Add(configurationpanel)
         Controls.Add(sidepanel)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -740,15 +861,19 @@ Partial Class adminframe
         head_users.ResumeLayout(False)
         head_enrollments.ResumeLayout(False)
         enrollmentspanel.ResumeLayout(False)
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         sidepanel.ResumeLayout(False)
         subjectspanel.ResumeLayout(False)
         head_subjects.ResumeLayout(False)
         configurationpanel.ResumeLayout(False)
         head_configuration.ResumeLayout(False)
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        CType(DataGridView3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -809,4 +934,14 @@ Partial Class adminframe
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents ComboBox8 As ComboBox
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents ComboBox9 As ComboBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Button10 As Button
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label2 As Label
 End Class

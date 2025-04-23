@@ -7,6 +7,12 @@
     <Compile Update="Admin\Enrollments\editenrolle.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Admin\Subjects\addsubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Subjects\editsubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Admin\Users\adduser.vb">
       <SubType>Form</SubType>
     </Compile>

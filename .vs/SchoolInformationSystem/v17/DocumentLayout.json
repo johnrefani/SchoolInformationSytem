@@ -3,22 +3,6 @@
   "WorkspaceRootPath": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\enrollments\\editenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\enrollments\\editenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\enrollments\\addenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\enrollments\\addenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\users\\adduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\users\\adduser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\users\\edituser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\users\\edituser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
@@ -27,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\adminframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\enrollments\\editenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\enrollments\\editenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\subjects\\editsubject.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\subjects\\editsubject.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\enrollments\\addenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\enrollments\\addenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\admin\\enrollments\\editenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\admin\\enrollments\\editenrolle.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -46,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "Application.Designer.vb",
               "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\My Project\\Application.Designer.vb",
               "RelativeDocumentMoniker": "SchoolInformationSystem\\My Project\\Application.Designer.vb",
@@ -61,30 +45,6 @@
               "WhenOpened": "2025-04-22T07:05:41.921Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "addenrolle.vb [Design]",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Enrollments\\addenrolle.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\Enrollments\\addenrolle.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Enrollments\\addenrolle.vb [Design]",
-              "RelativeToolTip": "SchoolInformationSystem\\Admin\\Enrollments\\addenrolle.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-23T08:12:03.034Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "adduser.vb [Design]",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Users\\adduser.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\Users\\adduser.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Users\\adduser.vb [Design]",
-              "RelativeToolTip": "SchoolInformationSystem\\Admin\\Users\\adduser.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-23T08:11:44.605Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -100,78 +60,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "adminframe.vb",
               "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb",
               "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\adminframe.vb",
               "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb",
               "RelativeToolTip": "SchoolInformationSystem\\Admin\\adminframe.vb",
-              "ViewState": "AgIAACoAAAAAAAAAAAAqwEQAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAwEgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-23T08:11:03.409Z",
+              "WhenOpened": "2025-04-23T08:42:47.765Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "adminframe.vb [Design]",
               "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb",
               "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\adminframe.vb",
               "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\adminframe.vb [Design]",
               "RelativeToolTip": "SchoolInformationSystem\\Admin\\adminframe.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-23T08:10:58.832Z",
+              "WhenOpened": "2025-04-23T08:40:48.75Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "edituser.vb [Design]",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Users\\edituser.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\Users\\edituser.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Users\\edituser.vb [Design]",
-              "RelativeToolTip": "SchoolInformationSystem\\Admin\\Users\\edituser.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-23T08:09:12.426Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "editenrolle.vb",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Enrollments\\editenrolle.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\Enrollments\\editenrolle.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Enrollments\\editenrolle.vb",
-              "RelativeToolTip": "SchoolInformationSystem\\Admin\\Enrollments\\editenrolle.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-23T08:08:26.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "editenrolle.vb [Design]",
               "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Enrollments\\editenrolle.vb",
               "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\Enrollments\\editenrolle.vb",
               "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Enrollments\\editenrolle.vb [Design]",
               "RelativeToolTip": "SchoolInformationSystem\\Admin\\Enrollments\\editenrolle.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-23T08:08:00.657Z",
+              "WhenOpened": "2025-04-23T08:40:09.145Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "addenrolle.vb",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Enrollments\\addenrolle.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\Enrollments\\addenrolle.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Enrollments\\addenrolle.vb",
-              "RelativeToolTip": "SchoolInformationSystem\\Admin\\Enrollments\\addenrolle.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "editsubject.vb [Design]",
+              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Subjects\\editsubject.vb",
+              "RelativeDocumentMoniker": "SchoolInformationSystem\\Admin\\Subjects\\editsubject.vb",
+              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Admin\\Subjects\\editsubject.vb [Design]",
+              "RelativeToolTip": "SchoolInformationSystem\\Admin\\Subjects\\editsubject.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-23T07:53:01.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-23T08:39:16.162Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
