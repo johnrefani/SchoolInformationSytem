@@ -1,13 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Admin\adduser.vb">
+    <Compile Update="Admin\Enrollments\addenrolle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Enrollments\editenrolle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Users\adduser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Admin\adminframe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Admin\edituser.vb">
+    <Compile Update="Admin\Users\edituser.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Instructor\editprofile.vb">
