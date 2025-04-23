@@ -64,6 +64,17 @@ Partial Class adminframe
         configurationpanel = New Panel()
         head_configuration = New Panel()
         title_configuration = New Label()
+        Button5 = New Button()
+        Button6 = New Button()
+        ComboBox4 = New ComboBox()
+        TextBox3 = New TextBox()
+        Button7 = New Button()
+        DataGridView1 = New DataGridView()
+        PictureBox2 = New PictureBox()
+        Label1 = New Label()
+        Panel1 = New Panel()
+        ComboBox5 = New ComboBox()
+        ComboBox6 = New ComboBox()
         dashboardpanel.SuspendLayout()
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
@@ -87,6 +98,9 @@ Partial Class adminframe
         head_subjects.SuspendLayout()
         configurationpanel.SuspendLayout()
         head_configuration.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        Panel1.SuspendLayout()
         SuspendLayout()
         ' 
         ' dashboardpanel
@@ -490,6 +504,7 @@ Partial Class adminframe
         ' 
         ' enrollmentspanel
         ' 
+        enrollmentspanel.Controls.Add(Panel1)
         enrollmentspanel.Controls.Add(head_enrollments)
         enrollmentspanel.Dock = DockStyle.Fill
         enrollmentspanel.Location = New Point(350, 0)
@@ -569,15 +584,132 @@ Partial Class adminframe
         title_configuration.Text = "Configure Database"
         title_configuration.TextAlign = ContentAlignment.MiddleLeft
         ' 
+        ' Button5
+        ' 
+        Button5.AutoSize = True
+        Button5.Location = New Point(726, 29)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(98, 35)
+        Button5.TabIndex = 13
+        Button5.Text = "EXPORT"
+        Button5.UseVisualStyleBackColor = True
+        ' 
+        ' Button6
+        ' 
+        Button6.AutoSize = True
+        Button6.Location = New Point(608, 29)
+        Button6.Name = "Button6"
+        Button6.Size = New Size(95, 35)
+        Button6.TabIndex = 12
+        Button6.Text = "PRINT"
+        Button6.UseVisualStyleBackColor = True
+        ' 
+        ' ComboBox4
+        ' 
+        ComboBox4.FormattingEnabled = True
+        ComboBox4.Location = New Point(882, 85)
+        ComboBox4.Name = "ComboBox4"
+        ComboBox4.Size = New Size(121, 33)
+        ComboBox4.TabIndex = 11
+        ComboBox4.Text = "Role"
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.Location = New Point(61, 79)
+        TextBox3.Name = "TextBox3"
+        TextBox3.Size = New Size(358, 33)
+        TextBox3.TabIndex = 10
+        TextBox3.Text = "Search"
+        ' 
+        ' Button7
+        ' 
+        Button7.AutoSize = True
+        Button7.BackColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        Button7.Cursor = Cursors.Hand
+        Button7.FlatAppearance.BorderSize = 0
+        Button7.FlatStyle = FlatStyle.Flat
+        Button7.ForeColor = Color.White
+        Button7.Location = New Point(847, 29)
+        Button7.Name = "Button7"
+        Button7.Size = New Size(156, 35)
+        Button7.TabIndex = 9
+        Button7.Text = "ADD ENROLLE"
+        Button7.UseVisualStyleBackColor = False
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.BackgroundColor = Color.White
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(23, 133)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.Size = New Size(981, 698)
+        DataGridView1.TabIndex = 8
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(23, 79)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(32, 33)
+        PictureBox2.TabIndex = 5
+        PictureBox2.TabStop = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(23, 19)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(276, 39)
+        Label1.TabIndex = 0
+        Label1.Text = "Enrollments List"
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
+        Panel1.Controls.Add(ComboBox6)
+        Panel1.Controls.Add(ComboBox5)
+        Panel1.Controls.Add(Button5)
+        Panel1.Controls.Add(Button6)
+        Panel1.Controls.Add(ComboBox4)
+        Panel1.Controls.Add(TextBox3)
+        Panel1.Controls.Add(Button7)
+        Panel1.Controls.Add(DataGridView1)
+        Panel1.Controls.Add(PictureBox2)
+        Panel1.Controls.Add(Label1)
+        Panel1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Panel1.Location = New Point(25, 118)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1024, 850)
+        Panel1.TabIndex = 3
+        ' 
+        ' ComboBox5
+        ' 
+        ComboBox5.FormattingEnabled = True
+        ComboBox5.Location = New Point(742, 85)
+        ComboBox5.Name = "ComboBox5"
+        ComboBox5.Size = New Size(121, 33)
+        ComboBox5.TabIndex = 14
+        ComboBox5.Text = "Status"
+        ' 
+        ' ComboBox6
+        ' 
+        ComboBox6.FormattingEnabled = True
+        ComboBox6.Location = New Point(577, 85)
+        ComboBox6.Name = "ComboBox6"
+        ComboBox6.Size = New Size(146, 33)
+        ComboBox6.TabIndex = 15
+        ComboBox6.Text = "School Year"
+        ' 
         ' adminframe
         ' 
         AutoScaleDimensions = New SizeF(12F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
+        Controls.Add(enrollmentspanel)
         Controls.Add(userspanel)
         Controls.Add(dashboardpanel)
-        Controls.Add(enrollmentspanel)
         Controls.Add(subjectspanel)
         Controls.Add(configurationpanel)
         Controls.Add(sidepanel)
@@ -613,6 +745,10 @@ Partial Class adminframe
         head_subjects.ResumeLayout(False)
         configurationpanel.ResumeLayout(False)
         head_configuration.ResumeLayout(False)
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -662,4 +798,15 @@ Partial Class adminframe
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Button7 As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

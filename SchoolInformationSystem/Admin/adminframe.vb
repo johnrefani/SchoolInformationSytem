@@ -62,7 +62,10 @@
     End Sub
 
     Private Sub adduserbutton_Click(sender As Object, e As EventArgs) Handles adduserbutton.Click
-        adduser.Show()
+        adduser.Show
     End Sub
 
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        addenrolle.Show()
+    End Sub
 End Class
