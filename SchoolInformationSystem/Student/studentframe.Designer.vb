@@ -23,6 +23,9 @@ Partial Class studentframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentframe))
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         Panel3 = New Panel()
@@ -81,7 +84,7 @@ Partial Class studentframe
         schedule_panel = New Panel()
         Label2 = New Label()
         subject_panel = New Panel()
-        Label1 = New Label()
+        StudBarChart = New DataVisualization.Charting.Chart()
         myprofilepanel.SuspendLayout()
         Panel3.SuspendLayout()
         head_myprofile.SuspendLayout()
@@ -102,6 +105,7 @@ Partial Class studentframe
         Panel1.SuspendLayout()
         schedule_panel.SuspendLayout()
         subject_panel.SuspendLayout()
+        CType(StudBarChart, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' title_myprofile
@@ -712,7 +716,7 @@ Partial Class studentframe
         ' 
         schedule_panel.BackColor = Color.WhiteSmoke
         schedule_panel.Controls.Add(Label2)
-        schedule_panel.Location = New Point(627, 121)
+        schedule_panel.Location = New Point(591, 121)
         schedule_panel.Name = "schedule_panel"
         schedule_panel.Size = New Size(435, 362)
         schedule_panel.TabIndex = 2
@@ -730,21 +734,27 @@ Partial Class studentframe
         ' subject_panel
         ' 
         subject_panel.BackColor = Color.WhiteSmoke
-        subject_panel.Controls.Add(Label1)
+        subject_panel.Controls.Add(StudBarChart)
         subject_panel.Location = New Point(16, 121)
         subject_panel.Name = "subject_panel"
-        subject_panel.Size = New Size(585, 362)
+        subject_panel.Size = New Size(550, 362)
         subject_panel.TabIndex = 1
         ' 
-        ' Label1
+        ' StudBarChart
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(16, 17)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(157, 25)
-        Label1.TabIndex = 0
-        Label1.Text = "Enrolled Subjects"
+        ChartArea2.Name = "ChartArea1"
+        StudBarChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        StudBarChart.Legends.Add(Legend2)
+        StudBarChart.Location = New Point(0, 0)
+        StudBarChart.Name = "StudBarChart"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        StudBarChart.Series.Add(Series2)
+        StudBarChart.Size = New Size(550, 362)
+        StudBarChart.TabIndex = 0
+        StudBarChart.Text = "Chart1"
         ' 
         ' studentframe
         ' 
@@ -752,9 +762,9 @@ Partial Class studentframe
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1370, 749)
+        Controls.Add(dashboardpanel)
         Controls.Add(myprofilepanel)
         Controls.Add(classespanel)
-        Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Name = "studentframe"
@@ -784,7 +794,7 @@ Partial Class studentframe
         schedule_panel.ResumeLayout(False)
         schedule_panel.PerformLayout()
         subject_panel.ResumeLayout(False)
-        subject_panel.PerformLayout()
+        CType(StudBarChart, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -813,7 +823,6 @@ Partial Class studentframe
     Friend WithEvents Panel1 As Panel
     Friend WithEvents schedule_panel As Panel
     Friend WithEvents subject_panel As Panel
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
@@ -847,5 +856,6 @@ Partial Class studentframe
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents StudBarChart As DataVisualization.Charting.Chart
 End Class
 
