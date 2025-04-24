@@ -1,13 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class login
-    ' Declare connection string and connection object
-    Dim connString As String = "Server=your_server;Database=school_information_db;Uid=your_user;Pwd=your_password;"
-    Dim conn As New MySqlConnection(connString)
-
     ' Event handler for login button click
     Private Sub loginbtn_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
-        errorLabel.Text = "" ' Clear error label
+        errorLabel.Text = ""
 
         ' Validation
         If String.IsNullOrWhiteSpace(username.Text) OrElse String.IsNullOrWhiteSpace(password.Text) Then
@@ -15,42 +11,52 @@ Public Class login
             Return
         End If
 
-        If Me.role.SelectedIndex = -1 Then
-            errorLabel.Text = "Please select a user type (Student/Teacher)."
+        If role.SelectedIndex = -1 Then
+            errorLabel.Text = "Please select a user type (Student/Instructor/Admin)."
             Return
         End If
 
-        Dim inputUsername As String = username.Text
-        Dim inputPassword As String = password.Text
-        Dim role As String = Me.role.SelectedItem.ToString()
+        ' Get user inputs and ensure they're lowercase for case-insensitive matching
+        Dim inputUsername As String = username.Text.Trim().ToLower()
+        Dim inputPassword As String = password.Text.Trim().ToLower()
+        Dim inputRole As String = role.SelectedItem.ToString().Trim().ToLower()
 
+        ' Database connection
         Dim conn As MySqlConnection = strconnection()
 
         Try
             conn.Open()
 
-            Dim query As String = "SELECT * FROM user WHERE username = @username AND role = @role"
+            ' SQL query for case-insensitive username and role matching
+            Dim query As String = "SELECT * FROM user WHERE LOWER(username) = @username AND LOWER(role) = @role"
             Dim cmd As New MySqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@username", inputUsername)
-            cmd.Parameters.AddWithValue("@role", role)
+            cmd.Parameters.AddWithValue("@role", inputRole)
 
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
+            ' Check if the user exists
             If reader.HasRows Then
                 reader.Read()
-                If inputPassword = reader("PasswordHash").ToString() Then
-                    ' Login success
+
+                ' Check if the account is active
+                If CInt(reader("is_active")) = 0 Then
+                    errorLabel.Text = "This account is inactive."
+                    Return
+                End If
+
+
+                If inputPassword = reader("password").ToString().ToLower() Then
+                    ' Successful login
                     Me.Hide()
-                    If role.ToLower() = "admin" Then
-                        adminframe.Show()
-                    ElseIf role.ToLower() = "student" Then
-
-                        studentframe.Show()
-
-                    ElseIf role.ToLower() = "instructor" Then
-                        instructorframe.Show()
-
-                    End If
+                    Select Case inputRole
+                        Case "admin"
+                            adminframe.Show()
+                        Case "student"
+                            studentframe.Show()
+                        Case "instructor"
+                            instructorframe.Show()
+                    End Select
                 Else
                     errorLabel.Text = "Invalid password. Please try again."
                 End If
@@ -65,4 +71,23 @@ Public Class login
         End Try
     End Sub
 
+    ' Event handler for Enter key press in the username field
+    Private Sub username_KeyDown(sender As Object, e As KeyEventArgs) Handles username.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            loginbtn.PerformClick()
+        End If
+    End Sub
+
+    ' Event handler for Enter key press in the password field
+    Private Sub password_KeyDown(sender As Object, e As KeyEventArgs) Handles password.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            loginbtn.PerformClick()
+        End If
+    End Sub
+
+    Private Sub login_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            loginbtn.PerformClick()
+        End If
+    End Sub
 End Class
