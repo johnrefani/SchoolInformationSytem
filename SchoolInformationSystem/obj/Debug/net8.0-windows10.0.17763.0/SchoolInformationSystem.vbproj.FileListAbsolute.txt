@@ -141,3 +141,13 @@ C:\Users\Win11\Source\Repos\SchoolInformationSytem\SchoolInformationSystem\bin\D
 C:\Users\Win11\Source\Repos\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\WinForms.DataVisualization.dll
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\WinForms.DataVisualization.Utilities.dll
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\WinForms.DataVisualization.dll
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\WinForms.DataVisualization.Utilities.dll
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\bin\Debug\net8.0-windows10.0.17763.0\WinForms.DataVisualization.dll
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.editconfiguration.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.addenrolle.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.editenrolle.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.addsubject.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.editsubject.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.adduser.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.edituser.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.editprofile.resources
