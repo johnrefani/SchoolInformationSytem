@@ -23,6 +23,9 @@ Partial Class instructorframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
@@ -94,8 +97,7 @@ Partial Class instructorframe
         enrolledstudentslabel = New Label()
         Label3 = New Label()
         chartpanel = New Panel()
-        Label2 = New Label()
-        Label1 = New Label()
+        LineChart = New DataVisualization.Charting.Chart()
         myprofilepanel.SuspendLayout()
         myprofilebodypanel.SuspendLayout()
         head_myprofile.SuspendLayout()
@@ -119,6 +121,7 @@ Partial Class instructorframe
         Panel2.SuspendLayout()
         Panel1.SuspendLayout()
         chartpanel.SuspendLayout()
+        CType(LineChart, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' title_myprofile
@@ -140,7 +143,7 @@ Partial Class instructorframe
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1074, 985)
+        myprofilepanel.Size = New Size(1020, 749)
         myprofilepanel.TabIndex = 7
         ' 
         ' myprofilebodypanel
@@ -446,7 +449,7 @@ Partial Class instructorframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1074, 94)
+        head_myprofile.Size = New Size(1020, 94)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -606,7 +609,7 @@ Partial Class instructorframe
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1074, 94)
+        head_classes.Size = New Size(1020, 94)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -616,7 +619,7 @@ Partial Class instructorframe
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
         classespanel.Name = "classespanel"
-        classespanel.Size = New Size(1074, 985)
+        classespanel.Size = New Size(1020, 749)
         classespanel.TabIndex = 6
         ' 
         ' bodyclassespanel
@@ -753,7 +756,7 @@ Partial Class instructorframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1074, 94)
+        head_dashboard.Size = New Size(1020, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' sidenav
@@ -772,7 +775,7 @@ Partial Class instructorframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 985)
+        sidepanel.Size = New Size(350, 749)
         sidepanel.TabIndex = 4
         ' 
         ' dashboardpanel
@@ -785,7 +788,7 @@ Partial Class instructorframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1074, 985)
+        dashboardpanel.Size = New Size(1020, 749)
         dashboardpanel.TabIndex = 5
         ' 
         ' Panel3
@@ -838,30 +841,30 @@ Partial Class instructorframe
         Panel2.Controls.Add(droppedstudentslabel)
         Panel2.Controls.Add(Label5)
         Panel2.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Panel2.Location = New Point(807, 353)
+        Panel2.Location = New Point(762, 353)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(240, 210)
+        Panel2.Size = New Size(230, 200)
         Panel2.TabIndex = 3
         ' 
         ' droppedstudentslabel
         ' 
         droppedstudentslabel.AutoSize = True
-        droppedstudentslabel.Font = New Font("Tahoma", 64F, FontStyle.Bold)
+        droppedstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         droppedstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        droppedstudentslabel.Location = New Point(71, 79)
+        droppedstudentslabel.Location = New Point(79, 86)
         droppedstudentslabel.Name = "droppedstudentslabel"
-        droppedstudentslabel.Size = New Size(99, 104)
+        droppedstudentslabel.Size = New Size(74, 77)
         droppedstudentslabel.TabIndex = 2
         droppedstudentslabel.Text = "2"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        Label5.Location = New Point(6, 33)
+        Label5.Location = New Point(16, 40)
         Label5.Name = "Label5"
-        Label5.Size = New Size(228, 29)
+        Label5.Size = New Size(200, 25)
         Label5.TabIndex = 1
         Label5.Text = "Dropped Students"
         ' 
@@ -871,72 +874,69 @@ Partial Class instructorframe
         Panel1.Controls.Add(enrolledstudentslabel)
         Panel1.Controls.Add(Label3)
         Panel1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Panel1.Location = New Point(807, 121)
+        Panel1.Location = New Point(763, 120)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(240, 210)
+        Panel1.Size = New Size(230, 200)
         Panel1.TabIndex = 2
         ' 
         ' enrolledstudentslabel
         ' 
         enrolledstudentslabel.AutoSize = True
-        enrolledstudentslabel.Font = New Font("Tahoma", 64F, FontStyle.Bold)
+        enrolledstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         enrolledstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        enrolledstudentslabel.Location = New Point(43, 79)
+        enrolledstudentslabel.Location = New Point(56, 80)
         enrolledstudentslabel.Name = "enrolledstudentslabel"
-        enrolledstudentslabel.Size = New Size(154, 104)
+        enrolledstudentslabel.Size = New Size(115, 77)
         enrolledstudentslabel.TabIndex = 1
         enrolledstudentslabel.Text = "96"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        Label3.Location = New Point(8, 22)
+        Label3.Location = New Point(18, 38)
         Label3.Name = "Label3"
-        Label3.Size = New Size(224, 29)
+        Label3.Size = New Size(196, 25)
         Label3.TabIndex = 0
         Label3.Text = "Enrolled Students"
         ' 
         ' chartpanel
         ' 
         chartpanel.BackColor = Color.White
-        chartpanel.Controls.Add(Label2)
-        chartpanel.Controls.Add(Label1)
+        chartpanel.Controls.Add(LineChart)
         chartpanel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         chartpanel.Location = New Point(16, 121)
         chartpanel.Name = "chartpanel"
-        chartpanel.Size = New Size(760, 442)
+        chartpanel.Size = New Size(720, 434)
         chartpanel.TabIndex = 1
         ' 
-        ' Label2
+        ' LineChart
         ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(12, 70)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(659, 25)
-        Label2.TabIndex = 1
-        Label2.Text = "Line chart showing student enrollment per subject over school years."
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(13, 16)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(328, 39)
-        Label1.TabIndex = 0
-        Label1.Text = "Student Enrollment"
+        ChartArea1.Name = "ChartArea1"
+        LineChart.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        LineChart.Legends.Add(Legend1)
+        LineChart.Location = New Point(0, -1)
+        LineChart.Name = "LineChart"
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = DataVisualization.Charting.SeriesChartType.Line
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        LineChart.Series.Add(Series1)
+        LineChart.Size = New Size(720, 433)
+        LineChart.TabIndex = 0
+        LineChart.Text = "Chart1"
         ' 
         ' instructorframe
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1424, 985)
+        ClientSize = New Size(1370, 749)
+        Controls.Add(dashboardpanel)
         Controls.Add(classespanel)
         Controls.Add(myprofilepanel)
-        Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
@@ -972,7 +972,7 @@ Partial Class instructorframe
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         chartpanel.ResumeLayout(False)
-        chartpanel.PerformLayout()
+        CType(LineChart, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -1003,8 +1003,6 @@ Partial Class instructorframe
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents enrolledstudentslabel As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents droppedstudentslabel As Label
@@ -1049,4 +1047,5 @@ Partial Class instructorframe
     Friend WithEvents Label18 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label20 As Label
+    Friend WithEvents LineChart As DataVisualization.Charting.Chart
 End Class

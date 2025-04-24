@@ -23,6 +23,9 @@ Partial Class studentframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentframe))
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         Panel3 = New Panel()
@@ -81,7 +84,7 @@ Partial Class studentframe
         schedule_panel = New Panel()
         Label2 = New Label()
         subject_panel = New Panel()
-        Label1 = New Label()
+        StudBarChart = New DataVisualization.Charting.Chart()
         myprofilepanel.SuspendLayout()
         Panel3.SuspendLayout()
         head_myprofile.SuspendLayout()
@@ -102,6 +105,7 @@ Partial Class studentframe
         Panel1.SuspendLayout()
         schedule_panel.SuspendLayout()
         subject_panel.SuspendLayout()
+        CType(StudBarChart, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' title_myprofile
@@ -124,7 +128,7 @@ Partial Class studentframe
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1074, 985)
+        myprofilepanel.Size = New Size(1020, 749)
         myprofilepanel.TabIndex = 7
         ' 
         ' Panel3
@@ -383,7 +387,7 @@ Partial Class studentframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1074, 81)
+        head_myprofile.Size = New Size(1020, 81)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -540,7 +544,7 @@ Partial Class studentframe
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1074, 81)
+        head_classes.Size = New Size(1020, 81)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -551,7 +555,7 @@ Partial Class studentframe
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
         classespanel.Name = "classespanel"
-        classespanel.Size = New Size(1074, 985)
+        classespanel.Size = New Size(1020, 749)
         classespanel.TabIndex = 6
         ' 
         ' Panel2
@@ -597,7 +601,7 @@ Partial Class studentframe
         ' 
         ' TextBox1
         ' 
-        TextBox1.Font = New Font("Segoe UI", 12.0F)
+        TextBox1.Font = New Font("Segoe UI", 12F)
         TextBox1.Location = New Point(55, 57)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "Search"
@@ -624,7 +628,7 @@ Partial Class studentframe
         ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24.0F)
+        title_dashboard.Font = New Font("Tahoma", 24F)
         title_dashboard.ForeColor = Color.White
         title_dashboard.ImeMode = ImeMode.NoControl
         title_dashboard.Location = New Point(16, 28)
@@ -636,7 +640,7 @@ Partial Class studentframe
         ' 
         ' username
         ' 
-        username.Font = New Font("Tahoma", 24.0F)
+        username.Font = New Font("Tahoma", 24F)
         username.ForeColor = Color.White
         username.ImeMode = ImeMode.NoControl
         username.Location = New Point(179, 28)
@@ -654,7 +658,7 @@ Partial Class studentframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1074, 94)
+        head_dashboard.Size = New Size(1020, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' sidenav
@@ -673,7 +677,7 @@ Partial Class studentframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 985)
+        sidepanel.Size = New Size(350, 749)
         sidepanel.TabIndex = 4
         ' 
         ' dashboardpanel
@@ -686,7 +690,7 @@ Partial Class studentframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1074, 985)
+        dashboardpanel.Size = New Size(1020, 749)
         dashboardpanel.TabIndex = 5
         ' 
         ' Panel1
@@ -712,7 +716,7 @@ Partial Class studentframe
         ' 
         schedule_panel.BackColor = Color.WhiteSmoke
         schedule_panel.Controls.Add(Label2)
-        schedule_panel.Location = New Point(627, 121)
+        schedule_panel.Location = New Point(591, 121)
         schedule_panel.Name = "schedule_panel"
         schedule_panel.Size = New Size(435, 362)
         schedule_panel.TabIndex = 2
@@ -730,34 +734,40 @@ Partial Class studentframe
         ' subject_panel
         ' 
         subject_panel.BackColor = Color.WhiteSmoke
-        subject_panel.Controls.Add(Label1)
+        subject_panel.Controls.Add(StudBarChart)
         subject_panel.Location = New Point(16, 121)
         subject_panel.Name = "subject_panel"
-        subject_panel.Size = New Size(585, 362)
+        subject_panel.Size = New Size(550, 362)
         subject_panel.TabIndex = 1
         ' 
-        ' Label1
+        ' StudBarChart
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(16, 17)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(157, 25)
-        Label1.TabIndex = 0
-        Label1.Text = "Enrolled Subjects"
+        ChartArea2.Name = "ChartArea1"
+        StudBarChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        StudBarChart.Legends.Add(Legend2)
+        StudBarChart.Location = New Point(0, 0)
+        StudBarChart.Name = "StudBarChart"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        StudBarChart.Series.Add(Series2)
+        StudBarChart.Size = New Size(550, 362)
+        StudBarChart.TabIndex = 0
+        StudBarChart.Text = "Chart1"
         ' 
-        ' student_frame
+        ' studentframe
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1424, 985)
-        Controls.Add(classespanel)
-        Controls.Add(myprofilepanel)
+        ClientSize = New Size(1370, 749)
         Controls.Add(dashboardpanel)
+        Controls.Add(myprofilepanel)
+        Controls.Add(classespanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
-        Name = "student_frame"
+        Name = "studentframe"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Student"
         myprofilepanel.ResumeLayout(False)
@@ -784,7 +794,7 @@ Partial Class studentframe
         schedule_panel.ResumeLayout(False)
         schedule_panel.PerformLayout()
         subject_panel.ResumeLayout(False)
-        subject_panel.PerformLayout()
+        CType(StudBarChart, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -813,7 +823,6 @@ Partial Class studentframe
     Friend WithEvents Panel1 As Panel
     Friend WithEvents schedule_panel As Panel
     Friend WithEvents subject_panel As Panel
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
@@ -847,5 +856,6 @@ Partial Class studentframe
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents StudBarChart As DataVisualization.Charting.Chart
 End Class
 

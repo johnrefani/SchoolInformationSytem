@@ -22,8 +22,28 @@ Partial Class adminframe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminframe))
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         dashboardpanel = New Panel()
+        UserPieChart = New Panel()
+        PieChart = New DataVisualization.Charting.Chart()
+        TotalEnroll = New Panel()
+        EnrollmentCount = New TextBox()
+        TotalEnrollments = New TextBox()
+        TotalSub = New Panel()
+        SubjectCount = New TextBox()
+        TotalSubjects = New TextBox()
+        TotalIns = New Panel()
+        InstructorsCount = New TextBox()
+        TotalInstructors = New TextBox()
+        TotalStuds = New Panel()
+        StudentsCount = New TextBox()
+        TotalStudents = New TextBox()
         head_dashboard = New Panel()
         title_dashboard = New Label()
         username = New Label()
@@ -99,7 +119,15 @@ Partial Class adminframe
         Label9 = New Label()
         head_configuration = New Panel()
         title_configuration = New Label()
+        Panel4 = New Panel()
+        EnrollmentBarGraph = New DataVisualization.Charting.Chart()
         dashboardpanel.SuspendLayout()
+        UserPieChart.SuspendLayout()
+        CType(PieChart, ComponentModel.ISupportInitialize).BeginInit()
+        TotalEnroll.SuspendLayout()
+        TotalSub.SuspendLayout()
+        TotalIns.SuspendLayout()
+        TotalStuds.SuspendLayout()
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
         header.SuspendLayout()
@@ -129,16 +157,197 @@ Partial Class adminframe
         configurationpanel.SuspendLayout()
         Panel3.SuspendLayout()
         head_configuration.SuspendLayout()
+        Panel4.SuspendLayout()
+        CType(EnrollmentBarGraph, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' dashboardpanel
         ' 
+        dashboardpanel.Controls.Add(Panel4)
+        dashboardpanel.Controls.Add(UserPieChart)
+        dashboardpanel.Controls.Add(TotalEnroll)
+        dashboardpanel.Controls.Add(TotalSub)
+        dashboardpanel.Controls.Add(TotalIns)
+        dashboardpanel.Controls.Add(TotalStuds)
         dashboardpanel.Controls.Add(head_dashboard)
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1074, 985)
+        dashboardpanel.Size = New Size(1020, 749)
         dashboardpanel.TabIndex = 9
+        ' 
+        ' UserPieChart
+        ' 
+        UserPieChart.Controls.Add(PieChart)
+        UserPieChart.Location = New Point(16, 344)
+        UserPieChart.Name = "UserPieChart"
+        UserPieChart.Size = New Size(360, 360)
+        UserPieChart.TabIndex = 6
+        ' 
+        ' PieChart
+        ' 
+        ChartArea3.Name = "ChartArea1"
+        PieChart.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        PieChart.Legends.Add(Legend3)
+        PieChart.Location = New Point(0, 0)
+        PieChart.Name = "PieChart"
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = DataVisualization.Charting.SeriesChartType.Pie
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        PieChart.Series.Add(Series3)
+        PieChart.Size = New Size(360, 360)
+        PieChart.TabIndex = 5
+        PieChart.Text = "Chart1"
+        ' 
+        ' TotalEnroll
+        ' 
+        TotalEnroll.BackColor = Color.SlateGray
+        TotalEnroll.Controls.Add(EnrollmentCount)
+        TotalEnroll.Controls.Add(TotalEnrollments)
+        TotalEnroll.ForeColor = SystemColors.ControlLightLight
+        TotalEnroll.Location = New Point(767, 115)
+        TotalEnroll.Name = "TotalEnroll"
+        TotalEnroll.Size = New Size(230, 200)
+        TotalEnroll.TabIndex = 4
+        ' 
+        ' EnrollmentCount
+        ' 
+        EnrollmentCount.BackColor = Color.SlateGray
+        EnrollmentCount.BorderStyle = BorderStyle.None
+        EnrollmentCount.Font = New Font("Tahoma", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        EnrollmentCount.ForeColor = Color.Gold
+        EnrollmentCount.Location = New Point(3, 89)
+        EnrollmentCount.Name = "EnrollmentCount"
+        EnrollmentCount.Size = New Size(224, 58)
+        EnrollmentCount.TabIndex = 1
+        EnrollmentCount.Text = "3,120"
+        EnrollmentCount.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TotalEnrollments
+        ' 
+        TotalEnrollments.BackColor = Color.SlateGray
+        TotalEnrollments.BorderStyle = BorderStyle.None
+        TotalEnrollments.Font = New Font("Tahoma", 14F, FontStyle.Bold)
+        TotalEnrollments.ForeColor = Color.Gold
+        TotalEnrollments.Location = New Point(3, 41)
+        TotalEnrollments.Name = "TotalEnrollments"
+        TotalEnrollments.Size = New Size(224, 23)
+        TotalEnrollments.TabIndex = 0
+        TotalEnrollments.Text = "Total Enrollments"
+        TotalEnrollments.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TotalSub
+        ' 
+        TotalSub.BackColor = Color.SteelBlue
+        TotalSub.Controls.Add(SubjectCount)
+        TotalSub.Controls.Add(TotalSubjects)
+        TotalSub.ForeColor = SystemColors.ControlLightLight
+        TotalSub.Location = New Point(515, 115)
+        TotalSub.Name = "TotalSub"
+        TotalSub.Size = New Size(230, 200)
+        TotalSub.TabIndex = 3
+        ' 
+        ' SubjectCount
+        ' 
+        SubjectCount.BackColor = Color.SteelBlue
+        SubjectCount.BorderStyle = BorderStyle.None
+        SubjectCount.Font = New Font("Tahoma", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        SubjectCount.ForeColor = Color.White
+        SubjectCount.Location = New Point(3, 89)
+        SubjectCount.Name = "SubjectCount"
+        SubjectCount.Size = New Size(224, 58)
+        SubjectCount.TabIndex = 1
+        SubjectCount.Text = "105"
+        SubjectCount.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TotalSubjects
+        ' 
+        TotalSubjects.BackColor = Color.SteelBlue
+        TotalSubjects.BorderStyle = BorderStyle.None
+        TotalSubjects.Font = New Font("Tahoma", 14F, FontStyle.Bold)
+        TotalSubjects.ForeColor = Color.White
+        TotalSubjects.Location = New Point(3, 41)
+        TotalSubjects.Name = "TotalSubjects"
+        TotalSubjects.Size = New Size(224, 23)
+        TotalSubjects.TabIndex = 0
+        TotalSubjects.Text = "Total Subjects"
+        TotalSubjects.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TotalIns
+        ' 
+        TotalIns.BackColor = Color.Silver
+        TotalIns.Controls.Add(InstructorsCount)
+        TotalIns.Controls.Add(TotalInstructors)
+        TotalIns.ForeColor = Color.WhiteSmoke
+        TotalIns.Location = New Point(265, 115)
+        TotalIns.Name = "TotalIns"
+        TotalIns.Size = New Size(230, 200)
+        TotalIns.TabIndex = 2
+        ' 
+        ' InstructorsCount
+        ' 
+        InstructorsCount.BackColor = Color.Silver
+        InstructorsCount.BorderStyle = BorderStyle.None
+        InstructorsCount.Font = New Font("Tahoma", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        InstructorsCount.ForeColor = Color.DarkRed
+        InstructorsCount.Location = New Point(3, 89)
+        InstructorsCount.Name = "InstructorsCount"
+        InstructorsCount.Size = New Size(224, 58)
+        InstructorsCount.TabIndex = 1
+        InstructorsCount.Text = "38"
+        InstructorsCount.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TotalInstructors
+        ' 
+        TotalInstructors.BackColor = Color.Silver
+        TotalInstructors.BorderStyle = BorderStyle.None
+        TotalInstructors.Font = New Font("Tahoma", 14F, FontStyle.Bold)
+        TotalInstructors.ForeColor = Color.DarkRed
+        TotalInstructors.Location = New Point(3, 41)
+        TotalInstructors.Name = "TotalInstructors"
+        TotalInstructors.Size = New Size(224, 23)
+        TotalInstructors.TabIndex = 0
+        TotalInstructors.Text = "Total Instructors"
+        TotalInstructors.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TotalStuds
+        ' 
+        TotalStuds.BackColor = Color.Gold
+        TotalStuds.Controls.Add(StudentsCount)
+        TotalStuds.Controls.Add(TotalStudents)
+        TotalStuds.ForeColor = SystemColors.ControlLightLight
+        TotalStuds.Location = New Point(16, 115)
+        TotalStuds.Name = "TotalStuds"
+        TotalStuds.Size = New Size(230, 200)
+        TotalStuds.TabIndex = 1
+        ' 
+        ' StudentsCount
+        ' 
+        StudentsCount.BackColor = Color.Gold
+        StudentsCount.BorderStyle = BorderStyle.None
+        StudentsCount.Font = New Font("Tahoma", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        StudentsCount.ForeColor = Color.DarkRed
+        StudentsCount.Location = New Point(3, 89)
+        StudentsCount.Name = "StudentsCount"
+        StudentsCount.Size = New Size(224, 58)
+        StudentsCount.TabIndex = 1
+        StudentsCount.Text = "3,120"
+        StudentsCount.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TotalStudents
+        ' 
+        TotalStudents.BackColor = Color.Gold
+        TotalStudents.BorderStyle = BorderStyle.None
+        TotalStudents.Font = New Font("Tahoma", 14F, FontStyle.Bold)
+        TotalStudents.ForeColor = Color.DarkRed
+        TotalStudents.Location = New Point(3, 41)
+        TotalStudents.Name = "TotalStudents"
+        TotalStudents.Size = New Size(224, 23)
+        TotalStudents.TabIndex = 0
+        TotalStudents.Text = "Total Students"
+        TotalStudents.TextAlign = HorizontalAlignment.Center
         ' 
         ' head_dashboard
         ' 
@@ -148,7 +357,7 @@ Partial Class adminframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1074, 94)
+        head_dashboard.Size = New Size(1020, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' title_dashboard
@@ -386,7 +595,7 @@ Partial Class adminframe
         userspanel.Dock = DockStyle.Fill
         userspanel.Location = New Point(350, 0)
         userspanel.Name = "userspanel"
-        userspanel.Size = New Size(1074, 985)
+        userspanel.Size = New Size(1020, 749)
         userspanel.TabIndex = 10
         ' 
         ' bodyclassespanel
@@ -493,7 +702,7 @@ Partial Class adminframe
         head_users.Dock = DockStyle.Top
         head_users.Location = New Point(0, 0)
         head_users.Name = "head_users"
-        head_users.Size = New Size(1074, 94)
+        head_users.Size = New Size(1020, 94)
         head_users.TabIndex = 0
         ' 
         ' title_users
@@ -515,7 +724,7 @@ Partial Class adminframe
         head_enrollments.Dock = DockStyle.Top
         head_enrollments.Location = New Point(0, 0)
         head_enrollments.Name = "head_enrollments"
-        head_enrollments.Size = New Size(1074, 94)
+        head_enrollments.Size = New Size(1020, 94)
         head_enrollments.TabIndex = 0
         ' 
         ' title_enrollments
@@ -537,7 +746,7 @@ Partial Class adminframe
         enrollmentspanel.Dock = DockStyle.Fill
         enrollmentspanel.Location = New Point(350, 0)
         enrollmentspanel.Name = "enrollmentspanel"
-        enrollmentspanel.Size = New Size(1074, 985)
+        enrollmentspanel.Size = New Size(1020, 749)
         enrollmentspanel.TabIndex = 11
         ' 
         ' Panel1
@@ -664,7 +873,7 @@ Partial Class adminframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 985)
+        sidepanel.Size = New Size(350, 749)
         sidepanel.TabIndex = 8
         ' 
         ' subjectspanel
@@ -674,7 +883,7 @@ Partial Class adminframe
         subjectspanel.Dock = DockStyle.Fill
         subjectspanel.Location = New Point(350, 0)
         subjectspanel.Name = "subjectspanel"
-        subjectspanel.Size = New Size(1074, 985)
+        subjectspanel.Size = New Size(1020, 749)
         subjectspanel.TabIndex = 12
         ' 
         ' Panel2
@@ -791,7 +1000,7 @@ Partial Class adminframe
         head_subjects.Dock = DockStyle.Top
         head_subjects.Location = New Point(0, 0)
         head_subjects.Name = "head_subjects"
-        head_subjects.Size = New Size(1074, 94)
+        head_subjects.Size = New Size(1020, 94)
         head_subjects.TabIndex = 0
         ' 
         ' title_subjects
@@ -813,7 +1022,7 @@ Partial Class adminframe
         configurationpanel.Dock = DockStyle.Fill
         configurationpanel.Location = New Point(350, 0)
         configurationpanel.Name = "configurationpanel"
-        configurationpanel.Size = New Size(1074, 985)
+        configurationpanel.Size = New Size(1020, 749)
         configurationpanel.TabIndex = 13
         ' 
         ' Panel3
@@ -973,7 +1182,7 @@ Partial Class adminframe
         head_configuration.Dock = DockStyle.Top
         head_configuration.Location = New Point(0, 0)
         head_configuration.Name = "head_configuration"
-        head_configuration.Size = New Size(1074, 94)
+        head_configuration.Size = New Size(1020, 94)
         head_configuration.TabIndex = 0
         ' 
         ' title_configuration
@@ -988,17 +1197,41 @@ Partial Class adminframe
         title_configuration.Text = "Configure Database"
         title_configuration.TextAlign = ContentAlignment.MiddleLeft
         ' 
+        ' Panel4
+        ' 
+        Panel4.Controls.Add(EnrollmentBarGraph)
+        Panel4.Location = New Point(402, 344)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(595, 360)
+        Panel4.TabIndex = 7
+        ' 
+        ' EnrollmentBarGraph
+        ' 
+        ChartArea4.Name = "ChartArea1"
+        EnrollmentBarGraph.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        EnrollmentBarGraph.Legends.Add(Legend4)
+        EnrollmentBarGraph.Location = New Point(0, 0)
+        EnrollmentBarGraph.Name = "EnrollmentBarGraph"
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        EnrollmentBarGraph.Series.Add(Series4)
+        EnrollmentBarGraph.Size = New Size(595, 360)
+        EnrollmentBarGraph.TabIndex = 0
+        EnrollmentBarGraph.Text = "Chart1"
+        ' 
         ' adminframe
         ' 
         AutoScaleDimensions = New SizeF(12F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1424, 985)
+        ClientSize = New Size(1370, 749)
+        Controls.Add(dashboardpanel)
         Controls.Add(configurationpanel)
         Controls.Add(subjectspanel)
         Controls.Add(enrollmentspanel)
         Controls.Add(userspanel)
-        Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.FixedDialog
@@ -1009,6 +1242,16 @@ Partial Class adminframe
         StartPosition = FormStartPosition.CenterScreen
         Text = "Admin"
         dashboardpanel.ResumeLayout(False)
+        UserPieChart.ResumeLayout(False)
+        CType(PieChart, ComponentModel.ISupportInitialize).EndInit()
+        TotalEnroll.ResumeLayout(False)
+        TotalEnroll.PerformLayout()
+        TotalSub.ResumeLayout(False)
+        TotalSub.PerformLayout()
+        TotalIns.ResumeLayout(False)
+        TotalIns.PerformLayout()
+        TotalStuds.ResumeLayout(False)
+        TotalStuds.PerformLayout()
         head_dashboard.ResumeLayout(False)
         sidenav.ResumeLayout(False)
         header.ResumeLayout(False)
@@ -1042,6 +1285,8 @@ Partial Class adminframe
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
         head_configuration.ResumeLayout(False)
+        Panel4.ResumeLayout(False)
+        CType(EnrollmentBarGraph, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -1121,4 +1366,20 @@ Partial Class adminframe
     Friend WithEvents Button2 As Button
     Friend WithEvents configurebutton As Button
     Friend WithEvents Label9 As Label
+    Friend WithEvents TotalStuds As Panel
+    Friend WithEvents TotalStudents As TextBox
+    Friend WithEvents TotalIns As Panel
+    Friend WithEvents InstructorsCount As TextBox
+    Friend WithEvents TotalInstructors As TextBox
+    Friend WithEvents StudentsCount As TextBox
+    Friend WithEvents TotalEnroll As Panel
+    Friend WithEvents EnrollmentCount As TextBox
+    Friend WithEvents TotalEnrollments As TextBox
+    Friend WithEvents TotalSub As Panel
+    Friend WithEvents SubjectCount As TextBox
+    Friend WithEvents TotalSubjects As TextBox
+    Friend WithEvents PieChart As DataVisualization.Charting.Chart
+    Friend WithEvents UserPieChart As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents EnrollmentBarGraph As DataVisualization.Charting.Chart
 End Class
