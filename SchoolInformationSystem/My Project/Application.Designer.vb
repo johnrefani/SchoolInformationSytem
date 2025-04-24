@@ -33,7 +33,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.SchoolInformationSystem.adminframe
+            Me.MainForm = Global.SchoolInformationSystem.instructorframe
 
         End Sub
         
