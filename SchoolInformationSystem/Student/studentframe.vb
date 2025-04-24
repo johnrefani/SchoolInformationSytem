@@ -42,11 +42,11 @@ Public Class studentframe
         HighlightActiveButton(myprofilebutton)
     End Sub
 
-    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -54,7 +54,7 @@ Public Class studentframe
 
     End Sub
 
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint, Panel3.Paint
 
     End Sub
 
@@ -108,5 +108,37 @@ Public Class studentframe
         StudBarChart.ChartAreas(0).AxisX.ScrollBar.Enabled = True
         StudBarChart.ChartAreas(0).AxisX.ScrollBar.Size = 15
         StudBarChart.ChartAreas(0).AxisX.ScrollBar.ButtonStyle = ScrollBarButtonStyles.All
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles student_fullname.Click
+
+    End Sub
+
+    Private Sub Label4_Click_1(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender, e)
+
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub print_button_Click(sender As Object, e As EventArgs) Handles print_button.Click
+
+    End Sub
+
+    Private Sub status_SelectedIndexChanged(sender As Object, e As EventArgs) Handles status.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    End Sub
+
+    Private Sub schoolyear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles schoolyear.SelectedIndexChanged
+
     End Sub
 End Class
