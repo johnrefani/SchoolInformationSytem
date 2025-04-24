@@ -34,7 +34,6 @@ Partial Class studentframe
         student_religion = New Label()
         student_guardian = New Label()
         student_nationality = New Label()
-        student_birthday = New Label()
         student_grade = New Label()
         student_address = New Label()
         student_email = New Label()
@@ -45,7 +44,6 @@ Partial Class studentframe
         Label14 = New Label()
         Label13 = New Label()
         Label12 = New Label()
-        Label11 = New Label()
         Label10 = New Label()
         Label9 = New Label()
         Label8 = New Label()
@@ -69,6 +67,7 @@ Partial Class studentframe
         head_classes = New Panel()
         classespanel = New Panel()
         Panel2 = New Panel()
+        DataGridView1 = New DataGridView()
         Button1 = New Button()
         schoolyear = New ComboBox()
         status = New ComboBox()
@@ -86,7 +85,6 @@ Partial Class studentframe
         schedule_panel = New Panel()
         Label2 = New Label()
         subject_panel = New Panel()
-        Label16 = New Label()
         StudBarChart = New DataVisualization.Charting.Chart()
         myprofilepanel.SuspendLayout()
         Panel3.SuspendLayout()
@@ -100,6 +98,7 @@ Partial Class studentframe
         head_classes.SuspendLayout()
         classespanel.SuspendLayout()
         Panel2.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
@@ -113,7 +112,7 @@ Partial Class studentframe
         ' 
         ' title_myprofile
         ' 
-        title_myprofile.Font = New Font("Tahoma", 24.0F)
+        title_myprofile.Font = New Font("Tahoma", 24F)
         title_myprofile.ForeColor = Color.White
         title_myprofile.ImeMode = ImeMode.NoControl
         title_myprofile.Location = New Point(16, 21)
@@ -131,7 +130,7 @@ Partial Class studentframe
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1020, 749)
+        myprofilepanel.Size = New Size(1074, 985)
         myprofilepanel.TabIndex = 7
         ' 
         ' Panel3
@@ -142,7 +141,6 @@ Partial Class studentframe
         Panel3.Controls.Add(student_religion)
         Panel3.Controls.Add(student_guardian)
         Panel3.Controls.Add(student_nationality)
-        Panel3.Controls.Add(student_birthday)
         Panel3.Controls.Add(student_grade)
         Panel3.Controls.Add(student_address)
         Panel3.Controls.Add(student_email)
@@ -153,7 +151,6 @@ Partial Class studentframe
         Panel3.Controls.Add(Label14)
         Panel3.Controls.Add(Label13)
         Panel3.Controls.Add(Label12)
-        Panel3.Controls.Add(Label11)
         Panel3.Controls.Add(Label10)
         Panel3.Controls.Add(Label9)
         Panel3.Controls.Add(Label8)
@@ -162,7 +159,7 @@ Partial Class studentframe
         Panel3.Controls.Add(Label5)
         Panel3.Controls.Add(Label4)
         Panel3.Controls.Add(editprofile)
-        Panel3.Location = New Point(16, 103)
+        Panel3.Location = New Point(41, 103)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(992, 523)
         Panel3.TabIndex = 1
@@ -171,7 +168,7 @@ Partial Class studentframe
         ' 
         student_birthplace.AutoSize = True
         student_birthplace.Font = New Font("Tahoma", 15.75F)
-        student_birthplace.Location = New Point(384, 299)
+        student_birthplace.Location = New Point(370, 299)
         student_birthplace.Name = "student_birthplace"
         student_birthplace.Size = New Size(140, 25)
         student_birthplace.TabIndex = 35
@@ -182,7 +179,7 @@ Partial Class studentframe
         ' 
         Label17.AutoSize = True
         Label17.Font = New Font("Tahoma", 14.25F)
-        Label17.Location = New Point(384, 271)
+        Label17.Location = New Point(370, 271)
         Label17.Name = "Label17"
         Label17.Size = New Size(116, 23)
         Label17.TabIndex = 34
@@ -193,7 +190,7 @@ Partial Class studentframe
         ' 
         student_religion.AutoSize = True
         student_religion.Font = New Font("Tahoma", 15.75F)
-        student_religion.Location = New Point(384, 405)
+        student_religion.Location = New Point(370, 405)
         student_religion.Name = "student_religion"
         student_religion.Size = New Size(158, 25)
         student_religion.TabIndex = 33
@@ -221,17 +218,6 @@ Partial Class studentframe
         student_nationality.TabIndex = 31
         student_nationality.Text = "American"
         student_nationality.TextAlign = ContentAlignment.MiddleLeft
-        ' 
-        ' student_birthday
-        ' 
-        student_birthday.AutoSize = True
-        student_birthday.Font = New Font("Tahoma", 15.75F)
-        student_birthday.Location = New Point(237, 299)
-        student_birthday.Name = "student_birthday"
-        student_birthday.Size = New Size(131, 25)
-        student_birthday.TabIndex = 30
-        student_birthday.Text = "June 1, 2002"
-        student_birthday.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' student_grade
         ' 
@@ -314,7 +300,7 @@ Partial Class studentframe
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Tahoma", 14.25F)
-        Label14.Location = New Point(384, 376)
+        Label14.Location = New Point(370, 376)
         Label14.Name = "Label14"
         Label14.Size = New Size(95, 23)
         Label14.TabIndex = 22
@@ -342,17 +328,6 @@ Partial Class studentframe
         Label12.TabIndex = 20
         Label12.Text = "NATIONALITY"
         Label12.TextAlign = ContentAlignment.MiddleLeft
-        ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Font = New Font("Tahoma", 14.25F)
-        Label11.Location = New Point(237, 271)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(99, 23)
-        Label11.TabIndex = 19
-        Label11.Text = "BIRTHDAY"
-        Label11.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Label10
         ' 
@@ -450,12 +425,12 @@ Partial Class studentframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1020, 81)
+        head_myprofile.Size = New Size(1074, 81)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
         ' 
-        title_classes.Font = New Font("Tahoma", 24.0F)
+        title_classes.Font = New Font("Tahoma", 24F)
         title_classes.ForeColor = Color.White
         title_classes.ImeMode = ImeMode.NoControl
         title_classes.Location = New Point(16, 21)
@@ -607,7 +582,7 @@ Partial Class studentframe
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1020, 81)
+        head_classes.Size = New Size(1074, 81)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -618,22 +593,32 @@ Partial Class studentframe
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
         classespanel.Name = "classespanel"
-        classespanel.Size = New Size(1020, 749)
+        classespanel.Size = New Size(1074, 985)
         classespanel.TabIndex = 6
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.WhiteSmoke
+        Panel2.Controls.Add(DataGridView1)
         Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(schoolyear)
         Panel2.Controls.Add(status)
         Panel2.Controls.Add(PictureBox1)
         Panel2.Controls.Add(TextBox1)
         Panel2.Controls.Add(print_button)
-        Panel2.Location = New Point(16, 100)
+        Panel2.Location = New Point(43, 100)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(989, 831)
         Panel2.TabIndex = 1
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.BackgroundColor = Color.White
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(21, 149)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.Size = New Size(946, 651)
+        DataGridView1.TabIndex = 7
         ' 
         ' Button1
         ' 
@@ -653,21 +638,21 @@ Partial Class studentframe
         ' 
         schoolyear.Font = New Font("Tahoma", 15.75F)
         schoolyear.FormattingEnabled = True
-        schoolyear.Items.AddRange(New Object() {"School Year"})
         schoolyear.Location = New Point(816, 74)
         schoolyear.Name = "schoolyear"
         schoolyear.Size = New Size(147, 33)
         schoolyear.TabIndex = 5
+        schoolyear.Text = "School Year"
         ' 
         ' status
         ' 
         status.Font = New Font("Tahoma", 15.75F)
         status.FormattingEnabled = True
-        status.Items.AddRange(New Object() {"Status"})
         status.Location = New Point(698, 74)
         status.Name = "status"
         status.Size = New Size(96, 33)
         status.TabIndex = 4
+        status.Text = "Status"
         ' 
         ' PictureBox1
         ' 
@@ -680,7 +665,7 @@ Partial Class studentframe
         ' 
         ' TextBox1
         ' 
-        TextBox1.Font = New Font("Tahoma", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Font = New Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(55, 72)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "Search"
@@ -703,7 +688,7 @@ Partial Class studentframe
         ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24.0F)
+        title_dashboard.Font = New Font("Tahoma", 24F)
         title_dashboard.ForeColor = Color.White
         title_dashboard.ImeMode = ImeMode.NoControl
         title_dashboard.Location = New Point(16, 28)
@@ -715,7 +700,7 @@ Partial Class studentframe
         ' 
         ' username
         ' 
-        username.Font = New Font("Tahoma", 24.0F)
+        username.Font = New Font("Tahoma", 24F)
         username.ForeColor = Color.White
         username.ImeMode = ImeMode.NoControl
         username.Location = New Point(179, 28)
@@ -733,7 +718,7 @@ Partial Class studentframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1020, 94)
+        head_dashboard.Size = New Size(1074, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' sidenav
@@ -752,7 +737,7 @@ Partial Class studentframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 749)
+        sidepanel.Size = New Size(350, 985)
         sidepanel.TabIndex = 4
         ' 
         ' dashboardpanel
@@ -765,14 +750,14 @@ Partial Class studentframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1020, 749)
+        dashboardpanel.Size = New Size(1074, 985)
         dashboardpanel.TabIndex = 5
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
         Panel1.Controls.Add(Label3)
-        Panel1.Location = New Point(16, 526)
+        Panel1.Location = New Point(41, 526)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(992, 420)
         Panel1.TabIndex = 2
@@ -780,10 +765,10 @@ Partial Class studentframe
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(16, 17)
         Label3.Name = "Label3"
-        Label3.Size = New Size(209, 25)
+        Label3.Size = New Size(232, 25)
         Label3.TabIndex = 2
         Label3.Text = "Enrollment Summary"
         ' 
@@ -791,7 +776,7 @@ Partial Class studentframe
         ' 
         schedule_panel.BackColor = Color.White
         schedule_panel.Controls.Add(Label2)
-        schedule_panel.Location = New Point(561, 121)
+        schedule_panel.Location = New Point(586, 121)
         schedule_panel.Name = "schedule_panel"
         schedule_panel.Size = New Size(444, 362)
         schedule_panel.TabIndex = 2
@@ -799,32 +784,21 @@ Partial Class studentframe
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(16, 17)
         Label2.Name = "Label2"
-        Label2.Size = New Size(190, 25)
+        Label2.Size = New Size(209, 25)
         Label2.TabIndex = 1
         Label2.Text = "Schedule Overview"
         ' 
         ' subject_panel
         ' 
         subject_panel.BackColor = Color.White
-        subject_panel.Controls.Add(Label16)
         subject_panel.Controls.Add(StudBarChart)
-        subject_panel.Location = New Point(16, 121)
+        subject_panel.Location = New Point(41, 121)
         subject_panel.Name = "subject_panel"
         subject_panel.Size = New Size(524, 362)
         subject_panel.TabIndex = 1
-        ' 
-        ' Label16
-        ' 
-        Label16.AutoSize = True
-        Label16.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label16.Location = New Point(14, 16)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(174, 25)
-        Label16.TabIndex = 2
-        Label16.Text = "Enrolled Subjects"
         ' 
         ' StudBarChart
         ' 
@@ -832,7 +806,7 @@ Partial Class studentframe
         StudBarChart.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
         StudBarChart.Legends.Add(Legend1)
-        StudBarChart.Location = New Point(16, 48)
+        StudBarChart.Location = New Point(15, 28)
         StudBarChart.Name = "StudBarChart"
         Series1.ChartArea = "ChartArea1"
         Series1.Legend = "Legend1"
@@ -844,15 +818,16 @@ Partial Class studentframe
         ' 
         ' studentframe
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1370, 749)
-        Controls.Add(dashboardpanel)
+        ClientSize = New Size(1424, 985)
         Controls.Add(classespanel)
+        Controls.Add(dashboardpanel)
         Controls.Add(myprofilepanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "studentframe"
         StartPosition = FormStartPosition.CenterScreen
@@ -871,6 +846,7 @@ Partial Class studentframe
         classespanel.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         head_dashboard.ResumeLayout(False)
         sidenav.ResumeLayout(False)
@@ -881,7 +857,6 @@ Partial Class studentframe
         schedule_panel.ResumeLayout(False)
         schedule_panel.PerformLayout()
         subject_panel.ResumeLayout(False)
-        subject_panel.PerformLayout()
         CType(StudBarChart, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
@@ -931,13 +906,11 @@ Partial Class studentframe
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents StudBarChart As DataVisualization.Charting.Chart
     Friend WithEvents student_fullname As Label
     Friend WithEvents student_religion As Label
     Friend WithEvents student_guardian As Label
     Friend WithEvents student_nationality As Label
-    Friend WithEvents student_birthday As Label
     Friend WithEvents student_grade As Label
     Friend WithEvents student_address As Label
     Friend WithEvents student_email As Label
@@ -947,6 +920,6 @@ Partial Class studentframe
     Friend WithEvents student_birthplace As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label16 As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
 

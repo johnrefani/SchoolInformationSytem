@@ -35,8 +35,6 @@ Namespace My
         Protected Overrides Sub OnCreateMainForm()
             Me.MainForm = Global.SchoolInformationSystem.login
 
-
-
         End Sub
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

@@ -23,9 +23,9 @@ Partial Class instructorframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
@@ -143,7 +143,7 @@ Partial Class instructorframe
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1020, 749)
+        myprofilepanel.Size = New Size(1074, 985)
         myprofilepanel.TabIndex = 7
         ' 
         ' myprofilebodypanel
@@ -449,7 +449,7 @@ Partial Class instructorframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1020, 94)
+        head_myprofile.Size = New Size(1074, 94)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -609,7 +609,7 @@ Partial Class instructorframe
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1020, 94)
+        head_classes.Size = New Size(1074, 94)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -619,7 +619,7 @@ Partial Class instructorframe
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
         classespanel.Name = "classespanel"
-        classespanel.Size = New Size(1020, 749)
+        classespanel.Size = New Size(1074, 985)
         classespanel.TabIndex = 6
         ' 
         ' bodyclassespanel
@@ -756,7 +756,7 @@ Partial Class instructorframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1020, 94)
+        head_dashboard.Size = New Size(1074, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' sidenav
@@ -775,7 +775,7 @@ Partial Class instructorframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 749)
+        sidepanel.Size = New Size(350, 985)
         sidepanel.TabIndex = 4
         ' 
         ' dashboardpanel
@@ -788,7 +788,7 @@ Partial Class instructorframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1020, 749)
+        dashboardpanel.Size = New Size(1074, 985)
         dashboardpanel.TabIndex = 5
         ' 
         ' Panel3
@@ -798,9 +798,9 @@ Partial Class instructorframe
         Panel3.Controls.Add(DataGridView1)
         Panel3.Controls.Add(Label7)
         Panel3.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Panel3.Location = New Point(16, 583)
+        Panel3.Location = New Point(28, 506)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(760, 390)
+        Panel3.Size = New Size(1016, 467)
         Panel3.TabIndex = 4
         ' 
         ' Button1
@@ -809,7 +809,7 @@ Partial Class instructorframe
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(495, 28)
+        Button1.Location = New Point(765, 28)
         Button1.Name = "Button1"
         Button1.Size = New Size(240, 40)
         Button1.TabIndex = 3
@@ -820,16 +820,16 @@ Partial Class instructorframe
         ' 
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(24, 82)
+        DataGridView1.Location = New Point(14, 82)
         DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(711, 192)
+        DataGridView1.Size = New Size(989, 380)
         DataGridView1.TabIndex = 2
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(24, 25)
+        Label7.Location = New Point(14, 25)
         Label7.Name = "Label7"
         Label7.Size = New Size(261, 39)
         Label7.TabIndex = 1
@@ -841,9 +841,9 @@ Partial Class instructorframe
         Panel2.Controls.Add(droppedstudentslabel)
         Panel2.Controls.Add(Label5)
         Panel2.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Panel2.Location = New Point(762, 353)
+        Panel2.Location = New Point(816, 319)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(230, 200)
+        Panel2.Size = New Size(230, 167)
         Panel2.TabIndex = 3
         ' 
         ' droppedstudentslabel
@@ -851,7 +851,7 @@ Partial Class instructorframe
         droppedstudentslabel.AutoSize = True
         droppedstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         droppedstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        droppedstudentslabel.Location = New Point(79, 86)
+        droppedstudentslabel.Location = New Point(79, 70)
         droppedstudentslabel.Name = "droppedstudentslabel"
         droppedstudentslabel.Size = New Size(74, 77)
         droppedstudentslabel.TabIndex = 2
@@ -862,7 +862,7 @@ Partial Class instructorframe
         Label5.AutoSize = True
         Label5.Font = New Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        Label5.Location = New Point(16, 40)
+        Label5.Location = New Point(16, 32)
         Label5.Name = "Label5"
         Label5.Size = New Size(200, 25)
         Label5.TabIndex = 1
@@ -874,9 +874,9 @@ Partial Class instructorframe
         Panel1.Controls.Add(enrolledstudentslabel)
         Panel1.Controls.Add(Label3)
         Panel1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Panel1.Location = New Point(763, 120)
+        Panel1.Location = New Point(815, 120)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(230, 200)
+        Panel1.Size = New Size(230, 167)
         Panel1.TabIndex = 2
         ' 
         ' enrolledstudentslabel
@@ -884,7 +884,7 @@ Partial Class instructorframe
         enrolledstudentslabel.AutoSize = True
         enrolledstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         enrolledstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        enrolledstudentslabel.Location = New Point(56, 80)
+        enrolledstudentslabel.Location = New Point(56, 69)
         enrolledstudentslabel.Name = "enrolledstudentslabel"
         enrolledstudentslabel.Size = New Size(115, 77)
         enrolledstudentslabel.TabIndex = 1
@@ -895,7 +895,7 @@ Partial Class instructorframe
         Label3.AutoSize = True
         Label3.Font = New Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        Label3.Location = New Point(18, 38)
+        Label3.Location = New Point(18, 29)
         Label3.Name = "Label3"
         Label3.Size = New Size(196, 25)
         Label3.TabIndex = 0
@@ -906,25 +906,25 @@ Partial Class instructorframe
         chartpanel.BackColor = Color.White
         chartpanel.Controls.Add(LineChart)
         chartpanel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        chartpanel.Location = New Point(16, 121)
+        chartpanel.Location = New Point(28, 121)
         chartpanel.Name = "chartpanel"
-        chartpanel.Size = New Size(720, 434)
+        chartpanel.Size = New Size(760, 365)
         chartpanel.TabIndex = 1
         ' 
         ' LineChart
         ' 
-        ChartArea1.Name = "ChartArea1"
-        LineChart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        LineChart.Legends.Add(Legend1)
-        LineChart.Location = New Point(0, -1)
+        ChartArea2.Name = "ChartArea1"
+        LineChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        LineChart.Legends.Add(Legend2)
+        LineChart.Location = New Point(3, -1)
         LineChart.Name = "LineChart"
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = DataVisualization.Charting.SeriesChartType.Line
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        LineChart.Series.Add(Series1)
-        LineChart.Size = New Size(720, 433)
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Line
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        LineChart.Series.Add(Series2)
+        LineChart.Size = New Size(754, 363)
         LineChart.TabIndex = 0
         LineChart.Text = "Chart1"
         ' 
@@ -933,10 +933,10 @@ Partial Class instructorframe
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1370, 749)
-        Controls.Add(dashboardpanel)
-        Controls.Add(classespanel)
+        ClientSize = New Size(1424, 985)
         Controls.Add(myprofilepanel)
+        Controls.Add(classespanel)
+        Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
