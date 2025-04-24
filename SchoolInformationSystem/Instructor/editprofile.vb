@@ -1,3 +1,3 @@
-﻿Public Class editstudentinformation
+﻿Public Class editprofile
 
 End Class

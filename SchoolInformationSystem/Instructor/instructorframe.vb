@@ -104,4 +104,5 @@ Public Class instructorframe
         LineChart.ChartAreas(0).AxisY.Title = "Enrollment"
         LineChart.ChartAreas(0).AxisY.TitleFont = New Font("Tahoma", 12, FontStyle.Regular)
     End Sub
+
 End Class
