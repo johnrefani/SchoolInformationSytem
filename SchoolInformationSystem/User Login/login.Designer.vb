@@ -64,9 +64,9 @@ Partial Class login
         ' 
         errorLabel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         errorLabel.ForeColor = Color.Red
-        errorLabel.Location = New Point(100, 422)
+        errorLabel.Location = New Point(100, 513)
         errorLabel.Name = "errorLabel"
-        errorLabel.Size = New Size(300, 35)
+        errorLabel.Size = New Size(300, 72)
         errorLabel.TabIndex = 5
         errorLabel.TextAlign = ContentAlignment.MiddleLeft
         ' 
@@ -74,11 +74,12 @@ Partial Class login
         ' 
         role.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         role.FormattingEnabled = True
-        role.Items.AddRange(New Object() {"Select User", "Student", "Teacher", "Admin"})
-        role.Location = New Point(100, 249)
+        role.Items.AddRange(New Object() {"Student", "Instructor", "Admin"})
+        role.Location = New Point(100, 276)
         role.Name = "role"
         role.Size = New Size(300, 33)
         role.TabIndex = 4
+        role.Text = "Select User"
         ' 
         ' loginbtn
         ' 
@@ -96,7 +97,7 @@ Partial Class login
         ' password
         ' 
         password.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        password.Location = New Point(100, 373)
+        password.Location = New Point(100, 400)
         password.Multiline = True
         password.Name = "password"
         password.PlaceholderText = "Password"
@@ -106,7 +107,7 @@ Partial Class login
         ' username
         ' 
         username.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        username.Location = New Point(100, 310)
+        username.Location = New Point(100, 337)
         username.Multiline = True
         username.Name = "username"
         username.PlaceholderText = "Username"
