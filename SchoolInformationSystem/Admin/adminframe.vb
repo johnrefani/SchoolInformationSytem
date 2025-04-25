@@ -1,4 +1,5 @@
 ﻿Imports System.Windows.Forms.DataVisualization.Charting
+Imports MySql.Data.MySqlClient
 Imports Org.BouncyCastle.Asn1.Misc
 
 Public Class adminframe
@@ -82,7 +83,20 @@ Public Class adminframe
     End Sub
 
     Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles TotalIns.Paint
+        Try
+            Dim conn As MySqlConnection = strconnection()
+            conn.Open()
 
+            Dim query As String = "SELECT COUNT(*) FROM Instructor"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim total As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            InstructorsCount.Text = total.ToString()
+
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error retrieving student count: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub TextBox10_TextChanged(sender As Object, e As EventArgs) Handles SubjectCount.TextChanged
@@ -90,75 +104,192 @@ Public Class adminframe
     End Sub
 
     Private Sub UserPieChart_Paint(sender As Object, e As PaintEventArgs) Handles UserPieChart.Paint
-        If PieChart.ChartAreas.Count = 0 Then
-            PieChart.ChartAreas.Add("ChartArea1")
-        End If
+        Try
+            Dim conn As MySqlConnection = strconnection()
+            conn.Open()
 
-        Dim series1 As New Series("UserTypes")
-        series1.ChartType = SeriesChartType.Pie
+            Dim query As String = "SELECT role, COUNT(*) AS count FROM User GROUP BY role"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
-        series1.Points.AddXY("Students", 3120)
-        series1.Points.AddXY("Instructors", 38)
-        series1.Points.AddXY("Aadmins", 15)
+            Dim studentCount As Integer = 0
+            Dim instructorCount As Integer = 0
+            Dim adminCount As Integer = 0
 
-        series1.IsValueShownAsLabel = False
+            While reader.Read()
+                Dim role As String = reader("role").ToString().ToLower()
+                Dim count As Integer = Convert.ToInt32(reader("count"))
 
-        If PieChart.Legends.Count = 0 Then
-            PieChart.Legends.Add("Legend1")
-        End If
+                Select Case role
+                    Case "student", "students"
+                        studentCount = count
+                    Case "instructor", "instructors"
+                        instructorCount = count
+                    Case "admin", "admins"
+                        adminCount = count
+                End Select
+            End While
 
-        PieChart.Legends("Legend1").BackColor = Color.FromArgb(245, 245, 245)
+            reader.Close()
+            conn.Close()
 
-        series1.Points(0).LegendText = "Students, 3120"
-        series1.Points(1).LegendText = "Instructors, 38"
-        series1.Points(2).LegendText = "Admins, 15"
+            PieChart.Series.Clear()
+            If PieChart.ChartAreas.Count = 0 Then
+                PieChart.ChartAreas.Add("ChartArea1")
+            End If
 
-        series1.Points(0).Color = Color.FromArgb(255, 255, 215, 0)
-        series1.Points(1).Color = Color.FromArgb(255, 245, 225, 160)
-        series1.Points(2).Color = Color.FromArgb(255, 0, 128, 128)
+            Dim series1 As New Series("UserTypes")
+            series1.ChartType = SeriesChartType.Pie
 
-        PieChart.Series.Clear()
-        PieChart.Series.Add(series1)
+            series1.Points.AddXY("Students", studentCount)
+            series1.Points.AddXY("Instructors", instructorCount)
+            series1.Points.AddXY("Admins", adminCount)
 
-        PieChart.Titles.Add("Total Number of Users")
-        PieChart.Titles(0).Font = New Font("Tahoma", 18, FontStyle.Bold)
-        PieChart.Titles(0).ForeColor = Color.FromArgb(42, 62, 80)
+            series1.IsValueShownAsLabel = False
+
+            If PieChart.Legends.Count = 0 Then
+                PieChart.Legends.Add("Legend1")
+            End If
+
+            PieChart.Legends("Legend1").BackColor = Color.FromArgb(245, 245, 245)
+
+            series1.Points(0).LegendText = "Students, " & studentCount
+            series1.Points(1).LegendText = "Instructors, " & instructorCount
+            series1.Points(2).LegendText = "Admins, " & adminCount
+
+            series1.Points(0).Color = Color.FromArgb(255, 46, 46, 46)
+            series1.Points(1).Color = Color.FromArgb(255, 0, 128, 128)
+            series1.Points(2).Color = Color.FromArgb(255, 255, 165, 0)
+
+            PieChart.Series.Add(series1)
+
+            PieChart.Titles.Clear()
+            PieChart.Titles.Add("Total Number of Users")
+            PieChart.Titles(0).Font = New Font("Tahoma", 18, FontStyle.Bold)
+            PieChart.Titles(0).ForeColor = Color.FromArgb(42, 62, 80)
+
+        Catch ex As Exception
+            MessageBox.Show("Error generating user pie chart: " & ex.Message)
+        End Try
     End Sub
 
+
     Private Sub Panel4_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
-        If EnrollmentBarGraph.ChartAreas.Count = 0 Then
-            EnrollmentBarGraph.ChartAreas.Add("ChartArea1")
-        End If
+        Try
+            Dim conn As MySqlConnection = strconnection()
+            conn.Open()
 
-        Dim series1 As New Series("Enrollments")
-        series1.ChartType = SeriesChartType.Column
+            Dim query As String = "SELECT school_year, COUNT(*) AS total FROM Enrollment GROUP BY school_year ORDER BY school_year ASC"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
-        series1.Points.AddXY(2021, 2500)
-        series1.Points.AddXY(2022, 2800)
-        series1.Points.AddXY(2023, 3000)
-        series1.Points.AddXY(2024, 3200)
-        series1.Points.AddXY(2025, 3400)
+            EnrollmentBarGraph.Series.Clear()
+            EnrollmentBarGraph.Titles.Clear()
 
-        If EnrollmentBarGraph.Legends.Count = 0 Then
-            EnrollmentBarGraph.Legends.Add("Legend1")
-        End If
-        EnrollmentBarGraph.Legends("Legend1").Docking = Docking.Top
-        EnrollmentBarGraph.Legends("Legend1").Title = "Enrollments"
-        EnrollmentBarGraph.Legends("Legend1").Font = New Font("Tahoma", 10, FontStyle.Regular)
-        EnrollmentBarGraph.Legends("Legend1").BackColor = Color.FromArgb(245, 245, 245)
+            If EnrollmentBarGraph.ChartAreas.Count = 0 Then
+                EnrollmentBarGraph.ChartAreas.Add("ChartArea1")
+            End If
 
-        series1.Color = Color.FromArgb(52, 152, 219)
+            Dim series1 As New Series("Enrollments")
+            series1.ChartType = SeriesChartType.Column
+            series1.Color = Color.FromArgb(52, 152, 219)
 
-        EnrollmentBarGraph.Series.Clear()
-        EnrollmentBarGraph.Series.Add(series1)
+            While reader.Read()
+                Dim yearStr As String = reader("school_year").ToString()
+                Dim yearInt As Integer
 
-        EnrollmentBarGraph.Titles.Add("Total Enrollments per Year")
-        EnrollmentBarGraph.Titles(0).Font = New Font("Tahoma", 18, FontStyle.Bold)
-        EnrollmentBarGraph.Titles(0).ForeColor = Color.FromArgb(44, 62, 80)
+                If yearStr.Contains("-") Then
+                    Dim parts() As String = yearStr.Split("-"c)
+                    If Integer.TryParse(parts(0), yearInt) Then
+                        series1.Points.AddXY(yearInt, Convert.ToInt32(reader("total")))
+                    End If
+                ElseIf Integer.TryParse(yearStr, yearInt) Then
+                    series1.Points.AddXY(yearInt, Convert.ToInt32(reader("total")))
+                End If
+            End While
 
-        EnrollmentBarGraph.ChartAreas(0).AxisX.Title = "Year"
-        EnrollmentBarGraph.ChartAreas(0).AxisX.TitleFont = New Font("Tahoma", 12, FontStyle.Regular)
-        EnrollmentBarGraph.ChartAreas(0).AxisY.Title = "Enrollments"
-        EnrollmentBarGraph.ChartAreas(0).AxisY.TitleFont = New Font("Tahoma", 12, FontStyle.Regular)
+            reader.Close()
+            conn.Close()
+
+            EnrollmentBarGraph.Series.Add(series1)
+
+            If EnrollmentBarGraph.Legends.Count = 0 Then
+                EnrollmentBarGraph.Legends.Add("Legend1")
+            End If
+
+            With EnrollmentBarGraph.Legends("Legend1")
+                .Docking = Docking.Top
+                .Title = "Enrollments"
+                .Font = New Font("Tahoma", 10, FontStyle.Regular)
+                .BackColor = Color.FromArgb(245, 245, 245)
+            End With
+
+            EnrollmentBarGraph.Titles.Add("Total Enrollments per Year")
+            EnrollmentBarGraph.Titles(0).Font = New Font("Tahoma", 18, FontStyle.Bold)
+            EnrollmentBarGraph.Titles(0).ForeColor = Color.FromArgb(44, 62, 80)
+
+            With EnrollmentBarGraph.ChartAreas(0)
+                .AxisX.Title = "Year"
+                .AxisX.TitleFont = New Font("Tahoma", 12, FontStyle.Regular)
+                .AxisY.Title = "Enrollments"
+                .AxisY.TitleFont = New Font("Tahoma", 12, FontStyle.Regular)
+            End With
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading enrollment chart: " & ex.Message)
+        End Try
+    End Sub
+
+
+
+    Private Sub TotalStuds_Paint(sender As Object, e As PaintEventArgs) Handles TotalStuds.Paint
+        Try
+            Dim conn As MySqlConnection = strconnection()
+            conn.Open()
+
+            Dim query As String = "SELECT COUNT(*) FROM Student"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim total As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            StudentsCount.Text = total.ToString()
+
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error retrieving student count: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TotalSub_Paint(sender As Object, e As PaintEventArgs) Handles TotalSub.Paint
+        Try
+            Dim conn As MySqlConnection = strconnection()
+            conn.Open()
+
+            Dim query As String = "SELECT COUNT(*) FROM Subject"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim total As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            SubjectCount.Text = total.ToString()
+
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error retrieving student count: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TotalEnroll_Paint(sender As Object, e As PaintEventArgs) Handles TotalEnroll.Paint
+        Try
+            Dim conn As MySqlConnection = strconnection()
+            conn.Open()
+
+            Dim query As String = "SELECT COUNT(*) FROM Enrollment"
+            Dim cmd As New MySqlCommand(query, conn)
+            Dim total As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+            EnrollmentCount.Text = total.ToString()
+
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error retrieving student count: " & ex.Message)
+        End Try
     End Sub
 End Class

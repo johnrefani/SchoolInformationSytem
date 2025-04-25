@@ -23,9 +23,9 @@ Partial Class instructorframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
@@ -143,7 +143,7 @@ Partial Class instructorframe
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1074, 985)
+        myprofilepanel.Size = New Size(1020, 749)
         myprofilepanel.TabIndex = 7
         ' 
         ' myprofilebodypanel
@@ -449,7 +449,7 @@ Partial Class instructorframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1074, 94)
+        head_myprofile.Size = New Size(1020, 94)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -609,7 +609,7 @@ Partial Class instructorframe
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1074, 94)
+        head_classes.Size = New Size(1020, 94)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -619,7 +619,7 @@ Partial Class instructorframe
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
         classespanel.Name = "classespanel"
-        classespanel.Size = New Size(1074, 985)
+        classespanel.Size = New Size(1020, 749)
         classespanel.TabIndex = 6
         ' 
         ' bodyclassespanel
@@ -756,7 +756,7 @@ Partial Class instructorframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1074, 94)
+        head_dashboard.Size = New Size(1020, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' sidenav
@@ -775,7 +775,7 @@ Partial Class instructorframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 985)
+        sidepanel.Size = New Size(350, 749)
         sidepanel.TabIndex = 4
         ' 
         ' dashboardpanel
@@ -788,7 +788,7 @@ Partial Class instructorframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1074, 985)
+        dashboardpanel.Size = New Size(1020, 749)
         dashboardpanel.TabIndex = 5
         ' 
         ' Panel3
@@ -913,17 +913,17 @@ Partial Class instructorframe
         ' 
         ' LineChart
         ' 
-        ChartArea2.Name = "ChartArea1"
-        LineChart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        LineChart.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        LineChart.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        LineChart.Legends.Add(Legend1)
         LineChart.Location = New Point(3, -1)
         LineChart.Name = "LineChart"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Line
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        LineChart.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = DataVisualization.Charting.SeriesChartType.Line
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        LineChart.Series.Add(Series1)
         LineChart.Size = New Size(754, 363)
         LineChart.TabIndex = 0
         LineChart.Text = "Chart1"
@@ -933,14 +933,13 @@ Partial Class instructorframe
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1424, 985)
+        ClientSize = New Size(1370, 749)
         Controls.Add(myprofilepanel)
         Controls.Add(classespanel)
         Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MaximizeBox = False
         Name = "instructorframe"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Instructor"

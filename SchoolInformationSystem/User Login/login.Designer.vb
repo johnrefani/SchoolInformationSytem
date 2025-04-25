@@ -42,7 +42,7 @@ Partial Class login
         TopColor.Location = New Point(0, 0)
         TopColor.Margin = New Padding(2)
         TopColor.Name = "TopColor"
-        TopColor.Size = New Size(1424, 512)
+        TopColor.Size = New Size(1370, 512)
         TopColor.TabIndex = 0
         ' 
         ' LoginPanel
@@ -128,13 +128,12 @@ Partial Class login
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1424, 985)
+        ClientSize = New Size(1370, 749)
         Controls.Add(LoginPanel)
         Controls.Add(TopColor)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(2)
-        MaximizeBox = False
         Name = "login"
         StartPosition = FormStartPosition.CenterScreen
         Text = "School Information System"
