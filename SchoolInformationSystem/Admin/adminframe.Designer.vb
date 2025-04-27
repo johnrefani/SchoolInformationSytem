@@ -66,12 +66,14 @@ Partial Class adminframe
         configurationbutton = New Button()
         userspanel = New Panel()
         bodyclassespanel = New Panel()
-        Button4 = New Button()
-        Button1 = New Button()
-        ComboBox3 = New ComboBox()
-        TextBox2 = New TextBox()
+        PageLabel = New Label()
+        NextPageButton = New Button()
+        PrevPageButton = New Button()
+        PrintButton = New Button()
+        RoleSort = New ComboBox()
+        SearchUser = New TextBox()
         adduserbutton = New Button()
-        DataGridView2 = New DataGridView()
+        UsersDataGrid = New DataGridView()
         PictureBox1 = New PictureBox()
         Label4 = New Label()
         head_users = New Panel()
@@ -142,7 +144,7 @@ Partial Class adminframe
         configuration.SuspendLayout()
         userspanel.SuspendLayout()
         bodyclassespanel.SuspendLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(UsersDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         head_users.SuspendLayout()
         head_enrollments.SuspendLayout()
@@ -173,7 +175,7 @@ Partial Class adminframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1074, 985)
+        dashboardpanel.Size = New Size(1020, 749)
         dashboardpanel.TabIndex = 9
         ' 
         ' Panel4
@@ -389,7 +391,7 @@ Partial Class adminframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1074, 94)
+        head_dashboard.Size = New Size(1020, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' title_dashboard
@@ -627,18 +629,20 @@ Partial Class adminframe
         userspanel.Dock = DockStyle.Fill
         userspanel.Location = New Point(350, 0)
         userspanel.Name = "userspanel"
-        userspanel.Size = New Size(1074, 985)
+        userspanel.Size = New Size(1020, 749)
         userspanel.TabIndex = 10
         ' 
         ' bodyclassespanel
         ' 
         bodyclassespanel.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
-        bodyclassespanel.Controls.Add(Button4)
-        bodyclassespanel.Controls.Add(Button1)
-        bodyclassespanel.Controls.Add(ComboBox3)
-        bodyclassespanel.Controls.Add(TextBox2)
+        bodyclassespanel.Controls.Add(PageLabel)
+        bodyclassespanel.Controls.Add(NextPageButton)
+        bodyclassespanel.Controls.Add(PrevPageButton)
+        bodyclassespanel.Controls.Add(PrintButton)
+        bodyclassespanel.Controls.Add(RoleSort)
+        bodyclassespanel.Controls.Add(SearchUser)
         bodyclassespanel.Controls.Add(adduserbutton)
-        bodyclassespanel.Controls.Add(DataGridView2)
+        bodyclassespanel.Controls.Add(UsersDataGrid)
         bodyclassespanel.Controls.Add(PictureBox1)
         bodyclassespanel.Controls.Add(Label4)
         bodyclassespanel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -647,42 +651,59 @@ Partial Class adminframe
         bodyclassespanel.Size = New Size(1024, 850)
         bodyclassespanel.TabIndex = 2
         ' 
-        ' Button4
+        ' PageLabel
         ' 
-        Button4.AutoSize = True
-        Button4.Location = New Point(766, 26)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(98, 35)
-        Button4.TabIndex = 13
-        Button4.Text = "EXPORT"
-        Button4.UseVisualStyleBackColor = True
+        PageLabel.AutoSize = True
+        PageLabel.Location = New Point(766, 587)
+        PageLabel.Name = "PageLabel"
+        PageLabel.Size = New Size(130, 25)
+        PageLabel.TabIndex = 17
+        PageLabel.Text = "Page 1 of 10"
         ' 
-        ' Button1
+        ' NextPageButton
         ' 
-        Button1.AutoSize = True
-        Button1.Location = New Point(654, 26)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(95, 35)
-        Button1.TabIndex = 12
-        Button1.Text = "PRINT"
-        Button1.UseVisualStyleBackColor = True
+        NextPageButton.Location = New Point(902, 582)
+        NextPageButton.Name = "NextPageButton"
+        NextPageButton.Size = New Size(81, 36)
+        NextPageButton.TabIndex = 15
+        NextPageButton.Text = "Next"
+        NextPageButton.UseVisualStyleBackColor = True
         ' 
-        ' ComboBox3
+        ' PrevPageButton
         ' 
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(882, 85)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(121, 33)
-        ComboBox3.TabIndex = 11
-        ComboBox3.Text = "Role"
+        PrevPageButton.Location = New Point(666, 582)
+        PrevPageButton.Name = "PrevPageButton"
+        PrevPageButton.Size = New Size(102, 34)
+        PrevPageButton.TabIndex = 14
+        PrevPageButton.Text = "Preview"
+        PrevPageButton.UseVisualStyleBackColor = True
         ' 
-        ' TextBox2
+        ' PrintButton
         ' 
-        TextBox2.Location = New Point(61, 79)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(358, 33)
-        TextBox2.TabIndex = 10
-        TextBox2.Text = "Search"
+        PrintButton.AutoSize = True
+        PrintButton.Location = New Point(758, 26)
+        PrintButton.Name = "PrintButton"
+        PrintButton.Size = New Size(95, 35)
+        PrintButton.TabIndex = 12
+        PrintButton.Text = "PRINT"
+        PrintButton.UseVisualStyleBackColor = True
+        ' 
+        ' RoleSort
+        ' 
+        RoleSort.FormattingEnabled = True
+        RoleSort.Location = New Point(830, 82)
+        RoleSort.Name = "RoleSort"
+        RoleSort.Size = New Size(121, 33)
+        RoleSort.TabIndex = 11
+        RoleSort.Text = "Role"
+        ' 
+        ' SearchUser
+        ' 
+        SearchUser.Location = New Point(61, 79)
+        SearchUser.Name = "SearchUser"
+        SearchUser.PlaceholderText = "Search by username or fullname"
+        SearchUser.Size = New Size(358, 33)
+        SearchUser.TabIndex = 10
         ' 
         ' adduserbutton
         ' 
@@ -699,14 +720,14 @@ Partial Class adminframe
         adduserbutton.Text = "ADD USER"
         adduserbutton.UseVisualStyleBackColor = False
         ' 
-        ' DataGridView2
+        ' UsersDataGrid
         ' 
-        DataGridView2.BackgroundColor = Color.White
-        DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView2.Location = New Point(23, 133)
-        DataGridView2.Name = "DataGridView2"
-        DataGridView2.Size = New Size(981, 698)
-        DataGridView2.TabIndex = 8
+        UsersDataGrid.BackgroundColor = Color.White
+        UsersDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        UsersDataGrid.Location = New Point(144, 147)
+        UsersDataGrid.Name = "UsersDataGrid"
+        UsersDataGrid.Size = New Size(839, 423)
+        UsersDataGrid.TabIndex = 8
         ' 
         ' PictureBox1
         ' 
@@ -734,7 +755,7 @@ Partial Class adminframe
         head_users.Dock = DockStyle.Top
         head_users.Location = New Point(0, 0)
         head_users.Name = "head_users"
-        head_users.Size = New Size(1074, 94)
+        head_users.Size = New Size(1020, 94)
         head_users.TabIndex = 0
         ' 
         ' title_users
@@ -756,7 +777,7 @@ Partial Class adminframe
         head_enrollments.Dock = DockStyle.Top
         head_enrollments.Location = New Point(0, 0)
         head_enrollments.Name = "head_enrollments"
-        head_enrollments.Size = New Size(1074, 94)
+        head_enrollments.Size = New Size(1020, 94)
         head_enrollments.TabIndex = 0
         ' 
         ' title_enrollments
@@ -778,7 +799,7 @@ Partial Class adminframe
         enrollmentspanel.Dock = DockStyle.Fill
         enrollmentspanel.Location = New Point(350, 0)
         enrollmentspanel.Name = "enrollmentspanel"
-        enrollmentspanel.Size = New Size(1074, 985)
+        enrollmentspanel.Size = New Size(1020, 749)
         enrollmentspanel.TabIndex = 11
         ' 
         ' Panel1
@@ -905,7 +926,7 @@ Partial Class adminframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 985)
+        sidepanel.Size = New Size(350, 749)
         sidepanel.TabIndex = 8
         ' 
         ' subjectspanel
@@ -915,7 +936,7 @@ Partial Class adminframe
         subjectspanel.Dock = DockStyle.Fill
         subjectspanel.Location = New Point(350, 0)
         subjectspanel.Name = "subjectspanel"
-        subjectspanel.Size = New Size(1074, 985)
+        subjectspanel.Size = New Size(1020, 749)
         subjectspanel.TabIndex = 12
         ' 
         ' Panel2
@@ -1032,7 +1053,7 @@ Partial Class adminframe
         head_subjects.Dock = DockStyle.Top
         head_subjects.Location = New Point(0, 0)
         head_subjects.Name = "head_subjects"
-        head_subjects.Size = New Size(1074, 94)
+        head_subjects.Size = New Size(1020, 94)
         head_subjects.TabIndex = 0
         ' 
         ' title_subjects
@@ -1054,7 +1075,7 @@ Partial Class adminframe
         configurationpanel.Dock = DockStyle.Fill
         configurationpanel.Location = New Point(350, 0)
         configurationpanel.Name = "configurationpanel"
-        configurationpanel.Size = New Size(1074, 985)
+        configurationpanel.Size = New Size(1020, 749)
         configurationpanel.TabIndex = 13
         ' 
         ' Panel3
@@ -1214,7 +1235,7 @@ Partial Class adminframe
         head_configuration.Dock = DockStyle.Top
         head_configuration.Location = New Point(0, 0)
         head_configuration.Name = "head_configuration"
-        head_configuration.Size = New Size(1074, 94)
+        head_configuration.Size = New Size(1020, 94)
         head_configuration.TabIndex = 0
         ' 
         ' title_configuration
@@ -1235,9 +1256,9 @@ Partial Class adminframe
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1424, 985)
-        Controls.Add(dashboardpanel)
+        ClientSize = New Size(1370, 749)
         Controls.Add(userspanel)
+        Controls.Add(dashboardpanel)
         Controls.Add(subjectspanel)
         Controls.Add(enrollmentspanel)
         Controls.Add(configurationpanel)
@@ -1275,7 +1296,7 @@ Partial Class adminframe
         userspanel.ResumeLayout(False)
         bodyclassespanel.ResumeLayout(False)
         bodyclassespanel.PerformLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
+        CType(UsersDataGrid, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         head_users.ResumeLayout(False)
         head_enrollments.ResumeLayout(False)
@@ -1331,14 +1352,13 @@ Partial Class adminframe
     Friend WithEvents head_configuration As Panel
     Friend WithEvents title_configuration As Label
     Friend WithEvents bodyclassespanel As Panel
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents UsersDataGrid As DataGridView
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents adduserbutton As Button
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents RoleSort As ComboBox
+    Friend WithEvents SearchUser As TextBox
+    Friend WithEvents PrintButton As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ComboBox6 As ComboBox
     Friend WithEvents ComboBox5 As ComboBox
@@ -1390,4 +1410,7 @@ Partial Class adminframe
     Friend WithEvents UserPieChart As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents EnrollmentBarGraph As DataVisualization.Charting.Chart
+    Friend WithEvents PageLabel As Label
+    Friend WithEvents NextPageButton As Button
+    Friend WithEvents PrevPageButton As Button
 End Class
