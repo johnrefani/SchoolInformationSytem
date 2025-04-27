@@ -37,7 +37,7 @@ Namespace My
 
         End Sub
 
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Function OnInitialize(ByVal commandLineArgs As System.Collections.ObjectModel.ReadOnlyCollection(Of String)) As Boolean
             Me.MinimumSplashScreenDisplayTime = 0
             Return MyBase.OnInitialize(commandLineArgs)

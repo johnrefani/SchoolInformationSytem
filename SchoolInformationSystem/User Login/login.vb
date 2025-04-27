@@ -2,15 +2,12 @@
 
 Public Class login
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
         password.Multiline = False
         password.AutoSize = False
         password.Height = 40
         password.UseSystemPasswordChar = True
-        hide.Visible = False
-        show.Visible = True
-
+        hideicon.Visible = False
+        showicon.Visible = True
     End Sub
 
     ' Event handler for login button click
@@ -30,7 +27,7 @@ Public Class login
 
         ' Get user inputs and ensure they're lowercase for case-insensitive matching
         Dim inputUsername As String = username.Text.Trim().ToLower()
-        Dim inputPassword As String = password.Text.Trim().ToLower()
+        Dim inputPassword As String = password.Text.Trim()
         Dim inputRole As String = role.SelectedItem.ToString().Trim().ToLower()
 
         ' Database connection
@@ -57,17 +54,31 @@ Public Class login
                     Return
                 End If
 
+                ' Direct comparison of input password with stored password (plain text)
+                If inputPassword = reader("password").ToString() Then
+                    ' Successful login, close the login form and show the corresponding frame
+                    Me.Hide()
 
-                If inputPassword = reader("password").ToString().ToLower() Then
-                    ' Successful login
-                    Me.Close()
+                    ' Check if the frame is initialized properly
                     Select Case inputRole
                         Case "admin"
-                            adminframe.Show()
+                            If Not IsNothing(adminframe) Then
+                                adminframe.Show()
+                            Else
+                                MessageBox.Show("Admin frame is not initialized.")
+                            End If
                         Case "student"
-                            studentframe.Show()
+                            If Not IsNothing(studentframe) Then
+                                studentframe.Show()
+                            Else
+                                MessageBox.Show("Student frame is not initialized.")
+                            End If
                         Case "instructor"
-                            instructorframe.Show()
+                            If Not IsNothing(instructorframe) Then
+                                instructorframe.Show()
+                            Else
+                                MessageBox.Show("Instructor frame is not initialized.")
+                            End If
                     End Select
                 Else
                     errorLabel.Text = "Invalid password. Please try again."
@@ -77,7 +88,9 @@ Public Class login
             End If
 
         Catch ex As Exception
-            errorLabel.Text = "Connection error: " & ex.Message
+            ' Generic error message for the user, specific error details in debug
+            errorLabel.Text = "An error occurred while connecting. Please try again later."
+            Console.WriteLine("Connection error: " & ex.Message)
         Finally
             conn.Close()
         End Try
@@ -102,20 +115,18 @@ Public Class login
             loginbtn.PerformClick()
         End If
     End Sub
+
     ' Show password button
-    Private Sub show_Click(sender As Object, e As EventArgs) Handles show.Click
+    Private Sub showicon_Click(sender As Object, e As EventArgs) Handles showicon.Click
         password.UseSystemPasswordChar = False
-        show.Visible = False
-        hide.Visible = True
+        showicon.Visible = False
+        hideicon.Visible = True
     End Sub
 
     ' Hide password button
-    Private Sub hide_Click(sender As Object, e As EventArgs) Handles hide.Click
+    Private Sub hideicon_Click(sender As Object, e As EventArgs) Handles hideicon.Click
         password.UseSystemPasswordChar = True
-        hide.Visible = False
-        show.Visible = True
+        hideicon.Visible = False
+        showicon.Visible = True
     End Sub
-
-
-
 End Class
