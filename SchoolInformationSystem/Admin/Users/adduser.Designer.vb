@@ -26,31 +26,31 @@ Partial Class adduser
         savebutton = New Button()
         cancelbutton = New Button()
         Label6 = New Label()
-        gendertextbox = New TextBox()
+        gender = New TextBox()
         Label11 = New Label()
-        lastnametextbox = New TextBox()
+        fullname = New TextBox()
         Label10 = New Label()
-        middlenametextbox = New TextBox()
+        password = New TextBox()
         Label9 = New Label()
-        firsnametextbox = New TextBox()
+        username = New TextBox()
         Label8 = New Label()
         Label1 = New Label()
-        TextBox2 = New TextBox()
+        idnum = New TextBox()
         Label2 = New Label()
-        TextBox3 = New TextBox()
+        contact = New TextBox()
         Label3 = New Label()
-        TextBox4 = New TextBox()
+        email = New TextBox()
         Label4 = New Label()
-        adduser_rolecombobox = New ComboBox()
-        TextBox1 = New TextBox()
+        role = New ComboBox()
+        position = New TextBox()
         Label20 = New Label()
-        advisorytextbox = New TextBox()
+        address = New TextBox()
         Label15 = New Label()
-        nationalitytextbox = New TextBox()
+        active = New TextBox()
         Label19 = New Label()
-        civilstatustextbox = New TextBox()
+        accesslevel = New TextBox()
         Label18 = New Label()
-        departmenttextbox = New TextBox()
+        office = New TextBox()
         Label14 = New Label()
         SuspendLayout()
         ' 
@@ -92,14 +92,14 @@ Partial Class adduser
         Label6.TabIndex = 59
         Label6.Text = "Edit Profile"
         ' 
-        ' gendertextbox
+        ' gender
         ' 
-        gendertextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        gendertextbox.BorderStyle = BorderStyle.FixedSingle
-        gendertextbox.Location = New Point(869, 117)
-        gendertextbox.Name = "gendertextbox"
-        gendertextbox.Size = New Size(111, 33)
-        gendertextbox.TabIndex = 4
+        gender.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        gender.BorderStyle = BorderStyle.FixedSingle
+        gender.Location = New Point(869, 117)
+        gender.Name = "gender"
+        gender.Size = New Size(111, 33)
+        gender.TabIndex = 4
         ' 
         ' Label11
         ' 
@@ -110,14 +110,14 @@ Partial Class adduser
         Label11.TabIndex = 68
         Label11.Text = "GENDER"
         ' 
-        ' lastnametextbox
+        ' fullname
         ' 
-        lastnametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        lastnametextbox.BorderStyle = BorderStyle.FixedSingle
-        lastnametextbox.Location = New Point(564, 117)
-        lastnametextbox.Name = "lastnametextbox"
-        lastnametextbox.Size = New Size(286, 33)
-        lastnametextbox.TabIndex = 3
+        fullname.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        fullname.BorderStyle = BorderStyle.FixedSingle
+        fullname.Location = New Point(564, 117)
+        fullname.Name = "fullname"
+        fullname.Size = New Size(286, 33)
+        fullname.TabIndex = 3
         ' 
         ' Label10
         ' 
@@ -128,14 +128,14 @@ Partial Class adduser
         Label10.TabIndex = 66
         Label10.Text = "FULL NAME"
         ' 
-        ' middlenametextbox
+        ' password
         ' 
-        middlenametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        middlenametextbox.BorderStyle = BorderStyle.FixedSingle
-        middlenametextbox.Location = New Point(295, 117)
-        middlenametextbox.Name = "middlenametextbox"
-        middlenametextbox.Size = New Size(250, 33)
-        middlenametextbox.TabIndex = 2
+        password.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        password.BorderStyle = BorderStyle.FixedSingle
+        password.Location = New Point(295, 117)
+        password.Name = "password"
+        password.Size = New Size(250, 33)
+        password.TabIndex = 2
         ' 
         ' Label9
         ' 
@@ -146,14 +146,14 @@ Partial Class adduser
         Label9.TabIndex = 64
         Label9.Text = "PASSWORD"
         ' 
-        ' firsnametextbox
+        ' username
         ' 
-        firsnametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        firsnametextbox.BorderStyle = BorderStyle.FixedSingle
-        firsnametextbox.Location = New Point(26, 117)
-        firsnametextbox.Name = "firsnametextbox"
-        firsnametextbox.Size = New Size(250, 33)
-        firsnametextbox.TabIndex = 1
+        username.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        username.BorderStyle = BorderStyle.FixedSingle
+        username.Location = New Point(26, 117)
+        username.Name = "username"
+        username.Size = New Size(250, 33)
+        username.TabIndex = 1
         ' 
         ' Label8
         ' 
@@ -173,14 +173,14 @@ Partial Class adduser
         Label1.TabIndex = 76
         Label1.Text = "GENDER"
         ' 
-        ' TextBox2
+        ' idnum
         ' 
-        TextBox2.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Location = New Point(564, 217)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(286, 33)
-        TextBox2.TabIndex = 7
+        idnum.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        idnum.BorderStyle = BorderStyle.FixedSingle
+        idnum.Location = New Point(564, 217)
+        idnum.Name = "idnum"
+        idnum.Size = New Size(286, 33)
+        idnum.TabIndex = 7
         ' 
         ' Label2
         ' 
@@ -191,14 +191,14 @@ Partial Class adduser
         Label2.TabIndex = 74
         Label2.Text = "ID NUMBER"
         ' 
-        ' TextBox3
+        ' contact
         ' 
-        TextBox3.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox3.BorderStyle = BorderStyle.FixedSingle
-        TextBox3.Location = New Point(295, 217)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(250, 33)
-        TextBox3.TabIndex = 6
+        contact.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        contact.BorderStyle = BorderStyle.FixedSingle
+        contact.Location = New Point(295, 217)
+        contact.Name = "contact"
+        contact.Size = New Size(250, 33)
+        contact.TabIndex = 6
         ' 
         ' Label3
         ' 
@@ -209,14 +209,14 @@ Partial Class adduser
         Label3.TabIndex = 72
         Label3.Text = "CONTACT NUMBER"
         ' 
-        ' TextBox4
+        ' email
         ' 
-        TextBox4.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox4.BorderStyle = BorderStyle.FixedSingle
-        TextBox4.Location = New Point(26, 217)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(250, 33)
-        TextBox4.TabIndex = 5
+        email.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        email.BorderStyle = BorderStyle.FixedSingle
+        email.Location = New Point(26, 217)
+        email.Name = "email"
+        email.Size = New Size(250, 33)
+        email.TabIndex = 5
         ' 
         ' Label4
         ' 
@@ -227,24 +227,24 @@ Partial Class adduser
         Label4.TabIndex = 70
         Label4.Text = "EMAIL ADDRESS"
         ' 
-        ' adduser_rolecombobox
+        ' role
         ' 
-        adduser_rolecombobox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        adduser_rolecombobox.FormattingEnabled = True
-        adduser_rolecombobox.Location = New Point(871, 217)
-        adduser_rolecombobox.Name = "adduser_rolecombobox"
-        adduser_rolecombobox.Size = New Size(109, 33)
-        adduser_rolecombobox.TabIndex = 8
-        adduser_rolecombobox.Text = "Role"
+        role.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        role.FormattingEnabled = True
+        role.Location = New Point(871, 217)
+        role.Name = "role"
+        role.Size = New Size(109, 33)
+        role.TabIndex = 8
+        role.Text = "Role"
         ' 
-        ' TextBox1
+        ' position
         ' 
-        TextBox1.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox1.BorderStyle = BorderStyle.FixedSingle
-        TextBox1.Location = New Point(564, 318)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(416, 33)
-        TextBox1.TabIndex = 10
+        position.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        position.BorderStyle = BorderStyle.FixedSingle
+        position.Location = New Point(564, 318)
+        position.Name = "position"
+        position.Size = New Size(416, 33)
+        position.TabIndex = 10
         ' 
         ' Label20
         ' 
@@ -255,14 +255,14 @@ Partial Class adduser
         Label20.TabIndex = 80
         Label20.Text = "POSITION"
         ' 
-        ' advisorytextbox
+        ' address
         ' 
-        advisorytextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        advisorytextbox.BorderStyle = BorderStyle.FixedSingle
-        advisorytextbox.Location = New Point(26, 318)
-        advisorytextbox.Name = "advisorytextbox"
-        advisorytextbox.Size = New Size(519, 33)
-        advisorytextbox.TabIndex = 9
+        address.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        address.BorderStyle = BorderStyle.FixedSingle
+        address.Location = New Point(26, 318)
+        address.Name = "address"
+        address.Size = New Size(519, 33)
+        address.TabIndex = 9
         ' 
         ' Label15
         ' 
@@ -273,14 +273,14 @@ Partial Class adduser
         Label15.TabIndex = 78
         Label15.Text = "ADDRESS"
         ' 
-        ' nationalitytextbox
+        ' active
         ' 
-        nationalitytextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        nationalitytextbox.BorderStyle = BorderStyle.FixedSingle
-        nationalitytextbox.Location = New Point(632, 420)
-        nationalitytextbox.Name = "nationalitytextbox"
-        nationalitytextbox.Size = New Size(196, 33)
-        nationalitytextbox.TabIndex = 13
+        active.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        active.BorderStyle = BorderStyle.FixedSingle
+        active.Location = New Point(632, 420)
+        active.Name = "active"
+        active.Size = New Size(196, 33)
+        active.TabIndex = 13
         ' 
         ' Label19
         ' 
@@ -291,14 +291,14 @@ Partial Class adduser
         Label19.TabIndex = 86
         Label19.Text = "IS ACTIVE"
         ' 
-        ' civilstatustextbox
+        ' accesslevel
         ' 
-        civilstatustextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        civilstatustextbox.BorderStyle = BorderStyle.FixedSingle
-        civilstatustextbox.Location = New Point(361, 420)
-        civilstatustextbox.Name = "civilstatustextbox"
-        civilstatustextbox.Size = New Size(245, 33)
-        civilstatustextbox.TabIndex = 12
+        accesslevel.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        accesslevel.BorderStyle = BorderStyle.FixedSingle
+        accesslevel.Location = New Point(361, 420)
+        accesslevel.Name = "accesslevel"
+        accesslevel.Size = New Size(245, 33)
+        accesslevel.TabIndex = 12
         ' 
         ' Label18
         ' 
@@ -309,14 +309,14 @@ Partial Class adduser
         Label18.TabIndex = 84
         Label18.Text = "ACCESS LEVEL"
         ' 
-        ' departmenttextbox
+        ' office
         ' 
-        departmenttextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        departmenttextbox.BorderStyle = BorderStyle.FixedSingle
-        departmenttextbox.Location = New Point(26, 420)
-        departmenttextbox.Name = "departmenttextbox"
-        departmenttextbox.Size = New Size(309, 33)
-        departmenttextbox.TabIndex = 11
+        office.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        office.BorderStyle = BorderStyle.FixedSingle
+        office.Location = New Point(26, 420)
+        office.Name = "office"
+        office.Size = New Size(309, 33)
+        office.TabIndex = 11
         ' 
         ' Label14
         ' 
@@ -333,31 +333,31 @@ Partial Class adduser
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1008, 488)
-        Controls.Add(nationalitytextbox)
+        Controls.Add(active)
         Controls.Add(Label19)
-        Controls.Add(civilstatustextbox)
+        Controls.Add(accesslevel)
         Controls.Add(Label18)
-        Controls.Add(departmenttextbox)
+        Controls.Add(office)
         Controls.Add(Label14)
-        Controls.Add(TextBox1)
+        Controls.Add(position)
         Controls.Add(Label20)
-        Controls.Add(advisorytextbox)
+        Controls.Add(address)
         Controls.Add(Label15)
-        Controls.Add(adduser_rolecombobox)
+        Controls.Add(role)
         Controls.Add(Label1)
-        Controls.Add(TextBox2)
+        Controls.Add(idnum)
         Controls.Add(Label2)
-        Controls.Add(TextBox3)
+        Controls.Add(contact)
         Controls.Add(Label3)
-        Controls.Add(TextBox4)
+        Controls.Add(email)
         Controls.Add(Label4)
-        Controls.Add(gendertextbox)
+        Controls.Add(gender)
         Controls.Add(Label11)
-        Controls.Add(lastnametextbox)
+        Controls.Add(fullname)
         Controls.Add(Label10)
-        Controls.Add(middlenametextbox)
+        Controls.Add(password)
         Controls.Add(Label9)
-        Controls.Add(firsnametextbox)
+        Controls.Add(username)
         Controls.Add(Label8)
         Controls.Add(savebutton)
         Controls.Add(cancelbutton)
@@ -376,30 +376,30 @@ Partial Class adduser
     Friend WithEvents savebutton As Button
     Friend WithEvents cancelbutton As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents gendertextbox As TextBox
+    Friend WithEvents gender As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents lastnametextbox As TextBox
+    Friend WithEvents fullname As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents middlenametextbox As TextBox
+    Friend WithEvents password As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents firsnametextbox As TextBox
+    Friend WithEvents username As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents idnum As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents contact As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents email As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents adduser_rolecombobox As ComboBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents role As ComboBox
+    Friend WithEvents position As TextBox
     Friend WithEvents Label20 As Label
-    Friend WithEvents advisorytextbox As TextBox
+    Friend WithEvents address As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents nationalitytextbox As TextBox
+    Friend WithEvents active As TextBox
     Friend WithEvents Label19 As Label
-    Friend WithEvents civilstatustextbox As TextBox
+    Friend WithEvents accesslevel As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents departmenttextbox As TextBox
+    Friend WithEvents office As TextBox
     Friend WithEvents Label14 As Label
 End Class
