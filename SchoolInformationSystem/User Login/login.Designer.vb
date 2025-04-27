@@ -25,8 +25,8 @@ Partial Class login
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         TopColor = New Panel()
         LoginPanel = New Panel()
-        hide = New PictureBox()
-        show = New PictureBox()
+        hideicon = New PictureBox()
+        showicon = New PictureBox()
         errorLabel = New Label()
         role = New ComboBox()
         loginbtn = New Button()
@@ -34,8 +34,8 @@ Partial Class login
         username = New TextBox()
         Logo = New PictureBox()
         LoginPanel.SuspendLayout()
-        CType(hide, ComponentModel.ISupportInitialize).BeginInit()
-        CType(show, ComponentModel.ISupportInitialize).BeginInit()
+        CType(hideicon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(showicon, ComponentModel.ISupportInitialize).BeginInit()
         CType(Logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -52,8 +52,8 @@ Partial Class login
         ' LoginPanel
         ' 
         LoginPanel.BackColor = Color.White
-        LoginPanel.Controls.Add(hide)
-        LoginPanel.Controls.Add(show)
+        LoginPanel.Controls.Add(hideicon)
+        LoginPanel.Controls.Add(showicon)
         LoginPanel.Controls.Add(errorLabel)
         LoginPanel.Controls.Add(role)
         LoginPanel.Controls.Add(loginbtn)
@@ -66,27 +66,27 @@ Partial Class login
         LoginPanel.Size = New Size(500, 600)
         LoginPanel.TabIndex = 1
         ' 
-        ' hide
+        ' hideicon
         ' 
-        hide.Cursor = Cursors.Hand
-        hide.Image = CType(resources.GetObject("hide.Image"), Image)
-        hide.Location = New Point(363, 402)
-        hide.Name = "hide"
-        hide.Size = New Size(35, 35)
-        hide.SizeMode = PictureBoxSizeMode.StretchImage
-        hide.TabIndex = 7
-        hide.TabStop = False
+        hideicon.Cursor = Cursors.Hand
+        hideicon.Image = CType(resources.GetObject("hideicon.Image"), Image)
+        hideicon.Location = New Point(363, 402)
+        hideicon.Name = "hideicon"
+        hideicon.Size = New Size(35, 35)
+        hideicon.SizeMode = PictureBoxSizeMode.StretchImage
+        hideicon.TabIndex = 7
+        hideicon.TabStop = False
         ' 
-        ' show
+        ' showicon
         ' 
-        show.Cursor = Cursors.Hand
-        show.Image = CType(resources.GetObject("show.Image"), Image)
-        show.Location = New Point(363, 402)
-        show.Name = "show"
-        show.Size = New Size(35, 35)
-        show.SizeMode = PictureBoxSizeMode.StretchImage
-        show.TabIndex = 6
-        show.TabStop = False
+        showicon.Cursor = Cursors.Hand
+        showicon.Image = CType(resources.GetObject("showicon.Image"), Image)
+        showicon.Location = New Point(363, 402)
+        showicon.Name = "showicon"
+        showicon.Size = New Size(35, 35)
+        showicon.SizeMode = PictureBoxSizeMode.StretchImage
+        showicon.TabIndex = 6
+        showicon.TabStop = False
         ' 
         ' errorLabel
         ' 
@@ -119,7 +119,7 @@ Partial Class login
         loginbtn.Location = New Point(100, 460)
         loginbtn.Name = "loginbtn"
         loginbtn.Size = New Size(300, 50)
-        loginbtn.TabIndex = 3
+        loginbtn.TabIndex = 5
         loginbtn.Text = "Login"
         loginbtn.UseVisualStyleBackColor = False
         ' 
@@ -130,7 +130,7 @@ Partial Class login
         password.Name = "password"
         password.PlaceholderText = "Password"
         password.Size = New Size(300, 33)
-        password.TabIndex = 3
+        password.TabIndex = 4
         password.UseSystemPasswordChar = True
         ' 
         ' username
@@ -141,7 +141,7 @@ Partial Class login
         username.Name = "username"
         username.PlaceholderText = "Username"
         username.Size = New Size(300, 40)
-        username.TabIndex = 2
+        username.TabIndex = 3
         ' 
         ' Logo
         ' 
@@ -169,8 +169,8 @@ Partial Class login
         Text = "School Information System"
         LoginPanel.ResumeLayout(False)
         LoginPanel.PerformLayout()
-        CType(hide, ComponentModel.ISupportInitialize).EndInit()
-        CType(show, ComponentModel.ISupportInitialize).EndInit()
+        CType(hideicon, ComponentModel.ISupportInitialize).EndInit()
+        CType(showicon, ComponentModel.ISupportInitialize).EndInit()
         CType(Logo, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
@@ -183,6 +183,6 @@ Partial Class login
     Friend WithEvents loginbtn As Button
     Friend WithEvents role As ComboBox
     Friend WithEvents errorLabel As Label
-    Friend WithEvents hide As PictureBox
-    Friend WithEvents show As PictureBox
+    Friend WithEvents hideicon As PictureBox
+    Friend WithEvents showicon As PictureBox
 End Class
