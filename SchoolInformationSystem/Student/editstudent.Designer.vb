@@ -230,7 +230,7 @@ Partial Class editstudent
         TextBox1.Location = New Point(25, 131)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(280, 33)
-        TextBox1.TabIndex = 74
+        TextBox1.TabIndex = 1
         ' 
         ' TextBox2
         ' 
@@ -238,7 +238,7 @@ Partial Class editstudent
         TextBox2.Location = New Point(352, 131)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(114, 33)
-        TextBox2.TabIndex = 75
+        TextBox2.TabIndex = 2
         ' 
         ' TextBox3
         ' 
@@ -246,7 +246,7 @@ Partial Class editstudent
         TextBox3.Location = New Point(529, 131)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(66, 33)
-        TextBox3.TabIndex = 76
+        TextBox3.TabIndex = 3
         ' 
         ' TextBox4
         ' 
@@ -254,7 +254,7 @@ Partial Class editstudent
         TextBox4.Location = New Point(661, 131)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(239, 33)
-        TextBox4.TabIndex = 77
+        TextBox4.TabIndex = 4
         ' 
         ' TextBox5
         ' 
@@ -262,7 +262,7 @@ Partial Class editstudent
         TextBox5.Location = New Point(25, 237)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(280, 33)
-        TextBox5.TabIndex = 78
+        TextBox5.TabIndex = 5
         ' 
         ' TextBox6
         ' 
@@ -270,7 +270,7 @@ Partial Class editstudent
         TextBox6.Location = New Point(352, 237)
         TextBox6.Name = "TextBox6"
         TextBox6.Size = New Size(548, 33)
-        TextBox6.TabIndex = 79
+        TextBox6.TabIndex = 6
         ' 
         ' TextBox7
         ' 
@@ -278,7 +278,7 @@ Partial Class editstudent
         TextBox7.Location = New Point(25, 341)
         TextBox7.Name = "TextBox7"
         TextBox7.Size = New Size(166, 33)
-        TextBox7.TabIndex = 80
+        TextBox7.TabIndex = 7
         ' 
         ' TextBox8
         ' 
@@ -286,7 +286,7 @@ Partial Class editstudent
         TextBox8.Location = New Point(219, 341)
         TextBox8.Name = "TextBox8"
         TextBox8.Size = New Size(122, 33)
-        TextBox8.TabIndex = 81
+        TextBox8.TabIndex = 8
         ' 
         ' TextBox9
         ' 
@@ -294,7 +294,7 @@ Partial Class editstudent
         TextBox9.Location = New Point(366, 341)
         TextBox9.Name = "TextBox9"
         TextBox9.Size = New Size(272, 33)
-        TextBox9.TabIndex = 82
+        TextBox9.TabIndex = 9
         ' 
         ' TextBox10
         ' 
@@ -302,7 +302,7 @@ Partial Class editstudent
         TextBox10.Location = New Point(661, 341)
         TextBox10.Name = "TextBox10"
         TextBox10.Size = New Size(239, 33)
-        TextBox10.TabIndex = 83
+        TextBox10.TabIndex = 10
         ' 
         ' TextBox11
         ' 
@@ -310,7 +310,7 @@ Partial Class editstudent
         TextBox11.Location = New Point(25, 444)
         TextBox11.Name = "TextBox11"
         TextBox11.Size = New Size(280, 33)
-        TextBox11.TabIndex = 84
+        TextBox11.TabIndex = 11
         ' 
         ' TextBox12
         ' 
@@ -318,7 +318,7 @@ Partial Class editstudent
         TextBox12.Location = New Point(366, 444)
         TextBox12.Name = "TextBox12"
         TextBox12.Size = New Size(240, 33)
-        TextBox12.TabIndex = 85
+        TextBox12.TabIndex = 12
         ' 
         ' editstudent
         ' 

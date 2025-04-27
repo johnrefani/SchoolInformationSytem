@@ -61,7 +61,7 @@ Partial Class editprofile
         TextBox2.Location = New Point(354, 516)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(234, 33)
-        TextBox2.TabIndex = 57
+        TextBox2.TabIndex = 13
         ' 
         ' Label20
         ' 
@@ -79,7 +79,7 @@ Partial Class editprofile
         nationalitytextbox.Location = New Point(690, 419)
         nationalitytextbox.Name = "nationalitytextbox"
         nationalitytextbox.Size = New Size(282, 33)
-        nationalitytextbox.TabIndex = 55
+        nationalitytextbox.TabIndex = 11
         ' 
         ' Label19
         ' 
@@ -97,7 +97,7 @@ Partial Class editprofile
         civilstatustextbox.Location = New Point(354, 419)
         civilstatustextbox.Name = "civilstatustextbox"
         civilstatustextbox.Size = New Size(302, 33)
-        civilstatustextbox.TabIndex = 53
+        civilstatustextbox.TabIndex = 10
         ' 
         ' Label18
         ' 
@@ -115,7 +115,7 @@ Partial Class editprofile
         subjecthandledtextbox.Location = New Point(354, 323)
         subjecthandledtextbox.Name = "subjecthandledtextbox"
         subjecthandledtextbox.Size = New Size(619, 33)
-        subjecthandledtextbox.TabIndex = 51
+        subjecthandledtextbox.TabIndex = 8
         ' 
         ' Label17
         ' 
@@ -133,7 +133,7 @@ Partial Class editprofile
         addresstextbox.Location = New Point(354, 225)
         addresstextbox.Name = "addresstextbox"
         addresstextbox.Size = New Size(619, 33)
-        addresstextbox.TabIndex = 49
+        addresstextbox.TabIndex = 6
         ' 
         ' Label16
         ' 
@@ -151,7 +151,7 @@ Partial Class editprofile
         advisorytextbox.Location = New Point(17, 516)
         advisorytextbox.Name = "advisorytextbox"
         advisorytextbox.Size = New Size(309, 33)
-        advisorytextbox.TabIndex = 47
+        advisorytextbox.TabIndex = 12
         ' 
         ' Label15
         ' 
@@ -169,7 +169,7 @@ Partial Class editprofile
         departmenttextbox.Location = New Point(17, 419)
         departmenttextbox.Name = "departmenttextbox"
         departmenttextbox.Size = New Size(309, 33)
-        departmenttextbox.TabIndex = 45
+        departmenttextbox.TabIndex = 9
         ' 
         ' Label14
         ' 
@@ -187,7 +187,7 @@ Partial Class editprofile
         emailaddtextbox.Location = New Point(17, 323)
         emailaddtextbox.Name = "emailaddtextbox"
         emailaddtextbox.Size = New Size(309, 33)
-        emailaddtextbox.TabIndex = 43
+        emailaddtextbox.TabIndex = 7
         ' 
         ' Label13
         ' 
@@ -205,7 +205,7 @@ Partial Class editprofile
         contactnumtextbox.Location = New Point(17, 225)
         contactnumtextbox.Name = "contactnumtextbox"
         contactnumtextbox.Size = New Size(309, 33)
-        contactnumtextbox.TabIndex = 41
+        contactnumtextbox.TabIndex = 5
         ' 
         ' Label12
         ' 
@@ -223,7 +223,7 @@ Partial Class editprofile
         gendertextbox.Location = New Point(824, 124)
         gendertextbox.Name = "gendertextbox"
         gendertextbox.Size = New Size(149, 33)
-        gendertextbox.TabIndex = 39
+        gendertextbox.TabIndex = 4
         ' 
         ' Label11
         ' 
@@ -241,7 +241,7 @@ Partial Class editprofile
         lastnametextbox.Location = New Point(555, 124)
         lastnametextbox.Name = "lastnametextbox"
         lastnametextbox.Size = New Size(250, 33)
-        lastnametextbox.TabIndex = 37
+        lastnametextbox.TabIndex = 3
         ' 
         ' Label10
         ' 
@@ -259,7 +259,7 @@ Partial Class editprofile
         middlenametextbox.Location = New Point(286, 124)
         middlenametextbox.Name = "middlenametextbox"
         middlenametextbox.Size = New Size(250, 33)
-        middlenametextbox.TabIndex = 35
+        middlenametextbox.TabIndex = 2
         ' 
         ' Label9
         ' 
@@ -277,7 +277,7 @@ Partial Class editprofile
         firsnametextbox.Location = New Point(17, 124)
         firsnametextbox.Name = "firsnametextbox"
         firsnametextbox.Size = New Size(250, 33)
-        firsnametextbox.TabIndex = 33
+        firsnametextbox.TabIndex = 1
         ' 
         ' Label8
         ' 
@@ -305,7 +305,7 @@ Partial Class editprofile
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Tahoma", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(10, 11)
         Label6.Name = "Label6"
         Label6.Size = New Size(195, 39)
@@ -328,8 +328,9 @@ Partial Class editprofile
         ' 
         ' editprofile
         ' 
-        AutoScaleDimensions = New SizeF(12.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(12F, 25F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
         ClientSize = New Size(1008, 576)
         Controls.Add(savebutton)
         Controls.Add(TextBox2)

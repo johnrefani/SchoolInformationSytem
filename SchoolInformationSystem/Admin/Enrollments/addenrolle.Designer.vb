@@ -100,7 +100,7 @@ Partial Class addenrolle
         studentnametextbox.Location = New Point(17, 111)
         studentnametextbox.Name = "studentnametextbox"
         studentnametextbox.Size = New Size(250, 33)
-        studentnametextbox.TabIndex = 66
+        studentnametextbox.TabIndex = 1
         ' 
         ' Label8
         ' 
@@ -119,7 +119,7 @@ Partial Class addenrolle
         ComboBox1.Location = New Point(292, 111)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(230, 33)
-        ComboBox1.TabIndex = 67
+        ComboBox1.TabIndex = 2
         ' 
         ' Label1
         ' 
@@ -137,7 +137,7 @@ Partial Class addenrolle
         TextBox1.Location = New Point(547, 111)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(213, 33)
-        TextBox1.TabIndex = 70
+        TextBox1.TabIndex = 3
         ' 
         ' Label2
         ' 
@@ -155,7 +155,7 @@ Partial Class addenrolle
         TextBox2.Location = New Point(785, 111)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(207, 33)
-        TextBox2.TabIndex = 72
+        TextBox2.TabIndex = 4
         ' 
         ' Label3
         ' 
@@ -173,7 +173,7 @@ Partial Class addenrolle
         TextBox3.Location = New Point(785, 209)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(207, 33)
-        TextBox3.TabIndex = 80
+        TextBox3.TabIndex = 8
         ' 
         ' Label4
         ' 
@@ -191,7 +191,7 @@ Partial Class addenrolle
         TextBox4.Location = New Point(547, 209)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(213, 33)
-        TextBox4.TabIndex = 78
+        TextBox4.TabIndex = 7
         ' 
         ' Label5
         ' 
@@ -218,7 +218,7 @@ Partial Class addenrolle
         TextBox5.Location = New Point(17, 209)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(250, 33)
-        TextBox5.TabIndex = 74
+        TextBox5.TabIndex = 5
         ' 
         ' Label9
         ' 
@@ -236,7 +236,7 @@ Partial Class addenrolle
         TextBox6.Location = New Point(292, 209)
         TextBox6.Name = "TextBox6"
         TextBox6.Size = New Size(230, 33)
-        TextBox6.TabIndex = 81
+        TextBox6.TabIndex = 6
         ' 
         ' TextBox7
         ' 
@@ -245,7 +245,7 @@ Partial Class addenrolle
         TextBox7.Location = New Point(292, 305)
         TextBox7.Name = "TextBox7"
         TextBox7.Size = New Size(230, 33)
-        TextBox7.TabIndex = 89
+        TextBox7.TabIndex = 10
         ' 
         ' TextBox8
         ' 
@@ -254,7 +254,7 @@ Partial Class addenrolle
         TextBox8.Location = New Point(785, 305)
         TextBox8.Name = "TextBox8"
         TextBox8.Size = New Size(207, 33)
-        TextBox8.TabIndex = 88
+        TextBox8.TabIndex = 12
         ' 
         ' Label10
         ' 
@@ -272,7 +272,7 @@ Partial Class addenrolle
         TextBox9.Location = New Point(547, 305)
         TextBox9.Name = "TextBox9"
         TextBox9.Size = New Size(213, 33)
-        TextBox9.TabIndex = 86
+        TextBox9.TabIndex = 11
         ' 
         ' Label11
         ' 
@@ -299,7 +299,7 @@ Partial Class addenrolle
         TextBox10.Location = New Point(17, 305)
         TextBox10.Name = "TextBox10"
         TextBox10.Size = New Size(250, 33)
-        TextBox10.TabIndex = 83
+        TextBox10.TabIndex = 9
         ' 
         ' Label13
         ' 
@@ -317,7 +317,7 @@ Partial Class addenrolle
         TextBox11.Location = New Point(292, 396)
         TextBox11.Name = "TextBox11"
         TextBox11.Size = New Size(230, 33)
-        TextBox11.TabIndex = 93
+        TextBox11.TabIndex = 14
         ' 
         ' Label14
         ' 
@@ -335,7 +335,7 @@ Partial Class addenrolle
         TextBox12.Location = New Point(17, 396)
         TextBox12.Name = "TextBox12"
         TextBox12.Size = New Size(250, 33)
-        TextBox12.TabIndex = 91
+        TextBox12.TabIndex = 13
         ' 
         ' Label15
         ' 
