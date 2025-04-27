@@ -97,7 +97,7 @@ Partial Class editconfiguration
         studentnametextbox.Location = New Point(23, 134)
         studentnametextbox.Name = "studentnametextbox"
         studentnametextbox.Size = New Size(250, 33)
-        studentnametextbox.TabIndex = 131
+        studentnametextbox.TabIndex = 1
         ' 
         ' Label8
         ' 
@@ -115,7 +115,7 @@ Partial Class editconfiguration
         TextBox1.Location = New Point(316, 134)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(250, 33)
-        TextBox1.TabIndex = 133
+        TextBox1.TabIndex = 2
         ' 
         ' Label1
         ' 
@@ -133,7 +133,7 @@ Partial Class editconfiguration
         TextBox2.Location = New Point(601, 134)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(250, 33)
-        TextBox2.TabIndex = 135
+        TextBox2.TabIndex = 3
         ' 
         ' Label2
         ' 
@@ -151,7 +151,7 @@ Partial Class editconfiguration
         TextBox3.Location = New Point(316, 235)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(250, 33)
-        TextBox3.TabIndex = 139
+        TextBox3.TabIndex = 5
         ' 
         ' Label3
         ' 
@@ -169,7 +169,7 @@ Partial Class editconfiguration
         TextBox4.Location = New Point(23, 235)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(250, 33)
-        TextBox4.TabIndex = 137
+        TextBox4.TabIndex = 4
         ' 
         ' Label4
         ' 

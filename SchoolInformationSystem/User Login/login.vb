@@ -1,6 +1,18 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class login
+    Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        password.Multiline = False
+        password.AutoSize = False
+        password.Height = 40
+        password.UseSystemPasswordChar = True
+        hide.Visible = False
+        show.Visible = True
+
+    End Sub
+
     ' Event handler for login button click
     Private Sub loginbtn_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
         errorLabel.Text = ""
@@ -48,7 +60,7 @@ Public Class login
 
                 If inputPassword = reader("password").ToString().ToLower() Then
                     ' Successful login
-                    Me.Hide()
+                    Me.Close()
                     Select Case inputRole
                         Case "admin"
                             adminframe.Show()
@@ -90,4 +102,20 @@ Public Class login
             loginbtn.PerformClick()
         End If
     End Sub
+    ' Show password button
+    Private Sub show_Click(sender As Object, e As EventArgs) Handles show.Click
+        password.UseSystemPasswordChar = False
+        show.Visible = False
+        hide.Visible = True
+    End Sub
+
+    ' Hide password button
+    Private Sub hide_Click(sender As Object, e As EventArgs) Handles hide.Click
+        password.UseSystemPasswordChar = True
+        hide.Visible = False
+        show.Visible = True
+    End Sub
+
+
+
 End Class

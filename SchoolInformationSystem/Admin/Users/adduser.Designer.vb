@@ -99,7 +99,7 @@ Partial Class adduser
         gendertextbox.Location = New Point(869, 117)
         gendertextbox.Name = "gendertextbox"
         gendertextbox.Size = New Size(111, 33)
-        gendertextbox.TabIndex = 69
+        gendertextbox.TabIndex = 4
         ' 
         ' Label11
         ' 
@@ -117,7 +117,7 @@ Partial Class adduser
         lastnametextbox.Location = New Point(564, 117)
         lastnametextbox.Name = "lastnametextbox"
         lastnametextbox.Size = New Size(286, 33)
-        lastnametextbox.TabIndex = 67
+        lastnametextbox.TabIndex = 3
         ' 
         ' Label10
         ' 
@@ -135,7 +135,7 @@ Partial Class adduser
         middlenametextbox.Location = New Point(295, 117)
         middlenametextbox.Name = "middlenametextbox"
         middlenametextbox.Size = New Size(250, 33)
-        middlenametextbox.TabIndex = 65
+        middlenametextbox.TabIndex = 2
         ' 
         ' Label9
         ' 
@@ -153,7 +153,7 @@ Partial Class adduser
         firsnametextbox.Location = New Point(26, 117)
         firsnametextbox.Name = "firsnametextbox"
         firsnametextbox.Size = New Size(250, 33)
-        firsnametextbox.TabIndex = 63
+        firsnametextbox.TabIndex = 1
         ' 
         ' Label8
         ' 
@@ -180,7 +180,7 @@ Partial Class adduser
         TextBox2.Location = New Point(564, 217)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(286, 33)
-        TextBox2.TabIndex = 75
+        TextBox2.TabIndex = 7
         ' 
         ' Label2
         ' 
@@ -198,7 +198,7 @@ Partial Class adduser
         TextBox3.Location = New Point(295, 217)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(250, 33)
-        TextBox3.TabIndex = 73
+        TextBox3.TabIndex = 6
         ' 
         ' Label3
         ' 
@@ -216,7 +216,7 @@ Partial Class adduser
         TextBox4.Location = New Point(26, 217)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(250, 33)
-        TextBox4.TabIndex = 71
+        TextBox4.TabIndex = 5
         ' 
         ' Label4
         ' 
@@ -234,7 +234,7 @@ Partial Class adduser
         adduser_rolecombobox.Location = New Point(871, 217)
         adduser_rolecombobox.Name = "adduser_rolecombobox"
         adduser_rolecombobox.Size = New Size(109, 33)
-        adduser_rolecombobox.TabIndex = 77
+        adduser_rolecombobox.TabIndex = 8
         adduser_rolecombobox.Text = "Role"
         ' 
         ' TextBox1
@@ -244,7 +244,7 @@ Partial Class adduser
         TextBox1.Location = New Point(564, 318)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(416, 33)
-        TextBox1.TabIndex = 81
+        TextBox1.TabIndex = 10
         ' 
         ' Label20
         ' 
@@ -262,7 +262,7 @@ Partial Class adduser
         advisorytextbox.Location = New Point(26, 318)
         advisorytextbox.Name = "advisorytextbox"
         advisorytextbox.Size = New Size(519, 33)
-        advisorytextbox.TabIndex = 79
+        advisorytextbox.TabIndex = 9
         ' 
         ' Label15
         ' 
@@ -280,7 +280,7 @@ Partial Class adduser
         nationalitytextbox.Location = New Point(632, 420)
         nationalitytextbox.Name = "nationalitytextbox"
         nationalitytextbox.Size = New Size(196, 33)
-        nationalitytextbox.TabIndex = 87
+        nationalitytextbox.TabIndex = 13
         ' 
         ' Label19
         ' 
@@ -298,7 +298,7 @@ Partial Class adduser
         civilstatustextbox.Location = New Point(361, 420)
         civilstatustextbox.Name = "civilstatustextbox"
         civilstatustextbox.Size = New Size(245, 33)
-        civilstatustextbox.TabIndex = 85
+        civilstatustextbox.TabIndex = 12
         ' 
         ' Label18
         ' 
@@ -316,7 +316,7 @@ Partial Class adduser
         departmenttextbox.Location = New Point(26, 420)
         departmenttextbox.Name = "departmenttextbox"
         departmenttextbox.Size = New Size(309, 33)
-        departmenttextbox.TabIndex = 83
+        departmenttextbox.TabIndex = 11
         ' 
         ' Label14
         ' 

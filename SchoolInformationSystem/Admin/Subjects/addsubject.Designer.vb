@@ -100,7 +100,7 @@ Partial Class addsubject
         TextBox2.Location = New Point(785, 111)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(207, 33)
-        TextBox2.TabIndex = 80
+        TextBox2.TabIndex = 4
         ' 
         ' Label3
         ' 
@@ -118,7 +118,7 @@ Partial Class addsubject
         TextBox1.Location = New Point(292, 111)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(213, 33)
-        TextBox1.TabIndex = 78
+        TextBox1.TabIndex = 2
         ' 
         ' Label2
         ' 
@@ -146,7 +146,7 @@ Partial Class addsubject
         ComboBox1.Location = New Point(530, 111)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(230, 33)
-        ComboBox1.TabIndex = 75
+        ComboBox1.TabIndex = 3
         ' 
         ' studentnametextbox
         ' 
@@ -155,7 +155,7 @@ Partial Class addsubject
         studentnametextbox.Location = New Point(17, 111)
         studentnametextbox.Name = "studentnametextbox"
         studentnametextbox.Size = New Size(250, 33)
-        studentnametextbox.TabIndex = 74
+        studentnametextbox.TabIndex = 1
         ' 
         ' Label8
         ' 
@@ -173,7 +173,7 @@ Partial Class addsubject
         TextBox3.Location = New Point(616, 205)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(375, 33)
-        TextBox3.TabIndex = 86
+        TextBox3.TabIndex = 7
         ' 
         ' Label4
         ' 
@@ -191,7 +191,7 @@ Partial Class addsubject
         TextBox4.Location = New Point(291, 205)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(301, 33)
-        TextBox4.TabIndex = 84
+        TextBox4.TabIndex = 6
         ' 
         ' Label5
         ' 
@@ -209,7 +209,7 @@ Partial Class addsubject
         TextBox5.Location = New Point(17, 205)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(250, 33)
-        TextBox5.TabIndex = 82
+        TextBox5.TabIndex = 5
         ' 
         ' Label7
         ' 
@@ -227,7 +227,7 @@ Partial Class addsubject
         TextBox6.Location = New Point(784, 302)
         TextBox6.Name = "TextBox6"
         TextBox6.Size = New Size(207, 33)
-        TextBox6.TabIndex = 94
+        TextBox6.TabIndex = 11
         ' 
         ' Label9
         ' 
@@ -245,7 +245,7 @@ Partial Class addsubject
         TextBox7.Location = New Point(291, 302)
         TextBox7.Name = "TextBox7"
         TextBox7.Size = New Size(213, 33)
-        TextBox7.TabIndex = 92
+        TextBox7.TabIndex = 9
         ' 
         ' Label10
         ' 
@@ -272,7 +272,7 @@ Partial Class addsubject
         TextBox8.Location = New Point(16, 302)
         TextBox8.Name = "TextBox8"
         TextBox8.Size = New Size(250, 33)
-        TextBox8.TabIndex = 88
+        TextBox8.TabIndex = 8
         ' 
         ' Label12
         ' 
@@ -290,7 +290,7 @@ Partial Class addsubject
         TextBox9.Location = New Point(529, 302)
         TextBox9.Name = "TextBox9"
         TextBox9.Size = New Size(230, 33)
-        TextBox9.TabIndex = 95
+        TextBox9.TabIndex = 10
         ' 
         ' TextBox10
         ' 
@@ -299,7 +299,7 @@ Partial Class addsubject
         TextBox10.Location = New Point(529, 394)
         TextBox10.Name = "TextBox10"
         TextBox10.Size = New Size(230, 33)
-        TextBox10.TabIndex = 101
+        TextBox10.TabIndex = 14
         ' 
         ' TextBox11
         ' 
@@ -308,7 +308,7 @@ Partial Class addsubject
         TextBox11.Location = New Point(291, 394)
         TextBox11.Name = "TextBox11"
         TextBox11.Size = New Size(213, 33)
-        TextBox11.TabIndex = 100
+        TextBox11.TabIndex = 13
         ' 
         ' Label13
         ' 
@@ -335,7 +335,7 @@ Partial Class addsubject
         TextBox12.Location = New Point(16, 394)
         TextBox12.Name = "TextBox12"
         TextBox12.Size = New Size(250, 33)
-        TextBox12.TabIndex = 97
+        TextBox12.TabIndex = 12
         ' 
         ' Label15
         ' 
