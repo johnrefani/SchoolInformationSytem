@@ -1,6 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Module dbconnection
+    Public GlobalStudentId As String
+    Public GlobalInstructorId As String
+    Public GlobalAdminId As String
     ' Function to return a new connection object
     Public Function strconnection() As MySqlConnection
         Return New MySqlConnection("server=localhost;username=root;password=;database=school_information_db")

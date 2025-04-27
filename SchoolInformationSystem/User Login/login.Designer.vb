@@ -27,7 +27,6 @@ Partial Class login
         LoginPanel = New Panel()
         hideicon = New PictureBox()
         showicon = New PictureBox()
-        errorLabel = New Label()
         role = New ComboBox()
         loginbtn = New Button()
         password = New TextBox()
@@ -54,7 +53,6 @@ Partial Class login
         LoginPanel.BackColor = Color.White
         LoginPanel.Controls.Add(hideicon)
         LoginPanel.Controls.Add(showicon)
-        LoginPanel.Controls.Add(errorLabel)
         LoginPanel.Controls.Add(role)
         LoginPanel.Controls.Add(loginbtn)
         LoginPanel.Controls.Add(password)
@@ -87,16 +85,6 @@ Partial Class login
         showicon.SizeMode = PictureBoxSizeMode.StretchImage
         showicon.TabIndex = 6
         showicon.TabStop = False
-        ' 
-        ' errorLabel
-        ' 
-        errorLabel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        errorLabel.ForeColor = Color.Red
-        errorLabel.Location = New Point(100, 513)
-        errorLabel.Name = "errorLabel"
-        errorLabel.Size = New Size(300, 72)
-        errorLabel.TabIndex = 5
-        errorLabel.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' role
         ' 
@@ -182,7 +170,6 @@ Partial Class login
     Friend WithEvents password As TextBox
     Friend WithEvents loginbtn As Button
     Friend WithEvents role As ComboBox
-    Friend WithEvents errorLabel As Label
     Friend WithEvents hideicon As PictureBox
     Friend WithEvents showicon As PictureBox
 End Class

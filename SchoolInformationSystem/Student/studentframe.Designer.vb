@@ -38,8 +38,8 @@ Partial Class studentframe
         student_address = New Label()
         student_email = New Label()
         student_contact = New Label()
-        Label15 = New Label()
-        Label1 = New Label()
+        student_age = New Label()
+        student_gender = New Label()
         student_fullname = New Label()
         Label14 = New Label()
         Label13 = New Label()
@@ -75,10 +75,12 @@ Partial Class studentframe
         TextBox1 = New TextBox()
         print_button = New Button()
         title_dashboard = New Label()
-        username = New Label()
+        student_name = New Label()
         head_dashboard = New Panel()
         sidenav = New Panel()
         sidepanel = New Panel()
+        logoutpanel = New Panel()
+        logoutbutton = New Button()
         dashboardpanel = New Panel()
         Panel1 = New Panel()
         Label3 = New Label()
@@ -103,6 +105,7 @@ Partial Class studentframe
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
         sidepanel.SuspendLayout()
+        logoutpanel.SuspendLayout()
         dashboardpanel.SuspendLayout()
         Panel1.SuspendLayout()
         schedule_panel.SuspendLayout()
@@ -145,8 +148,8 @@ Partial Class studentframe
         Panel3.Controls.Add(student_address)
         Panel3.Controls.Add(student_email)
         Panel3.Controls.Add(student_contact)
-        Panel3.Controls.Add(Label15)
-        Panel3.Controls.Add(Label1)
+        Panel3.Controls.Add(student_age)
+        Panel3.Controls.Add(student_gender)
         Panel3.Controls.Add(student_fullname)
         Panel3.Controls.Add(Label14)
         Panel3.Controls.Add(Label13)
@@ -263,27 +266,27 @@ Partial Class studentframe
         student_contact.Text = "09123456789"
         student_contact.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label15
+        ' student_age
         ' 
-        Label15.AutoSize = True
-        Label15.Font = New Font("Tahoma", 15.75F)
-        Label15.Location = New Point(558, 97)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(34, 25)
-        Label15.TabIndex = 25
-        Label15.Text = "22"
-        Label15.TextAlign = ContentAlignment.MiddleLeft
+        student_age.AutoSize = True
+        student_age.Font = New Font("Tahoma", 15.75F)
+        student_age.Location = New Point(558, 97)
+        student_age.Name = "student_age"
+        student_age.Size = New Size(34, 25)
+        student_age.TabIndex = 25
+        student_age.Text = "22"
+        student_age.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label1
+        ' student_gender
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Tahoma", 15.75F)
-        Label1.Location = New Point(370, 97)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(55, 25)
-        Label1.TabIndex = 24
-        Label1.Text = "Male"
-        Label1.TextAlign = ContentAlignment.MiddleLeft
+        student_gender.AutoSize = True
+        student_gender.Font = New Font("Tahoma", 15.75F)
+        student_gender.Location = New Point(370, 97)
+        student_gender.Name = "student_gender"
+        student_gender.Size = New Size(55, 25)
+        student_gender.TabIndex = 24
+        student_gender.Text = "Male"
+        student_gender.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' student_fullname
         ' 
@@ -698,23 +701,23 @@ Partial Class studentframe
         title_dashboard.Text = "Welcome,"
         title_dashboard.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' username
+        ' student_name
         ' 
-        username.Font = New Font("Tahoma", 24F)
-        username.ForeColor = Color.White
-        username.ImeMode = ImeMode.NoControl
-        username.Location = New Point(179, 28)
-        username.Name = "username"
-        username.Size = New Size(157, 38)
-        username.TabIndex = 1
-        username.Text = "John Doe"
-        username.TextAlign = ContentAlignment.MiddleLeft
+        student_name.Font = New Font("Tahoma", 24F)
+        student_name.ForeColor = Color.White
+        student_name.ImeMode = ImeMode.NoControl
+        student_name.Location = New Point(179, 28)
+        student_name.Name = "student_name"
+        student_name.Size = New Size(157, 38)
+        student_name.TabIndex = 1
+        student_name.Text = "John Doe"
+        student_name.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' head_dashboard
         ' 
         head_dashboard.BackColor = Color.Maroon
         head_dashboard.Controls.Add(title_dashboard)
-        head_dashboard.Controls.Add(username)
+        head_dashboard.Controls.Add(student_name)
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
@@ -733,12 +736,41 @@ Partial Class studentframe
         ' sidepanel
         ' 
         sidepanel.BackColor = Color.Maroon
+        sidepanel.Controls.Add(logoutpanel)
         sidepanel.Controls.Add(sidenav)
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
         sidepanel.Size = New Size(350, 985)
         sidepanel.TabIndex = 4
+        ' 
+        ' logoutpanel
+        ' 
+        logoutpanel.Controls.Add(logoutbutton)
+        logoutpanel.Cursor = Cursors.Hand
+        logoutpanel.Location = New Point(25, 890)
+        logoutpanel.Name = "logoutpanel"
+        logoutpanel.Size = New Size(294, 56)
+        logoutpanel.TabIndex = 3
+        ' 
+        ' logoutbutton
+        ' 
+        logoutbutton.BackColor = Color.Maroon
+        logoutbutton.Dock = DockStyle.Fill
+        logoutbutton.FlatAppearance.BorderSize = 0
+        logoutbutton.FlatStyle = FlatStyle.Flat
+        logoutbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        logoutbutton.ForeColor = Color.White
+        logoutbutton.Image = CType(resources.GetObject("logoutbutton.Image"), Image)
+        logoutbutton.ImageAlign = ContentAlignment.MiddleLeft
+        logoutbutton.ImeMode = ImeMode.NoControl
+        logoutbutton.Location = New Point(0, 0)
+        logoutbutton.Name = "logoutbutton"
+        logoutbutton.Size = New Size(294, 56)
+        logoutbutton.TabIndex = 0
+        logoutbutton.Text = "       Log Out"
+        logoutbutton.TextAlign = ContentAlignment.MiddleLeft
+        logoutbutton.UseVisualStyleBackColor = False
         ' 
         ' dashboardpanel
         ' 
@@ -822,9 +854,9 @@ Partial Class studentframe
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1424, 985)
-        Controls.Add(classespanel)
         Controls.Add(dashboardpanel)
         Controls.Add(myprofilepanel)
+        Controls.Add(classespanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
@@ -850,6 +882,7 @@ Partial Class studentframe
         head_dashboard.ResumeLayout(False)
         sidenav.ResumeLayout(False)
         sidepanel.ResumeLayout(False)
+        logoutpanel.ResumeLayout(False)
         dashboardpanel.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
@@ -874,7 +907,7 @@ Partial Class studentframe
     Friend WithEvents head_classes As Panel
     Friend WithEvents classespanel As Panel
     Friend WithEvents title_dashboard As Label
-    Friend WithEvents username As Label
+    Friend WithEvents student_name As Label
     Friend WithEvents head_dashboard As Panel
     Friend WithEvents title As Label
     Friend WithEvents logo As PictureBox
@@ -914,11 +947,13 @@ Partial Class studentframe
     Friend WithEvents student_address As Label
     Friend WithEvents student_email As Label
     Friend WithEvents student_contact As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents student_age As Label
+    Friend WithEvents student_gender As Label
     Friend WithEvents student_birthplace As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents logoutpanel As Panel
+    Friend WithEvents logoutbutton As Button
 End Class
 

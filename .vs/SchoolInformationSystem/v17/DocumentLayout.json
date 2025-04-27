@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\student\\studentframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\student\\studentframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\student\\studentframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\student\\studentframe.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\user login\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -13,6 +17,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\user login\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\user login\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\dbconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\dbconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|d:\\work projects\\schoolinformationsystem\\schoolinformationsytem\\schoolinformationsystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C27C3E70-9C01-42B1-9F75-674F6F27734A}|SchoolInformationSystem\\SchoolInformationSystem.vbproj|solutionrelative:schoolinformationsystem\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Application.Designer.vb",
               "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\My Project\\Application.Designer.vb",
               "RelativeDocumentMoniker": "SchoolInformationSystem\\My Project\\Application.Designer.vb",
               "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\My Project\\Application.Designer.vb",
               "RelativeToolTip": "SchoolInformationSystem\\My Project\\Application.Designer.vb",
-              "ViewState": "AgIAABsAAAAAAAAAAAAIwCcAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowCMAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-22T07:05:41.921Z",
               "IsPinned": true,
@@ -52,28 +64,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "login.vb",
-              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\User Login\\login.vb",
-              "RelativeDocumentMoniker": "SchoolInformationSystem\\User Login\\login.vb",
-              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\User Login\\login.vb",
-              "RelativeToolTip": "SchoolInformationSystem\\User Login\\login.vb",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAwwH8AAAAIAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "dbconnection.vb",
+              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\dbconnection.vb",
+              "RelativeDocumentMoniker": "SchoolInformationSystem\\dbconnection.vb",
+              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\dbconnection.vb",
+              "RelativeToolTip": "SchoolInformationSystem\\dbconnection.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-27T08:12:03.74Z",
+              "WhenOpened": "2025-04-27T18:00:03.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "login.vb [Design]",
               "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\User Login\\login.vb",
               "RelativeDocumentMoniker": "SchoolInformationSystem\\User Login\\login.vb",
               "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\User Login\\login.vb [Design]",
               "RelativeToolTip": "SchoolInformationSystem\\User Login\\login.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-27T08:12:01.643Z",
+              "WhenOpened": "2025-04-27T17:36:20.132Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "studentframe.vb",
+              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Student\\studentframe.vb",
+              "RelativeDocumentMoniker": "SchoolInformationSystem\\Student\\studentframe.vb",
+              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Student\\studentframe.vb",
+              "RelativeToolTip": "SchoolInformationSystem\\Student\\studentframe.vb",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAcwF4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-27T16:55:51.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "studentframe.vb [Design]",
+              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Student\\studentframe.vb",
+              "RelativeDocumentMoniker": "SchoolInformationSystem\\Student\\studentframe.vb",
+              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\Student\\studentframe.vb [Design]",
+              "RelativeToolTip": "SchoolInformationSystem\\Student\\studentframe.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-27T16:02:35.635Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "login.vb",
+              "DocumentMoniker": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\User Login\\login.vb",
+              "RelativeDocumentMoniker": "SchoolInformationSystem\\User Login\\login.vb",
+              "ToolTip": "D:\\Work Projects\\schoolinformationsystem\\SchoolInformationSytem\\SchoolInformationSystem\\User Login\\login.vb",
+              "RelativeToolTip": "SchoolInformationSystem\\User Login\\login.vb",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowBIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-27T08:12:03.74Z",
+              "EditorCaption": ""
             }
           ]
         }
