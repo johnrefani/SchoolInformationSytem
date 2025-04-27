@@ -30,8 +30,8 @@ Partial Class adminframe
         Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminframe))
         dashboardpanel = New Panel()
-        EnrollmentBarGraph = New DataVisualization.Charting.Chart()
         Panel4 = New Panel()
+        EnrollmentBarGraph = New DataVisualization.Charting.Chart()
         UserPieChart = New Panel()
         PieChart = New DataVisualization.Charting.Chart()
         TotalEnroll = New Panel()
@@ -122,8 +122,8 @@ Partial Class adminframe
         head_configuration = New Panel()
         title_configuration = New Label()
         dashboardpanel.SuspendLayout()
-        CType(EnrollmentBarGraph, ComponentModel.ISupportInitialize).BeginInit()
         Panel4.SuspendLayout()
+        CType(EnrollmentBarGraph, ComponentModel.ISupportInitialize).BeginInit()
         UserPieChart.SuspendLayout()
         CType(PieChart, ComponentModel.ISupportInitialize).BeginInit()
         TotalEnroll.SuspendLayout()
@@ -173,8 +173,16 @@ Partial Class adminframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1000, 729)
+        dashboardpanel.Size = New Size(1074, 985)
         dashboardpanel.TabIndex = 9
+        ' 
+        ' Panel4
+        ' 
+        Panel4.Controls.Add(EnrollmentBarGraph)
+        Panel4.Location = New Point(466, 344)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(585, 496)
+        Panel4.TabIndex = 7
         ' 
         ' EnrollmentBarGraph
         ' 
@@ -191,14 +199,6 @@ Partial Class adminframe
         EnrollmentBarGraph.Size = New Size(575, 490)
         EnrollmentBarGraph.TabIndex = 0
         EnrollmentBarGraph.Text = "Chart1"
-        ' 
-        ' Panel4
-        ' 
-        Panel4.Controls.Add(EnrollmentBarGraph)
-        Panel4.Location = New Point(466, 344)
-        Panel4.Name = "Panel4"
-        Panel4.Size = New Size(585, 496)
-        Panel4.TabIndex = 7
         ' 
         ' UserPieChart
         ' 
@@ -389,7 +389,7 @@ Partial Class adminframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1000, 94)
+        head_dashboard.Size = New Size(1074, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' title_dashboard
@@ -627,7 +627,7 @@ Partial Class adminframe
         userspanel.Dock = DockStyle.Fill
         userspanel.Location = New Point(350, 0)
         userspanel.Name = "userspanel"
-        userspanel.Size = New Size(1000, 729)
+        userspanel.Size = New Size(1074, 985)
         userspanel.TabIndex = 10
         ' 
         ' bodyclassespanel
@@ -734,7 +734,7 @@ Partial Class adminframe
         head_users.Dock = DockStyle.Top
         head_users.Location = New Point(0, 0)
         head_users.Name = "head_users"
-        head_users.Size = New Size(1000, 94)
+        head_users.Size = New Size(1074, 94)
         head_users.TabIndex = 0
         ' 
         ' title_users
@@ -756,7 +756,7 @@ Partial Class adminframe
         head_enrollments.Dock = DockStyle.Top
         head_enrollments.Location = New Point(0, 0)
         head_enrollments.Name = "head_enrollments"
-        head_enrollments.Size = New Size(1000, 94)
+        head_enrollments.Size = New Size(1074, 94)
         head_enrollments.TabIndex = 0
         ' 
         ' title_enrollments
@@ -778,7 +778,7 @@ Partial Class adminframe
         enrollmentspanel.Dock = DockStyle.Fill
         enrollmentspanel.Location = New Point(350, 0)
         enrollmentspanel.Name = "enrollmentspanel"
-        enrollmentspanel.Size = New Size(1000, 729)
+        enrollmentspanel.Size = New Size(1074, 985)
         enrollmentspanel.TabIndex = 11
         ' 
         ' Panel1
@@ -905,7 +905,7 @@ Partial Class adminframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 729)
+        sidepanel.Size = New Size(350, 985)
         sidepanel.TabIndex = 8
         ' 
         ' subjectspanel
@@ -915,7 +915,7 @@ Partial Class adminframe
         subjectspanel.Dock = DockStyle.Fill
         subjectspanel.Location = New Point(350, 0)
         subjectspanel.Name = "subjectspanel"
-        subjectspanel.Size = New Size(1000, 729)
+        subjectspanel.Size = New Size(1074, 985)
         subjectspanel.TabIndex = 12
         ' 
         ' Panel2
@@ -1032,7 +1032,7 @@ Partial Class adminframe
         head_subjects.Dock = DockStyle.Top
         head_subjects.Location = New Point(0, 0)
         head_subjects.Name = "head_subjects"
-        head_subjects.Size = New Size(1000, 94)
+        head_subjects.Size = New Size(1074, 94)
         head_subjects.TabIndex = 0
         ' 
         ' title_subjects
@@ -1054,7 +1054,7 @@ Partial Class adminframe
         configurationpanel.Dock = DockStyle.Fill
         configurationpanel.Location = New Point(350, 0)
         configurationpanel.Name = "configurationpanel"
-        configurationpanel.Size = New Size(1000, 729)
+        configurationpanel.Size = New Size(1074, 985)
         configurationpanel.TabIndex = 13
         ' 
         ' Panel3
@@ -1214,7 +1214,7 @@ Partial Class adminframe
         head_configuration.Dock = DockStyle.Top
         head_configuration.Location = New Point(0, 0)
         head_configuration.Name = "head_configuration"
-        head_configuration.Size = New Size(1000, 94)
+        head_configuration.Size = New Size(1074, 94)
         head_configuration.TabIndex = 0
         ' 
         ' title_configuration
@@ -1235,7 +1235,7 @@ Partial Class adminframe
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1350, 729)
+        ClientSize = New Size(1424, 985)
         Controls.Add(dashboardpanel)
         Controls.Add(userspanel)
         Controls.Add(subjectspanel)
@@ -1250,8 +1250,8 @@ Partial Class adminframe
         StartPosition = FormStartPosition.CenterScreen
         Text = "Admin"
         dashboardpanel.ResumeLayout(False)
-        CType(EnrollmentBarGraph, ComponentModel.ISupportInitialize).EndInit()
         Panel4.ResumeLayout(False)
+        CType(EnrollmentBarGraph, ComponentModel.ISupportInitialize).EndInit()
         UserPieChart.ResumeLayout(False)
         CType(PieChart, ComponentModel.ISupportInitialize).EndInit()
         TotalEnroll.ResumeLayout(False)
