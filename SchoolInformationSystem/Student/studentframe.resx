@@ -572,6 +572,17 @@
         gg==
 </value>
   </data>
+  <data name="logoutbutton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAATNJREFUWEft2E9KAzEcxfHq3lNUV+KBqiCI4Ea9htKK3sJTuBK8g7vq1rVby1d+
+        UCF59M9MXwazyAeyzHuBaSaTjkZN05QFHAFnwFXPEXMONa8YYB94ABbsLuZGxp7m24BbbTPcaL4N+NQW
+        w1zzbeajVQvNt2mDS/NtWuDSfJsWuDTfpgUuzbdpQUexse6AR91kmm9Lw3t4S+ZfpovM0wvIezv7Bo6T
+        jIu/RebpBWhzD1/ASZIzAX7y9AK0NfEOvGwZz8BBknWepxegq1p6HeTg34WubKn6BYaqH3EX/75JNqn+
+        NVP9izoWdA881XrUraX5Ni1wab5NC1yab9MCl+bb9EduGuTS9KEthkGunSUv7teab4uPAmAWx5S29RBz
+        p4N+YABj4HTFn0PbRswZa17TNKZfrmZeUI9UsOIAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA

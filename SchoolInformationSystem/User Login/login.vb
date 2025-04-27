@@ -12,16 +12,14 @@ Public Class login
 
     ' Event handler for login button click
     Private Sub loginbtn_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
-        errorLabel.Text = ""
-
         ' Validation
         If String.IsNullOrWhiteSpace(username.Text) OrElse String.IsNullOrWhiteSpace(password.Text) Then
-            errorLabel.Text = "Please enter both username and password."
+            MessageBox.Show("Please enter both username and password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
 
         If role.SelectedIndex = -1 Then
-            errorLabel.Text = "Please select a user type (Student/Instructor/Admin)."
+            MessageBox.Show("Please select a user type (Student/Instructor/Admin).", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
 
@@ -37,10 +35,11 @@ Public Class login
             conn.Open()
 
             ' SQL query for case-insensitive username and role matching
-            Dim query As String = "SELECT * FROM user WHERE LOWER(username) = @username AND LOWER(role) = @role"
+            Dim query As String = "SELECT * FROM user WHERE LOWER(username) = @username AND LOWER(role) = @role AND password = @password"
             Dim cmd As New MySqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@username", inputUsername)
             cmd.Parameters.AddWithValue("@role", inputRole)
+            cmd.Parameters.AddWithValue("@password", inputPassword)
 
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
@@ -50,9 +49,12 @@ Public Class login
 
                 ' Check if the account is active
                 If CInt(reader("is_active")) = 0 Then
-                    errorLabel.Text = "This account is inactive."
+                    MessageBox.Show("This account is inactive.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     Return
                 End If
+
+                ' Store the user_id in the global variable (GlobalStudentId)
+                GlobalStudentId = reader("user_id").ToString()
 
                 ' Direct comparison of input password with stored password (plain text)
                 If inputPassword = reader("password").ToString() Then
@@ -65,31 +67,31 @@ Public Class login
                             If Not IsNothing(adminframe) Then
                                 adminframe.Show()
                             Else
-                                MessageBox.Show("Admin frame is not initialized.")
+                                MessageBox.Show("Admin frame is not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             End If
                         Case "student"
                             If Not IsNothing(studentframe) Then
                                 studentframe.Show()
                             Else
-                                MessageBox.Show("Student frame is not initialized.")
+                                MessageBox.Show("Student frame is not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             End If
                         Case "instructor"
                             If Not IsNothing(instructorframe) Then
                                 instructorframe.Show()
                             Else
-                                MessageBox.Show("Instructor frame is not initialized.")
+                                MessageBox.Show("Instructor frame is not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             End If
                     End Select
                 Else
-                    errorLabel.Text = "Invalid password. Please try again."
+                    MessageBox.Show("Invalid password. Please try again.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 End If
             Else
-                errorLabel.Text = "User not found or role mismatch."
+                MessageBox.Show("User not found or role mismatch.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
 
         Catch ex As Exception
             ' Generic error message for the user, specific error details in debug
-            errorLabel.Text = "An error occurred while connecting. Please try again later."
+            MessageBox.Show("An error occurred while connecting. Please try again later.", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Console.WriteLine("Connection error: " & ex.Message)
         Finally
             conn.Close()
