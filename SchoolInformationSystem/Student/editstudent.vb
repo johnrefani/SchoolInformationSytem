@@ -19,7 +19,7 @@ Public Class editstudent
             If reader.HasRows Then
                 reader.Read()
                 ' Display student information on the profile panel
-                studentedit_fullname.Text = reader("first_name").ToString() & " " & reader("middle_initial").ToString() & " " & reader("last_name").ToString()
+                studentedit_fullname.Text = reader("first_name").ToString() & " " & reader("middle_initial").ToString() & ". " & reader("last_name").ToString()
                 studentedit_email.Text = reader("email").ToString()
                 studentedit_contact.Text = reader("contact_number").ToString()
                 studentedit_address.Text = reader("address").ToString()
@@ -133,5 +133,4 @@ Public Class editstudent
         studentframe.Show()
 
     End Sub
-
 End Class
