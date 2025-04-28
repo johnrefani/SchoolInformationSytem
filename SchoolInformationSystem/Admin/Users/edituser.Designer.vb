@@ -149,20 +149,21 @@ Partial Class edituser
         ' 
         role.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
         role.FormattingEnabled = True
+        role.Items.AddRange(New Object() {"Admin", "Instructor", "Student"})
         role.Location = New Point(869, 230)
         role.Name = "role"
         role.Size = New Size(109, 33)
         role.TabIndex = 106
-        role.Text = "Role"
+        role.Text = "Select"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Location = New Point(869, 192)
         Label1.Name = "Label1"
-        Label1.Size = New Size(91, 25)
+        Label1.Size = New Size(52, 25)
         Label1.TabIndex = 105
-        Label1.Text = "GENDER"
+        Label1.Text = "Role"
         ' 
         ' idnum
         ' 

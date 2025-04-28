@@ -23,9 +23,9 @@ Partial Class instructorframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
@@ -965,17 +965,17 @@ Partial Class instructorframe
         ' 
         ' LineChart
         ' 
-        ChartArea1.Name = "ChartArea1"
-        LineChart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        LineChart.Legends.Add(Legend1)
+        ChartArea2.Name = "ChartArea1"
+        LineChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        LineChart.Legends.Add(Legend2)
         LineChart.Location = New Point(3, -1)
         LineChart.Name = "LineChart"
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = DataVisualization.Charting.SeriesChartType.Line
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        LineChart.Series.Add(Series1)
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Line
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        LineChart.Series.Add(Series2)
         LineChart.Size = New Size(754, 363)
         LineChart.TabIndex = 0
         LineChart.Text = "Chart1"
@@ -986,8 +986,8 @@ Partial Class instructorframe
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
-        Controls.Add(classespanel)
         Controls.Add(dashboardpanel)
+        Controls.Add(classespanel)
         Controls.Add(myprofilepanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog

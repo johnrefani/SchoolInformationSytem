@@ -169,9 +169,9 @@ Partial Class adduser
         Label1.AutoSize = True
         Label1.Location = New Point(871, 179)
         Label1.Name = "Label1"
-        Label1.Size = New Size(91, 25)
+        Label1.Size = New Size(52, 25)
         Label1.TabIndex = 76
-        Label1.Text = "GENDER"
+        Label1.Text = "Role"
         ' 
         ' idnum
         ' 
@@ -231,11 +231,12 @@ Partial Class adduser
         ' 
         role.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
         role.FormattingEnabled = True
+        role.Items.AddRange(New Object() {"Admin", "Instructor", "Student"})
         role.Location = New Point(871, 217)
         role.Name = "role"
         role.Size = New Size(109, 33)
         role.TabIndex = 8
-        role.Text = "Role"
+        role.Text = "Select"
         ' 
         ' position
         ' 
