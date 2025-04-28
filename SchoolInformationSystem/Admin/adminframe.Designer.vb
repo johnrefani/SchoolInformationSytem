@@ -96,13 +96,15 @@ Partial Class adminframe
         sidepanel = New Panel()
         subjectspanel = New Panel()
         Panel2 = New Panel()
-        ComboBox8 = New ComboBox()
-        Button8 = New Button()
-        Button9 = New Button()
-        ComboBox9 = New ComboBox()
-        TextBox4 = New TextBox()
-        Button10 = New Button()
-        DataGridView3 = New DataGridView()
+        subpagelabel = New Label()
+        subnext = New Button()
+        subprev = New Button()
+        subdepartment = New ComboBox()
+        subprint = New Button()
+        subgradelevel = New ComboBox()
+        subsearch = New TextBox()
+        addsub = New Button()
+        subdatagrid = New DataGridView()
         PictureBox3 = New PictureBox()
         Label2 = New Label()
         head_subjects = New Panel()
@@ -156,7 +158,7 @@ Partial Class adminframe
         sidepanel.SuspendLayout()
         subjectspanel.SuspendLayout()
         Panel2.SuspendLayout()
-        CType(DataGridView3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(subdatagrid, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         head_subjects.SuspendLayout()
         configurationpanel.SuspendLayout()
@@ -952,13 +954,15 @@ Partial Class adminframe
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
-        Panel2.Controls.Add(ComboBox8)
-        Panel2.Controls.Add(Button8)
-        Panel2.Controls.Add(Button9)
-        Panel2.Controls.Add(ComboBox9)
-        Panel2.Controls.Add(TextBox4)
-        Panel2.Controls.Add(Button10)
-        Panel2.Controls.Add(DataGridView3)
+        Panel2.Controls.Add(subpagelabel)
+        Panel2.Controls.Add(subnext)
+        Panel2.Controls.Add(subprev)
+        Panel2.Controls.Add(subdepartment)
+        Panel2.Controls.Add(subprint)
+        Panel2.Controls.Add(subgradelevel)
+        Panel2.Controls.Add(subsearch)
+        Panel2.Controls.Add(addsub)
+        Panel2.Controls.Add(subdatagrid)
         Panel2.Controls.Add(PictureBox3)
         Panel2.Controls.Add(Label2)
         Panel2.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -967,75 +971,92 @@ Partial Class adminframe
         Panel2.Size = New Size(1024, 850)
         Panel2.TabIndex = 4
         ' 
-        ' ComboBox8
+        ' subpagelabel
         ' 
-        ComboBox8.FormattingEnabled = True
-        ComboBox8.Location = New Point(685, 85)
-        ComboBox8.Name = "ComboBox8"
-        ComboBox8.Size = New Size(139, 33)
-        ComboBox8.TabIndex = 14
-        ComboBox8.Text = "Department"
+        subpagelabel.AutoSize = True
+        subpagelabel.Location = New Point(758, 587)
+        subpagelabel.Name = "subpagelabel"
+        subpagelabel.Size = New Size(130, 25)
+        subpagelabel.TabIndex = 18
+        subpagelabel.Text = "Page 1 of 10"
         ' 
-        ' Button8
+        ' subnext
         ' 
-        Button8.AutoSize = True
-        Button8.Location = New Point(726, 29)
-        Button8.Name = "Button8"
-        Button8.Size = New Size(98, 35)
-        Button8.TabIndex = 13
-        Button8.Text = "EXPORT"
-        Button8.UseVisualStyleBackColor = True
+        subnext.Location = New Point(902, 580)
+        subnext.Name = "subnext"
+        subnext.Size = New Size(81, 34)
+        subnext.TabIndex = 17
+        subnext.Text = "Next"
+        subnext.UseVisualStyleBackColor = True
         ' 
-        ' Button9
+        ' subprev
         ' 
-        Button9.AutoSize = True
-        Button9.Location = New Point(608, 29)
-        Button9.Name = "Button9"
-        Button9.Size = New Size(95, 35)
-        Button9.TabIndex = 12
-        Button9.Text = "PRINT"
-        Button9.UseVisualStyleBackColor = True
+        subprev.Location = New Point(653, 580)
+        subprev.Name = "subprev"
+        subprev.Size = New Size(96, 38)
+        subprev.TabIndex = 16
+        subprev.Text = "Preview"
+        subprev.UseVisualStyleBackColor = True
         ' 
-        ' ComboBox9
+        ' subdepartment
         ' 
-        ComboBox9.FormattingEnabled = True
-        ComboBox9.Location = New Point(847, 85)
-        ComboBox9.Name = "ComboBox9"
-        ComboBox9.Size = New Size(156, 33)
-        ComboBox9.TabIndex = 11
-        ComboBox9.Text = "Grade Level"
+        subdepartment.FormattingEnabled = True
+        subdepartment.Location = New Point(597, 81)
+        subdepartment.Name = "subdepartment"
+        subdepartment.Size = New Size(139, 33)
+        subdepartment.TabIndex = 14
+        subdepartment.Text = "Department"
         ' 
-        ' TextBox4
+        ' subprint
         ' 
-        TextBox4.Location = New Point(61, 79)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(358, 33)
-        TextBox4.TabIndex = 10
-        TextBox4.Text = "Search"
+        subprint.AutoSize = True
+        subprint.Location = New Point(729, 28)
+        subprint.Name = "subprint"
+        subprint.Size = New Size(95, 35)
+        subprint.TabIndex = 12
+        subprint.Text = "PRINT"
+        subprint.UseVisualStyleBackColor = True
         ' 
-        ' Button10
+        ' subgradelevel
         ' 
-        Button10.AutoSize = True
-        Button10.BackColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
-        Button10.Cursor = Cursors.Hand
-        Button10.FlatAppearance.BorderSize = 0
-        Button10.FlatStyle = FlatStyle.Flat
-        Button10.ForeColor = Color.White
-        Button10.Location = New Point(847, 29)
-        Button10.Name = "Button10"
-        Button10.Size = New Size(156, 35)
-        Button10.TabIndex = 9
-        Button10.Text = "ADD SUBJECT"
-        Button10.UseVisualStyleBackColor = False
+        subgradelevel.FormattingEnabled = True
+        subgradelevel.Location = New Point(794, 81)
+        subgradelevel.Name = "subgradelevel"
+        subgradelevel.Size = New Size(156, 33)
+        subgradelevel.TabIndex = 11
+        subgradelevel.Text = "Grade Level"
         ' 
-        ' DataGridView3
+        ' subsearch
         ' 
-        DataGridView3.BackgroundColor = Color.White
-        DataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView3.Location = New Point(23, 133)
-        DataGridView3.Name = "DataGridView3"
-        DataGridView3.Size = New Size(981, 698)
-        DataGridView3.TabIndex = 8
+        subsearch.Location = New Point(61, 79)
+        subsearch.Name = "subsearch"
+        subsearch.PlaceholderText = "Search by subject code and name"
+        subsearch.Size = New Size(358, 33)
+        subsearch.TabIndex = 10
+        ' 
+        ' addsub
+        ' 
+        addsub.AutoSize = True
+        addsub.BackColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        addsub.Cursor = Cursors.Hand
+        addsub.FlatAppearance.BorderSize = 0
+        addsub.FlatStyle = FlatStyle.Flat
+        addsub.ForeColor = Color.White
+        addsub.Location = New Point(847, 29)
+        addsub.Name = "addsub"
+        addsub.Size = New Size(156, 35)
+        addsub.TabIndex = 9
+        addsub.Text = "ADD SUBJECT"
+        addsub.UseVisualStyleBackColor = False
+        ' 
+        ' subdatagrid
+        ' 
+        subdatagrid.BackgroundColor = Color.White
+        subdatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        subdatagrid.Location = New Point(18, 153)
+        subdatagrid.Name = "subdatagrid"
+        subdatagrid.Size = New Size(965, 401)
+        subdatagrid.TabIndex = 8
         ' 
         ' PictureBox3
         ' 
@@ -1267,11 +1288,11 @@ Partial Class adminframe
         AutoSize = True
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1370, 749)
+        Controls.Add(subjectspanel)
         Controls.Add(configurationpanel)
         Controls.Add(enrollmentspanel)
         Controls.Add(userspanel)
         Controls.Add(dashboardpanel)
-        Controls.Add(subjectspanel)
         Controls.Add(sidepanel)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.FixedDialog
@@ -1319,7 +1340,7 @@ Partial Class adminframe
         subjectspanel.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(DataGridView3, ComponentModel.ISupportInitialize).EndInit()
+        CType(subdatagrid, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         head_subjects.ResumeLayout(False)
         configurationpanel.ResumeLayout(False)
@@ -1379,13 +1400,12 @@ Partial Class adminframe
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents ComboBox8 As ComboBox
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents ComboBox9 As ComboBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button10 As Button
-    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents subdepartment As ComboBox
+    Friend WithEvents subprint As Button
+    Friend WithEvents subgradelevel As ComboBox
+    Friend WithEvents subsearch As TextBox
+    Friend WithEvents addsub As Button
+    Friend WithEvents subdatagrid As DataGridView
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
@@ -1424,4 +1444,7 @@ Partial Class adminframe
     Friend WithEvents NextButton As Button
     Friend WithEvents PrevButton As Button
     Friend WithEvents Epagelabel As Label
+    Friend WithEvents subpagelabel As Label
+    Friend WithEvents subnext As Button
+    Friend WithEvents subprev As Button
 End Class
