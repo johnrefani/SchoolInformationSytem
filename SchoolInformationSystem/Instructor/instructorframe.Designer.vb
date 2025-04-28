@@ -29,7 +29,7 @@ Partial Class instructorframe
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
-        TextBox2 = New TextBox()
+        yearofexperiencetextbox = New TextBox()
         Label20 = New Label()
         nationalitytextbox = New TextBox()
         Label19 = New Label()
@@ -51,7 +51,7 @@ Partial Class instructorframe
         Label11 = New Label()
         lastnametextbox = New TextBox()
         Label10 = New Label()
-        middlenametextbox = New TextBox()
+        middleinitialtextbox = New TextBox()
         Label9 = New Label()
         firsnametextbox = New TextBox()
         Label8 = New Label()
@@ -81,10 +81,12 @@ Partial Class instructorframe
         Button2 = New Button()
         Label4 = New Label()
         title_dashboard = New Label()
-        username = New Label()
+        instructor_username = New Label()
         head_dashboard = New Panel()
         sidenav = New Panel()
         sidepanel = New Panel()
+        logoutpanel = New Panel()
+        logoutbutton = New Button()
         dashboardpanel = New Panel()
         Panel3 = New Panel()
         Button1 = New Button()
@@ -115,6 +117,7 @@ Partial Class instructorframe
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
         sidepanel.SuspendLayout()
+        logoutpanel.SuspendLayout()
         dashboardpanel.SuspendLayout()
         Panel3.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -126,7 +129,7 @@ Partial Class instructorframe
         ' 
         ' title_myprofile
         ' 
-        title_myprofile.Font = New Font("Tahoma", 24F)
+        title_myprofile.Font = New Font("Tahoma", 24.0F)
         title_myprofile.ForeColor = Color.White
         title_myprofile.ImeMode = ImeMode.NoControl
         title_myprofile.Location = New Point(16, 28)
@@ -149,7 +152,7 @@ Partial Class instructorframe
         ' myprofilebodypanel
         ' 
         myprofilebodypanel.BackColor = Color.White
-        myprofilebodypanel.Controls.Add(TextBox2)
+        myprofilebodypanel.Controls.Add(yearofexperiencetextbox)
         myprofilebodypanel.Controls.Add(Label20)
         myprofilebodypanel.Controls.Add(nationalitytextbox)
         myprofilebodypanel.Controls.Add(Label19)
@@ -171,7 +174,7 @@ Partial Class instructorframe
         myprofilebodypanel.Controls.Add(Label11)
         myprofilebodypanel.Controls.Add(lastnametextbox)
         myprofilebodypanel.Controls.Add(Label10)
-        myprofilebodypanel.Controls.Add(middlenametextbox)
+        myprofilebodypanel.Controls.Add(middleinitialtextbox)
         myprofilebodypanel.Controls.Add(Label9)
         myprofilebodypanel.Controls.Add(firsnametextbox)
         myprofilebodypanel.Controls.Add(Label8)
@@ -183,14 +186,15 @@ Partial Class instructorframe
         myprofilebodypanel.Size = New Size(1024, 589)
         myprofilebodypanel.TabIndex = 1
         ' 
-        ' TextBox2
+        ' yearofexperiencetextbox
         ' 
-        TextBox2.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Location = New Point(360, 525)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(234, 33)
-        TextBox2.TabIndex = 29
+        yearofexperiencetextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        yearofexperiencetextbox.BorderStyle = BorderStyle.FixedSingle
+        yearofexperiencetextbox.Location = New Point(360, 525)
+        yearofexperiencetextbox.Name = "yearofexperiencetextbox"
+        yearofexperiencetextbox.ReadOnly = True
+        yearofexperiencetextbox.Size = New Size(234, 33)
+        yearofexperiencetextbox.TabIndex = 29
         ' 
         ' Label20
         ' 
@@ -207,6 +211,7 @@ Partial Class instructorframe
         nationalitytextbox.BorderStyle = BorderStyle.FixedSingle
         nationalitytextbox.Location = New Point(696, 428)
         nationalitytextbox.Name = "nationalitytextbox"
+        nationalitytextbox.ReadOnly = True
         nationalitytextbox.Size = New Size(282, 33)
         nationalitytextbox.TabIndex = 27
         ' 
@@ -225,6 +230,7 @@ Partial Class instructorframe
         civilstatustextbox.BorderStyle = BorderStyle.FixedSingle
         civilstatustextbox.Location = New Point(360, 428)
         civilstatustextbox.Name = "civilstatustextbox"
+        civilstatustextbox.ReadOnly = True
         civilstatustextbox.Size = New Size(302, 33)
         civilstatustextbox.TabIndex = 25
         ' 
@@ -243,6 +249,7 @@ Partial Class instructorframe
         subjecthandledtextbox.BorderStyle = BorderStyle.FixedSingle
         subjecthandledtextbox.Location = New Point(360, 332)
         subjecthandledtextbox.Name = "subjecthandledtextbox"
+        subjecthandledtextbox.ReadOnly = True
         subjecthandledtextbox.Size = New Size(619, 33)
         subjecthandledtextbox.TabIndex = 23
         ' 
@@ -261,6 +268,7 @@ Partial Class instructorframe
         addresstextbox.BorderStyle = BorderStyle.FixedSingle
         addresstextbox.Location = New Point(360, 234)
         addresstextbox.Name = "addresstextbox"
+        addresstextbox.ReadOnly = True
         addresstextbox.Size = New Size(619, 33)
         addresstextbox.TabIndex = 21
         ' 
@@ -279,6 +287,7 @@ Partial Class instructorframe
         advisorytextbox.BorderStyle = BorderStyle.FixedSingle
         advisorytextbox.Location = New Point(23, 525)
         advisorytextbox.Name = "advisorytextbox"
+        advisorytextbox.ReadOnly = True
         advisorytextbox.Size = New Size(309, 33)
         advisorytextbox.TabIndex = 19
         ' 
@@ -297,6 +306,7 @@ Partial Class instructorframe
         departmenttextbox.BorderStyle = BorderStyle.FixedSingle
         departmenttextbox.Location = New Point(23, 428)
         departmenttextbox.Name = "departmenttextbox"
+        departmenttextbox.ReadOnly = True
         departmenttextbox.Size = New Size(309, 33)
         departmenttextbox.TabIndex = 17
         ' 
@@ -315,6 +325,7 @@ Partial Class instructorframe
         emailaddtextbox.BorderStyle = BorderStyle.FixedSingle
         emailaddtextbox.Location = New Point(23, 332)
         emailaddtextbox.Name = "emailaddtextbox"
+        emailaddtextbox.ReadOnly = True
         emailaddtextbox.Size = New Size(309, 33)
         emailaddtextbox.TabIndex = 15
         ' 
@@ -333,6 +344,7 @@ Partial Class instructorframe
         contactnumtextbox.BorderStyle = BorderStyle.FixedSingle
         contactnumtextbox.Location = New Point(23, 234)
         contactnumtextbox.Name = "contactnumtextbox"
+        contactnumtextbox.ReadOnly = True
         contactnumtextbox.Size = New Size(309, 33)
         contactnumtextbox.TabIndex = 13
         ' 
@@ -351,6 +363,7 @@ Partial Class instructorframe
         gendertextbox.BorderStyle = BorderStyle.FixedSingle
         gendertextbox.Location = New Point(830, 133)
         gendertextbox.Name = "gendertextbox"
+        gendertextbox.ReadOnly = True
         gendertextbox.Size = New Size(149, 33)
         gendertextbox.TabIndex = 11
         ' 
@@ -369,6 +382,7 @@ Partial Class instructorframe
         lastnametextbox.BorderStyle = BorderStyle.FixedSingle
         lastnametextbox.Location = New Point(561, 133)
         lastnametextbox.Name = "lastnametextbox"
+        lastnametextbox.ReadOnly = True
         lastnametextbox.Size = New Size(250, 33)
         lastnametextbox.TabIndex = 9
         ' 
@@ -381,14 +395,15 @@ Partial Class instructorframe
         Label10.TabIndex = 8
         Label10.Text = "LAST NAME"
         ' 
-        ' middlenametextbox
+        ' middleinitialtextbox
         ' 
-        middlenametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        middlenametextbox.BorderStyle = BorderStyle.FixedSingle
-        middlenametextbox.Location = New Point(292, 133)
-        middlenametextbox.Name = "middlenametextbox"
-        middlenametextbox.Size = New Size(250, 33)
-        middlenametextbox.TabIndex = 7
+        middleinitialtextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        middleinitialtextbox.BorderStyle = BorderStyle.FixedSingle
+        middleinitialtextbox.Location = New Point(292, 133)
+        middleinitialtextbox.Name = "middleinitialtextbox"
+        middleinitialtextbox.ReadOnly = True
+        middleinitialtextbox.Size = New Size(250, 33)
+        middleinitialtextbox.TabIndex = 7
         ' 
         ' Label9
         ' 
@@ -405,6 +420,7 @@ Partial Class instructorframe
         firsnametextbox.BorderStyle = BorderStyle.FixedSingle
         firsnametextbox.Location = New Point(23, 133)
         firsnametextbox.Name = "firsnametextbox"
+        firsnametextbox.ReadOnly = True
         firsnametextbox.Size = New Size(250, 33)
         firsnametextbox.TabIndex = 5
         ' 
@@ -435,7 +451,7 @@ Partial Class instructorframe
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Tahoma", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(16, 20)
         Label6.Name = "Label6"
         Label6.Size = New Size(258, 39)
@@ -454,7 +470,7 @@ Partial Class instructorframe
         ' 
         ' title_classes
         ' 
-        title_classes.Font = New Font("Tahoma", 24F)
+        title_classes.Font = New Font("Tahoma", 24.0F)
         title_classes.ForeColor = Color.White
         title_classes.ImeMode = ImeMode.NoControl
         title_classes.Location = New Point(16, 28)
@@ -717,7 +733,7 @@ Partial Class instructorframe
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Tahoma", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(15, 17)
         Label4.Name = "Label4"
         Label4.Size = New Size(295, 39)
@@ -726,7 +742,7 @@ Partial Class instructorframe
         ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24F)
+        title_dashboard.Font = New Font("Tahoma", 24.0F)
         title_dashboard.ForeColor = Color.White
         title_dashboard.ImeMode = ImeMode.NoControl
         title_dashboard.Location = New Point(16, 28)
@@ -736,23 +752,24 @@ Partial Class instructorframe
         title_dashboard.Text = "Welcome,"
         title_dashboard.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' username
+        ' instructor_username
         ' 
-        username.Font = New Font("Tahoma", 24F)
-        username.ForeColor = Color.White
-        username.ImeMode = ImeMode.NoControl
-        username.Location = New Point(179, 28)
-        username.Name = "username"
-        username.Size = New Size(157, 38)
-        username.TabIndex = 1
-        username.Text = "John Doe"
-        username.TextAlign = ContentAlignment.MiddleLeft
+        instructor_username.AutoSize = True
+        instructor_username.Font = New Font("Tahoma", 24.0F)
+        instructor_username.ForeColor = Color.White
+        instructor_username.ImeMode = ImeMode.NoControl
+        instructor_username.Location = New Point(179, 28)
+        instructor_username.Name = "instructor_username"
+        instructor_username.Size = New Size(149, 39)
+        instructor_username.TabIndex = 1
+        instructor_username.Text = "John Doe"
+        instructor_username.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' head_dashboard
         ' 
         head_dashboard.BackColor = Color.Maroon
         head_dashboard.Controls.Add(title_dashboard)
-        head_dashboard.Controls.Add(username)
+        head_dashboard.Controls.Add(instructor_username)
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
@@ -771,12 +788,43 @@ Partial Class instructorframe
         ' sidepanel
         ' 
         sidepanel.BackColor = Color.Maroon
+        sidepanel.Controls.Add(logoutpanel)
         sidepanel.Controls.Add(sidenav)
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
         sidepanel.Size = New Size(350, 985)
         sidepanel.TabIndex = 4
+        ' 
+        ' logoutpanel
+        ' 
+        logoutpanel.Controls.Add(logoutbutton)
+        logoutpanel.Cursor = Cursors.Hand
+        logoutpanel.Location = New Point(28, 890)
+        logoutpanel.Name = "logoutpanel"
+        logoutpanel.Size = New Size(294, 56)
+        logoutpanel.TabIndex = 3
+        ' 
+        ' logoutbutton
+        ' 
+        logoutbutton.BackColor = Color.Maroon
+        logoutbutton.BackgroundImageLayout = ImageLayout.Center
+        logoutbutton.Dock = DockStyle.Fill
+        logoutbutton.FlatAppearance.BorderColor = Color.Maroon
+        logoutbutton.FlatAppearance.BorderSize = 0
+        logoutbutton.FlatStyle = FlatStyle.Flat
+        logoutbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        logoutbutton.ForeColor = Color.White
+        logoutbutton.Image = CType(resources.GetObject("logoutbutton.Image"), Image)
+        logoutbutton.ImageAlign = ContentAlignment.MiddleLeft
+        logoutbutton.ImeMode = ImeMode.NoControl
+        logoutbutton.Location = New Point(0, 0)
+        logoutbutton.Name = "logoutbutton"
+        logoutbutton.Size = New Size(294, 56)
+        logoutbutton.TabIndex = 0
+        logoutbutton.Text = "       Log Out"
+        logoutbutton.TextAlign = ContentAlignment.MiddleLeft
+        logoutbutton.UseVisualStyleBackColor = False
         ' 
         ' dashboardpanel
         ' 
@@ -828,7 +876,7 @@ Partial Class instructorframe
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Tahoma", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(14, 25)
         Label7.Name = "Label7"
         Label7.Size = New Size(261, 39)
@@ -849,7 +897,7 @@ Partial Class instructorframe
         ' droppedstudentslabel
         ' 
         droppedstudentslabel.AutoSize = True
-        droppedstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        droppedstudentslabel.Font = New Font("Tahoma", 48.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         droppedstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
         droppedstudentslabel.Location = New Point(79, 70)
         droppedstudentslabel.Name = "droppedstudentslabel"
@@ -882,7 +930,7 @@ Partial Class instructorframe
         ' enrolledstudentslabel
         ' 
         enrolledstudentslabel.AutoSize = True
-        enrolledstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        enrolledstudentslabel.Font = New Font("Tahoma", 48.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         enrolledstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
         enrolledstudentslabel.Location = New Point(56, 69)
         enrolledstudentslabel.Name = "enrolledstudentslabel"
@@ -930,13 +978,13 @@ Partial Class instructorframe
         ' 
         ' instructorframe
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
         Controls.Add(myprofilepanel)
-        Controls.Add(classespanel)
         Controls.Add(dashboardpanel)
+        Controls.Add(classespanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
@@ -960,8 +1008,10 @@ Partial Class instructorframe
         CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         head_dashboard.ResumeLayout(False)
+        head_dashboard.PerformLayout()
         sidenav.ResumeLayout(False)
         sidepanel.ResumeLayout(False)
+        logoutpanel.ResumeLayout(False)
         dashboardpanel.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
@@ -989,7 +1039,7 @@ Partial Class instructorframe
     Friend WithEvents head_classes As Panel
     Friend WithEvents classespanel As Panel
     Friend WithEvents title_dashboard As Label
-    Friend WithEvents username As Label
+    Friend WithEvents instructor_username As Label
     Friend WithEvents head_dashboard As Panel
     Friend WithEvents title As Label
     Friend WithEvents logo As PictureBox
@@ -1024,7 +1074,7 @@ Partial Class instructorframe
     Friend WithEvents Label11 As Label
     Friend WithEvents lastnametextbox As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents middlenametextbox As TextBox
+    Friend WithEvents middleinitialtextbox As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents firsnametextbox As TextBox
     Friend WithEvents Label8 As Label
@@ -1044,7 +1094,9 @@ Partial Class instructorframe
     Friend WithEvents Label19 As Label
     Friend WithEvents civilstatustextbox As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents yearofexperiencetextbox As TextBox
     Friend WithEvents Label20 As Label
     Friend WithEvents LineChart As DataVisualization.Charting.Chart
+    Friend WithEvents logoutpanel As Panel
+    Friend WithEvents logoutbutton As Button
 End Class

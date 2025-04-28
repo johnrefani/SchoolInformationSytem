@@ -1,10 +1,14 @@
-﻿Imports System.Windows.Forms.DataVisualization.Charting
+﻿Imports MySql.Data.MySqlClient
+Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class instructorframe
     Private Sub instructor_frame_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         HideAllPanels()
         dashboardpanel.Visible = True
         HighlightActiveButton(dashboardbutton)
+
+        ' Fetch Instructor Data on Load (Example)
+        FetchInstructorData(GlobalInstructorId)
     End Sub
 
     ' Hide all panels
@@ -45,6 +49,46 @@ Public Class instructorframe
 
     Private Sub editprofilebutton_Click(sender As Object, e As EventArgs) Handles editprofilebutton.Click
         editprofile.Show()
+    End Sub
+
+    ' Fetch Instructor Data from the Database
+    Private Sub FetchInstructorData(instructorId As String)
+        Try
+            Using connection As MySqlConnection = strconnection()
+                connection.Open()
+
+                ' SQL query to fetch the instructor data
+                Dim query As String = "SELECT * FROM instructor WHERE instructor_id = @InstructorId"
+                Using cmd As New MySqlCommand(query, connection)
+                    cmd.Parameters.AddWithValue("@InstructorId", instructorId)
+
+                    ' Execute the query
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        If reader.Read() Then
+                            ' Populate the textboxes with instructor data
+                            instructor_username.Text = reader("first_name").ToString() & " " & reader("last_name").ToString()
+                            yearofexperiencetextbox.Text = reader("years_of_experience").ToString()
+                            nationalitytextbox.Text = reader("nationality").ToString()
+                            civilstatustextbox.Text = reader("civil_status").ToString()
+                            subjecthandledtextbox.Text = reader("subject_handled").ToString()
+                            addresstextbox.Text = reader("address").ToString()
+                            advisorytextbox.Text = reader("advisory_class").ToString()
+                            departmenttextbox.Text = reader("department").ToString()
+                            emailaddtextbox.Text = reader("email").ToString()
+                            contactnumtextbox.Text = reader("contact_number").ToString()
+                            gendertextbox.Text = reader("gender").ToString()
+                            lastnametextbox.Text = reader("last_name").ToString()
+                            middleinitialtextbox.Text = reader("middle_initial").ToString() ' Assuming middle_name is used for initials
+                            firsnametextbox.Text = reader("first_name").ToString()
+                        Else
+                            MessageBox.Show("Instructor not found.")
+                        End If
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub chartpanel_Paint(sender As Object, e As PaintEventArgs) Handles chartpanel.Paint
@@ -104,5 +148,12 @@ Public Class instructorframe
         LineChart.ChartAreas(0).AxisY.Title = "Enrollment"
         LineChart.ChartAreas(0).AxisY.TitleFont = New Font("Tahoma", 12, FontStyle.Regular)
     End Sub
+
+    Private Sub logoutbutton_Click(sender As Object, e As EventArgs) Handles logoutbutton.Click
+        Me.Close()
+        login.Show()
+        connection.Close()
+    End Sub
+
 
 End Class

@@ -10,7 +10,40 @@ Public Class login
         showicon.Visible = True
     End Sub
 
-    ' Event handler for login button click
+
+    ' Event handler for Enter key press in the username field
+    Private Sub username_KeyDown(sender As Object, e As KeyEventArgs) Handles username.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            loginbtn.PerformClick()
+        End If
+    End Sub
+
+    ' Event handler for Enter key press in the password field
+    Private Sub password_KeyDown(sender As Object, e As KeyEventArgs) Handles password.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            loginbtn.PerformClick()
+        End If
+    End Sub
+
+    Private Sub login_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            loginbtn.PerformClick()
+        End If
+    End Sub
+
+    ' Show password button
+    Private Sub showicon_Click(sender As Object, e As EventArgs) Handles showicon.Click
+        password.UseSystemPasswordChar = False
+        showicon.Visible = False
+        hideicon.Visible = True
+    End Sub
+
+    ' Hide password button
+    Private Sub hideicon_Click(sender As Object, e As EventArgs) Handles hideicon.Click
+        password.UseSystemPasswordChar = True
+        hideicon.Visible = False
+        showicon.Visible = True
+    End Sub
     Private Sub loginbtn_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
         ' Validation
         If String.IsNullOrWhiteSpace(username.Text) OrElse String.IsNullOrWhiteSpace(password.Text) Then
@@ -35,11 +68,10 @@ Public Class login
             conn.Open()
 
             ' SQL query for case-insensitive username and role matching
-            Dim query As String = "SELECT * FROM user WHERE LOWER(username) = @username AND LOWER(role) = @role AND password = @password"
+            Dim query As String = "SELECT * FROM user WHERE LOWER(username) = @username AND LOWER(role) = @role"
             Dim cmd As New MySqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@username", inputUsername)
             cmd.Parameters.AddWithValue("@role", inputRole)
-            cmd.Parameters.AddWithValue("@password", inputPassword)
 
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
@@ -55,8 +87,10 @@ Public Class login
 
                 ' Store the user_id in the global variable (GlobalStudentId)
                 GlobalStudentId = reader("user_id").ToString()
+                GlobalInstructorId = reader("user_id").ToString()
+                GlobalAdminId = reader("user_id").ToString()
 
-                ' Direct comparison of input password with stored password (plain text)
+                ' Check if the password is correct
                 If inputPassword = reader("password").ToString() Then
                     ' Successful login, close the login form and show the corresponding frame
                     Me.Hide()
@@ -98,37 +132,4 @@ Public Class login
         End Try
     End Sub
 
-    ' Event handler for Enter key press in the username field
-    Private Sub username_KeyDown(sender As Object, e As KeyEventArgs) Handles username.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            loginbtn.PerformClick()
-        End If
-    End Sub
-
-    ' Event handler for Enter key press in the password field
-    Private Sub password_KeyDown(sender As Object, e As KeyEventArgs) Handles password.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            loginbtn.PerformClick()
-        End If
-    End Sub
-
-    Private Sub login_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            loginbtn.PerformClick()
-        End If
-    End Sub
-
-    ' Show password button
-    Private Sub showicon_Click(sender As Object, e As EventArgs) Handles showicon.Click
-        password.UseSystemPasswordChar = False
-        showicon.Visible = False
-        hideicon.Visible = True
-    End Sub
-
-    ' Hide password button
-    Private Sub hideicon_Click(sender As Object, e As EventArgs) Handles hideicon.Click
-        password.UseSystemPasswordChar = True
-        hideicon.Visible = False
-        showicon.Visible = True
-    End Sub
 End Class
