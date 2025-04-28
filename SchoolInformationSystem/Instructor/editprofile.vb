@@ -48,29 +48,32 @@ Public Class editprofile
     Private Sub SaveInstructorData()
         Dim instructorId As String = GlobalInstructorId
 
+        ' Combine the full name from the first name, middle initial, and last name
+        Dim fullName As String = firsnametextbox.Text & " " & middleinitialtextbox.Text & ". " & lastnametextbox.Text
+
         Try
             Using connection As MySqlConnection = strconnection()
                 connection.Open()
 
-                ' SQL Update query
+                ' SQL Update query for the instructor
                 Dim query As String = "UPDATE instructor SET 
-                                    first_name = @FirstName,
-                                    last_name = @LastName,
-                                    middle_initial = @MiddleName,
-                                    gender = @Gender,
-                                    address = @Address,
-                                    contact_number = @ContactNumber,
-                                    email = @Email,
-                                    subject_handled = @SubjectHandled,
-                                    advisory_class = @AdvisoryClass,
-                                    department = @Department,
-                                    civil_status = @CivilStatus,
-                                    nationality = @Nationality,
-                                    years_of_experience = @YearsOfExperience
-                                   WHERE instructor_id = @InstructorId"
+                                first_name = @FirstName,
+                                last_name = @LastName,
+                                middle_initial = @MiddleName,
+                                gender = @Gender,
+                                address = @Address,
+                                contact_number = @ContactNumber,
+                                email = @Email,
+                                subject_handled = @SubjectHandled,
+                                advisory_class = @AdvisoryClass,
+                                department = @Department,
+                                civil_status = @CivilStatus,
+                                nationality = @Nationality,
+                                years_of_experience = @YearsOfExperience
+                               WHERE instructor_id = @InstructorId"
 
                 Using cmd As New MySqlCommand(query, connection)
-                    ' Add parameters
+                    ' Add parameters for instructor update
                     cmd.Parameters.AddWithValue("@FirstName", firsnametextbox.Text)
                     cmd.Parameters.AddWithValue("@LastName", lastnametextbox.Text)
                     cmd.Parameters.AddWithValue("@MiddleName", middleinitialtextbox.Text)
@@ -86,13 +89,29 @@ Public Class editprofile
                     cmd.Parameters.AddWithValue("@YearsOfExperience", yearsofexperiencetextbox.Text)
                     cmd.Parameters.AddWithValue("@InstructorId", instructorId)
 
-                    ' Execute update
+                    ' Execute update for instructor
                     Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
 
                     If rowsAffected > 0 Then
-                        MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        ' Now update the full name in the user table
+                        Dim updateUserQuery As String = "UPDATE user SET 
+                                                     full_name = @FullName
+                                                     WHERE user_id = @InstructorId"
+
+                        Using userCmd As New MySqlCommand(updateUserQuery, connection)
+                            userCmd.Parameters.AddWithValue("@FullName", fullName)
+                            userCmd.Parameters.AddWithValue("@InstructorId", instructorId)
+
+                            Dim userRowsAffected As Integer = userCmd.ExecuteNonQuery()
+
+                            If userRowsAffected > 0 Then
+                                MessageBox.Show("Instructor profile and user full name updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            Else
+                                MessageBox.Show("Instructor profile updated, but no matching user found to update.", "Partial Update", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                            End If
+                        End Using
                     Else
-                        MessageBox.Show("No changes were made.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        MessageBox.Show("No changes were made to the instructor profile.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End If
                 End Using
             End Using
@@ -100,6 +119,7 @@ Public Class editprofile
             MessageBox.Show("Error updating profile: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
 
     Private Sub savebutton_Click(sender As Object, e As EventArgs) Handles savebutton.Click
         SaveInstructorData()

@@ -47,7 +47,7 @@ Public Class editstudent
     Private Sub SaveStudentProfile()
         Dim studentId As String = GlobalStudentId ' Use the global variable for the ID
 
-        ' Split the full name into first name, middle initial, and last name
+        ' Split the full name into parts
         Dim fullNameParts As String() = studentedit_fullname.Text.Trim().Split(" "c)
 
         Dim firstName As String = ""
@@ -56,18 +56,23 @@ Public Class editstudent
 
         If fullNameParts.Length >= 3 Then
             firstName = fullNameParts(0)
-            middleInitial = fullNameParts(1).Replace(".", "") ' Remove the dot if user typed it
+            middleInitial = fullNameParts(1).Replace(".", "") ' Remove dot if any
             lastName = fullNameParts(2)
         Else
             MessageBox.Show("Please enter full name in 'Firstname M. Lastname' format.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
+        ' Prepare full name
+        Dim fullName As String = $"{firstName} {middleInitial}. {lastName}"
+
         Dim conn As MySqlConnection = strconnection()
 
         Try
             conn.Open()
-            Dim query As String = "UPDATE student SET 
+
+            ' Update Student table
+            Dim updateStudentQuery As String = "UPDATE student SET 
                                 first_name = @firstName,
                                 middle_initial = @middleInitial,
                                 last_name = @lastName,
@@ -81,33 +86,44 @@ Public Class editstudent
                                 religion = @religion,
                                 grade_level = @gradeLevel,
                                 guardian_name = @guardianName
-                              WHERE student_id = @studentId"
+                            WHERE student_id = @studentId"
 
-            Dim cmd As New MySqlCommand(query, conn)
+            Using studentCmd As New MySqlCommand(updateStudentQuery, conn)
+                studentCmd.Parameters.AddWithValue("@firstName", firstName)
+                studentCmd.Parameters.AddWithValue("@middleInitial", middleInitial)
+                studentCmd.Parameters.AddWithValue("@lastName", lastName)
+                studentCmd.Parameters.AddWithValue("@gender", studentedit_gender.Text)
+                studentCmd.Parameters.AddWithValue("@address", studentedit_address.Text)
+                studentCmd.Parameters.AddWithValue("@contact", studentedit_contact.Text)
+                studentCmd.Parameters.AddWithValue("@email", studentedit_email.Text)
+                studentCmd.Parameters.AddWithValue("@age", studentedit_age.Text)
+                studentCmd.Parameters.AddWithValue("@birthPlace", studentedit_birthplace.Text)
+                studentCmd.Parameters.AddWithValue("@nationality", studentedit_nationality.Text)
+                studentCmd.Parameters.AddWithValue("@religion", studentedit_religion.Text)
+                studentCmd.Parameters.AddWithValue("@gradeLevel", studentedit_grade.Text)
+                studentCmd.Parameters.AddWithValue("@guardianName", studentedit_guardian.Text)
+                studentCmd.Parameters.AddWithValue("@studentId", studentId)
 
-            ' Parameters
-            cmd.Parameters.AddWithValue("@firstName", firstName)
-            cmd.Parameters.AddWithValue("@middleInitial", middleInitial)
-            cmd.Parameters.AddWithValue("@lastName", lastName)
-            cmd.Parameters.AddWithValue("@gender", studentedit_gender.Text)
-            cmd.Parameters.AddWithValue("@address", studentedit_address.Text)
-            cmd.Parameters.AddWithValue("@contact", studentedit_contact.Text)
-            cmd.Parameters.AddWithValue("@email", studentedit_email.Text)
-            cmd.Parameters.AddWithValue("@age", studentedit_age.Text)
-            cmd.Parameters.AddWithValue("@birthPlace", studentedit_birthplace.Text)
-            cmd.Parameters.AddWithValue("@nationality", studentedit_nationality.Text)
-            cmd.Parameters.AddWithValue("@religion", studentedit_religion.Text)
-            cmd.Parameters.AddWithValue("@gradeLevel", studentedit_grade.Text)
-            cmd.Parameters.AddWithValue("@guardianName", studentedit_guardian.Text)
-            cmd.Parameters.AddWithValue("@studentId", studentId)
+                studentCmd.ExecuteNonQuery()
+            End Using
 
-            Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+            ' Update User table (using id_number which is the same as student_id)
+            Dim updateUserQuery As String = "UPDATE user SET 
+                                         full_name = @fullName
+                                         WHERE user_id = @studentId"
 
-            If rowsAffected > 0 Then
-                MessageBox.Show("Student profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("No changes were made.", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
+            Using userCmd As New MySqlCommand(updateUserQuery, conn)
+                userCmd.Parameters.AddWithValue("@fullName", fullName)
+                userCmd.Parameters.AddWithValue("@studentId", studentId)
+
+                Dim affectedRows As Integer = userCmd.ExecuteNonQuery()
+
+                If affectedRows > 0 Then
+                    MessageBox.Show("Student profile and user full name updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Student profile updated, but no matching user found to update.", "Partial Update", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            End Using
 
         Catch ex As Exception
             MessageBox.Show("Error saving profile: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -115,6 +131,7 @@ Public Class editstudent
             conn.Close()
         End Try
     End Sub
+
 
 
     Private Sub editstudent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
