@@ -153,3 +153,4 @@ C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.editstudent.resources
 D:\Work Projects\schoolinformationsystem\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.editprofile.resources
 C:\Users\Win11\Source\Repos\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.editstudent.resources
+C:\Users\Acer\Desktop\Commission\SchoolInformationSytem\SchoolInformationSystem\obj\Debug\net8.0-windows10.0.17763.0\SchoolInformationSystem.editstudent.resources
