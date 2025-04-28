@@ -333,6 +333,7 @@ Partial Class editstudent
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "editstudent"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Edit Student Profile"
         ResumeLayout(False)
         PerformLayout()
