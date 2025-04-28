@@ -22,12 +22,12 @@ Partial Class adminframe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminframe))
         dashboardpanel = New Panel()
         Panel4 = New Panel()
@@ -178,7 +178,7 @@ Partial Class adminframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1020, 749)
+        dashboardpanel.Size = New Size(1074, 985)
         dashboardpanel.TabIndex = 9
         ' 
         ' Panel4
@@ -191,16 +191,16 @@ Partial Class adminframe
         ' 
         ' EnrollmentBarGraph
         ' 
-        ChartArea1.Name = "ChartArea1"
-        EnrollmentBarGraph.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        EnrollmentBarGraph.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        EnrollmentBarGraph.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        EnrollmentBarGraph.Legends.Add(Legend3)
         EnrollmentBarGraph.Location = New Point(0, 0)
         EnrollmentBarGraph.Name = "EnrollmentBarGraph"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        EnrollmentBarGraph.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        EnrollmentBarGraph.Series.Add(Series3)
         EnrollmentBarGraph.Size = New Size(575, 490)
         EnrollmentBarGraph.TabIndex = 0
         EnrollmentBarGraph.Text = "Chart1"
@@ -215,17 +215,17 @@ Partial Class adminframe
         ' 
         ' PieChart
         ' 
-        ChartArea2.Name = "ChartArea1"
-        PieChart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        PieChart.Legends.Add(Legend2)
+        ChartArea4.Name = "ChartArea1"
+        PieChart.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        PieChart.Legends.Add(Legend4)
         PieChart.Location = New Point(3, 0)
         PieChart.Name = "PieChart"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Pie
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        PieChart.Series.Add(Series2)
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = DataVisualization.Charting.SeriesChartType.Pie
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        PieChart.Series.Add(Series4)
         PieChart.Size = New Size(406, 496)
         PieChart.TabIndex = 5
         PieChart.Text = "Chart1"
@@ -394,7 +394,7 @@ Partial Class adminframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1020, 94)
+        head_dashboard.Size = New Size(1074, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' title_dashboard
@@ -632,7 +632,7 @@ Partial Class adminframe
         userspanel.Dock = DockStyle.Fill
         userspanel.Location = New Point(350, 0)
         userspanel.Name = "userspanel"
-        userspanel.Size = New Size(1020, 749)
+        userspanel.Size = New Size(1074, 985)
         userspanel.TabIndex = 10
         ' 
         ' bodyclassespanel
@@ -758,7 +758,7 @@ Partial Class adminframe
         head_users.Dock = DockStyle.Top
         head_users.Location = New Point(0, 0)
         head_users.Name = "head_users"
-        head_users.Size = New Size(1020, 94)
+        head_users.Size = New Size(1074, 94)
         head_users.TabIndex = 0
         ' 
         ' title_users
@@ -780,7 +780,7 @@ Partial Class adminframe
         head_enrollments.Dock = DockStyle.Top
         head_enrollments.Location = New Point(0, 0)
         head_enrollments.Name = "head_enrollments"
-        head_enrollments.Size = New Size(1020, 94)
+        head_enrollments.Size = New Size(1074, 94)
         head_enrollments.TabIndex = 0
         ' 
         ' title_enrollments
@@ -802,7 +802,7 @@ Partial Class adminframe
         enrollmentspanel.Dock = DockStyle.Fill
         enrollmentspanel.Location = New Point(350, 0)
         enrollmentspanel.Name = "enrollmentspanel"
-        enrollmentspanel.Size = New Size(1020, 749)
+        enrollmentspanel.Size = New Size(1074, 985)
         enrollmentspanel.TabIndex = 11
         ' 
         ' Panel1
@@ -938,7 +938,7 @@ Partial Class adminframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 749)
+        sidepanel.Size = New Size(350, 985)
         sidepanel.TabIndex = 8
         ' 
         ' subjectspanel
@@ -948,7 +948,7 @@ Partial Class adminframe
         subjectspanel.Dock = DockStyle.Fill
         subjectspanel.Location = New Point(350, 0)
         subjectspanel.Name = "subjectspanel"
-        subjectspanel.Size = New Size(1020, 749)
+        subjectspanel.Size = New Size(1074, 985)
         subjectspanel.TabIndex = 12
         ' 
         ' Panel2
@@ -1048,6 +1048,7 @@ Partial Class adminframe
         addsub.TabIndex = 9
         addsub.Text = "ADD SUBJECT"
         addsub.UseVisualStyleBackColor = False
+        addsub.Visible = False
         ' 
         ' subdatagrid
         ' 
@@ -1084,7 +1085,7 @@ Partial Class adminframe
         head_subjects.Dock = DockStyle.Top
         head_subjects.Location = New Point(0, 0)
         head_subjects.Name = "head_subjects"
-        head_subjects.Size = New Size(1020, 94)
+        head_subjects.Size = New Size(1074, 94)
         head_subjects.TabIndex = 0
         ' 
         ' title_subjects
@@ -1106,7 +1107,7 @@ Partial Class adminframe
         configurationpanel.Dock = DockStyle.Fill
         configurationpanel.Location = New Point(350, 0)
         configurationpanel.Name = "configurationpanel"
-        configurationpanel.Size = New Size(1020, 749)
+        configurationpanel.Size = New Size(1074, 985)
         configurationpanel.TabIndex = 13
         ' 
         ' Panel3
@@ -1266,7 +1267,7 @@ Partial Class adminframe
         head_configuration.Dock = DockStyle.Top
         head_configuration.Location = New Point(0, 0)
         head_configuration.Name = "head_configuration"
-        head_configuration.Size = New Size(1020, 94)
+        head_configuration.Size = New Size(1074, 94)
         head_configuration.TabIndex = 0
         ' 
         ' title_configuration
@@ -1287,7 +1288,7 @@ Partial Class adminframe
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1370, 749)
+        ClientSize = New Size(1424, 985)
         Controls.Add(subjectspanel)
         Controls.Add(configurationpanel)
         Controls.Add(enrollmentspanel)

@@ -23,9 +23,9 @@ Partial Class instructorframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
@@ -72,13 +72,14 @@ Partial Class instructorframe
         head_classes = New Panel()
         classespanel = New Panel()
         bodyclassespanel = New Panel()
-        DataGridView2 = New DataGridView()
-        ComboBox2 = New ComboBox()
-        ComboBox1 = New ComboBox()
+        instLabel = New Label()
+        instNext = New Button()
+        instPrev = New Button()
+        instData = New DataGridView()
+        instSemester = New ComboBox()
         PictureBox1 = New PictureBox()
-        TextBox1 = New TextBox()
-        Button3 = New Button()
-        Button2 = New Button()
+        instSearch = New TextBox()
+        instPrint = New Button()
         Label4 = New Label()
         title_dashboard = New Label()
         instructor_username = New Label()
@@ -112,7 +113,7 @@ Partial Class instructorframe
         head_classes.SuspendLayout()
         classespanel.SuspendLayout()
         bodyclassespanel.SuspendLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(instData, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
@@ -146,7 +147,7 @@ Partial Class instructorframe
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1020, 749)
+        myprofilepanel.Size = New Size(1074, 985)
         myprofilepanel.TabIndex = 7
         ' 
         ' myprofilebodypanel
@@ -465,7 +466,7 @@ Partial Class instructorframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1020, 94)
+        head_myprofile.Size = New Size(1074, 94)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -625,7 +626,7 @@ Partial Class instructorframe
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1020, 94)
+        head_classes.Size = New Size(1074, 94)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -635,19 +636,20 @@ Partial Class instructorframe
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
         classespanel.Name = "classespanel"
-        classespanel.Size = New Size(1020, 749)
+        classespanel.Size = New Size(1074, 985)
         classespanel.TabIndex = 6
         ' 
         ' bodyclassespanel
         ' 
         bodyclassespanel.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
-        bodyclassespanel.Controls.Add(DataGridView2)
-        bodyclassespanel.Controls.Add(ComboBox2)
-        bodyclassespanel.Controls.Add(ComboBox1)
+        bodyclassespanel.Controls.Add(instLabel)
+        bodyclassespanel.Controls.Add(instNext)
+        bodyclassespanel.Controls.Add(instPrev)
+        bodyclassespanel.Controls.Add(instData)
+        bodyclassespanel.Controls.Add(instSemester)
         bodyclassespanel.Controls.Add(PictureBox1)
-        bodyclassespanel.Controls.Add(TextBox1)
-        bodyclassespanel.Controls.Add(Button3)
-        bodyclassespanel.Controls.Add(Button2)
+        bodyclassespanel.Controls.Add(instSearch)
+        bodyclassespanel.Controls.Add(instPrint)
         bodyclassespanel.Controls.Add(Label4)
         bodyclassespanel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         bodyclassespanel.Location = New Point(25, 121)
@@ -655,34 +657,51 @@ Partial Class instructorframe
         bodyclassespanel.Size = New Size(1024, 850)
         bodyclassespanel.TabIndex = 1
         ' 
-        ' DataGridView2
+        ' instLabel
         ' 
-        DataGridView2.BackgroundColor = Color.White
-        DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView2.Location = New Point(23, 133)
-        DataGridView2.Name = "DataGridView2"
-        DataGridView2.Size = New Size(981, 698)
-        DataGridView2.TabIndex = 8
+        instLabel.AutoSize = True
+        instLabel.Location = New Point(725, 792)
+        instLabel.Name = "instLabel"
+        instLabel.Size = New Size(130, 25)
+        instLabel.TabIndex = 11
+        instLabel.Text = "page 1 of 10"
         ' 
-        ' ComboBox2
+        ' instNext
         ' 
-        ComboBox2.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Location = New Point(883, 79)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(121, 33)
-        ComboBox2.TabIndex = 7
-        ComboBox2.Text = "Semester"
+        instNext.Location = New Point(897, 784)
+        instNext.Name = "instNext"
+        instNext.Size = New Size(107, 41)
+        instNext.TabIndex = 10
+        instNext.Text = "Next"
+        instNext.UseVisualStyleBackColor = True
         ' 
-        ' ComboBox1
+        ' instPrev
         ' 
-        ComboBox1.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(756, 79)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(121, 33)
-        ComboBox1.TabIndex = 6
-        ComboBox1.Text = "Subject"
+        instPrev.Location = New Point(612, 784)
+        instPrev.Name = "instPrev"
+        instPrev.Size = New Size(107, 41)
+        instPrev.TabIndex = 9
+        instPrev.Text = "Prev"
+        instPrev.UseVisualStyleBackColor = True
+        ' 
+        ' instData
+        ' 
+        instData.BackgroundColor = Color.White
+        instData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        instData.Location = New Point(23, 133)
+        instData.Name = "instData"
+        instData.Size = New Size(981, 476)
+        instData.TabIndex = 8
+        ' 
+        ' instSemester
+        ' 
+        instSemester.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        instSemester.FormattingEnabled = True
+        instSemester.Location = New Point(830, 79)
+        instSemester.Name = "instSemester"
+        instSemester.Size = New Size(174, 33)
+        instSemester.TabIndex = 7
+        instSemester.Text = "Semester"
         ' 
         ' PictureBox1
         ' 
@@ -693,42 +712,28 @@ Partial Class instructorframe
         PictureBox1.TabIndex = 5
         PictureBox1.TabStop = False
         ' 
-        ' TextBox1
+        ' instSearch
         ' 
-        TextBox1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(61, 79)
-        TextBox1.Name = "TextBox1"
-        TextBox1.PlaceholderText = "Search"
-        TextBox1.Size = New Size(418, 33)
-        TextBox1.TabIndex = 4
+        instSearch.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        instSearch.Location = New Point(61, 79)
+        instSearch.Name = "instSearch"
+        instSearch.PlaceholderText = "Search"
+        instSearch.Size = New Size(418, 33)
+        instSearch.TabIndex = 4
         ' 
-        ' Button3
+        ' instPrint
         ' 
-        Button3.AutoSize = True
-        Button3.BackColor = Color.White
-        Button3.FlatAppearance.BorderSize = 0
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
-        Button3.Location = New Point(906, 22)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(98, 37)
-        Button3.TabIndex = 2
-        Button3.Text = "EXPORT"
-        Button3.UseVisualStyleBackColor = False
-        ' 
-        ' Button2
-        ' 
-        Button2.AutoSize = True
-        Button2.BackColor = Color.White
-        Button2.FlatAppearance.BorderSize = 0
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
-        Button2.Location = New Point(805, 21)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(95, 37)
-        Button2.TabIndex = 1
-        Button2.Text = "PRINT"
-        Button2.UseVisualStyleBackColor = False
+        instPrint.AutoSize = True
+        instPrint.BackColor = Color.White
+        instPrint.FlatAppearance.BorderSize = 0
+        instPrint.FlatStyle = FlatStyle.Flat
+        instPrint.ForeColor = Color.FromArgb(CByte(35), CByte(50), CByte(85))
+        instPrint.Location = New Point(909, 28)
+        instPrint.Name = "instPrint"
+        instPrint.Size = New Size(95, 37)
+        instPrint.TabIndex = 1
+        instPrint.Text = "PRINT"
+        instPrint.UseVisualStyleBackColor = False
         ' 
         ' Label4
         ' 
@@ -772,7 +777,7 @@ Partial Class instructorframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1020, 94)
+        head_dashboard.Size = New Size(1074, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' sidenav
@@ -792,7 +797,7 @@ Partial Class instructorframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 749)
+        sidepanel.Size = New Size(350, 985)
         sidepanel.TabIndex = 4
         ' 
         ' logoutpanel
@@ -835,7 +840,7 @@ Partial Class instructorframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1020, 749)
+        dashboardpanel.Size = New Size(1074, 985)
         dashboardpanel.TabIndex = 5
         ' 
         ' Panel3
@@ -960,17 +965,17 @@ Partial Class instructorframe
         ' 
         ' LineChart
         ' 
-        ChartArea2.Name = "ChartArea1"
-        LineChart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        LineChart.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        LineChart.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        LineChart.Legends.Add(Legend1)
         LineChart.Location = New Point(3, -1)
         LineChart.Name = "LineChart"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Line
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        LineChart.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = DataVisualization.Charting.SeriesChartType.Line
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        LineChart.Series.Add(Series1)
         LineChart.Size = New Size(754, 363)
         LineChart.TabIndex = 0
         LineChart.Text = "Chart1"
@@ -980,10 +985,10 @@ Partial Class instructorframe
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1370, 749)
+        ClientSize = New Size(1424, 985)
+        Controls.Add(classespanel)
         Controls.Add(dashboardpanel)
         Controls.Add(myprofilepanel)
-        Controls.Add(classespanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
@@ -1004,7 +1009,7 @@ Partial Class instructorframe
         classespanel.ResumeLayout(False)
         bodyclassespanel.ResumeLayout(False)
         bodyclassespanel.PerformLayout()
-        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
+        CType(instData, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         head_dashboard.ResumeLayout(False)
         sidenav.ResumeLayout(False)
@@ -1059,12 +1064,12 @@ Partial Class instructorframe
     Friend WithEvents bodyclassespanel As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents instPrint As Button
+    Friend WithEvents instSemester As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents instSearch As TextBox
+    Friend WithEvents instData As DataGridView
     Friend WithEvents myprofilebodypanel As Panel
     Friend WithEvents editprofilebutton As Button
     Friend WithEvents Label6 As Label
@@ -1097,4 +1102,7 @@ Partial Class instructorframe
     Friend WithEvents LineChart As DataVisualization.Charting.Chart
     Friend WithEvents logoutpanel As Panel
     Friend WithEvents logoutbutton As Button
+    Friend WithEvents instLabel As Label
+    Friend WithEvents instNext As Button
+    Friend WithEvents instPrev As Button
 End Class
