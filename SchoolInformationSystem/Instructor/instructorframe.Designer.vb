@@ -23,9 +23,9 @@ Partial Class instructorframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
@@ -90,12 +90,12 @@ Partial Class instructorframe
         dashboardpanel = New Panel()
         Panel3 = New Panel()
         Button1 = New Button()
-        DataGridView1 = New DataGridView()
+        ClassGridView = New DataGridView()
         Label7 = New Label()
-        Panel2 = New Panel()
+        droppedstuds = New Panel()
         droppedstudentslabel = New Label()
         Label5 = New Label()
-        Panel1 = New Panel()
+        enrolledstuds = New Panel()
         enrolledstudentslabel = New Label()
         Label3 = New Label()
         chartpanel = New Panel()
@@ -120,9 +120,9 @@ Partial Class instructorframe
         logoutpanel.SuspendLayout()
         dashboardpanel.SuspendLayout()
         Panel3.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        Panel2.SuspendLayout()
-        Panel1.SuspendLayout()
+        CType(ClassGridView, ComponentModel.ISupportInitialize).BeginInit()
+        droppedstuds.SuspendLayout()
+        enrolledstuds.SuspendLayout()
         chartpanel.SuspendLayout()
         CType(LineChart, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -828,8 +828,8 @@ Partial Class instructorframe
         ' dashboardpanel
         ' 
         dashboardpanel.Controls.Add(Panel3)
-        dashboardpanel.Controls.Add(Panel2)
-        dashboardpanel.Controls.Add(Panel1)
+        dashboardpanel.Controls.Add(droppedstuds)
+        dashboardpanel.Controls.Add(enrolledstuds)
         dashboardpanel.Controls.Add(chartpanel)
         dashboardpanel.Controls.Add(head_dashboard)
         dashboardpanel.Dock = DockStyle.Fill
@@ -842,7 +842,7 @@ Partial Class instructorframe
         ' 
         Panel3.BackColor = Color.White
         Panel3.Controls.Add(Button1)
-        Panel3.Controls.Add(DataGridView1)
+        Panel3.Controls.Add(ClassGridView)
         Panel3.Controls.Add(Label7)
         Panel3.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Panel3.Location = New Point(28, 506)
@@ -856,21 +856,21 @@ Partial Class instructorframe
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(765, 28)
+        Button1.Location = New Point(520, 25)
         Button1.Name = "Button1"
         Button1.Size = New Size(240, 40)
         Button1.TabIndex = 3
         Button1.Text = "VIEW ALL CLASSES"
         Button1.UseVisualStyleBackColor = False
         ' 
-        ' DataGridView1
+        ' ClassGridView
         ' 
-        DataGridView1.BackgroundColor = Color.White
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(14, 82)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(989, 380)
-        DataGridView1.TabIndex = 2
+        ClassGridView.BackgroundColor = Color.White
+        ClassGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        ClassGridView.Location = New Point(14, 82)
+        ClassGridView.Name = "ClassGridView"
+        ClassGridView.Size = New Size(989, 380)
+        ClassGridView.TabIndex = 2
         ' 
         ' Label7
         ' 
@@ -882,16 +882,16 @@ Partial Class instructorframe
         Label7.TabIndex = 1
         Label7.Text = "Class Summary"
         ' 
-        ' Panel2
+        ' droppedstuds
         ' 
-        Panel2.BackColor = Color.FromArgb(CByte(255), CByte(139), CByte(139))
-        Panel2.Controls.Add(droppedstudentslabel)
-        Panel2.Controls.Add(Label5)
-        Panel2.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Panel2.Location = New Point(816, 319)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(230, 167)
-        Panel2.TabIndex = 3
+        droppedstuds.BackColor = Color.FromArgb(CByte(255), CByte(139), CByte(139))
+        droppedstuds.Controls.Add(droppedstudentslabel)
+        droppedstuds.Controls.Add(Label5)
+        droppedstuds.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        droppedstuds.Location = New Point(816, 319)
+        droppedstuds.Name = "droppedstuds"
+        droppedstuds.Size = New Size(230, 167)
+        droppedstuds.TabIndex = 3
         ' 
         ' droppedstudentslabel
         ' 
@@ -915,16 +915,16 @@ Partial Class instructorframe
         Label5.TabIndex = 1
         Label5.Text = "Dropped Students"
         ' 
-        ' Panel1
+        ' enrolledstuds
         ' 
-        Panel1.BackColor = Color.FromArgb(CByte(255), CByte(17), CByte(17))
-        Panel1.Controls.Add(enrolledstudentslabel)
-        Panel1.Controls.Add(Label3)
-        Panel1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Panel1.Location = New Point(815, 120)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(230, 167)
-        Panel1.TabIndex = 2
+        enrolledstuds.BackColor = Color.FromArgb(CByte(255), CByte(17), CByte(17))
+        enrolledstuds.Controls.Add(enrolledstudentslabel)
+        enrolledstuds.Controls.Add(Label3)
+        enrolledstuds.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        enrolledstuds.Location = New Point(815, 120)
+        enrolledstuds.Name = "enrolledstuds"
+        enrolledstuds.Size = New Size(230, 167)
+        enrolledstuds.TabIndex = 2
         ' 
         ' enrolledstudentslabel
         ' 
@@ -960,17 +960,17 @@ Partial Class instructorframe
         ' 
         ' LineChart
         ' 
-        ChartArea1.Name = "ChartArea1"
-        LineChart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        LineChart.Legends.Add(Legend1)
+        ChartArea2.Name = "ChartArea1"
+        LineChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        LineChart.Legends.Add(Legend2)
         LineChart.Location = New Point(3, -1)
         LineChart.Name = "LineChart"
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = DataVisualization.Charting.SeriesChartType.Line
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        LineChart.Series.Add(Series1)
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Line
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        LineChart.Series.Add(Series2)
         LineChart.Size = New Size(754, 363)
         LineChart.TabIndex = 0
         LineChart.Text = "Chart1"
@@ -1013,11 +1013,11 @@ Partial Class instructorframe
         dashboardpanel.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
+        CType(ClassGridView, ComponentModel.ISupportInitialize).EndInit()
+        droppedstuds.ResumeLayout(False)
+        droppedstuds.PerformLayout()
+        enrolledstuds.ResumeLayout(False)
+        enrolledstuds.PerformLayout()
         chartpanel.ResumeLayout(False)
         CType(LineChart, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -1046,15 +1046,15 @@ Partial Class instructorframe
     Friend WithEvents sidepanel As Panel
     Friend WithEvents dashboardpanel As Panel
     Friend WithEvents chartpanel As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents droppedstuds As Panel
+    Friend WithEvents enrolledstuds As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents enrolledstudentslabel As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents droppedstudentslabel As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ClassGridView As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents bodyclassespanel As Panel
     Friend WithEvents Label4 As Label
