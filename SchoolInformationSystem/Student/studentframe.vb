@@ -67,8 +67,8 @@ Public Class studentframe
             If reader.HasRows Then
                 reader.Read()
                 ' Display student information on the profile panel
-                student_name.Text = reader("first_name").ToString() & " " & reader("middle_initial").ToString() & " " & reader("last_name").ToString()
-                student_fullname.Text = reader("first_name").ToString() & " " & reader("middle_initial").ToString() & " " & reader("last_name").ToString()
+                student_name.Text = reader("first_name").ToString() & " " & reader("middle_initial").ToString() & ". " & reader("last_name").ToString()
+                student_fullname.Text = reader("first_name").ToString() & " " & reader("middle_initial").ToString() & ". " & reader("last_name").ToString()
                 student_email.Text = reader("email").ToString()
                 student_contact.Text = reader("contact_number").ToString()
                 student_address.Text = reader("address").ToString()
@@ -102,5 +102,7 @@ Public Class studentframe
         Me.Close()
     End Sub
 
+    Private Sub student_name_Click(sender As Object, e As EventArgs) Handles student_name.Click
 
+    End Sub
 End Class
