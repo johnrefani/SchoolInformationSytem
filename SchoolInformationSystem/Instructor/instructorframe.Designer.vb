@@ -23,9 +23,9 @@ Partial Class instructorframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
@@ -129,7 +129,7 @@ Partial Class instructorframe
         ' 
         ' title_myprofile
         ' 
-        title_myprofile.Font = New Font("Tahoma", 24.0F)
+        title_myprofile.Font = New Font("Tahoma", 24F)
         title_myprofile.ForeColor = Color.White
         title_myprofile.ImeMode = ImeMode.NoControl
         title_myprofile.Location = New Point(16, 28)
@@ -451,7 +451,7 @@ Partial Class instructorframe
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Tahoma", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(16, 20)
         Label6.Name = "Label6"
         Label6.Size = New Size(258, 39)
@@ -470,7 +470,7 @@ Partial Class instructorframe
         ' 
         ' title_classes
         ' 
-        title_classes.Font = New Font("Tahoma", 24.0F)
+        title_classes.Font = New Font("Tahoma", 24F)
         title_classes.ForeColor = Color.White
         title_classes.ImeMode = ImeMode.NoControl
         title_classes.Location = New Point(16, 28)
@@ -733,7 +733,7 @@ Partial Class instructorframe
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Tahoma", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(15, 17)
         Label4.Name = "Label4"
         Label4.Size = New Size(295, 39)
@@ -742,7 +742,7 @@ Partial Class instructorframe
         ' 
         ' title_dashboard
         ' 
-        title_dashboard.Font = New Font("Tahoma", 24.0F)
+        title_dashboard.Font = New Font("Tahoma", 24F)
         title_dashboard.ForeColor = Color.White
         title_dashboard.ImeMode = ImeMode.NoControl
         title_dashboard.Location = New Point(16, 28)
@@ -754,13 +754,12 @@ Partial Class instructorframe
         ' 
         ' instructor_username
         ' 
-        instructor_username.AutoSize = True
-        instructor_username.Font = New Font("Tahoma", 24.0F)
+        instructor_username.Font = New Font("Tahoma", 24F)
         instructor_username.ForeColor = Color.White
         instructor_username.ImeMode = ImeMode.NoControl
         instructor_username.Location = New Point(179, 28)
         instructor_username.Name = "instructor_username"
-        instructor_username.Size = New Size(149, 39)
+        instructor_username.Size = New Size(850, 39)
         instructor_username.TabIndex = 1
         instructor_username.Text = "John Doe"
         instructor_username.TextAlign = ContentAlignment.MiddleLeft
@@ -876,7 +875,7 @@ Partial Class instructorframe
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Tahoma", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.Location = New Point(14, 25)
         Label7.Name = "Label7"
         Label7.Size = New Size(261, 39)
@@ -897,7 +896,7 @@ Partial Class instructorframe
         ' droppedstudentslabel
         ' 
         droppedstudentslabel.AutoSize = True
-        droppedstudentslabel.Font = New Font("Tahoma", 48.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        droppedstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         droppedstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
         droppedstudentslabel.Location = New Point(79, 70)
         droppedstudentslabel.Name = "droppedstudentslabel"
@@ -930,7 +929,7 @@ Partial Class instructorframe
         ' enrolledstudentslabel
         ' 
         enrolledstudentslabel.AutoSize = True
-        enrolledstudentslabel.Font = New Font("Tahoma", 48.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        enrolledstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         enrolledstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
         enrolledstudentslabel.Location = New Point(56, 69)
         enrolledstudentslabel.Name = "enrolledstudentslabel"
@@ -961,24 +960,24 @@ Partial Class instructorframe
         ' 
         ' LineChart
         ' 
-        ChartArea1.Name = "ChartArea1"
-        LineChart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        LineChart.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        LineChart.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        LineChart.Legends.Add(Legend3)
         LineChart.Location = New Point(3, -1)
         LineChart.Name = "LineChart"
-        Series1.ChartArea = "ChartArea1"
-        Series1.ChartType = DataVisualization.Charting.SeriesChartType.Line
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        LineChart.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = DataVisualization.Charting.SeriesChartType.Line
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        LineChart.Series.Add(Series3)
         LineChart.Size = New Size(754, 363)
         LineChart.TabIndex = 0
         LineChart.Text = "Chart1"
         ' 
         ' instructorframe
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
@@ -1008,7 +1007,6 @@ Partial Class instructorframe
         CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         head_dashboard.ResumeLayout(False)
-        head_dashboard.PerformLayout()
         sidenav.ResumeLayout(False)
         sidepanel.ResumeLayout(False)
         logoutpanel.ResumeLayout(False)

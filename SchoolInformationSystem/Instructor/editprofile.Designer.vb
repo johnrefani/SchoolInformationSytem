@@ -23,7 +23,7 @@ Partial Class editprofile
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(editprofile))
-        TextBox2 = New TextBox()
+        yearsofexperiencetextbox = New TextBox()
         Label20 = New Label()
         nationalitytextbox = New TextBox()
         Label19 = New Label()
@@ -45,7 +45,7 @@ Partial Class editprofile
         Label11 = New Label()
         lastnametextbox = New TextBox()
         Label10 = New Label()
-        middlenametextbox = New TextBox()
+        middleinitialtextbox = New TextBox()
         Label9 = New Label()
         firsnametextbox = New TextBox()
         Label8 = New Label()
@@ -54,14 +54,14 @@ Partial Class editprofile
         savebutton = New Button()
         SuspendLayout()
         ' 
-        ' TextBox2
+        ' yearsofexperiencetextbox
         ' 
-        TextBox2.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Location = New Point(354, 516)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(234, 33)
-        TextBox2.TabIndex = 13
+        yearsofexperiencetextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        yearsofexperiencetextbox.BorderStyle = BorderStyle.FixedSingle
+        yearsofexperiencetextbox.Location = New Point(354, 516)
+        yearsofexperiencetextbox.Name = "yearsofexperiencetextbox"
+        yearsofexperiencetextbox.Size = New Size(234, 33)
+        yearsofexperiencetextbox.TabIndex = 13
         ' 
         ' Label20
         ' 
@@ -252,14 +252,14 @@ Partial Class editprofile
         Label10.TabIndex = 36
         Label10.Text = "LAST NAME"
         ' 
-        ' middlenametextbox
+        ' middleinitialtextbox
         ' 
-        middlenametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        middlenametextbox.BorderStyle = BorderStyle.FixedSingle
-        middlenametextbox.Location = New Point(286, 124)
-        middlenametextbox.Name = "middlenametextbox"
-        middlenametextbox.Size = New Size(250, 33)
-        middlenametextbox.TabIndex = 2
+        middleinitialtextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        middleinitialtextbox.BorderStyle = BorderStyle.FixedSingle
+        middleinitialtextbox.Location = New Point(286, 124)
+        middleinitialtextbox.Name = "middleinitialtextbox"
+        middleinitialtextbox.Size = New Size(250, 33)
+        middleinitialtextbox.TabIndex = 2
         ' 
         ' Label9
         ' 
@@ -333,7 +333,7 @@ Partial Class editprofile
         BackColor = Color.White
         ClientSize = New Size(1008, 576)
         Controls.Add(savebutton)
-        Controls.Add(TextBox2)
+        Controls.Add(yearsofexperiencetextbox)
         Controls.Add(Label20)
         Controls.Add(nationalitytextbox)
         Controls.Add(Label19)
@@ -355,7 +355,7 @@ Partial Class editprofile
         Controls.Add(Label11)
         Controls.Add(lastnametextbox)
         Controls.Add(Label10)
-        Controls.Add(middlenametextbox)
+        Controls.Add(middleinitialtextbox)
         Controls.Add(Label9)
         Controls.Add(firsnametextbox)
         Controls.Add(Label8)
@@ -373,7 +373,7 @@ Partial Class editprofile
         PerformLayout()
     End Sub
 
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents yearsofexperiencetextbox As TextBox
     Friend WithEvents Label20 As Label
     Friend WithEvents nationalitytextbox As TextBox
     Friend WithEvents Label19 As Label
@@ -395,7 +395,7 @@ Partial Class editprofile
     Friend WithEvents Label11 As Label
     Friend WithEvents lastnametextbox As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents middlenametextbox As TextBox
+    Friend WithEvents middleinitialtextbox As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents firsnametextbox As TextBox
     Friend WithEvents Label8 As Label

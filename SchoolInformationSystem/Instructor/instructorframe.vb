@@ -49,6 +49,8 @@ Public Class instructorframe
 
     Private Sub editprofilebutton_Click(sender As Object, e As EventArgs) Handles editprofilebutton.Click
         editprofile.Show()
+        Me.Close()
+
     End Sub
 
     ' Fetch Instructor Data from the Database
@@ -66,7 +68,7 @@ Public Class instructorframe
                     Using reader As MySqlDataReader = cmd.ExecuteReader()
                         If reader.Read() Then
                             ' Populate the textboxes with instructor data
-                            instructor_username.Text = reader("first_name").ToString() & " " & reader("last_name").ToString()
+                            instructor_username.Text = reader("first_name").ToString() & " " & reader("middle_initial").ToString() & ". " & reader("last_name").ToString()
                             yearofexperiencetextbox.Text = reader("years_of_experience").ToString()
                             nationalitytextbox.Text = reader("nationality").ToString()
                             civilstatustextbox.Text = reader("civil_status").ToString()
@@ -155,5 +157,7 @@ Public Class instructorframe
         connection.Close()
     End Sub
 
+    Private Sub instructor_username_Click(sender As Object, e As EventArgs) Handles instructor_username.Click
 
+    End Sub
 End Class
