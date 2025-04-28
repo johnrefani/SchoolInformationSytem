@@ -22,12 +22,12 @@ Partial Class adminframe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminframe))
         dashboardpanel = New Panel()
         Panel4 = New Panel()
@@ -82,14 +82,12 @@ Partial Class adminframe
         title_enrollments = New Label()
         enrollmentspanel = New Panel()
         Panel1 = New Panel()
-        ComboBox6 = New ComboBox()
-        ComboBox5 = New ComboBox()
-        Button5 = New Button()
-        Button6 = New Button()
-        ComboBox4 = New ComboBox()
-        TextBox3 = New TextBox()
+        filterschoolyear = New ComboBox()
+        filterstatus = New ComboBox()
+        printenrollment = New Button()
+        searchenrollee = New TextBox()
         Button7 = New Button()
-        DataGridView1 = New DataGridView()
+        enrollmentdatagrid = New DataGridView()
         PictureBox2 = New PictureBox()
         Label1 = New Label()
         sidepanel = New Panel()
@@ -123,6 +121,9 @@ Partial Class adminframe
         Label9 = New Label()
         head_configuration = New Panel()
         title_configuration = New Label()
+        PrevButton = New Button()
+        NextButton = New Button()
+        Epagelabel = New Label()
         dashboardpanel.SuspendLayout()
         Panel4.SuspendLayout()
         CType(EnrollmentBarGraph, ComponentModel.ISupportInitialize).BeginInit()
@@ -150,7 +151,7 @@ Partial Class adminframe
         head_enrollments.SuspendLayout()
         enrollmentspanel.SuspendLayout()
         Panel1.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(enrollmentdatagrid, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         sidepanel.SuspendLayout()
         subjectspanel.SuspendLayout()
@@ -188,16 +189,16 @@ Partial Class adminframe
         ' 
         ' EnrollmentBarGraph
         ' 
-        ChartArea1.Name = "ChartArea1"
-        EnrollmentBarGraph.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        EnrollmentBarGraph.Legends.Add(Legend1)
+        ChartArea3.Name = "ChartArea1"
+        EnrollmentBarGraph.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        EnrollmentBarGraph.Legends.Add(Legend3)
         EnrollmentBarGraph.Location = New Point(0, 0)
         EnrollmentBarGraph.Name = "EnrollmentBarGraph"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        EnrollmentBarGraph.Series.Add(Series1)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        EnrollmentBarGraph.Series.Add(Series3)
         EnrollmentBarGraph.Size = New Size(575, 490)
         EnrollmentBarGraph.TabIndex = 0
         EnrollmentBarGraph.Text = "Chart1"
@@ -212,17 +213,17 @@ Partial Class adminframe
         ' 
         ' PieChart
         ' 
-        ChartArea2.Name = "ChartArea1"
-        PieChart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        PieChart.Legends.Add(Legend2)
+        ChartArea4.Name = "ChartArea1"
+        PieChart.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        PieChart.Legends.Add(Legend4)
         PieChart.Location = New Point(3, 0)
         PieChart.Name = "PieChart"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Pie
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        PieChart.Series.Add(Series2)
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = DataVisualization.Charting.SeriesChartType.Pie
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        PieChart.Series.Add(Series4)
         PieChart.Size = New Size(406, 496)
         PieChart.TabIndex = 5
         PieChart.Text = "Chart1"
@@ -805,14 +806,15 @@ Partial Class adminframe
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(229), CByte(229), CByte(229))
-        Panel1.Controls.Add(ComboBox6)
-        Panel1.Controls.Add(ComboBox5)
-        Panel1.Controls.Add(Button5)
-        Panel1.Controls.Add(Button6)
-        Panel1.Controls.Add(ComboBox4)
-        Panel1.Controls.Add(TextBox3)
+        Panel1.Controls.Add(Epagelabel)
+        Panel1.Controls.Add(NextButton)
+        Panel1.Controls.Add(PrevButton)
+        Panel1.Controls.Add(filterschoolyear)
+        Panel1.Controls.Add(filterstatus)
+        Panel1.Controls.Add(printenrollment)
+        Panel1.Controls.Add(searchenrollee)
         Panel1.Controls.Add(Button7)
-        Panel1.Controls.Add(DataGridView1)
+        Panel1.Controls.Add(enrollmentdatagrid)
         Panel1.Controls.Add(PictureBox2)
         Panel1.Controls.Add(Label1)
         Panel1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -821,60 +823,41 @@ Partial Class adminframe
         Panel1.Size = New Size(1024, 850)
         Panel1.TabIndex = 3
         ' 
-        ' ComboBox6
+        ' filterschoolyear
         ' 
-        ComboBox6.FormattingEnabled = True
-        ComboBox6.Location = New Point(577, 85)
-        ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(146, 33)
-        ComboBox6.TabIndex = 15
-        ComboBox6.Text = "School Year"
+        filterschoolyear.FormattingEnabled = True
+        filterschoolyear.Location = New Point(577, 85)
+        filterschoolyear.Name = "filterschoolyear"
+        filterschoolyear.Size = New Size(146, 33)
+        filterschoolyear.TabIndex = 15
+        filterschoolyear.Text = "School Year"
         ' 
-        ' ComboBox5
+        ' filterstatus
         ' 
-        ComboBox5.FormattingEnabled = True
-        ComboBox5.Location = New Point(742, 85)
-        ComboBox5.Name = "ComboBox5"
-        ComboBox5.Size = New Size(121, 33)
-        ComboBox5.TabIndex = 14
-        ComboBox5.Text = "Status"
+        filterstatus.FormattingEnabled = True
+        filterstatus.Location = New Point(742, 85)
+        filterstatus.Name = "filterstatus"
+        filterstatus.Size = New Size(121, 33)
+        filterstatus.TabIndex = 14
+        filterstatus.Text = "Status"
         ' 
-        ' Button5
+        ' printenrollment
         ' 
-        Button5.AutoSize = True
-        Button5.Location = New Point(726, 29)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(98, 35)
-        Button5.TabIndex = 13
-        Button5.Text = "EXPORT"
-        Button5.UseVisualStyleBackColor = True
+        printenrollment.AutoSize = True
+        printenrollment.Location = New Point(742, 26)
+        printenrollment.Name = "printenrollment"
+        printenrollment.Size = New Size(95, 35)
+        printenrollment.TabIndex = 12
+        printenrollment.Text = "PRINT"
+        printenrollment.UseVisualStyleBackColor = True
         ' 
-        ' Button6
+        ' searchenrollee
         ' 
-        Button6.AutoSize = True
-        Button6.Location = New Point(608, 29)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(95, 35)
-        Button6.TabIndex = 12
-        Button6.Text = "PRINT"
-        Button6.UseVisualStyleBackColor = True
-        ' 
-        ' ComboBox4
-        ' 
-        ComboBox4.FormattingEnabled = True
-        ComboBox4.Location = New Point(882, 85)
-        ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(121, 33)
-        ComboBox4.TabIndex = 11
-        ComboBox4.Text = "Role"
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.Location = New Point(61, 79)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(358, 33)
-        TextBox3.TabIndex = 10
-        TextBox3.Text = "Search"
+        searchenrollee.Location = New Point(61, 79)
+        searchenrollee.Name = "searchenrollee"
+        searchenrollee.PlaceholderText = "Search by subject name or student name"
+        searchenrollee.Size = New Size(358, 33)
+        searchenrollee.TabIndex = 10
         ' 
         ' Button7
         ' 
@@ -891,14 +874,14 @@ Partial Class adminframe
         Button7.Text = "ADD ENROLLE"
         Button7.UseVisualStyleBackColor = False
         ' 
-        ' DataGridView1
+        ' enrollmentdatagrid
         ' 
-        DataGridView1.BackgroundColor = Color.White
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(23, 133)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(981, 698)
-        DataGridView1.TabIndex = 8
+        enrollmentdatagrid.BackgroundColor = Color.White
+        enrollmentdatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        enrollmentdatagrid.Location = New Point(55, 135)
+        enrollmentdatagrid.Name = "enrollmentdatagrid"
+        enrollmentdatagrid.Size = New Size(928, 442)
+        enrollmentdatagrid.TabIndex = 8
         ' 
         ' PictureBox2
         ' 
@@ -1250,6 +1233,33 @@ Partial Class adminframe
         title_configuration.Text = "Configure Database"
         title_configuration.TextAlign = ContentAlignment.MiddleLeft
         ' 
+        ' PrevButton
+        ' 
+        PrevButton.Location = New Point(673, 591)
+        PrevButton.Name = "PrevButton"
+        PrevButton.Size = New Size(95, 37)
+        PrevButton.TabIndex = 16
+        PrevButton.Text = "Preview"
+        PrevButton.UseVisualStyleBackColor = True
+        ' 
+        ' NextButton
+        ' 
+        NextButton.Location = New Point(908, 593)
+        NextButton.Name = "NextButton"
+        NextButton.Size = New Size(75, 32)
+        NextButton.TabIndex = 17
+        NextButton.Text = "Next"
+        NextButton.UseVisualStyleBackColor = True
+        ' 
+        ' Epagelabel
+        ' 
+        Epagelabel.AutoSize = True
+        Epagelabel.Location = New Point(775, 596)
+        Epagelabel.Name = "Epagelabel"
+        Epagelabel.Size = New Size(130, 25)
+        Epagelabel.TabIndex = 18
+        Epagelabel.Text = "Page 1 of 10"
+        ' 
         ' adminframe
         ' 
         AutoScaleDimensions = New SizeF(12F, 25F)
@@ -1257,10 +1267,10 @@ Partial Class adminframe
         AutoSize = True
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1370, 749)
+        Controls.Add(enrollmentspanel)
         Controls.Add(userspanel)
         Controls.Add(dashboardpanel)
         Controls.Add(subjectspanel)
-        Controls.Add(enrollmentspanel)
         Controls.Add(configurationpanel)
         Controls.Add(sidepanel)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -1303,7 +1313,7 @@ Partial Class adminframe
         enrollmentspanel.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(enrollmentdatagrid, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         sidepanel.ResumeLayout(False)
         subjectspanel.ResumeLayout(False)
@@ -1360,14 +1370,12 @@ Partial Class adminframe
     Friend WithEvents SearchUser As TextBox
     Friend WithEvents PrintButton As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ComboBox6 As ComboBox
-    Friend WithEvents ComboBox5 As ComboBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents filterschoolyear As ComboBox
+    Friend WithEvents filterstatus As ComboBox
+    Friend WithEvents printenrollment As Button
+    Friend WithEvents searchenrollee As TextBox
     Friend WithEvents Button7 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents enrollmentdatagrid As DataGridView
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
@@ -1413,4 +1421,7 @@ Partial Class adminframe
     Friend WithEvents PageLabel As Label
     Friend WithEvents NextPageButton As Button
     Friend WithEvents PrevPageButton As Button
+    Friend WithEvents NextButton As Button
+    Friend WithEvents PrevButton As Button
+    Friend WithEvents Epagelabel As Label
 End Class
