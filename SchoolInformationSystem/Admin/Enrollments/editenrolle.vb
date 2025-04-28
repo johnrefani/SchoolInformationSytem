@@ -26,7 +26,7 @@ Public Class editenrolle
                 conn.Open()
 
                 ' Get enrollment data with student and subject names
-                Dim query As String = "SELECT e.*, CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_name) AS student_name, sub.subject_name " &
+                Dim query As String = "SELECT e.*, CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_initial) AS student_name, sub.subject_name " &
                                      "FROM enrollment e " &
                                      "JOIN student s ON e.student_id = s.student_id " &
                                      "JOIN subject sub ON e.subject_id = sub.subject_id " &

@@ -32,7 +32,7 @@ Public Class editprofile
                             contactnumtextbox.Text = reader("contact_number").ToString()
                             gendertextbox.Text = reader("gender").ToString()
                             lastnametextbox.Text = reader("last_name").ToString()
-                            middleinitialtextbox.Text = reader("middle_initial").ToString() ' Assuming middle_name is used for initials
+                            middleinitialtextbox.Text = reader("middle_initial").ToString() ' Assuming middle_initial is used for initials
                             firsnametextbox.Text = reader("first_name").ToString()
                         Else
                             MessageBox.Show("Instructor not found.")
