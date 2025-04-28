@@ -366,6 +366,7 @@ Partial Class editsubject
         subid.Name = "subid"
         subid.Size = New Size(100, 33)
         subid.TabIndex = 136
+        subid.Visible = False
         ' 
         ' editsubject
         ' 
