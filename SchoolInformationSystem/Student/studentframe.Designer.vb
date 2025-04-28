@@ -23,9 +23,9 @@ Partial Class studentframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentframe))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         Panel3 = New Panel()
@@ -85,9 +85,11 @@ Partial Class studentframe
         Panel1 = New Panel()
         Label3 = New Label()
         schedule_panel = New Panel()
+        ScheduleDataGrid = New DataGridView()
         Label2 = New Label()
         subject_panel = New Panel()
         StudBarChart = New DataVisualization.Charting.Chart()
+        enrolldatagrid = New DataGridView()
         myprofilepanel.SuspendLayout()
         Panel3.SuspendLayout()
         head_myprofile.SuspendLayout()
@@ -109,8 +111,10 @@ Partial Class studentframe
         dashboardpanel.SuspendLayout()
         Panel1.SuspendLayout()
         schedule_panel.SuspendLayout()
+        CType(ScheduleDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         subject_panel.SuspendLayout()
         CType(StudBarChart, ComponentModel.ISupportInitialize).BeginInit()
+        CType(enrolldatagrid, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' title_myprofile
@@ -133,7 +137,7 @@ Partial Class studentframe
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1074, 985)
+        myprofilepanel.Size = New Size(1020, 749)
         myprofilepanel.TabIndex = 7
         ' 
         ' Panel3
@@ -428,7 +432,7 @@ Partial Class studentframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1074, 81)
+        head_myprofile.Size = New Size(1020, 81)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -585,7 +589,7 @@ Partial Class studentframe
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1074, 81)
+        head_classes.Size = New Size(1020, 81)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -596,7 +600,7 @@ Partial Class studentframe
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
         classespanel.Name = "classespanel"
-        classespanel.Size = New Size(1074, 985)
+        classespanel.Size = New Size(1020, 749)
         classespanel.TabIndex = 6
         ' 
         ' Panel2
@@ -721,7 +725,7 @@ Partial Class studentframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1074, 94)
+        head_dashboard.Size = New Size(1020, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' sidenav
@@ -741,7 +745,7 @@ Partial Class studentframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 985)
+        sidepanel.Size = New Size(350, 749)
         sidepanel.TabIndex = 4
         ' 
         ' logoutpanel
@@ -782,16 +786,17 @@ Partial Class studentframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1074, 985)
+        dashboardpanel.Size = New Size(1020, 749)
         dashboardpanel.TabIndex = 5
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
+        Panel1.Controls.Add(enrolldatagrid)
         Panel1.Controls.Add(Label3)
-        Panel1.Location = New Point(41, 526)
+        Panel1.Location = New Point(41, 505)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(992, 420)
+        Panel1.Size = New Size(953, 420)
         Panel1.TabIndex = 2
         ' 
         ' Label3
@@ -807,11 +812,20 @@ Partial Class studentframe
         ' schedule_panel
         ' 
         schedule_panel.BackColor = Color.White
+        schedule_panel.Controls.Add(ScheduleDataGrid)
         schedule_panel.Controls.Add(Label2)
         schedule_panel.Location = New Point(586, 121)
         schedule_panel.Name = "schedule_panel"
-        schedule_panel.Size = New Size(444, 362)
+        schedule_panel.Size = New Size(431, 362)
         schedule_panel.TabIndex = 2
+        ' 
+        ' ScheduleDataGrid
+        ' 
+        ScheduleDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        ScheduleDataGrid.Location = New Point(3, 48)
+        ScheduleDataGrid.Name = "ScheduleDataGrid"
+        ScheduleDataGrid.Size = New Size(431, 309)
+        ScheduleDataGrid.TabIndex = 2
         ' 
         ' Label2
         ' 
@@ -834,26 +848,34 @@ Partial Class studentframe
         ' 
         ' StudBarChart
         ' 
-        ChartArea2.Name = "ChartArea1"
-        StudBarChart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        StudBarChart.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        StudBarChart.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        StudBarChart.Legends.Add(Legend1)
         StudBarChart.Location = New Point(15, 28)
         StudBarChart.Name = "StudBarChart"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        StudBarChart.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        StudBarChart.Series.Add(Series1)
         StudBarChart.Size = New Size(494, 307)
         StudBarChart.TabIndex = 0
         StudBarChart.Text = "Chart1"
+        ' 
+        ' enrolldatagrid
+        ' 
+        enrolldatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        enrolldatagrid.Location = New Point(23, 62)
+        enrolldatagrid.Name = "enrolldatagrid"
+        enrolldatagrid.Size = New Size(899, 150)
+        enrolldatagrid.TabIndex = 3
         ' 
         ' studentframe
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1424, 985)
+        ClientSize = New Size(1370, 749)
         Controls.Add(dashboardpanel)
         Controls.Add(myprofilepanel)
         Controls.Add(classespanel)
@@ -888,8 +910,10 @@ Partial Class studentframe
         Panel1.PerformLayout()
         schedule_panel.ResumeLayout(False)
         schedule_panel.PerformLayout()
+        CType(ScheduleDataGrid, ComponentModel.ISupportInitialize).EndInit()
         subject_panel.ResumeLayout(False)
         CType(StudBarChart, ComponentModel.ISupportInitialize).EndInit()
+        CType(enrolldatagrid, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -955,5 +979,7 @@ Partial Class studentframe
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents logoutpanel As Panel
     Friend WithEvents logoutbutton As Button
+    Friend WithEvents ScheduleDataGrid As DataGridView
+    Friend WithEvents enrolldatagrid As DataGridView
 End Class
 

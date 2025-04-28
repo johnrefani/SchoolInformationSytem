@@ -1151,7 +1151,6 @@ Public Class adminframe
         ' Refresh the data after editing
         LoadEnrollmentData()
     End Sub
-
     Private Sub studentnametextbox_TextChanged(sender As Object, e As EventArgs) Handles serveraddress_box.TextChanged
 
     End Sub
@@ -1169,6 +1168,10 @@ Public Class adminframe
         Finally
             conn.Close()
         End Try
+
+    End Sub
+
+    Private Sub configurationpanel_Paint(sender As Object, e As PaintEventArgs) Handles configurationpanel.Paint
 
     End Sub
 End Class
