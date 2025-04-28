@@ -93,63 +93,7 @@ Public Class instructorframe
         End Try
     End Sub
 
-    Private Sub chartpanel_Paint(sender As Object, e As PaintEventArgs) Handles chartpanel.Paint
-        If LineChart.ChartAreas.Count = 0 Then
-            LineChart.ChartAreas.Add("ChartArea1")
-        End If
 
-        Dim mathSeries As New Series("Math")
-        mathSeries.ChartType = SeriesChartType.Line
-        mathSeries.Points.AddXY(2021, 500)
-        mathSeries.Points.AddXY(2022, 550)
-        mathSeries.Points.AddXY(2023, 600)
-        mathSeries.Points.AddXY(2024, 620)
-        mathSeries.Points.AddXY(2025, 650)
-        mathSeries.Color = Color.FromArgb(52, 152, 219)
-        mathSeries.BorderWidth = 2
-
-        Dim scienceSeries As New Series("Science")
-        scienceSeries.ChartType = SeriesChartType.Line
-        scienceSeries.Points.AddXY(2021, 450)
-        scienceSeries.Points.AddXY(2022, 480)
-        scienceSeries.Points.AddXY(2023, 510)
-        scienceSeries.Points.AddXY(2024, 530)
-        scienceSeries.Points.AddXY(2025, 560)
-        scienceSeries.Color = Color.FromArgb(46, 204, 113)
-        scienceSeries.BorderWidth = 2
-
-        Dim englishSeries As New Series("English")
-        englishSeries.ChartType = SeriesChartType.Line
-        englishSeries.Points.AddXY(2021, 400)
-        englishSeries.Points.AddXY(2022, 420)
-        englishSeries.Points.AddXY(2023, 440)
-        englishSeries.Points.AddXY(2024, 460)
-        englishSeries.Points.AddXY(2025, 480)
-        englishSeries.Color = Color.FromArgb(231, 76, 60)
-        englishSeries.BorderWidth = 2
-
-        If LineChart.Legends.Count = 0 Then
-            LineChart.Legends.Add("Legend1")
-        End If
-        LineChart.Legends("Legend1").Docking = Docking.Top
-        LineChart.Legends("Legend1").Title = "Subjects"
-        LineChart.Legends("Legend1").Font = New Font("Tahoma", 10, FontStyle.Regular)
-        LineChart.Legends("Legend1").BackColor = Color.FromArgb(245, 245, 245)
-
-        LineChart.Series.Clear()
-        LineChart.Series.Add(mathSeries)
-        LineChart.Series.Add(scienceSeries)
-        LineChart.Series.Add(englishSeries)
-
-        LineChart.Titles.Add("Student Enrollment per Subject Over School Years")
-        LineChart.Titles(0).Font = New Font("Tahoma", 18, FontStyle.Bold)
-        LineChart.Titles(0).ForeColor = Color.FromArgb(44, 62, 80)
-
-        LineChart.ChartAreas(0).AxisX.Title = "School Year"
-        LineChart.ChartAreas(0).AxisX.TitleFont = New Font("Tahoma", 12, FontStyle.Regular)
-        LineChart.ChartAreas(0).AxisY.Title = "Enrollment"
-        LineChart.ChartAreas(0).AxisY.TitleFont = New Font("Tahoma", 12, FontStyle.Regular)
-    End Sub
 
     Private Sub logoutbutton_Click(sender As Object, e As EventArgs) Handles logoutbutton.Click
         Me.Close()
@@ -157,7 +101,146 @@ Public Class instructorframe
         connection.Close()
     End Sub
 
-    Private Sub instructor_username_Click(sender As Object, e As EventArgs) Handles instructor_username.Click
 
+    Private Sub chartpanel_Paint(sender As Object, e As PaintEventArgs) Handles chartpanel.Paint
+        Dim instructorId As String = GlobalInstructorId
+        Dim conn As MySqlConnection = strconnection()
+        Try
+            conn.Open()
+            Dim query As String = "SELECT s.subject_name, e.school_year, COUNT(e.enrollment_id) as enrollment_count " &
+                             "FROM enrollment e " &
+                             "JOIN subject s ON e.subject_id = s.subject_id " &
+                             "WHERE s.teacher_id = @InstructorId " &
+                             "GROUP BY s.subject_name, e.school_year " &
+                             "ORDER BY e.school_year"
+
+            Dim cmd As New MySqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@InstructorId", instructorId) ' Ensure instructorId is defined or passed
+
+            Dim adapter As New MySqlDataAdapter(cmd)
+            Dim dt As New DataTable()
+            adapter.Fill(dt)
+
+            ' Clear previous chart data
+            LineChart.Series.Clear()
+            LineChart.ChartAreas.Clear()
+
+            ' Set up chart area
+            Dim chartArea As New ChartArea()
+            LineChart.ChartAreas.Add(chartArea)
+
+            ' Group data by subject to create a series for each subject
+            Dim subjects = dt.AsEnumerable().Select(Function(row) row.Field(Of String)("subject_name")).Distinct()
+            For Each subject In subjects
+                Dim series As New Series(subject)
+                series.ChartType = SeriesChartType.Line
+                series.BorderWidth = 2
+
+                ' Filter data for the current subject
+                Dim subjectData = dt.AsEnumerable().Where(Function(row) row.Field(Of String)("subject_name") = subject)
+                For Each row In subjectData
+                    Dim schoolYear = row.Field(Of String)("school_year")
+                    Dim enrollmentCount = row.Field(Of Long)("enrollment_count")
+                    series.Points.AddXY(schoolYear, enrollmentCount)
+                Next
+
+                LineChart.Series.Add(series)
+            Next
+
+            ' Customize chart appearance
+            With LineChart
+                .Titles.Clear()
+                .Titles.Add("Student Enrollment per Subject Over School Years")
+                .ChartAreas(0).AxisX.Title = "School Year"
+                .ChartAreas(0).AxisY.Title = "Number of Enrollments"
+                .ChartAreas(0).AxisX.Interval = 1
+                .ChartAreas(0).AxisX.MajorGrid.LineColor = Color.LightGray
+                .ChartAreas(0).AxisY.MajorGrid.LineColor = Color.LightGray
+            End With
+
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub enrolledstuds_Paint(sender As Object, e As PaintEventArgs) Handles enrolledstuds.Paint
+        Dim instructorId As String = GlobalInstructorId
+        Dim conn As MySqlConnection = strconnection()
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(e.enrollment_id) as enrolled_count " &
+                             "FROM enrollment e " &
+                             "JOIN subject s ON e.subject_id = s.subject_id " &
+                             "WHERE s.teacher_id = @InstructorId AND e.status = 'Enrolled'"
+
+            Dim cmd As New MySqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@InstructorId", instructorId) ' Ensure instructorId is defined or passed
+
+            Dim enrolledCount As Object = cmd.ExecuteScalar()
+            enrolledstudentslabel.Text = If(enrolledCount IsNot Nothing, enrolledCount.ToString(), "0")
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub droppedstuds_Paint(sender As Object, e As PaintEventArgs) Handles droppedstuds.Paint
+        Dim instructorId As String = GlobalInstructorId
+        Dim conn As MySqlConnection = strconnection()
+        Try
+            conn.Open()
+            Dim query As String = "SELECT COUNT(e.enrollment_id) as dropped_count " &
+                             "FROM enrollment e " &
+                             "JOIN subject s ON e.subject_id = s.subject_id " &
+                             "WHERE s.teacher_id = @InstructorId AND e.status = 'Dropped'"
+
+            Dim cmd As New MySqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@InstructorId", instructorId) ' Ensure instructorId is defined or passed
+
+            Dim droppedCount As Object = cmd.ExecuteScalar()
+            droppedstudentslabel.Text = If(droppedCount IsNot Nothing, droppedCount.ToString(), "0")
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+        Dim instructorId As String = GlobalInstructorId
+        Dim conn As MySqlConnection = strconnection()
+        Try
+            conn.Open()
+            Dim query As String = "SELECT subject_name, subject_code, grade_level, section, max_students " &
+                             "FROM subject " &
+                             "WHERE teacher_id = @InstructorId"
+
+            Dim cmd As New MySqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@InstructorId", instructorId) ' Ensure instructorId is defined or passed
+
+            Dim adapter As New MySqlDataAdapter(cmd)
+            Dim dt As New DataTable()
+            adapter.Fill(dt)
+
+            ClassGridView.DataSource = dt
+
+            ' Optional: Set column headers for better display
+            With ClassGridView
+                .Columns("subject_name").HeaderText = "Subject Name"
+                .Columns("subject_code").HeaderText = "Subject Code"
+                .Columns("grade_level").HeaderText = "Grade Level"
+                .Columns("section").HeaderText = "Section"
+                .Columns("max_students").HeaderText = "Max Students"
+
+                .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
+            End With
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            conn.Close()
+        End Try
     End Sub
 End Class

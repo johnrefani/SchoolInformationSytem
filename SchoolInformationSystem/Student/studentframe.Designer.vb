@@ -83,13 +83,13 @@ Partial Class studentframe
         logoutbutton = New Button()
         dashboardpanel = New Panel()
         Panel1 = New Panel()
+        enrolldatagrid = New DataGridView()
         Label3 = New Label()
         schedule_panel = New Panel()
         ScheduleDataGrid = New DataGridView()
         Label2 = New Label()
         subject_panel = New Panel()
         StudBarChart = New DataVisualization.Charting.Chart()
-        enrolldatagrid = New DataGridView()
         myprofilepanel.SuspendLayout()
         Panel3.SuspendLayout()
         head_myprofile.SuspendLayout()
@@ -110,11 +110,11 @@ Partial Class studentframe
         logoutpanel.SuspendLayout()
         dashboardpanel.SuspendLayout()
         Panel1.SuspendLayout()
+        CType(enrolldatagrid, ComponentModel.ISupportInitialize).BeginInit()
         schedule_panel.SuspendLayout()
         CType(ScheduleDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         subject_panel.SuspendLayout()
         CType(StudBarChart, ComponentModel.ISupportInitialize).BeginInit()
-        CType(enrolldatagrid, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' title_myprofile
@@ -799,6 +799,14 @@ Partial Class studentframe
         Panel1.Size = New Size(953, 420)
         Panel1.TabIndex = 2
         ' 
+        ' enrolldatagrid
+        ' 
+        enrolldatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        enrolldatagrid.Location = New Point(23, 62)
+        enrolldatagrid.Name = "enrolldatagrid"
+        enrolldatagrid.Size = New Size(899, 150)
+        enrolldatagrid.TabIndex = 3
+        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -862,14 +870,6 @@ Partial Class studentframe
         StudBarChart.TabIndex = 0
         StudBarChart.Text = "Chart1"
         ' 
-        ' enrolldatagrid
-        ' 
-        enrolldatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        enrolldatagrid.Location = New Point(23, 62)
-        enrolldatagrid.Name = "enrolldatagrid"
-        enrolldatagrid.Size = New Size(899, 150)
-        enrolldatagrid.TabIndex = 3
-        ' 
         ' studentframe
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -908,12 +908,12 @@ Partial Class studentframe
         dashboardpanel.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        CType(enrolldatagrid, ComponentModel.ISupportInitialize).EndInit()
         schedule_panel.ResumeLayout(False)
         schedule_panel.PerformLayout()
         CType(ScheduleDataGrid, ComponentModel.ISupportInitialize).EndInit()
         subject_panel.ResumeLayout(False)
         CType(StudBarChart, ComponentModel.ISupportInitialize).EndInit()
-        CType(enrolldatagrid, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
