@@ -100,6 +100,7 @@ Public Class addsubject
     Private Sub cancelbutton_Click(sender As Object, e As EventArgs) Handles cancelbutton.Click
         ClearForm()
         Me.Close()
+        adminframe.Show()
     End Sub
 
     Private Sub ClearForm()

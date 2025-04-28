@@ -23,9 +23,9 @@ Partial Class studentframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentframe))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         Panel3 = New Panel()
@@ -137,9 +137,9 @@ Partial Class studentframe
         myprofilepanel.Controls.Add(Panel3)
         myprofilepanel.Controls.Add(head_myprofile)
         myprofilepanel.Dock = DockStyle.Fill
-        myprofilepanel.Location = New Point(0, 0)
+        myprofilepanel.Location = New Point(350, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1424, 985)
+        myprofilepanel.Size = New Size(1074, 985)
         myprofilepanel.TabIndex = 7
         ' 
         ' Panel3
@@ -434,7 +434,7 @@ Partial Class studentframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1424, 81)
+        head_myprofile.Size = New Size(1074, 81)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -813,7 +813,7 @@ Partial Class studentframe
         Panel1.Controls.Add(Label3)
         Panel1.Location = New Point(41, 505)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(953, 420)
+        Panel1.Size = New Size(1008, 420)
         Panel1.TabIndex = 2
         ' 
         ' enrolldatagrid
@@ -821,7 +821,7 @@ Partial Class studentframe
         enrolldatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         enrolldatagrid.Location = New Point(23, 62)
         enrolldatagrid.Name = "enrolldatagrid"
-        enrolldatagrid.Size = New Size(899, 150)
+        enrolldatagrid.Size = New Size(966, 150)
         enrolldatagrid.TabIndex = 3
         ' 
         ' Label3
@@ -841,7 +841,7 @@ Partial Class studentframe
         schedule_panel.Controls.Add(Label2)
         schedule_panel.Location = New Point(586, 121)
         schedule_panel.Name = "schedule_panel"
-        schedule_panel.Size = New Size(431, 362)
+        schedule_panel.Size = New Size(463, 362)
         schedule_panel.TabIndex = 2
         ' 
         ' ScheduleDataGrid
@@ -849,7 +849,7 @@ Partial Class studentframe
         ScheduleDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         ScheduleDataGrid.Location = New Point(3, 48)
         ScheduleDataGrid.Name = "ScheduleDataGrid"
-        ScheduleDataGrid.Size = New Size(431, 309)
+        ScheduleDataGrid.Size = New Size(457, 309)
         ScheduleDataGrid.TabIndex = 2
         ' 
         ' Label2
@@ -873,16 +873,16 @@ Partial Class studentframe
         ' 
         ' StudBarChart
         ' 
-        ChartArea1.Name = "ChartArea1"
-        StudBarChart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        StudBarChart.Legends.Add(Legend1)
+        ChartArea2.Name = "ChartArea1"
+        StudBarChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        StudBarChart.Legends.Add(Legend2)
         StudBarChart.Location = New Point(15, 28)
         StudBarChart.Name = "StudBarChart"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        StudBarChart.Series.Add(Series1)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        StudBarChart.Series.Add(Series2)
         StudBarChart.Size = New Size(494, 307)
         StudBarChart.TabIndex = 0
         StudBarChart.Text = "Chart1"
@@ -893,10 +893,10 @@ Partial Class studentframe
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1424, 985)
-        Controls.Add(classespanel)
         Controls.Add(dashboardpanel)
-        Controls.Add(sidepanel)
         Controls.Add(myprofilepanel)
+        Controls.Add(classespanel)
+        Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "studentframe"

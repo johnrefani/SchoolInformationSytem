@@ -1643,4 +1643,11 @@ Public Class adminframe
         ' Refresh the data after editing
         LoadSubjectData()
     End Sub
+
+    Private Sub admin_logoutbutton_Click(sender As Object, e As EventArgs) Handles admin_logoutbutton.Click
+        Me.Close()
+        login.Show()
+        connection.Close()
+    End Sub
+
 End Class

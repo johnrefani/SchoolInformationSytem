@@ -94,6 +94,8 @@ Partial Class adminframe
         PictureBox2 = New PictureBox()
         Label1 = New Label()
         sidepanel = New Panel()
+        admin_logoutpanel = New Panel()
+        admin_logoutbutton = New Button()
         subjectspanel = New Panel()
         Panel2 = New Panel()
         subpagelabel = New Label()
@@ -156,6 +158,7 @@ Partial Class adminframe
         CType(enrollmentdatagrid, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         sidepanel.SuspendLayout()
+        admin_logoutpanel.SuspendLayout()
         subjectspanel.SuspendLayout()
         Panel2.SuspendLayout()
         CType(subdatagrid, ComponentModel.ISupportInitialize).BeginInit()
@@ -694,7 +697,7 @@ Partial Class adminframe
         ' RoleSort
         ' 
         RoleSort.FormattingEnabled = True
-        RoleSort.Location = New Point(830, 82)
+        RoleSort.Location = New Point(882, 86)
         RoleSort.Name = "RoleSort"
         RoleSort.Size = New Size(121, 33)
         RoleSort.TabIndex = 11
@@ -727,9 +730,9 @@ Partial Class adminframe
         ' 
         UsersDataGrid.BackgroundColor = Color.White
         UsersDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        UsersDataGrid.Location = New Point(144, 147)
+        UsersDataGrid.Location = New Point(25, 147)
         UsersDataGrid.Name = "UsersDataGrid"
-        UsersDataGrid.Size = New Size(839, 423)
+        UsersDataGrid.Size = New Size(978, 423)
         UsersDataGrid.TabIndex = 8
         ' 
         ' PictureBox1
@@ -855,7 +858,7 @@ Partial Class adminframe
         ' filterschoolyear
         ' 
         filterschoolyear.FormattingEnabled = True
-        filterschoolyear.Location = New Point(577, 85)
+        filterschoolyear.Location = New Point(716, 86)
         filterschoolyear.Name = "filterschoolyear"
         filterschoolyear.Size = New Size(146, 33)
         filterschoolyear.TabIndex = 15
@@ -864,7 +867,7 @@ Partial Class adminframe
         ' filterstatus
         ' 
         filterstatus.FormattingEnabled = True
-        filterstatus.Location = New Point(742, 85)
+        filterstatus.Location = New Point(882, 86)
         filterstatus.Name = "filterstatus"
         filterstatus.Size = New Size(121, 33)
         filterstatus.TabIndex = 14
@@ -873,9 +876,9 @@ Partial Class adminframe
         ' printenrollment
         ' 
         printenrollment.AutoSize = True
-        printenrollment.Location = New Point(742, 26)
+        printenrollment.Location = New Point(742, 29)
         printenrollment.Name = "printenrollment"
-        printenrollment.Size = New Size(95, 35)
+        printenrollment.Size = New Size(95, 36)
         printenrollment.TabIndex = 12
         printenrollment.Text = "PRINT"
         printenrollment.UseVisualStyleBackColor = True
@@ -907,9 +910,9 @@ Partial Class adminframe
         ' 
         enrollmentdatagrid.BackgroundColor = Color.White
         enrollmentdatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        enrollmentdatagrid.Location = New Point(55, 135)
+        enrollmentdatagrid.Location = New Point(25, 135)
         enrollmentdatagrid.Name = "enrollmentdatagrid"
-        enrollmentdatagrid.Size = New Size(928, 442)
+        enrollmentdatagrid.Size = New Size(978, 442)
         enrollmentdatagrid.TabIndex = 8
         ' 
         ' PictureBox2
@@ -934,12 +937,42 @@ Partial Class adminframe
         ' sidepanel
         ' 
         sidepanel.BackColor = Color.Maroon
+        sidepanel.Controls.Add(admin_logoutpanel)
         sidepanel.Controls.Add(sidenav)
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
         sidepanel.Size = New Size(350, 985)
         sidepanel.TabIndex = 8
+        ' 
+        ' admin_logoutpanel
+        ' 
+        admin_logoutpanel.Controls.Add(admin_logoutbutton)
+        admin_logoutpanel.Cursor = Cursors.Hand
+        admin_logoutpanel.Location = New Point(30, 890)
+        admin_logoutpanel.Name = "admin_logoutpanel"
+        admin_logoutpanel.Size = New Size(294, 56)
+        admin_logoutpanel.TabIndex = 5
+        ' 
+        ' admin_logoutbutton
+        ' 
+        admin_logoutbutton.BackColor = Color.Maroon
+        admin_logoutbutton.Dock = DockStyle.Fill
+        admin_logoutbutton.FlatAppearance.BorderColor = Color.Maroon
+        admin_logoutbutton.FlatAppearance.BorderSize = 0
+        admin_logoutbutton.FlatStyle = FlatStyle.Flat
+        admin_logoutbutton.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        admin_logoutbutton.ForeColor = Color.White
+        admin_logoutbutton.Image = CType(resources.GetObject("admin_logoutbutton.Image"), Image)
+        admin_logoutbutton.ImageAlign = ContentAlignment.MiddleLeft
+        admin_logoutbutton.ImeMode = ImeMode.NoControl
+        admin_logoutbutton.Location = New Point(0, 0)
+        admin_logoutbutton.Name = "admin_logoutbutton"
+        admin_logoutbutton.Size = New Size(294, 56)
+        admin_logoutbutton.TabIndex = 0
+        admin_logoutbutton.Text = "       Log Out"
+        admin_logoutbutton.TextAlign = ContentAlignment.MiddleLeft
+        admin_logoutbutton.UseVisualStyleBackColor = False
         ' 
         ' subjectspanel
         ' 
@@ -1001,7 +1034,7 @@ Partial Class adminframe
         ' subdepartment
         ' 
         subdepartment.FormattingEnabled = True
-        subdepartment.Location = New Point(597, 81)
+        subdepartment.Location = New Point(685, 88)
         subdepartment.Name = "subdepartment"
         subdepartment.Size = New Size(139, 33)
         subdepartment.TabIndex = 14
@@ -1020,7 +1053,7 @@ Partial Class adminframe
         ' subgradelevel
         ' 
         subgradelevel.FormattingEnabled = True
-        subgradelevel.Location = New Point(794, 81)
+        subgradelevel.Location = New Point(847, 88)
         subgradelevel.Name = "subgradelevel"
         subgradelevel.Size = New Size(156, 33)
         subgradelevel.TabIndex = 11
@@ -1056,7 +1089,7 @@ Partial Class adminframe
         subdatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         subdatagrid.Location = New Point(18, 153)
         subdatagrid.Name = "subdatagrid"
-        subdatagrid.Size = New Size(965, 401)
+        subdatagrid.Size = New Size(981, 401)
         subdatagrid.TabIndex = 8
         ' 
         ' PictureBox3
@@ -1289,10 +1322,10 @@ Partial Class adminframe
         AutoSize = True
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
-        Controls.Add(subjectspanel)
-        Controls.Add(configurationpanel)
         Controls.Add(enrollmentspanel)
+        Controls.Add(subjectspanel)
         Controls.Add(userspanel)
+        Controls.Add(configurationpanel)
         Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -1338,6 +1371,7 @@ Partial Class adminframe
         CType(enrollmentdatagrid, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         sidepanel.ResumeLayout(False)
+        admin_logoutpanel.ResumeLayout(False)
         subjectspanel.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
@@ -1448,4 +1482,6 @@ Partial Class adminframe
     Friend WithEvents subpagelabel As Label
     Friend WithEvents subnext As Button
     Friend WithEvents subprev As Button
+    Friend WithEvents admin_logoutpanel As Panel
+    Friend WithEvents admin_logoutbutton As Button
 End Class
