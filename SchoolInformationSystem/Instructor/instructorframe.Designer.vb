@@ -23,9 +23,9 @@ Partial Class instructorframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(instructorframe))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         myprofilebodypanel = New Panel()
@@ -861,7 +861,7 @@ Partial Class instructorframe
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(520, 25)
+        Button1.Location = New Point(761, 25)
         Button1.Name = "Button1"
         Button1.Size = New Size(240, 40)
         Button1.TabIndex = 3
@@ -900,14 +900,14 @@ Partial Class instructorframe
         ' 
         ' droppedstudentslabel
         ' 
-        droppedstudentslabel.AutoSize = True
         droppedstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         droppedstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        droppedstudentslabel.Location = New Point(79, 70)
+        droppedstudentslabel.Location = New Point(39, 72)
         droppedstudentslabel.Name = "droppedstudentslabel"
-        droppedstudentslabel.Size = New Size(74, 77)
+        droppedstudentslabel.Size = New Size(131, 77)
         droppedstudentslabel.TabIndex = 2
         droppedstudentslabel.Text = "2"
+        droppedstudentslabel.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label5
         ' 
@@ -933,14 +933,14 @@ Partial Class instructorframe
         ' 
         ' enrolledstudentslabel
         ' 
-        enrolledstudentslabel.AutoSize = True
         enrolledstudentslabel.Font = New Font("Tahoma", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         enrolledstudentslabel.ForeColor = Color.FromArgb(CByte(86), CByte(0), CByte(0))
-        enrolledstudentslabel.Location = New Point(56, 69)
+        enrolledstudentslabel.Location = New Point(40, 69)
         enrolledstudentslabel.Name = "enrolledstudentslabel"
-        enrolledstudentslabel.Size = New Size(115, 77)
+        enrolledstudentslabel.Size = New Size(149, 77)
         enrolledstudentslabel.TabIndex = 1
         enrolledstudentslabel.Text = "96"
+        enrolledstudentslabel.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label3
         ' 
@@ -965,17 +965,17 @@ Partial Class instructorframe
         ' 
         ' LineChart
         ' 
-        ChartArea2.Name = "ChartArea1"
-        LineChart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        LineChart.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        LineChart.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        LineChart.Legends.Add(Legend1)
         LineChart.Location = New Point(3, -1)
         LineChart.Name = "LineChart"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Line
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        LineChart.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = DataVisualization.Charting.SeriesChartType.Line
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        LineChart.Series.Add(Series1)
         LineChart.Size = New Size(754, 363)
         LineChart.TabIndex = 0
         LineChart.Text = "Chart1"
@@ -986,8 +986,8 @@ Partial Class instructorframe
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
-        Controls.Add(dashboardpanel)
         Controls.Add(classespanel)
+        Controls.Add(dashboardpanel)
         Controls.Add(myprofilepanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
