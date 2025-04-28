@@ -1,12 +1,21 @@
-.vs/SchoolInformationSystem/FileContentIndex/4445855d-d0cc-438e-b4f3-28a20a2829e5.vsidx
-# Ignore the entire .vs folder (Visual Studio local settings)
-.vs/
-
-# Ignore all bin and obj folders in the entire project (even nested ones)
-**/bin/
+# Ignore auto-generated files (from Visual Studio)
 **/obj/
+**/bin/
 
-# Ignore user-specific and log files
-*.user
-*.suo
-*.log
+# Ignore specific auto-generated files (sourcelink, cache, nuget, etc.)
+*/.sourcelink.json
+*/.CoreCompileInputs.cache
+*/.GenerateResource.cache
+*/.nuget.dgspec.json
+*/.nuget.g.props
+**/project.assets.json
+**/project.nuget.cache
+
+# Ignore assembly info and cache files
+*/.AssemblyInfo.vb
+*/.cache
+*/.editorconfig
+*/.genruntimeconfig.cache
+
+# Ignore other Visual Studio-generated files
+.vs/
