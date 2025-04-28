@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("SchoolInformationSystem"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15c85dfaec8c194b684e419fff949437a4d33265"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4be824b28cca164cd8795774ef831e726d0f04d6"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("SchoolInformationSystem"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("SchoolInformationSystem"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

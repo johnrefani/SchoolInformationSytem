@@ -657,4 +657,483 @@ Public Class adminframe
     End Sub
 
 
+
+
+
+    'Enrollemnt Tab
+    ' For setting the variables
+    Private currentEnrollmentPage As Integer = 1
+    Private enrollmentPageSize As Integer = 15
+    Private totalEnrollmentRecords As Integer = 0
+    Private totalEnrollmentPages As Integer = 0
+    Private isSearchingEnrollment As Boolean = False
+
+    ' For loading the form
+    Private Sub EnrollmentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SetupFilterComboBoxes()
+        AddHandler searchenrollee.TextChanged, AddressOf SearchEnrollee_TextChanged
+        LoadEnrollmentData()
+    End Sub
+
+    Private Sub LoadEnrollmentData()
+        Dim offset As Integer = (currentEnrollmentPage - 1) * enrollmentPageSize
+        Dim selectedSchoolYear As String = filterschoolyear.SelectedItem?.ToString()
+        Dim selectedStatus As String = filterstatus.SelectedItem?.ToString()
+
+        Using conn As MySqlConnection = strconnection()
+            Try
+                conn.Open()
+
+                ' Count query
+                Dim countQuery As String = "SELECT COUNT(*) FROM enrollment e"
+                Dim whereClauses As New List(Of String)
+
+                If selectedSchoolYear <> "All School Years" AndAlso Not String.IsNullOrEmpty(selectedSchoolYear) Then
+                    whereClauses.Add("e.school_year = @school_year")
+                End If
+
+                If selectedStatus <> "All Status" AndAlso Not String.IsNullOrEmpty(selectedStatus) Then
+                    whereClauses.Add("e.status = @status")
+                End If
+
+                If whereClauses.Count > 0 Then
+                    countQuery &= " WHERE " & String.Join(" AND ", whereClauses)
+                End If
+
+                Using countCmd As New MySqlCommand(countQuery, conn)
+                    If selectedSchoolYear <> "All School Years" AndAlso Not String.IsNullOrEmpty(selectedSchoolYear) Then
+                        countCmd.Parameters.AddWithValue("@school_year", selectedSchoolYear)
+                    End If
+
+                    If selectedStatus <> "All Status" AndAlso Not String.IsNullOrEmpty(selectedStatus) Then
+                        countCmd.Parameters.AddWithValue("@status", selectedStatus)
+                    End If
+
+                    totalEnrollmentRecords = Convert.ToInt32(countCmd.ExecuteScalar())
+                    totalEnrollmentPages = If(enrollmentPageSize > 0, Math.Ceiling(totalEnrollmentRecords / enrollmentPageSize), 1)
+                End Using
+
+                ' Main query with joins to get student and subject names
+                Dim query As String = "SELECT e.enrollment_id, CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_name) AS student_name, sub.subject_name, " &
+                                     "e.school_year, e.grade_level, e.section, e.status, e.remarks, " &
+                                     "e.payment_status, e.amount_paid, e.balance, e.mode_of_payment, " &
+                                     "e.payment_date, e.cashier_name, e.discount_applied " &
+                                     "FROM enrollment e " &
+                                     "JOIN student s ON e.student_id = s.student_id " &
+                                     "JOIN subject sub ON e.subject_id = sub.subject_id"
+
+                If whereClauses.Count > 0 Then
+                    query &= " WHERE " & String.Join(" AND ", whereClauses)
+                End If
+
+                query &= " LIMIT @limit OFFSET @offset"
+
+                Using cmd As New MySqlCommand(query, conn)
+                    If selectedSchoolYear <> "All School Years" AndAlso Not String.IsNullOrEmpty(selectedSchoolYear) Then
+                        cmd.Parameters.AddWithValue("@school_year", selectedSchoolYear)
+                    End If
+
+                    If selectedStatus <> "All Status" AndAlso Not String.IsNullOrEmpty(selectedStatus) Then
+                        cmd.Parameters.AddWithValue("@status", selectedStatus)
+                    End If
+
+                    cmd.Parameters.AddWithValue("@limit", enrollmentPageSize)
+                    cmd.Parameters.AddWithValue("@offset", offset)
+
+                    Using adapter As New MySqlDataAdapter(cmd)
+                        Dim dt As New DataTable()
+                        adapter.Fill(dt)
+                        enrollmentdatagrid.DataSource = dt
+                    End Using
+                End Using
+
+                UpdateEnrollmentPaginationUI()
+                SetupEnrollmentDataGridView()
+
+            Catch ex As Exception
+                MessageBox.Show("Error loading enrollment data: " & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    Private Sub FilterEnrollmentData()
+        isSearchingEnrollment = True
+        Dim offset As Integer = (currentEnrollmentPage - 1) * enrollmentPageSize
+        Dim selectedSchoolYear As String = filterschoolyear.SelectedItem?.ToString()
+        Dim selectedStatus As String = filterstatus.SelectedItem?.ToString()
+
+        Using conn As MySqlConnection = strconnection()
+            Try
+                conn.Open()
+
+                ' Counting filtered records
+                Dim countQuery As String = "SELECT COUNT(*) FROM enrollment e " &
+                                          "JOIN student s ON e.student_id = s.student_id " &
+                                          "JOIN subject sub ON e.subject_id = sub.subject_id " &
+                                          "WHERE (s.last_name LIKE @search OR sub.subject_name LIKE @search)"
+
+                If selectedSchoolYear <> "All School Years" AndAlso Not String.IsNullOrEmpty(selectedSchoolYear) Then
+                    countQuery &= " AND e.school_year = @school_year"
+                End If
+
+                If selectedStatus <> "All Status" AndAlso Not String.IsNullOrEmpty(selectedStatus) Then
+                    countQuery &= " AND e.status = @status"
+                End If
+
+                Using countCmd As New MySqlCommand(countQuery, conn)
+                    countCmd.Parameters.AddWithValue("@search", "%" & searchenrollee.Text & "%")
+
+                    If selectedSchoolYear <> "All School Years" AndAlso Not String.IsNullOrEmpty(selectedSchoolYear) Then
+                        countCmd.Parameters.AddWithValue("@school_year", selectedSchoolYear)
+                    End If
+
+                    If selectedStatus <> "All Status" AndAlso Not String.IsNullOrEmpty(selectedStatus) Then
+                        countCmd.Parameters.AddWithValue("@status", selectedStatus)
+                    End If
+
+                    totalEnrollmentRecords = Convert.ToInt32(countCmd.ExecuteScalar())
+                    totalEnrollmentPages = If(enrollmentPageSize > 0, Math.Ceiling(totalEnrollmentRecords / enrollmentPageSize), 1)
+                End Using
+
+                ' Query for searching
+                Dim query As String = "SELECT e.enrollment_id, CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_name) AS student_name, sub.subject_name, " &
+                                     "e.school_year, e.grade_level, e.section, e.status, e.remarks, " &
+                                     "e.payment_status, e.amount_paid, e.balance, e.mode_of_payment, " &
+                                     "e.payment_date, e.cashier_name, e.discount_applied " &
+                                     "FROM enrollment e " &
+                                     "JOIN student s ON e.student_id = s.student_id " &
+                                     "JOIN subject sub ON e.subject_id = sub.subject_id " &
+                                     "WHERE (s.last_name LIKE @search OR sub.subject_name LIKE @search)"
+
+                If selectedSchoolYear <> "All School Years" AndAlso Not String.IsNullOrEmpty(selectedSchoolYear) Then
+                    query &= " AND e.school_year = @school_year"
+                End If
+
+                If selectedStatus <> "All Status" AndAlso Not String.IsNullOrEmpty(selectedStatus) Then
+                    query &= " AND e.status = @status"
+                End If
+
+                query &= " LIMIT @limit OFFSET @offset"
+
+                Using cmd As New MySqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@search", "%" & searchenrollee.Text & "%")
+
+                    If selectedSchoolYear <> "All School Years" AndAlso Not String.IsNullOrEmpty(selectedSchoolYear) Then
+                        cmd.Parameters.AddWithValue("@school_year", selectedSchoolYear)
+                    End If
+
+                    If selectedStatus <> "All Status" AndAlso Not String.IsNullOrEmpty(selectedStatus) Then
+                        cmd.Parameters.AddWithValue("@status", selectedStatus)
+                    End If
+
+                    cmd.Parameters.AddWithValue("@limit", enrollmentPageSize)
+                    cmd.Parameters.AddWithValue("@offset", offset)
+
+                    Using adapter As New MySqlDataAdapter(cmd)
+                        Dim dt As New DataTable()
+                        adapter.Fill(dt)
+                        enrollmentdatagrid.DataSource = dt
+                    End Using
+                End Using
+
+                UpdateEnrollmentPaginationUI()
+                SetupEnrollmentDataGridView()
+
+            Catch ex As Exception
+                MessageBox.Show("Error filtering enrollment data: " & ex.Message)
+            End Try
+        End Using
+    End Sub
+
+    ' Set column headers and the design of the table
+    Private Sub SetupEnrollmentDataGridView()
+        Dim headers As String() = {"Enrollment ID", "Student Name", "Subject Name", "School Year",
+                                  "Grade Level", "Section", "Status", "Remarks", "Payment Status",
+                                  "Amount Paid", "Balance", "Mode of Payment", "Payment Date",
+                                  "Cashier Name", "Discount Applied"}
+
+        With enrollmentdatagrid
+            If .Columns.Count = headers.Length Then
+                For i As Integer = 0 To headers.Length - 1
+                    .Columns(i).HeaderText = headers(i)
+                Next
+            End If
+            .DefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245)
+            .DefaultCellStyle.Font = New Font("Tahoma", 10)
+        End With
+    End Sub
+
+    ' Updating the label and button states (this for pagination)
+    Private Sub UpdateEnrollmentPaginationUI()
+        Epagelabel.Text = $"Page {currentEnrollmentPage} of {If(totalEnrollmentPages = 0, 1, totalEnrollmentPages)}"
+        PrevButton.Enabled = currentEnrollmentPage > 1
+        NextButton.Enabled = currentEnrollmentPage < totalEnrollmentPages
+    End Sub
+
+    Private Sub SetupFilterComboBoxes()
+        ' Setup school year filter
+        filterschoolyear.Items.Clear()
+        filterschoolyear.Items.Add("All School Years")
+
+        Using conn As MySqlConnection = strconnection()
+            Try
+                conn.Open()
+                Dim query As String = "SELECT DISTINCT school_year FROM enrollment ORDER BY school_year DESC"
+                Using cmd As New MySqlCommand(query, conn)
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            filterschoolyear.Items.Add(reader("school_year").ToString())
+                        End While
+                    End Using
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error loading school years: " & ex.Message)
+            End Try
+        End Using
+        filterschoolyear.SelectedIndex = 0
+
+        ' Setup status filter
+        filterstatus.Items.Clear()
+        filterstatus.Items.Add("All Status")
+
+        Using conn As MySqlConnection = strconnection()
+            Try
+                conn.Open()
+                Dim query As String = "SELECT DISTINCT status FROM enrollment"
+                Using cmd As New MySqlCommand(query, conn)
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            filterstatus.Items.Add(reader("status").ToString())
+                        End While
+                    End Using
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Error loading status options: " & ex.Message)
+            End Try
+        End Using
+        filterstatus.SelectedIndex = 0
+    End Sub
+
+    ' Updating the search results
+    Private Sub SearchEnrollee_TextChanged(sender As Object, e As EventArgs)
+        currentEnrollmentPage = 1
+        If String.IsNullOrWhiteSpace(searchenrollee.Text) Then
+            isSearchingEnrollment = False
+            LoadEnrollmentData()
+        Else
+            FilterEnrollmentData()
+        End If
+    End Sub
+
+    ' For filtering by school year and status
+    Private Sub Filter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles filterschoolyear.SelectedIndexChanged, filterstatus.SelectedIndexChanged
+        currentEnrollmentPage = 1
+        If String.IsNullOrWhiteSpace(searchenrollee.Text) Then
+            LoadEnrollmentData()
+        Else
+            FilterEnrollmentData()
+        End If
+    End Sub
+
+    ' Next Page Button
+    Private Sub NextButton_Click(sender As Object, e As EventArgs) Handles NextButton.Click
+        If currentEnrollmentPage < totalEnrollmentPages Then
+            currentEnrollmentPage += 1
+            If isSearchingEnrollment Then
+                FilterEnrollmentData()
+            Else
+                LoadEnrollmentData()
+            End If
+        End If
+    End Sub
+
+    ' Prev Page Button
+    Private Sub PrevButton_Click(sender As Object, e As EventArgs) Handles PrevButton.Click
+        If currentEnrollmentPage > 1 Then
+            currentEnrollmentPage -= 1
+            If isSearchingEnrollment Then
+                FilterEnrollmentData()
+            Else
+                LoadEnrollmentData()
+            End If
+        End If
+    End Sub
+
+    Private Sub printenrollement_Click(sender As Object, e As EventArgs) Handles printenrollment.Click
+        ' Create a PrintDocument
+        Dim printDoc As New PrintDocument()
+        AddHandler printDoc.PrintPage, AddressOf PrintEnrollmentPageHandler
+
+        ' Show print dialog
+        Dim printDialog As New PrintDialog()
+        printDialog.Document = printDoc
+
+        If printDialog.ShowDialog() = DialogResult.OK Then
+            printDoc.Print()
+        End If
+    End Sub
+
+    Private Sub PrintEnrollmentPageHandler(ByVal sender As Object, ByVal e As PrintPageEventArgs)
+        Dim selectedSchoolYear As String = filterschoolyear.SelectedItem?.ToString()
+        Dim selectedStatus As String = filterstatus.SelectedItem?.ToString()
+        Dim searchText As String = searchenrollee.Text
+
+        ' Get the data to print
+        Dim dt As New DataTable()
+
+        Using conn As MySqlConnection = strconnection()
+            Try
+                conn.Open()
+
+                Dim query As String = "SELECT CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_name) AS student_name, sub.subject_name, " &
+                                     "e.grade_level, e.remarks, e.payment_status " &
+                                     "FROM enrollment e " &
+                                     "JOIN student s ON e.student_id = s.student_id " &
+                                     "JOIN subject sub ON e.subject_id = sub.subject_id"
+
+                Dim whereClauses As New List(Of String)
+
+                If Not String.IsNullOrWhiteSpace(searchText) Then
+                    whereClauses.Add("(s.last_name LIKE @search OR sub.subject_name LIKE @search)")
+                End If
+
+                If selectedSchoolYear <> "All School Years" AndAlso Not String.IsNullOrEmpty(selectedSchoolYear) Then
+                    whereClauses.Add("e.school_year = @school_year")
+                End If
+
+                If selectedStatus <> "All Status" AndAlso Not String.IsNullOrEmpty(selectedStatus) Then
+                    whereClauses.Add("e.status = @status")
+                End If
+
+                If whereClauses.Count > 0 Then
+                    query &= " WHERE " & String.Join(" AND ", whereClauses)
+                End If
+
+                query &= " ORDER BY s.last_name"
+
+                Using cmd As New MySqlCommand(query, conn)
+                    If Not String.IsNullOrWhiteSpace(searchText) Then
+                        cmd.Parameters.AddWithValue("@search", "%" & searchText & "%")
+                    End If
+
+                    If selectedSchoolYear <> "All School Years" AndAlso Not String.IsNullOrEmpty(selectedSchoolYear) Then
+                        cmd.Parameters.AddWithValue("@school_year", selectedSchoolYear)
+                    End If
+
+                    If selectedStatus <> "All Status" AndAlso Not String.IsNullOrEmpty(selectedStatus) Then
+                        cmd.Parameters.AddWithValue("@status", selectedStatus)
+                    End If
+
+                    Using adapter As New MySqlDataAdapter(cmd)
+                        adapter.Fill(dt)
+                    End Using
+                End Using
+
+            Catch ex As Exception
+                MessageBox.Show("Error preparing data for printing: " & ex.Message)
+                Return
+            End Try
+        End Using
+
+        ' Set up printing parameters
+        Dim fontHeader As New Font("Arial", 14, FontStyle.Bold)
+        Dim fontSubHeader As New Font("Arial", 10, FontStyle.Italic)
+        Dim fontBody As New Font("Arial", 10)
+        Dim fontFooter As New Font("Arial", 9)
+        Dim brush As New SolidBrush(Color.Black)
+
+        ' Margins and spacing
+        Dim leftMargin As Integer = e.MarginBounds.Left
+        Dim topMargin As Integer = e.MarginBounds.Top
+        Dim yPos As Integer = topMargin
+        Dim xPos As Integer = leftMargin
+
+        ' Column widths
+        Dim colWidths As Integer() = {150, 180, 80, 120, 100}
+
+        ' Print title
+        e.Graphics.DrawString("ENROLLMENT REPORT", fontHeader, brush, xPos, yPos)
+        yPos += 30
+
+        ' Print date
+        e.Graphics.DrawString("Printed on: " & DateTime.Now.ToString("MMM dd, yyyy hh:mm tt"), fontSubHeader, brush, xPos, yPos)
+        yPos += 25
+
+        ' Print filter info if any
+        If Not String.IsNullOrWhiteSpace(searchText) OrElse selectedSchoolYear <> "All School Years" OrElse selectedStatus <> "All Status" Then
+            Dim filterText As String = "Filtered by: "
+            If Not String.IsNullOrWhiteSpace(searchText) Then
+                filterText += "Search='" & searchText & "' "
+            End If
+            If selectedSchoolYear <> "All School Years" Then
+                filterText += "School Year='" & selectedSchoolYear & "' "
+            End If
+            If selectedStatus <> "All Status" Then
+                filterText += "Status='" & selectedStatus & "'"
+            End If
+            e.Graphics.DrawString(filterText, fontBody, brush, xPos, yPos)
+            yPos += 20
+        End If
+
+        ' Print column headers
+        Dim headers As String() = {"Student Name", "Subject Name", "Grade Level", "Remarks", "Payment Status"}
+        xPos = leftMargin
+
+        For i As Integer = 0 To headers.Length - 1
+            e.Graphics.DrawString(headers(i), fontBody, brush, xPos, yPos)
+            xPos += colWidths(i)
+        Next
+
+        yPos += 25
+
+        ' Print a line under headers
+        e.Graphics.DrawLine(Pens.Black, leftMargin, yPos, leftMargin + colWidths.Sum(), yPos)
+        yPos += 10
+
+        ' Print each row of data
+        For Each row As DataRow In dt.Rows
+            xPos = leftMargin
+
+            ' Check if we need a new page
+            If yPos > e.MarginBounds.Bottom - 50 Then
+                e.HasMorePages = True
+                Return
+            End If
+
+            ' Print each column
+            For i As Integer = 0 To headers.Length - 1
+                Dim cellValue As String = If(row.IsNull(i), "", row(i).ToString())
+                e.Graphics.DrawString(cellValue, fontBody, brush, xPos, yPos)
+                xPos += colWidths(i)
+            Next
+
+            yPos += 20
+        Next
+
+        ' Print record count at the bottom
+        yPos += 20
+        e.Graphics.DrawString($"Total Records: {dt.Rows.Count}", fontFooter, brush, leftMargin, yPos)
+
+        ' No more pages
+        e.HasMorePages = False
+    End Sub
+
+    Private Sub enrollmentdatagrid_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles enrollmentdatagrid.CellClick
+        ' Ignore header clicks and invalid rows
+        If e.RowIndex < 0 Or e.ColumnIndex < 0 Then Return
+
+        ' Get the selected row
+        Dim selectedRow As DataGridViewRow = enrollmentdatagrid.Rows(e.RowIndex)
+
+        ' Get the enrollment ID from the first column
+        Dim enrollmentId As Integer = Convert.ToInt32(selectedRow.Cells(0).Value)
+
+        ' Open the edit form and pass the ID
+        ' Dim editForm As New editenrolle()
+        'editForm.EnrollmentId = enrollmentId ' Set the public property
+        'editForm.ShowDialog()
+
+        ' Refresh the data after editing
+        LoadEnrollmentData()
+    End Sub
 End Class
