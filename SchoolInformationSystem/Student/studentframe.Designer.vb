@@ -23,9 +23,9 @@ Partial Class studentframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentframe))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         Panel3 = New Panel()
@@ -708,7 +708,7 @@ Partial Class studentframe
         student_name.ImeMode = ImeMode.NoControl
         student_name.Location = New Point(179, 28)
         student_name.Name = "student_name"
-        student_name.Size = New Size(157, 38)
+        student_name.Size = New Size(827, 38)
         student_name.TabIndex = 1
         student_name.Text = "John Doe"
         student_name.TextAlign = ContentAlignment.MiddleLeft
@@ -834,16 +834,16 @@ Partial Class studentframe
         ' 
         ' StudBarChart
         ' 
-        ChartArea1.Name = "ChartArea1"
-        StudBarChart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        StudBarChart.Legends.Add(Legend1)
+        ChartArea2.Name = "ChartArea1"
+        StudBarChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        StudBarChart.Legends.Add(Legend2)
         StudBarChart.Location = New Point(15, 28)
         StudBarChart.Name = "StudBarChart"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        StudBarChart.Series.Add(Series1)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        StudBarChart.Series.Add(Series2)
         StudBarChart.Size = New Size(494, 307)
         StudBarChart.TabIndex = 0
         StudBarChart.Text = "Chart1"

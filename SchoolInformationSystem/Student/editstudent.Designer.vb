@@ -30,7 +30,6 @@ Partial Class editstudent
         Label14 = New Label()
         Label13 = New Label()
         Label12 = New Label()
-        Label11 = New Label()
         Label10 = New Label()
         Label9 = New Label()
         Label8 = New Label()
@@ -38,18 +37,17 @@ Partial Class editstudent
         Label1 = New Label()
         Label5 = New Label()
         Label4 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox5 = New TextBox()
-        TextBox6 = New TextBox()
-        TextBox7 = New TextBox()
-        TextBox8 = New TextBox()
-        TextBox9 = New TextBox()
-        TextBox10 = New TextBox()
-        TextBox11 = New TextBox()
-        TextBox12 = New TextBox()
+        studentedit_fullname = New TextBox()
+        studentedit_gender = New TextBox()
+        studentedit_age = New TextBox()
+        studentedit_contact = New TextBox()
+        studentedit_email = New TextBox()
+        studentedit_address = New TextBox()
+        studentedit_grade = New TextBox()
+        studentedit_birthplace = New TextBox()
+        studentedit_nationality = New TextBox()
+        studentedit_guardian = New TextBox()
+        studentedit_religion = New TextBox()
         SuspendLayout()
         ' 
         ' savebutton
@@ -136,17 +134,6 @@ Partial Class editstudent
         Label12.Text = "NATIONALITY"
         Label12.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Font = New Font("Tahoma", 14.25F)
-        Label11.Location = New Point(219, 301)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(99, 23)
-        Label11.TabIndex = 69
-        Label11.Text = "BIRTHDAY"
-        Label11.TextAlign = ContentAlignment.MiddleLeft
-        ' 
         ' Label10
         ' 
         Label10.AutoSize = True
@@ -224,101 +211,93 @@ Partial Class editstudent
         Label4.Text = "FULL NAME"
         Label4.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' TextBox1
+        ' studentedit_fullname
         ' 
-        TextBox1.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(25, 131)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(280, 33)
-        TextBox1.TabIndex = 1
+        studentedit_fullname.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_fullname.Location = New Point(25, 131)
+        studentedit_fullname.Name = "studentedit_fullname"
+        studentedit_fullname.Size = New Size(280, 33)
+        studentedit_fullname.TabIndex = 1
         ' 
-        ' TextBox2
+        ' studentedit_gender
         ' 
-        TextBox2.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(352, 131)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(114, 33)
-        TextBox2.TabIndex = 2
+        studentedit_gender.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_gender.Location = New Point(352, 131)
+        studentedit_gender.Name = "studentedit_gender"
+        studentedit_gender.Size = New Size(114, 33)
+        studentedit_gender.TabIndex = 2
         ' 
-        ' TextBox3
+        ' studentedit_age
         ' 
-        TextBox3.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(529, 131)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(66, 33)
-        TextBox3.TabIndex = 3
+        studentedit_age.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_age.Location = New Point(529, 131)
+        studentedit_age.Name = "studentedit_age"
+        studentedit_age.Size = New Size(66, 33)
+        studentedit_age.TabIndex = 3
         ' 
-        ' TextBox4
+        ' studentedit_contact
         ' 
-        TextBox4.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox4.Location = New Point(661, 131)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(239, 33)
-        TextBox4.TabIndex = 4
+        studentedit_contact.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_contact.Location = New Point(661, 131)
+        studentedit_contact.Name = "studentedit_contact"
+        studentedit_contact.Size = New Size(239, 33)
+        studentedit_contact.TabIndex = 4
         ' 
-        ' TextBox5
+        ' studentedit_email
         ' 
-        TextBox5.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox5.Location = New Point(25, 237)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(280, 33)
-        TextBox5.TabIndex = 5
+        studentedit_email.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_email.Location = New Point(25, 237)
+        studentedit_email.Name = "studentedit_email"
+        studentedit_email.Size = New Size(280, 33)
+        studentedit_email.TabIndex = 5
         ' 
-        ' TextBox6
+        ' studentedit_address
         ' 
-        TextBox6.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox6.Location = New Point(352, 237)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(548, 33)
-        TextBox6.TabIndex = 6
+        studentedit_address.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_address.Location = New Point(352, 237)
+        studentedit_address.Name = "studentedit_address"
+        studentedit_address.Size = New Size(548, 33)
+        studentedit_address.TabIndex = 6
         ' 
-        ' TextBox7
+        ' studentedit_grade
         ' 
-        TextBox7.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox7.Location = New Point(25, 341)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(166, 33)
-        TextBox7.TabIndex = 7
+        studentedit_grade.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_grade.Location = New Point(25, 341)
+        studentedit_grade.Name = "studentedit_grade"
+        studentedit_grade.Size = New Size(280, 33)
+        studentedit_grade.TabIndex = 7
         ' 
-        ' TextBox8
+        ' studentedit_birthplace
         ' 
-        TextBox8.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox8.Location = New Point(219, 341)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(122, 33)
-        TextBox8.TabIndex = 8
+        studentedit_birthplace.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_birthplace.Location = New Point(366, 341)
+        studentedit_birthplace.Name = "studentedit_birthplace"
+        studentedit_birthplace.Size = New Size(272, 33)
+        studentedit_birthplace.TabIndex = 9
         ' 
-        ' TextBox9
+        ' studentedit_nationality
         ' 
-        TextBox9.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox9.Location = New Point(366, 341)
-        TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(272, 33)
-        TextBox9.TabIndex = 9
+        studentedit_nationality.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_nationality.Location = New Point(661, 341)
+        studentedit_nationality.Name = "studentedit_nationality"
+        studentedit_nationality.Size = New Size(239, 33)
+        studentedit_nationality.TabIndex = 10
         ' 
-        ' TextBox10
+        ' studentedit_guardian
         ' 
-        TextBox10.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox10.Location = New Point(661, 341)
-        TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(239, 33)
-        TextBox10.TabIndex = 10
+        studentedit_guardian.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_guardian.Location = New Point(25, 444)
+        studentedit_guardian.Name = "studentedit_guardian"
+        studentedit_guardian.Size = New Size(280, 33)
+        studentedit_guardian.TabIndex = 11
         ' 
-        ' TextBox11
+        ' studentedit_religion
         ' 
-        TextBox11.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox11.Location = New Point(25, 444)
-        TextBox11.Name = "TextBox11"
-        TextBox11.Size = New Size(280, 33)
-        TextBox11.TabIndex = 11
-        ' 
-        ' TextBox12
-        ' 
-        TextBox12.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox12.Location = New Point(366, 444)
-        TextBox12.Name = "TextBox12"
-        TextBox12.Size = New Size(240, 33)
-        TextBox12.TabIndex = 12
+        studentedit_religion.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studentedit_religion.Location = New Point(366, 444)
+        studentedit_religion.Name = "studentedit_religion"
+        studentedit_religion.Size = New Size(312, 33)
+        studentedit_religion.TabIndex = 12
         ' 
         ' editstudent
         ' 
@@ -326,23 +305,21 @@ Partial Class editstudent
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(936, 528)
-        Controls.Add(TextBox12)
-        Controls.Add(TextBox11)
-        Controls.Add(TextBox10)
-        Controls.Add(TextBox9)
-        Controls.Add(TextBox8)
-        Controls.Add(TextBox7)
-        Controls.Add(TextBox6)
-        Controls.Add(TextBox5)
-        Controls.Add(TextBox4)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        Controls.Add(studentedit_religion)
+        Controls.Add(studentedit_guardian)
+        Controls.Add(studentedit_nationality)
+        Controls.Add(studentedit_birthplace)
+        Controls.Add(studentedit_grade)
+        Controls.Add(studentedit_address)
+        Controls.Add(studentedit_email)
+        Controls.Add(studentedit_contact)
+        Controls.Add(studentedit_age)
+        Controls.Add(studentedit_gender)
+        Controls.Add(studentedit_fullname)
         Controls.Add(Label17)
         Controls.Add(Label14)
         Controls.Add(Label13)
         Controls.Add(Label12)
-        Controls.Add(Label11)
         Controls.Add(Label10)
         Controls.Add(Label9)
         Controls.Add(Label8)
@@ -367,7 +344,6 @@ Partial Class editstudent
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
@@ -375,16 +351,15 @@ Partial Class editstudent
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents studentedit_fullname As TextBox
+    Friend WithEvents studentedit_gender As TextBox
+    Friend WithEvents studentedit_age As TextBox
+    Friend WithEvents studentedit_contact As TextBox
+    Friend WithEvents studentedit_email As TextBox
+    Friend WithEvents studentedit_address As TextBox
+    Friend WithEvents studentedit_grade As TextBox
+    Friend WithEvents studentedit_birthplace As TextBox
+    Friend WithEvents studentedit_nationality As TextBox
+    Friend WithEvents studentedit_guardian As TextBox
+    Friend WithEvents studentedit_religion As TextBox
 End Class
