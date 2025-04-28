@@ -23,9 +23,9 @@ Partial Class studentframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentframe))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         Panel3 = New Panel()
@@ -67,6 +67,9 @@ Partial Class studentframe
         head_classes = New Panel()
         classespanel = New Panel()
         Panel2 = New Panel()
+        studlabel = New Label()
+        studnext = New Button()
+        studprev = New Button()
         classdatagrid = New DataGridView()
         filterschoolyear = New ComboBox()
         filterstatus = New ComboBox()
@@ -89,9 +92,6 @@ Partial Class studentframe
         Label2 = New Label()
         subject_panel = New Panel()
         StudBarChart = New DataVisualization.Charting.Chart()
-        studprev = New Button()
-        studnext = New Button()
-        studlabel = New Label()
         myprofilepanel.SuspendLayout()
         Panel3.SuspendLayout()
         head_myprofile.SuspendLayout()
@@ -139,7 +139,7 @@ Partial Class studentframe
         myprofilepanel.Dock = DockStyle.Fill
         myprofilepanel.Location = New Point(0, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1370, 749)
+        myprofilepanel.Size = New Size(1424, 985)
         myprofilepanel.TabIndex = 7
         ' 
         ' Panel3
@@ -434,7 +434,7 @@ Partial Class studentframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1370, 81)
+        head_myprofile.Size = New Size(1424, 81)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -591,7 +591,7 @@ Partial Class studentframe
         head_classes.Dock = DockStyle.Top
         head_classes.Location = New Point(0, 0)
         head_classes.Name = "head_classes"
-        head_classes.Size = New Size(1020, 81)
+        head_classes.Size = New Size(1074, 81)
         head_classes.TabIndex = 0
         ' 
         ' classespanel
@@ -602,7 +602,7 @@ Partial Class studentframe
         classespanel.Dock = DockStyle.Fill
         classespanel.Location = New Point(350, 0)
         classespanel.Name = "classespanel"
-        classespanel.Size = New Size(1020, 749)
+        classespanel.Size = New Size(1074, 985)
         classespanel.TabIndex = 6
         ' 
         ' Panel2
@@ -621,6 +621,33 @@ Partial Class studentframe
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(989, 831)
         Panel2.TabIndex = 1
+        ' 
+        ' studlabel
+        ' 
+        studlabel.AutoSize = True
+        studlabel.Location = New Point(794, 602)
+        studlabel.Name = "studlabel"
+        studlabel.Size = New Size(71, 15)
+        studlabel.TabIndex = 10
+        studlabel.Text = "Page 1 of 10"
+        ' 
+        ' studnext
+        ' 
+        studnext.Location = New Point(885, 598)
+        studnext.Name = "studnext"
+        studnext.Size = New Size(75, 23)
+        studnext.TabIndex = 9
+        studnext.Text = "Next"
+        studnext.UseVisualStyleBackColor = True
+        ' 
+        ' studprev
+        ' 
+        studprev.Location = New Point(693, 598)
+        studprev.Name = "studprev"
+        studprev.Size = New Size(75, 23)
+        studprev.TabIndex = 8
+        studprev.Text = "Preview"
+        studprev.UseVisualStyleBackColor = True
         ' 
         ' classdatagrid
         ' 
@@ -715,7 +742,7 @@ Partial Class studentframe
         head_dashboard.Dock = DockStyle.Top
         head_dashboard.Location = New Point(0, 0)
         head_dashboard.Name = "head_dashboard"
-        head_dashboard.Size = New Size(1020, 94)
+        head_dashboard.Size = New Size(1074, 94)
         head_dashboard.TabIndex = 0
         ' 
         ' sidenav
@@ -735,7 +762,7 @@ Partial Class studentframe
         sidepanel.Dock = DockStyle.Left
         sidepanel.Location = New Point(0, 0)
         sidepanel.Name = "sidepanel"
-        sidepanel.Size = New Size(350, 749)
+        sidepanel.Size = New Size(350, 985)
         sidepanel.TabIndex = 4
         ' 
         ' logoutpanel
@@ -776,7 +803,7 @@ Partial Class studentframe
         dashboardpanel.Dock = DockStyle.Fill
         dashboardpanel.Location = New Point(350, 0)
         dashboardpanel.Name = "dashboardpanel"
-        dashboardpanel.Size = New Size(1020, 749)
+        dashboardpanel.Size = New Size(1074, 985)
         dashboardpanel.TabIndex = 5
         ' 
         ' Panel1
@@ -846,53 +873,26 @@ Partial Class studentframe
         ' 
         ' StudBarChart
         ' 
-        ChartArea2.Name = "ChartArea1"
-        StudBarChart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        StudBarChart.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        StudBarChart.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        StudBarChart.Legends.Add(Legend1)
         StudBarChart.Location = New Point(15, 28)
         StudBarChart.Name = "StudBarChart"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        StudBarChart.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        StudBarChart.Series.Add(Series1)
         StudBarChart.Size = New Size(494, 307)
         StudBarChart.TabIndex = 0
         StudBarChart.Text = "Chart1"
-        ' 
-        ' studprev
-        ' 
-        studprev.Location = New Point(693, 598)
-        studprev.Name = "studprev"
-        studprev.Size = New Size(75, 23)
-        studprev.TabIndex = 8
-        studprev.Text = "Preview"
-        studprev.UseVisualStyleBackColor = True
-        ' 
-        ' studnext
-        ' 
-        studnext.Location = New Point(885, 598)
-        studnext.Name = "studnext"
-        studnext.Size = New Size(75, 23)
-        studnext.TabIndex = 9
-        studnext.Text = "Next"
-        studnext.UseVisualStyleBackColor = True
-        ' 
-        ' studlabel
-        ' 
-        studlabel.AutoSize = True
-        studlabel.Location = New Point(794, 602)
-        studlabel.Name = "studlabel"
-        studlabel.Size = New Size(71, 15)
-        studlabel.TabIndex = 10
-        studlabel.Text = "Page 1 of 10"
         ' 
         ' studentframe
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1370, 749)
+        ClientSize = New Size(1424, 985)
         Controls.Add(classespanel)
         Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
