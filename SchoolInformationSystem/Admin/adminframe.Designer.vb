@@ -22,12 +22,12 @@ Partial Class adminframe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminframe))
         dashboardpanel = New Panel()
         Panel4 = New Panel()
@@ -194,16 +194,16 @@ Partial Class adminframe
         ' 
         ' EnrollmentBarGraph
         ' 
-        ChartArea3.Name = "ChartArea1"
-        EnrollmentBarGraph.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        EnrollmentBarGraph.Legends.Add(Legend3)
+        ChartArea1.Name = "ChartArea1"
+        EnrollmentBarGraph.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        EnrollmentBarGraph.Legends.Add(Legend1)
         EnrollmentBarGraph.Location = New Point(0, 0)
         EnrollmentBarGraph.Name = "EnrollmentBarGraph"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        EnrollmentBarGraph.Series.Add(Series3)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        EnrollmentBarGraph.Series.Add(Series1)
         EnrollmentBarGraph.Size = New Size(575, 490)
         EnrollmentBarGraph.TabIndex = 0
         EnrollmentBarGraph.Text = "Chart1"
@@ -218,17 +218,17 @@ Partial Class adminframe
         ' 
         ' PieChart
         ' 
-        ChartArea4.Name = "ChartArea1"
-        PieChart.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        PieChart.Legends.Add(Legend4)
+        ChartArea2.Name = "ChartArea1"
+        PieChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        PieChart.Legends.Add(Legend2)
         PieChart.Location = New Point(3, 0)
         PieChart.Name = "PieChart"
-        Series4.ChartArea = "ChartArea1"
-        Series4.ChartType = DataVisualization.Charting.SeriesChartType.Pie
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series1"
-        PieChart.Series.Add(Series4)
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Pie
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        PieChart.Series.Add(Series2)
         PieChart.Size = New Size(406, 496)
         PieChart.TabIndex = 5
         PieChart.Text = "Chart1"
@@ -239,7 +239,7 @@ Partial Class adminframe
         TotalEnroll.Controls.Add(EnrollmentCount)
         TotalEnroll.Controls.Add(TotalEnrollments)
         TotalEnroll.ForeColor = SystemColors.ControlLightLight
-        TotalEnroll.Location = New Point(797, 115)
+        TotalEnroll.Location = New Point(820, 115)
         TotalEnroll.Name = "TotalEnroll"
         TotalEnroll.Size = New Size(230, 200)
         TotalEnroll.TabIndex = 4
@@ -278,7 +278,7 @@ Partial Class adminframe
         TotalSub.Controls.Add(SubjectCount)
         TotalSub.Controls.Add(TotalSubjects)
         TotalSub.ForeColor = SystemColors.ControlLightLight
-        TotalSub.Location = New Point(547, 115)
+        TotalSub.Location = New Point(556, 115)
         TotalSub.Name = "TotalSub"
         TotalSub.Size = New Size(230, 200)
         TotalSub.TabIndex = 3
@@ -317,7 +317,7 @@ Partial Class adminframe
         TotalIns.Controls.Add(InstructorsCount)
         TotalIns.Controls.Add(TotalInstructors)
         TotalIns.ForeColor = Color.WhiteSmoke
-        TotalIns.Location = New Point(297, 115)
+        TotalIns.Location = New Point(292, 115)
         TotalIns.Name = "TotalIns"
         TotalIns.Size = New Size(230, 200)
         TotalIns.TabIndex = 2
@@ -356,7 +356,7 @@ Partial Class adminframe
         TotalStuds.Controls.Add(StudentsCount)
         TotalStuds.Controls.Add(TotalStudents)
         TotalStuds.ForeColor = SystemColors.ControlLightLight
-        TotalStuds.Location = New Point(47, 115)
+        TotalStuds.Location = New Point(28, 115)
         TotalStuds.Name = "TotalStuds"
         TotalStuds.Size = New Size(230, 200)
         TotalStuds.TabIndex = 1
@@ -659,16 +659,15 @@ Partial Class adminframe
         ' 
         ' PageLabel
         ' 
-        PageLabel.AutoSize = True
-        PageLabel.Location = New Point(766, 587)
+        PageLabel.Location = New Point(695, 806)
         PageLabel.Name = "PageLabel"
-        PageLabel.Size = New Size(130, 25)
+        PageLabel.Size = New Size(217, 25)
         PageLabel.TabIndex = 17
         PageLabel.Text = "Page 1 of 10"
         ' 
         ' NextPageButton
         ' 
-        NextPageButton.Location = New Point(902, 582)
+        NextPageButton.Location = New Point(918, 800)
         NextPageButton.Name = "NextPageButton"
         NextPageButton.Size = New Size(81, 36)
         NextPageButton.TabIndex = 15
@@ -677,7 +676,7 @@ Partial Class adminframe
         ' 
         ' PrevPageButton
         ' 
-        PrevPageButton.Location = New Point(666, 582)
+        PrevPageButton.Location = New Point(587, 801)
         PrevPageButton.Name = "PrevPageButton"
         PrevPageButton.Size = New Size(102, 34)
         PrevPageButton.TabIndex = 14
@@ -830,16 +829,15 @@ Partial Class adminframe
         ' 
         ' Epagelabel
         ' 
-        Epagelabel.AutoSize = True
-        Epagelabel.Location = New Point(775, 596)
+        Epagelabel.Location = New Point(688, 806)
         Epagelabel.Name = "Epagelabel"
-        Epagelabel.Size = New Size(130, 25)
+        Epagelabel.Size = New Size(247, 25)
         Epagelabel.TabIndex = 18
         Epagelabel.Text = "Page 1 of 10"
         ' 
         ' NextButton
         ' 
-        NextButton.Location = New Point(908, 593)
+        NextButton.Location = New Point(941, 802)
         NextButton.Name = "NextButton"
         NextButton.Size = New Size(75, 32)
         NextButton.TabIndex = 17
@@ -848,7 +846,7 @@ Partial Class adminframe
         ' 
         ' PrevButton
         ' 
-        PrevButton.Location = New Point(673, 591)
+        PrevButton.Location = New Point(587, 800)
         PrevButton.Name = "PrevButton"
         PrevButton.Size = New Size(95, 37)
         PrevButton.TabIndex = 16
@@ -912,7 +910,7 @@ Partial Class adminframe
         enrollmentdatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         enrollmentdatagrid.Location = New Point(25, 135)
         enrollmentdatagrid.Name = "enrollmentdatagrid"
-        enrollmentdatagrid.Size = New Size(978, 442)
+        enrollmentdatagrid.Size = New Size(978, 624)
         enrollmentdatagrid.TabIndex = 8
         ' 
         ' PictureBox2
@@ -1006,16 +1004,15 @@ Partial Class adminframe
         ' 
         ' subpagelabel
         ' 
-        subpagelabel.AutoSize = True
-        subpagelabel.Location = New Point(758, 587)
+        subpagelabel.Location = New Point(707, 810)
         subpagelabel.Name = "subpagelabel"
-        subpagelabel.Size = New Size(130, 25)
+        subpagelabel.Size = New Size(206, 25)
         subpagelabel.TabIndex = 18
         subpagelabel.Text = "Page 1 of 10"
         ' 
         ' subnext
         ' 
-        subnext.Location = New Point(902, 580)
+        subnext.Location = New Point(921, 805)
         subnext.Name = "subnext"
         subnext.Size = New Size(81, 34)
         subnext.TabIndex = 17
@@ -1024,7 +1021,7 @@ Partial Class adminframe
         ' 
         ' subprev
         ' 
-        subprev.Location = New Point(653, 580)
+        subprev.Location = New Point(587, 803)
         subprev.Name = "subprev"
         subprev.Size = New Size(96, 38)
         subprev.TabIndex = 16
@@ -1043,7 +1040,7 @@ Partial Class adminframe
         ' subprint
         ' 
         subprint.AutoSize = True
-        subprint.Location = New Point(729, 28)
+        subprint.Location = New Point(908, 29)
         subprint.Name = "subprint"
         subprint.Size = New Size(95, 35)
         subprint.TabIndex = 12
@@ -1089,7 +1086,7 @@ Partial Class adminframe
         subdatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         subdatagrid.Location = New Point(18, 153)
         subdatagrid.Name = "subdatagrid"
-        subdatagrid.Size = New Size(981, 401)
+        subdatagrid.Size = New Size(981, 619)
         subdatagrid.TabIndex = 8
         ' 
         ' PictureBox3
@@ -1322,11 +1319,11 @@ Partial Class adminframe
         AutoSize = True
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1424, 985)
-        Controls.Add(enrollmentspanel)
-        Controls.Add(subjectspanel)
-        Controls.Add(userspanel)
-        Controls.Add(configurationpanel)
         Controls.Add(dashboardpanel)
+        Controls.Add(subjectspanel)
+        Controls.Add(configurationpanel)
+        Controls.Add(userspanel)
+        Controls.Add(enrollmentspanel)
         Controls.Add(sidepanel)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.FixedDialog

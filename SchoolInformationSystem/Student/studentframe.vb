@@ -712,4 +712,12 @@ Public Class studentframe
         ' No more pages
         e.HasMorePages = False
     End Sub
+
+    Private Sub studlabel_Click(sender As Object, e As EventArgs) Handles studlabel.Click
+
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
 End Class

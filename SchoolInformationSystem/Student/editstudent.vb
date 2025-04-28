@@ -119,9 +119,9 @@ Public Class editstudent
                 Dim affectedRows As Integer = userCmd.ExecuteNonQuery()
 
                 If affectedRows > 0 Then
-                    MessageBox.Show("Student profile and user full name updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Student profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
-                    MessageBox.Show("Student profile updated, but no matching user found to update.", "Partial Update", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("Student profile updated", "Partial Update", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 End If
             End Using
 

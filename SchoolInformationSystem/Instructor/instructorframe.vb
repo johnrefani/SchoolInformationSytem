@@ -636,4 +636,10 @@ Public Class instructorframe
         ' No more pages
         e.HasMorePages = False
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        HideAllPanels()
+        classespanel.Visible = True
+        HighlightActiveButton(classesbutton)
+    End Sub
 End Class

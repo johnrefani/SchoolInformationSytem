@@ -23,9 +23,9 @@ Partial Class studentframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentframe))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         Panel3 = New Panel()
@@ -624,29 +624,32 @@ Partial Class studentframe
         ' 
         ' studlabel
         ' 
-        studlabel.AutoSize = True
-        studlabel.Location = New Point(794, 602)
+        studlabel.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studlabel.Location = New Point(628, 777)
         studlabel.Name = "studlabel"
-        studlabel.Size = New Size(71, 15)
+        studlabel.Size = New Size(244, 31)
         studlabel.TabIndex = 10
         studlabel.Text = "Page 1 of 10"
+        studlabel.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' studnext
         ' 
-        studnext.Location = New Point(885, 598)
+        studnext.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studnext.Location = New Point(888, 774)
         studnext.Name = "studnext"
-        studnext.Size = New Size(75, 23)
+        studnext.Size = New Size(75, 37)
         studnext.TabIndex = 9
         studnext.Text = "Next"
         studnext.UseVisualStyleBackColor = True
         ' 
         ' studprev
         ' 
-        studprev.Location = New Point(693, 598)
+        studprev.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studprev.Location = New Point(504, 774)
         studprev.Name = "studprev"
-        studprev.Size = New Size(75, 23)
+        studprev.Size = New Size(111, 37)
         studprev.TabIndex = 8
-        studprev.Text = "Preview"
+        studprev.Text = "Previous"
         studprev.UseVisualStyleBackColor = True
         ' 
         ' classdatagrid
@@ -655,16 +658,16 @@ Partial Class studentframe
         classdatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         classdatagrid.Location = New Point(14, 128)
         classdatagrid.Name = "classdatagrid"
-        classdatagrid.Size = New Size(946, 447)
+        classdatagrid.Size = New Size(946, 614)
         classdatagrid.TabIndex = 7
         ' 
         ' filterschoolyear
         ' 
         filterschoolyear.Font = New Font("Tahoma", 15.75F)
         filterschoolyear.FormattingEnabled = True
-        filterschoolyear.Location = New Point(816, 74)
+        filterschoolyear.Location = New Point(780, 74)
         filterschoolyear.Name = "filterschoolyear"
-        filterschoolyear.Size = New Size(147, 33)
+        filterschoolyear.Size = New Size(183, 33)
         filterschoolyear.TabIndex = 5
         filterschoolyear.Text = "School Year"
         ' 
@@ -672,9 +675,9 @@ Partial Class studentframe
         ' 
         filterstatus.Font = New Font("Tahoma", 15.75F)
         filterstatus.FormattingEnabled = True
-        filterstatus.Location = New Point(698, 74)
+        filterstatus.Location = New Point(663, 75)
         filterstatus.Name = "filterstatus"
-        filterstatus.Size = New Size(96, 33)
+        filterstatus.Size = New Size(111, 33)
         filterstatus.TabIndex = 4
         filterstatus.Text = "Status"
         ' 
@@ -873,16 +876,16 @@ Partial Class studentframe
         ' 
         ' StudBarChart
         ' 
-        ChartArea2.Name = "ChartArea1"
-        StudBarChart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        StudBarChart.Legends.Add(Legend2)
+        ChartArea1.Name = "ChartArea1"
+        StudBarChart.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        StudBarChart.Legends.Add(Legend1)
         StudBarChart.Location = New Point(15, 28)
         StudBarChart.Name = "StudBarChart"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        StudBarChart.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        StudBarChart.Series.Add(Series1)
         StudBarChart.Size = New Size(494, 307)
         StudBarChart.TabIndex = 0
         StudBarChart.Text = "Chart1"
@@ -893,9 +896,9 @@ Partial Class studentframe
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1424, 985)
-        Controls.Add(dashboardpanel)
-        Controls.Add(myprofilepanel)
         Controls.Add(classespanel)
+        Controls.Add(myprofilepanel)
+        Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)

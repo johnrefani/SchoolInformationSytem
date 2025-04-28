@@ -88,9 +88,9 @@ Partial Class adduser
         Label6.Font = New Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(26, 12)
         Label6.Name = "Label6"
-        Label6.Size = New Size(195, 39)
+        Label6.Size = New Size(161, 39)
         Label6.TabIndex = 59
-        Label6.Text = "Edit Profile"
+        Label6.Text = "Add User"
         ' 
         ' gender
         ' 
