@@ -23,9 +23,9 @@ Partial Class studentframe
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentframe))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         title_myprofile = New Label()
         myprofilepanel = New Panel()
         Panel3 = New Panel()
@@ -67,13 +67,12 @@ Partial Class studentframe
         head_classes = New Panel()
         classespanel = New Panel()
         Panel2 = New Panel()
-        DataGridView1 = New DataGridView()
-        Button1 = New Button()
-        schoolyear = New ComboBox()
-        status = New ComboBox()
+        classdatagrid = New DataGridView()
+        filterschoolyear = New ComboBox()
+        filterstatus = New ComboBox()
         PictureBox1 = New PictureBox()
-        TextBox1 = New TextBox()
-        print_button = New Button()
+        classsearch = New TextBox()
+        studprint = New Button()
         title_dashboard = New Label()
         student_name = New Label()
         head_dashboard = New Panel()
@@ -90,6 +89,9 @@ Partial Class studentframe
         Label2 = New Label()
         subject_panel = New Panel()
         StudBarChart = New DataVisualization.Charting.Chart()
+        studprev = New Button()
+        studnext = New Button()
+        studlabel = New Label()
         myprofilepanel.SuspendLayout()
         Panel3.SuspendLayout()
         head_myprofile.SuspendLayout()
@@ -102,7 +104,7 @@ Partial Class studentframe
         head_classes.SuspendLayout()
         classespanel.SuspendLayout()
         Panel2.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(classdatagrid, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         head_dashboard.SuspendLayout()
         sidenav.SuspendLayout()
@@ -135,9 +137,9 @@ Partial Class studentframe
         myprofilepanel.Controls.Add(Panel3)
         myprofilepanel.Controls.Add(head_myprofile)
         myprofilepanel.Dock = DockStyle.Fill
-        myprofilepanel.Location = New Point(350, 0)
+        myprofilepanel.Location = New Point(0, 0)
         myprofilepanel.Name = "myprofilepanel"
-        myprofilepanel.Size = New Size(1020, 749)
+        myprofilepanel.Size = New Size(1370, 749)
         myprofilepanel.TabIndex = 7
         ' 
         ' Panel3
@@ -432,7 +434,7 @@ Partial Class studentframe
         head_myprofile.Dock = DockStyle.Top
         head_myprofile.Location = New Point(0, 0)
         head_myprofile.Name = "head_myprofile"
-        head_myprofile.Size = New Size(1020, 81)
+        head_myprofile.Size = New Size(1370, 81)
         head_myprofile.TabIndex = 0
         ' 
         ' title_classes
@@ -606,60 +608,48 @@ Partial Class studentframe
         ' Panel2
         ' 
         Panel2.BackColor = Color.WhiteSmoke
-        Panel2.Controls.Add(DataGridView1)
-        Panel2.Controls.Add(Button1)
-        Panel2.Controls.Add(schoolyear)
-        Panel2.Controls.Add(status)
+        Panel2.Controls.Add(studlabel)
+        Panel2.Controls.Add(studnext)
+        Panel2.Controls.Add(studprev)
+        Panel2.Controls.Add(classdatagrid)
+        Panel2.Controls.Add(filterschoolyear)
+        Panel2.Controls.Add(filterstatus)
         Panel2.Controls.Add(PictureBox1)
-        Panel2.Controls.Add(TextBox1)
-        Panel2.Controls.Add(print_button)
+        Panel2.Controls.Add(classsearch)
+        Panel2.Controls.Add(studprint)
         Panel2.Location = New Point(43, 100)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(989, 831)
         Panel2.TabIndex = 1
         ' 
-        ' DataGridView1
+        ' classdatagrid
         ' 
-        DataGridView1.BackgroundColor = Color.White
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(21, 149)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(946, 651)
-        DataGridView1.TabIndex = 7
+        classdatagrid.BackgroundColor = Color.White
+        classdatagrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        classdatagrid.Location = New Point(14, 128)
+        classdatagrid.Name = "classdatagrid"
+        classdatagrid.Size = New Size(946, 447)
+        classdatagrid.TabIndex = 7
         ' 
-        ' Button1
+        ' filterschoolyear
         ' 
-        Button1.BackColor = Color.White
-        Button1.FlatAppearance.BorderSize = 0
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Tahoma", 14.25F)
-        Button1.ForeColor = SystemColors.Desktop
-        Button1.Location = New Point(867, 19)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(96, 36)
-        Button1.TabIndex = 6
-        Button1.Text = "EXPORT"
-        Button1.UseVisualStyleBackColor = False
+        filterschoolyear.Font = New Font("Tahoma", 15.75F)
+        filterschoolyear.FormattingEnabled = True
+        filterschoolyear.Location = New Point(816, 74)
+        filterschoolyear.Name = "filterschoolyear"
+        filterschoolyear.Size = New Size(147, 33)
+        filterschoolyear.TabIndex = 5
+        filterschoolyear.Text = "School Year"
         ' 
-        ' schoolyear
+        ' filterstatus
         ' 
-        schoolyear.Font = New Font("Tahoma", 15.75F)
-        schoolyear.FormattingEnabled = True
-        schoolyear.Location = New Point(816, 74)
-        schoolyear.Name = "schoolyear"
-        schoolyear.Size = New Size(147, 33)
-        schoolyear.TabIndex = 5
-        schoolyear.Text = "School Year"
-        ' 
-        ' status
-        ' 
-        status.Font = New Font("Tahoma", 15.75F)
-        status.FormattingEnabled = True
-        status.Location = New Point(698, 74)
-        status.Name = "status"
-        status.Size = New Size(96, 33)
-        status.TabIndex = 4
-        status.Text = "Status"
+        filterstatus.Font = New Font("Tahoma", 15.75F)
+        filterstatus.FormattingEnabled = True
+        filterstatus.Location = New Point(698, 74)
+        filterstatus.Name = "filterstatus"
+        filterstatus.Size = New Size(96, 33)
+        filterstatus.TabIndex = 4
+        filterstatus.Text = "Status"
         ' 
         ' PictureBox1
         ' 
@@ -670,28 +660,28 @@ Partial Class studentframe
         PictureBox1.TabIndex = 3
         PictureBox1.TabStop = False
         ' 
-        ' TextBox1
+        ' classsearch
         ' 
-        TextBox1.Font = New Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(55, 72)
-        TextBox1.Name = "TextBox1"
-        TextBox1.PlaceholderText = "Search"
-        TextBox1.Size = New Size(418, 36)
-        TextBox1.TabIndex = 2
+        classsearch.Font = New Font("Tahoma", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        classsearch.Location = New Point(55, 72)
+        classsearch.Name = "classsearch"
+        classsearch.PlaceholderText = "Search"
+        classsearch.Size = New Size(418, 36)
+        classsearch.TabIndex = 2
         ' 
-        ' print_button
+        ' studprint
         ' 
-        print_button.BackColor = Color.White
-        print_button.FlatAppearance.BorderSize = 0
-        print_button.FlatStyle = FlatStyle.Flat
-        print_button.Font = New Font("Tahoma", 14.25F)
-        print_button.ForeColor = SystemColors.Desktop
-        print_button.Location = New Point(758, 19)
-        print_button.Name = "print_button"
-        print_button.Size = New Size(100, 36)
-        print_button.TabIndex = 1
-        print_button.Text = "PRINT"
-        print_button.UseVisualStyleBackColor = False
+        studprint.BackColor = Color.White
+        studprint.FlatAppearance.BorderSize = 0
+        studprint.FlatStyle = FlatStyle.Flat
+        studprint.Font = New Font("Tahoma", 14.25F)
+        studprint.ForeColor = SystemColors.Desktop
+        studprint.Location = New Point(863, 21)
+        studprint.Name = "studprint"
+        studprint.Size = New Size(100, 36)
+        studprint.TabIndex = 1
+        studprint.Text = "PRINT"
+        studprint.UseVisualStyleBackColor = False
         ' 
         ' title_dashboard
         ' 
@@ -856,19 +846,46 @@ Partial Class studentframe
         ' 
         ' StudBarChart
         ' 
-        ChartArea1.Name = "ChartArea1"
-        StudBarChart.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        StudBarChart.Legends.Add(Legend1)
+        ChartArea2.Name = "ChartArea1"
+        StudBarChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        StudBarChart.Legends.Add(Legend2)
         StudBarChart.Location = New Point(15, 28)
         StudBarChart.Name = "StudBarChart"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        StudBarChart.Series.Add(Series1)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        StudBarChart.Series.Add(Series2)
         StudBarChart.Size = New Size(494, 307)
         StudBarChart.TabIndex = 0
         StudBarChart.Text = "Chart1"
+        ' 
+        ' studprev
+        ' 
+        studprev.Location = New Point(693, 598)
+        studprev.Name = "studprev"
+        studprev.Size = New Size(75, 23)
+        studprev.TabIndex = 8
+        studprev.Text = "Preview"
+        studprev.UseVisualStyleBackColor = True
+        ' 
+        ' studnext
+        ' 
+        studnext.Location = New Point(885, 598)
+        studnext.Name = "studnext"
+        studnext.Size = New Size(75, 23)
+        studnext.TabIndex = 9
+        studnext.Text = "Next"
+        studnext.UseVisualStyleBackColor = True
+        ' 
+        ' studlabel
+        ' 
+        studlabel.AutoSize = True
+        studlabel.Location = New Point(794, 602)
+        studlabel.Name = "studlabel"
+        studlabel.Size = New Size(71, 15)
+        studlabel.TabIndex = 10
+        studlabel.Text = "Page 1 of 10"
         ' 
         ' studentframe
         ' 
@@ -876,10 +893,10 @@ Partial Class studentframe
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1370, 749)
-        Controls.Add(dashboardpanel)
-        Controls.Add(myprofilepanel)
         Controls.Add(classespanel)
+        Controls.Add(dashboardpanel)
         Controls.Add(sidepanel)
+        Controls.Add(myprofilepanel)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "studentframe"
@@ -899,7 +916,7 @@ Partial Class studentframe
         classespanel.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(classdatagrid, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         head_dashboard.ResumeLayout(False)
         sidenav.ResumeLayout(False)
@@ -945,11 +962,11 @@ Partial Class studentframe
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents print_button As Button
-    Friend WithEvents status As ComboBox
+    Friend WithEvents classsearch As TextBox
+    Friend WithEvents studprint As Button
+    Friend WithEvents filterstatus As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents schoolyear As ComboBox
+    Friend WithEvents filterschoolyear As ComboBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents editprofile As Button
@@ -975,11 +992,13 @@ Partial Class studentframe
     Friend WithEvents student_gender As Label
     Friend WithEvents student_birthplace As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents classdatagrid As DataGridView
     Friend WithEvents logoutpanel As Panel
     Friend WithEvents logoutbutton As Button
     Friend WithEvents ScheduleDataGrid As DataGridView
     Friend WithEvents enrolldatagrid As DataGridView
+    Friend WithEvents studlabel As Label
+    Friend WithEvents studnext As Button
+    Friend WithEvents studprev As Button
 End Class
 
