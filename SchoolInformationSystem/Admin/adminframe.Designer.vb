@@ -22,12 +22,12 @@ Partial Class adminframe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminframe))
         dashboardpanel = New Panel()
         Panel4 = New Panel()
@@ -82,6 +82,9 @@ Partial Class adminframe
         title_enrollments = New Label()
         enrollmentspanel = New Panel()
         Panel1 = New Panel()
+        Epagelabel = New Label()
+        NextButton = New Button()
+        PrevButton = New Button()
         filterschoolyear = New ComboBox()
         filterstatus = New ComboBox()
         printenrollment = New Button()
@@ -106,24 +109,21 @@ Partial Class adminframe
         title_subjects = New Label()
         configurationpanel = New Panel()
         Panel3 = New Panel()
-        TextBox1 = New TextBox()
+        password_box = New TextBox()
         Label3 = New Label()
-        TextBox5 = New TextBox()
+        username_box = New TextBox()
         Label5 = New Label()
-        TextBox6 = New TextBox()
+        database_box = New TextBox()
         Label6 = New Label()
-        TextBox7 = New TextBox()
+        port_box = New TextBox()
         Label7 = New Label()
-        studentnametextbox = New TextBox()
+        serveraddress_box = New TextBox()
         Label8 = New Label()
-        Button2 = New Button()
+        testdb_button = New Button()
         configurebutton = New Button()
         Label9 = New Label()
         head_configuration = New Panel()
         title_configuration = New Label()
-        PrevButton = New Button()
-        NextButton = New Button()
-        Epagelabel = New Label()
         dashboardpanel.SuspendLayout()
         Panel4.SuspendLayout()
         CType(EnrollmentBarGraph, ComponentModel.ISupportInitialize).BeginInit()
@@ -189,16 +189,16 @@ Partial Class adminframe
         ' 
         ' EnrollmentBarGraph
         ' 
-        ChartArea3.Name = "ChartArea1"
-        EnrollmentBarGraph.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        EnrollmentBarGraph.Legends.Add(Legend3)
+        ChartArea1.Name = "ChartArea1"
+        EnrollmentBarGraph.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        EnrollmentBarGraph.Legends.Add(Legend1)
         EnrollmentBarGraph.Location = New Point(0, 0)
         EnrollmentBarGraph.Name = "EnrollmentBarGraph"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        EnrollmentBarGraph.Series.Add(Series3)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        EnrollmentBarGraph.Series.Add(Series1)
         EnrollmentBarGraph.Size = New Size(575, 490)
         EnrollmentBarGraph.TabIndex = 0
         EnrollmentBarGraph.Text = "Chart1"
@@ -213,17 +213,17 @@ Partial Class adminframe
         ' 
         ' PieChart
         ' 
-        ChartArea4.Name = "ChartArea1"
-        PieChart.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        PieChart.Legends.Add(Legend4)
+        ChartArea2.Name = "ChartArea1"
+        PieChart.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        PieChart.Legends.Add(Legend2)
         PieChart.Location = New Point(3, 0)
         PieChart.Name = "PieChart"
-        Series4.ChartArea = "ChartArea1"
-        Series4.ChartType = DataVisualization.Charting.SeriesChartType.Pie
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series1"
-        PieChart.Series.Add(Series4)
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Pie
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        PieChart.Series.Add(Series2)
         PieChart.Size = New Size(406, 496)
         PieChart.TabIndex = 5
         PieChart.Text = "Chart1"
@@ -823,6 +823,33 @@ Partial Class adminframe
         Panel1.Size = New Size(1024, 850)
         Panel1.TabIndex = 3
         ' 
+        ' Epagelabel
+        ' 
+        Epagelabel.AutoSize = True
+        Epagelabel.Location = New Point(775, 596)
+        Epagelabel.Name = "Epagelabel"
+        Epagelabel.Size = New Size(130, 25)
+        Epagelabel.TabIndex = 18
+        Epagelabel.Text = "Page 1 of 10"
+        ' 
+        ' NextButton
+        ' 
+        NextButton.Location = New Point(908, 593)
+        NextButton.Name = "NextButton"
+        NextButton.Size = New Size(75, 32)
+        NextButton.TabIndex = 17
+        NextButton.Text = "Next"
+        NextButton.UseVisualStyleBackColor = True
+        ' 
+        ' PrevButton
+        ' 
+        PrevButton.Location = New Point(673, 591)
+        PrevButton.Name = "PrevButton"
+        PrevButton.Size = New Size(95, 37)
+        PrevButton.TabIndex = 16
+        PrevButton.Text = "Preview"
+        PrevButton.UseVisualStyleBackColor = True
+        ' 
         ' filterschoolyear
         ' 
         filterschoolyear.FormattingEnabled = True
@@ -1064,17 +1091,17 @@ Partial Class adminframe
         ' Panel3
         ' 
         Panel3.BackColor = Color.White
-        Panel3.Controls.Add(TextBox1)
+        Panel3.Controls.Add(password_box)
         Panel3.Controls.Add(Label3)
-        Panel3.Controls.Add(TextBox5)
+        Panel3.Controls.Add(username_box)
         Panel3.Controls.Add(Label5)
-        Panel3.Controls.Add(TextBox6)
+        Panel3.Controls.Add(database_box)
         Panel3.Controls.Add(Label6)
-        Panel3.Controls.Add(TextBox7)
+        Panel3.Controls.Add(port_box)
         Panel3.Controls.Add(Label7)
-        Panel3.Controls.Add(studentnametextbox)
+        Panel3.Controls.Add(serveraddress_box)
         Panel3.Controls.Add(Label8)
-        Panel3.Controls.Add(Button2)
+        Panel3.Controls.Add(testdb_button)
         Panel3.Controls.Add(configurebutton)
         Panel3.Controls.Add(Label9)
         Panel3.Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -1083,14 +1110,14 @@ Partial Class adminframe
         Panel3.Size = New Size(1024, 357)
         Panel3.TabIndex = 5
         ' 
-        ' TextBox1
+        ' password_box
         ' 
-        TextBox1.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox1.BorderStyle = BorderStyle.FixedSingle
-        TextBox1.Location = New Point(327, 230)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(250, 33)
-        TextBox1.TabIndex = 153
+        password_box.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        password_box.BorderStyle = BorderStyle.FixedSingle
+        password_box.Location = New Point(327, 230)
+        password_box.Name = "password_box"
+        password_box.Size = New Size(250, 33)
+        password_box.TabIndex = 153
         ' 
         ' Label3
         ' 
@@ -1101,14 +1128,14 @@ Partial Class adminframe
         Label3.TabIndex = 152
         Label3.Text = "PASSWORD"
         ' 
-        ' TextBox5
+        ' username_box
         ' 
-        TextBox5.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox5.BorderStyle = BorderStyle.FixedSingle
-        TextBox5.Location = New Point(34, 230)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(250, 33)
-        TextBox5.TabIndex = 151
+        username_box.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        username_box.BorderStyle = BorderStyle.FixedSingle
+        username_box.Location = New Point(34, 230)
+        username_box.Name = "username_box"
+        username_box.Size = New Size(250, 33)
+        username_box.TabIndex = 151
         ' 
         ' Label5
         ' 
@@ -1119,14 +1146,14 @@ Partial Class adminframe
         Label5.TabIndex = 150
         Label5.Text = "USERNAME"
         ' 
-        ' TextBox6
+        ' database_box
         ' 
-        TextBox6.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox6.BorderStyle = BorderStyle.FixedSingle
-        TextBox6.Location = New Point(612, 129)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(250, 33)
-        TextBox6.TabIndex = 149
+        database_box.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        database_box.BorderStyle = BorderStyle.FixedSingle
+        database_box.Location = New Point(612, 129)
+        database_box.Name = "database_box"
+        database_box.Size = New Size(250, 33)
+        database_box.TabIndex = 149
         ' 
         ' Label6
         ' 
@@ -1137,14 +1164,14 @@ Partial Class adminframe
         Label6.TabIndex = 148
         Label6.Text = "DATABASE NAME"
         ' 
-        ' TextBox7
+        ' port_box
         ' 
-        TextBox7.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox7.BorderStyle = BorderStyle.FixedSingle
-        TextBox7.Location = New Point(327, 129)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(250, 33)
-        TextBox7.TabIndex = 147
+        port_box.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        port_box.BorderStyle = BorderStyle.FixedSingle
+        port_box.Location = New Point(327, 129)
+        port_box.Name = "port_box"
+        port_box.Size = New Size(250, 33)
+        port_box.TabIndex = 147
         ' 
         ' Label7
         ' 
@@ -1155,14 +1182,14 @@ Partial Class adminframe
         Label7.TabIndex = 146
         Label7.Text = "PORT"
         ' 
-        ' studentnametextbox
+        ' serveraddress_box
         ' 
-        studentnametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        studentnametextbox.BorderStyle = BorderStyle.FixedSingle
-        studentnametextbox.Location = New Point(34, 129)
-        studentnametextbox.Name = "studentnametextbox"
-        studentnametextbox.Size = New Size(250, 33)
-        studentnametextbox.TabIndex = 145
+        serveraddress_box.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        serveraddress_box.BorderStyle = BorderStyle.FixedSingle
+        serveraddress_box.Location = New Point(34, 129)
+        serveraddress_box.Name = "serveraddress_box"
+        serveraddress_box.Size = New Size(250, 33)
+        serveraddress_box.TabIndex = 145
         ' 
         ' Label8
         ' 
@@ -1173,19 +1200,19 @@ Partial Class adminframe
         Label8.TabIndex = 144
         Label8.Text = "SERVER ADDRESS"
         ' 
-        ' Button2
+        ' testdb_button
         ' 
-        Button2.BackColor = Color.FromArgb(CByte(127), CByte(189), CByte(228))
-        Button2.Cursor = Cursors.Hand
-        Button2.FlatAppearance.BorderSize = 0
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.ForeColor = Color.White
-        Button2.Location = New Point(742, 20)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(98, 35)
-        Button2.TabIndex = 143
-        Button2.Text = "TEST"
-        Button2.UseVisualStyleBackColor = False
+        testdb_button.BackColor = Color.FromArgb(CByte(127), CByte(189), CByte(228))
+        testdb_button.Cursor = Cursors.Hand
+        testdb_button.FlatAppearance.BorderSize = 0
+        testdb_button.FlatStyle = FlatStyle.Flat
+        testdb_button.ForeColor = Color.White
+        testdb_button.Location = New Point(742, 20)
+        testdb_button.Name = "testdb_button"
+        testdb_button.Size = New Size(98, 35)
+        testdb_button.TabIndex = 143
+        testdb_button.Text = "TEST"
+        testdb_button.UseVisualStyleBackColor = False
         ' 
         ' configurebutton
         ' 
@@ -1233,33 +1260,6 @@ Partial Class adminframe
         title_configuration.Text = "Configure Database"
         title_configuration.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' PrevButton
-        ' 
-        PrevButton.Location = New Point(673, 591)
-        PrevButton.Name = "PrevButton"
-        PrevButton.Size = New Size(95, 37)
-        PrevButton.TabIndex = 16
-        PrevButton.Text = "Preview"
-        PrevButton.UseVisualStyleBackColor = True
-        ' 
-        ' NextButton
-        ' 
-        NextButton.Location = New Point(908, 593)
-        NextButton.Name = "NextButton"
-        NextButton.Size = New Size(75, 32)
-        NextButton.TabIndex = 17
-        NextButton.Text = "Next"
-        NextButton.UseVisualStyleBackColor = True
-        ' 
-        ' Epagelabel
-        ' 
-        Epagelabel.AutoSize = True
-        Epagelabel.Location = New Point(775, 596)
-        Epagelabel.Name = "Epagelabel"
-        Epagelabel.Size = New Size(130, 25)
-        Epagelabel.TabIndex = 18
-        Epagelabel.Text = "Page 1 of 10"
-        ' 
         ' adminframe
         ' 
         AutoScaleDimensions = New SizeF(12F, 25F)
@@ -1267,11 +1267,11 @@ Partial Class adminframe
         AutoSize = True
         BackColor = Color.WhiteSmoke
         ClientSize = New Size(1370, 749)
+        Controls.Add(configurationpanel)
         Controls.Add(enrollmentspanel)
         Controls.Add(userspanel)
         Controls.Add(dashboardpanel)
         Controls.Add(subjectspanel)
-        Controls.Add(configurationpanel)
         Controls.Add(sidepanel)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.FixedDialog
@@ -1389,17 +1389,17 @@ Partial Class adminframe
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents password_box As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents username_box As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents database_box As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents port_box As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents studentnametextbox As TextBox
+    Friend WithEvents serveraddress_box As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents testdb_button As Button
     Friend WithEvents configurebutton As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents TotalStuds As Panel

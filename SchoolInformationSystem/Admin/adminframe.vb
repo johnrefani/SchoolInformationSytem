@@ -81,7 +81,14 @@ Public Class adminframe
     End Sub
 
     Private Sub configurebutton_Click(sender As Object, e As EventArgs) Handles configurebutton.Click
-        editconfiguration.Show()
+        ' Update the variables from the textboxes
+        ServerAddress = serveraddress_box.Text
+        Port = port_box.Text
+        DatabaseName = database_box.Text
+        DBUsername = username_box.Text
+        DBPassword = password_box.Text
+
+        MessageBox.Show("Database configuration saved successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
     End Sub
 
@@ -673,6 +680,14 @@ Public Class adminframe
         SetupFilterComboBoxes()
         AddHandler searchenrollee.TextChanged, AddressOf SearchEnrollee_TextChanged
         LoadEnrollmentData()
+
+        ' Fill the textboxes with the current connection values
+        serveraddress_box.Text = ServerAddress
+        port_box.Text = Port
+        database_box.Text = DatabaseName
+        username_box.Text = DBUsername
+        password_box.Text = DBPassword
+
     End Sub
 
     Private Sub LoadEnrollmentData()
@@ -714,7 +729,7 @@ Public Class adminframe
                 End Using
 
                 ' Main query with joins to get student and subject names
-                Dim query As String = "SELECT e.enrollment_id, CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_name) AS student_name, sub.subject_name, " &
+                Dim query As String = "SELECT e.enrollment_id, CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_initial) AS student_name, sub.subject_name, " &
                                      "e.school_year, e.grade_level, e.section, e.status, e.remarks, " &
                                      "e.payment_status, e.amount_paid, e.balance, e.mode_of_payment, " &
                                      "e.payment_date, e.cashier_name, e.discount_applied " &
@@ -796,7 +811,7 @@ Public Class adminframe
                 End Using
 
                 ' Query for searching
-                Dim query As String = "SELECT e.enrollment_id, CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_name) AS student_name, sub.subject_name, " &
+                Dim query As String = "SELECT e.enrollment_id, CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_initial) AS student_name, sub.subject_name, " &
                                      "e.school_year, e.grade_level, e.section, e.status, e.remarks, " &
                                      "e.payment_status, e.amount_paid, e.balance, e.mode_of_payment, " &
                                      "e.payment_date, e.cashier_name, e.discount_applied " &
@@ -985,7 +1000,7 @@ Public Class adminframe
             Try
                 conn.Open()
 
-                Dim query As String = "SELECT CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_name) AS student_name, sub.subject_name, " &
+                Dim query As String = "SELECT CONCAT(s.last_name, ' ', s.first_name, ' ', s.middle_initial) AS student_name, sub.subject_name, " &
                                      "e.grade_level, e.remarks, e.payment_status " &
                                      "FROM enrollment e " &
                                      "JOIN student s ON e.student_id = s.student_id " &
@@ -1135,5 +1150,25 @@ Public Class adminframe
 
         ' Refresh the data after editing
         LoadEnrollmentData()
+    End Sub
+
+    Private Sub studentnametextbox_TextChanged(sender As Object, e As EventArgs) Handles serveraddress_box.TextChanged
+
+    End Sub
+
+    Private Sub testdb_button_Click(sender As Object, e As EventArgs) Handles testdb_button.Click
+        ' Update temporary values
+        Dim testConnectionString As String = "server=" & serveraddress_box.Text & ";port=" & port_box.Text & ";username=" & username_box.Text & ";password=" & password_box.Text & ";database=" & database_box.Text
+
+        Dim conn As New MySqlConnection(testConnectionString)
+        Try
+            conn.Open()
+            MessageBox.Show("Connection successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("Connection failed: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Finally
+            conn.Close()
+        End Try
+
     End Sub
 End Class

@@ -34,8 +34,8 @@ Public Class addenrolle
         Using conn As MySqlConnection = strconnection()
             Try
                 conn.Open()
-                Dim query As String = "SELECT student_id, CONCAT(first_name, ' ', IFNULL(middle_name, ''), ' ', last_name) AS full_name " &
-                                     "FROM student WHERE first_name LIKE @search OR middle_name LIKE @search OR last_name LIKE @search " &
+                Dim query As String = "SELECT student_id, CONCAT(first_name, ' ', IFNULL(middle_initial, ''), ' ', last_name) AS full_name " &
+                                     "FROM student WHERE first_name LIKE @search OR middle_initial LIKE @search OR last_name LIKE @search " &
                                      "LIMIT 10"
 
                 Using cmd As New MySqlCommand(query, conn)
