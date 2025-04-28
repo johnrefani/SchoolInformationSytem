@@ -1129,9 +1129,9 @@ Public Class adminframe
         Dim enrollmentId As Integer = Convert.ToInt32(selectedRow.Cells(0).Value)
 
         ' Open the edit form and pass the ID
-        ' Dim editForm As New editenrolle()
-        'editForm.EnrollmentId = enrollmentId ' Set the public property
-        'editForm.ShowDialog()
+        Dim editForm As New editenrolle()
+        editForm.EnrollmentId = enrollmentId ' Set the public property
+        editForm.ShowDialog()
 
         ' Refresh the data after editing
         LoadEnrollmentData()

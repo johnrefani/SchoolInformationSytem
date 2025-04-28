@@ -22,48 +22,47 @@ Partial Class editenrolle
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        TextBox11 = New TextBox()
+        eremarks = New TextBox()
         Label14 = New Label()
-        TextBox12 = New TextBox()
+        cashier = New TextBox()
         Label15 = New Label()
-        TextBox7 = New TextBox()
-        TextBox8 = New TextBox()
+        epaymentstatus = New TextBox()
+        ediscount = New TextBox()
         Label10 = New Label()
-        TextBox9 = New TextBox()
+        epaymentdate = New TextBox()
         Label11 = New Label()
         Label12 = New Label()
-        TextBox10 = New TextBox()
+        ebalance = New TextBox()
         Label13 = New Label()
-        TextBox6 = New TextBox()
-        TextBox3 = New TextBox()
+        estatus = New TextBox()
+        eamount = New TextBox()
         Label4 = New Label()
-        TextBox4 = New TextBox()
-        Label5 = New Label()
         Label7 = New Label()
-        TextBox5 = New TextBox()
+        esection = New TextBox()
         Label9 = New Label()
-        TextBox2 = New TextBox()
+        egradelevel = New TextBox()
         Label3 = New Label()
-        TextBox1 = New TextBox()
+        eschoolyear = New TextBox()
         Label2 = New Label()
         Label1 = New Label()
-        ComboBox1 = New ComboBox()
-        firsnametextbox = New TextBox()
+        estudentname = New TextBox()
         Label8 = New Label()
-        savebutton = New Button()
+        eupdatebutton = New Button()
         cancelbutton = New Button()
         Label6 = New Label()
-        Button1 = New Button()
+        edeletebutton = New Button()
+        esubjectname = New TextBox()
+        eid = New TextBox()
         SuspendLayout()
         ' 
-        ' TextBox11
+        ' eremarks
         ' 
-        TextBox11.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox11.BorderStyle = BorderStyle.FixedSingle
-        TextBox11.Location = New Point(294, 417)
-        TextBox11.Name = "TextBox11"
-        TextBox11.Size = New Size(230, 33)
-        TextBox11.TabIndex = 124
+        eremarks.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        eremarks.BorderStyle = BorderStyle.FixedSingle
+        eremarks.Location = New Point(294, 417)
+        eremarks.Name = "eremarks"
+        eremarks.Size = New Size(230, 33)
+        eremarks.TabIndex = 124
         ' 
         ' Label14
         ' 
@@ -74,14 +73,14 @@ Partial Class editenrolle
         Label14.TabIndex = 123
         Label14.Text = "REMARKS"
         ' 
-        ' TextBox12
+        ' cashier
         ' 
-        TextBox12.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox12.BorderStyle = BorderStyle.FixedSingle
-        TextBox12.Location = New Point(19, 417)
-        TextBox12.Name = "TextBox12"
-        TextBox12.Size = New Size(250, 33)
-        TextBox12.TabIndex = 122
+        cashier.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        cashier.BorderStyle = BorderStyle.FixedSingle
+        cashier.Location = New Point(19, 417)
+        cashier.Name = "cashier"
+        cashier.Size = New Size(250, 33)
+        cashier.TabIndex = 122
         ' 
         ' Label15
         ' 
@@ -92,23 +91,23 @@ Partial Class editenrolle
         Label15.TabIndex = 121
         Label15.Text = "CASHIER NAME"
         ' 
-        ' TextBox7
+        ' epaymentstatus
         ' 
-        TextBox7.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox7.BorderStyle = BorderStyle.FixedSingle
-        TextBox7.Location = New Point(294, 326)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(230, 33)
-        TextBox7.TabIndex = 120
+        epaymentstatus.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        epaymentstatus.BorderStyle = BorderStyle.FixedSingle
+        epaymentstatus.Location = New Point(294, 326)
+        epaymentstatus.Name = "epaymentstatus"
+        epaymentstatus.Size = New Size(230, 33)
+        epaymentstatus.TabIndex = 120
         ' 
-        ' TextBox8
+        ' ediscount
         ' 
-        TextBox8.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox8.BorderStyle = BorderStyle.FixedSingle
-        TextBox8.Location = New Point(787, 326)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(207, 33)
-        TextBox8.TabIndex = 119
+        ediscount.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        ediscount.BorderStyle = BorderStyle.FixedSingle
+        ediscount.Location = New Point(787, 326)
+        ediscount.Name = "ediscount"
+        ediscount.Size = New Size(207, 33)
+        ediscount.TabIndex = 119
         ' 
         ' Label10
         ' 
@@ -119,14 +118,14 @@ Partial Class editenrolle
         Label10.TabIndex = 118
         Label10.Text = "DISCOUNT APPLIED"
         ' 
-        ' TextBox9
+        ' epaymentdate
         ' 
-        TextBox9.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox9.BorderStyle = BorderStyle.FixedSingle
-        TextBox9.Location = New Point(549, 326)
-        TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(213, 33)
-        TextBox9.TabIndex = 117
+        epaymentdate.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        epaymentdate.BorderStyle = BorderStyle.FixedSingle
+        epaymentdate.Location = New Point(549, 326)
+        epaymentdate.Name = "epaymentdate"
+        epaymentdate.Size = New Size(213, 33)
+        epaymentdate.TabIndex = 117
         ' 
         ' Label11
         ' 
@@ -146,14 +145,14 @@ Partial Class editenrolle
         Label12.TabIndex = 115
         Label12.Text = "PAYMENT STATUS"
         ' 
-        ' TextBox10
+        ' ebalance
         ' 
-        TextBox10.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox10.BorderStyle = BorderStyle.FixedSingle
-        TextBox10.Location = New Point(19, 326)
-        TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(250, 33)
-        TextBox10.TabIndex = 114
+        ebalance.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        ebalance.BorderStyle = BorderStyle.FixedSingle
+        ebalance.Location = New Point(19, 326)
+        ebalance.Name = "ebalance"
+        ebalance.Size = New Size(250, 33)
+        ebalance.TabIndex = 114
         ' 
         ' Label13
         ' 
@@ -164,50 +163,32 @@ Partial Class editenrolle
         Label13.TabIndex = 113
         Label13.Text = "BALANCE"
         ' 
-        ' TextBox6
+        ' estatus
         ' 
-        TextBox6.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox6.BorderStyle = BorderStyle.FixedSingle
-        TextBox6.Location = New Point(294, 230)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(230, 33)
-        TextBox6.TabIndex = 112
+        estatus.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        estatus.BorderStyle = BorderStyle.FixedSingle
+        estatus.Location = New Point(294, 230)
+        estatus.Name = "estatus"
+        estatus.Size = New Size(230, 33)
+        estatus.TabIndex = 112
         ' 
-        ' TextBox3
+        ' eamount
         ' 
-        TextBox3.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox3.BorderStyle = BorderStyle.FixedSingle
-        TextBox3.Location = New Point(787, 230)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(207, 33)
-        TextBox3.TabIndex = 111
+        eamount.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        eamount.BorderStyle = BorderStyle.FixedSingle
+        eamount.Location = New Point(555, 228)
+        eamount.Name = "eamount"
+        eamount.Size = New Size(207, 33)
+        eamount.TabIndex = 111
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(789, 192)
+        Label4.Location = New Point(557, 190)
         Label4.Name = "Label4"
         Label4.Size = New Size(150, 25)
         Label4.TabIndex = 110
         Label4.Text = "AMOUNT PAID"
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox4.BorderStyle = BorderStyle.FixedSingle
-        TextBox4.Location = New Point(549, 230)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(213, 33)
-        TextBox4.TabIndex = 109
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(549, 192)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(185, 25)
-        Label5.TabIndex = 108
-        Label5.Text = "PAYMENT STATUS"
         ' 
         ' Label7
         ' 
@@ -218,14 +199,14 @@ Partial Class editenrolle
         Label7.TabIndex = 107
         Label7.Text = "STATUS"
         ' 
-        ' TextBox5
+        ' esection
         ' 
-        TextBox5.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox5.BorderStyle = BorderStyle.FixedSingle
-        TextBox5.Location = New Point(19, 230)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(250, 33)
-        TextBox5.TabIndex = 106
+        esection.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        esection.BorderStyle = BorderStyle.None
+        esection.Location = New Point(19, 230)
+        esection.Name = "esection"
+        esection.Size = New Size(250, 26)
+        esection.TabIndex = 106
         ' 
         ' Label9
         ' 
@@ -236,14 +217,14 @@ Partial Class editenrolle
         Label9.TabIndex = 105
         Label9.Text = "SECTION"
         ' 
-        ' TextBox2
+        ' egradelevel
         ' 
-        TextBox2.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Location = New Point(787, 132)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(207, 33)
-        TextBox2.TabIndex = 104
+        egradelevel.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        egradelevel.BorderStyle = BorderStyle.None
+        egradelevel.Location = New Point(787, 132)
+        egradelevel.Name = "egradelevel"
+        egradelevel.Size = New Size(207, 26)
+        egradelevel.TabIndex = 104
         ' 
         ' Label3
         ' 
@@ -254,14 +235,15 @@ Partial Class editenrolle
         Label3.TabIndex = 103
         Label3.Text = "GRADE LEVEL"
         ' 
-        ' TextBox1
+        ' eschoolyear
         ' 
-        TextBox1.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        TextBox1.BorderStyle = BorderStyle.FixedSingle
-        TextBox1.Location = New Point(549, 132)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(213, 33)
-        TextBox1.TabIndex = 102
+        eschoolyear.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        eschoolyear.BorderStyle = BorderStyle.None
+        eschoolyear.Location = New Point(549, 132)
+        eschoolyear.Name = "eschoolyear"
+        eschoolyear.ReadOnly = True
+        eschoolyear.Size = New Size(213, 26)
+        eschoolyear.TabIndex = 102
         ' 
         ' Label2
         ' 
@@ -281,24 +263,15 @@ Partial Class editenrolle
         Label1.TabIndex = 100
         Label1.Text = "SUBJECT NAME"
         ' 
-        ' ComboBox1
+        ' estudentname
         ' 
-        ComboBox1.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        ComboBox1.ForeColor = Color.Black
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(294, 132)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(230, 33)
-        ComboBox1.TabIndex = 99
-        ' 
-        ' firsnametextbox
-        ' 
-        firsnametextbox.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
-        firsnametextbox.BorderStyle = BorderStyle.FixedSingle
-        firsnametextbox.Location = New Point(19, 132)
-        firsnametextbox.Name = "firsnametextbox"
-        firsnametextbox.Size = New Size(250, 33)
-        firsnametextbox.TabIndex = 98
+        estudentname.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        estudentname.BorderStyle = BorderStyle.None
+        estudentname.Location = New Point(19, 132)
+        estudentname.Name = "estudentname"
+        estudentname.ReadOnly = True
+        estudentname.Size = New Size(250, 26)
+        estudentname.TabIndex = 98
         ' 
         ' Label8
         ' 
@@ -309,19 +282,19 @@ Partial Class editenrolle
         Label8.TabIndex = 97
         Label8.Text = "STUDENT NAME"
         ' 
-        ' savebutton
+        ' eupdatebutton
         ' 
-        savebutton.BackColor = Color.FromArgb(CByte(127), CByte(189), CByte(228))
-        savebutton.Cursor = Cursors.Hand
-        savebutton.FlatAppearance.BorderSize = 0
-        savebutton.FlatStyle = FlatStyle.Flat
-        savebutton.ForeColor = Color.White
-        savebutton.Location = New Point(649, 29)
-        savebutton.Name = "savebutton"
-        savebutton.Size = New Size(98, 37)
-        savebutton.TabIndex = 96
-        savebutton.Text = "SAVE"
-        savebutton.UseVisualStyleBackColor = False
+        eupdatebutton.BackColor = Color.FromArgb(CByte(127), CByte(189), CByte(228))
+        eupdatebutton.Cursor = Cursors.Hand
+        eupdatebutton.FlatAppearance.BorderSize = 0
+        eupdatebutton.FlatStyle = FlatStyle.Flat
+        eupdatebutton.ForeColor = Color.White
+        eupdatebutton.Location = New Point(649, 29)
+        eupdatebutton.Name = "eupdatebutton"
+        eupdatebutton.Size = New Size(98, 37)
+        eupdatebutton.TabIndex = 96
+        eupdatebutton.Text = "SAVE"
+        eupdatebutton.UseVisualStyleBackColor = False
         ' 
         ' cancelbutton
         ' 
@@ -347,19 +320,37 @@ Partial Class editenrolle
         Label6.TabIndex = 94
         Label6.Text = "Manage Enrolle"
         ' 
-        ' Button1
+        ' edeletebutton
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(190), CByte(0), CByte(0))
-        Button1.Cursor = Cursors.Hand
-        Button1.FlatAppearance.BorderSize = 0
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(771, 30)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(98, 37)
-        Button1.TabIndex = 125
-        Button1.Text = "DELETE"
-        Button1.UseVisualStyleBackColor = False
+        edeletebutton.BackColor = Color.FromArgb(CByte(190), CByte(0), CByte(0))
+        edeletebutton.Cursor = Cursors.Hand
+        edeletebutton.FlatAppearance.BorderSize = 0
+        edeletebutton.FlatStyle = FlatStyle.Flat
+        edeletebutton.ForeColor = Color.White
+        edeletebutton.Location = New Point(771, 30)
+        edeletebutton.Name = "edeletebutton"
+        edeletebutton.Size = New Size(98, 37)
+        edeletebutton.TabIndex = 125
+        edeletebutton.Text = "DELETE"
+        edeletebutton.UseVisualStyleBackColor = False
+        ' 
+        ' esubjectname
+        ' 
+        esubjectname.BackColor = Color.FromArgb(CByte(239), CByte(239), CByte(239))
+        esubjectname.BorderStyle = BorderStyle.None
+        esubjectname.Location = New Point(299, 130)
+        esubjectname.Name = "esubjectname"
+        esubjectname.ReadOnly = True
+        esubjectname.Size = New Size(213, 26)
+        esubjectname.TabIndex = 126
+        ' 
+        ' eid
+        ' 
+        eid.Location = New Point(412, 29)
+        eid.Name = "eid"
+        eid.Size = New Size(100, 33)
+        eid.TabIndex = 127
+        eid.Visible = False
         ' 
         ' editenrolle
         ' 
@@ -367,36 +358,35 @@ Partial Class editenrolle
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1008, 481)
-        Controls.Add(Button1)
-        Controls.Add(TextBox11)
+        Controls.Add(eid)
+        Controls.Add(esubjectname)
+        Controls.Add(edeletebutton)
+        Controls.Add(eremarks)
         Controls.Add(Label14)
-        Controls.Add(TextBox12)
+        Controls.Add(cashier)
         Controls.Add(Label15)
-        Controls.Add(TextBox7)
-        Controls.Add(TextBox8)
+        Controls.Add(epaymentstatus)
+        Controls.Add(ediscount)
         Controls.Add(Label10)
-        Controls.Add(TextBox9)
+        Controls.Add(epaymentdate)
         Controls.Add(Label11)
         Controls.Add(Label12)
-        Controls.Add(TextBox10)
+        Controls.Add(ebalance)
         Controls.Add(Label13)
-        Controls.Add(TextBox6)
-        Controls.Add(TextBox3)
+        Controls.Add(estatus)
+        Controls.Add(eamount)
         Controls.Add(Label4)
-        Controls.Add(TextBox4)
-        Controls.Add(Label5)
         Controls.Add(Label7)
-        Controls.Add(TextBox5)
+        Controls.Add(esection)
         Controls.Add(Label9)
-        Controls.Add(TextBox2)
+        Controls.Add(egradelevel)
         Controls.Add(Label3)
-        Controls.Add(TextBox1)
+        Controls.Add(eschoolyear)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Controls.Add(ComboBox1)
-        Controls.Add(firsnametextbox)
+        Controls.Add(estudentname)
         Controls.Add(Label8)
-        Controls.Add(savebutton)
+        Controls.Add(eupdatebutton)
         Controls.Add(cancelbutton)
         Controls.Add(Label6)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -409,36 +399,35 @@ Partial Class editenrolle
         PerformLayout()
     End Sub
 
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents eremarks As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents cashier As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents epaymentstatus As TextBox
+    Friend WithEvents ediscount As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents epaymentdate As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents ebalance As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents estatus As TextBox
+    Friend WithEvents eamount As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents esection As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents egradelevel As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents eschoolyear As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents firsnametextbox As TextBox
+    Friend WithEvents estudentname As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents savebutton As Button
+    Friend WithEvents eupdatebutton As Button
     Friend WithEvents cancelbutton As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents edeletebutton As Button
+    Friend WithEvents esubjectname As TextBox
+    Friend WithEvents eid As TextBox
 End Class
