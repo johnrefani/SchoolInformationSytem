@@ -220,6 +220,68 @@ Public Class edituser
         End Using
     End Sub
 
+    Private Sub deletebutton_Click(sender As Object, e As EventArgs) Handles deletebutton.Click
+        ' Confirm with the user before deleting
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to delete this user?",
+                                               "Confirm Delete",
+                                               MessageBoxButtons.YesNo,
+                                               MessageBoxIcon.Warning)
+
+        If result = DialogResult.Yes Then
+            Try
+                Using conn As MySqlConnection = strconnection()
+                    conn.Open()
+
+                    ' Start a transaction to ensure all deletions are successful
+                    Dim transaction As MySqlTransaction = conn.BeginTransaction()
+
+                    Try
+                        ' First delete from role-specific tables if they exist
+                        If role.Text = "Student" Then
+                            DeleteFromTable(conn, transaction, "student", "student_id")
+                        ElseIf role.Text = "Instructor" Then
+                            DeleteFromTable(conn, transaction, "instructor", "instructor_id")
+                        End If
+
+                        ' Then delete from the User table
+                        Dim query As String = "DELETE FROM User WHERE user_id = @id"
+                        Using cmd As New MySqlCommand(query, conn, transaction)
+                            cmd.Parameters.AddWithValue("@id", UserId)
+                            Dim rowsAffected = cmd.ExecuteNonQuery()
+
+                            If rowsAffected > 0 Then
+                                transaction.Commit()
+                                MessageBox.Show("User deleted successfully!", "Success",
+                                          MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                Me.Close()
+                            Else
+                                transaction.Rollback()
+                                MessageBox.Show("No user was deleted.", "Information",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            End If
+                        End Using
+
+                    Catch ex As Exception
+                        transaction.Rollback()
+                        MessageBox.Show("Error deleting user: " & ex.Message, "Error",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+                End Using
+            Catch ex As Exception
+                MessageBox.Show("Database error: " & ex.Message, "Error",
+                          MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
+    End Sub
+
+    Private Sub DeleteFromTable(conn As MySqlConnection, transaction As MySqlTransaction, tableName As String, idColumnName As String)
+        Dim query As String = $"DELETE FROM {tableName} WHERE {idColumnName} = @id"
+        Using cmd As New MySqlCommand(query, conn, transaction)
+            cmd.Parameters.AddWithValue("@id", UserId)
+            cmd.ExecuteNonQuery()
+        End Using
+    End Sub
+
     Private Sub cancelbutton_Click(sender As Object, e As EventArgs) Handles cancelbutton.Click
         Me.Close()
     End Sub
