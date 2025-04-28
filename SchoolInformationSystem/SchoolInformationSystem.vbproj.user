@@ -1,10 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Form1.vb">
+    <Compile Update="Admin\adminframe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Student\student_dashboard.vb">
+    <Compile Update="Admin\Configuration\editconfiguration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Enrollments\addenrolle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Enrollments\editenrolle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Subjects\addsubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Subjects\editsubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Users\adduser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Users\edituser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Instructor\editprofile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Instructor\instructorframe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Student\editstudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Student\studentframe.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="User Login\login.vb">
