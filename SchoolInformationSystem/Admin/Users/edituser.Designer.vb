@@ -48,7 +48,7 @@ Partial Class edituser
         Label9 = New Label()
         username = New TextBox()
         Label8 = New Label()
-        savebutton = New Button()
+        deletebutton = New Button()
         cancelbutton = New Button()
         Label6 = New Label()
         updatebutton = New Button()
@@ -290,19 +290,19 @@ Partial Class edituser
         Label8.TabIndex = 91
         Label8.Text = "USERNAME"
         ' 
-        ' savebutton
+        ' deletebutton
         ' 
-        savebutton.BackColor = Color.FromArgb(CByte(190), CByte(0), CByte(0))
-        savebutton.Cursor = Cursors.Hand
-        savebutton.FlatAppearance.BorderSize = 0
-        savebutton.FlatStyle = FlatStyle.Flat
-        savebutton.ForeColor = Color.White
-        savebutton.Location = New Point(774, 27)
-        savebutton.Name = "savebutton"
-        savebutton.Size = New Size(98, 37)
-        savebutton.TabIndex = 90
-        savebutton.Text = "DELETE"
-        savebutton.UseVisualStyleBackColor = False
+        deletebutton.BackColor = Color.FromArgb(CByte(190), CByte(0), CByte(0))
+        deletebutton.Cursor = Cursors.Hand
+        deletebutton.FlatAppearance.BorderSize = 0
+        deletebutton.FlatStyle = FlatStyle.Flat
+        deletebutton.ForeColor = Color.White
+        deletebutton.Location = New Point(774, 27)
+        deletebutton.Name = "deletebutton"
+        deletebutton.Size = New Size(98, 37)
+        deletebutton.TabIndex = 90
+        deletebutton.Text = "DELETE"
+        deletebutton.UseVisualStyleBackColor = False
         ' 
         ' cancelbutton
         ' 
@@ -384,7 +384,7 @@ Partial Class edituser
         Controls.Add(Label9)
         Controls.Add(username)
         Controls.Add(Label8)
-        Controls.Add(savebutton)
+        Controls.Add(deletebutton)
         Controls.Add(cancelbutton)
         Controls.Add(Label6)
         Font = New Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -423,7 +423,7 @@ Partial Class edituser
     Friend WithEvents Label9 As Label
     Friend WithEvents username As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents savebutton As Button
+    Friend WithEvents deletebutton As Button
     Friend WithEvents cancelbutton As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents updatebutton As Button
